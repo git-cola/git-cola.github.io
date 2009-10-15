@@ -1,50 +1,49 @@
 ---
-title: git-cola - Downloads
+title: "git-cola: News"
 layout: logo-top
 ---
-
-<style type="text/css">
-img.title { border: 0; }
-h1.title { margin-bottom: 0.5em; }
-h2.title { margin-bottom: 0.5em; }
-</style>
 
 <div class="bodydiv">
 
 <p><a href="index.html">[back]</a></p>
 
-<h1>Binary Packages</h1>
+<h1>News</h1>
 
-<h2 class="title"><img class="title" src="images/logo-linux.png"/> Linux</h2>
-Linux is it!  Your distro has probably already packaged git-cola for you.<br/>
-If not, please file a bug against your distribution ;-)
+<h2>Release v1.4.0</h2>
+<h3>Halloween 2009</h3>
+
+<p>
+The focus for this release has been the on a redesign of the main
+git-cola interface and some new minor features.
+</p>
+
+<p>Changes since v1.3.9
 <ul>
-	<li><a href="http://packages.ubuntu.com/karmic/git-cola">ubuntu</a>
-	sudo aptitude install git-cola</li>
-	<li><a href="http://packages.debian.org/testing/main/git-cola">debian</a>
-	sudo aptitude install git-cola</li>
-	<li><a href="https://admin.fedoraproject.org/pkgdb/packages/name/git-cola">fedora</a>
-	sudo yum install git-cola</li>
+	<li>Flexible, configurable GUI</li>
+	<li>Commit message editor displays current row/column
+		and warns when lines get too long.</li>
+	<li>The "classic" view displays paths that have been changed upstream</li>
+	<li>New interface for creating tags</li>
+	<li>Lots of miscellaneous bug fixes</li>
+	<li>'git cola --classic' launches the classic view in standalone mode</li>
+	<li>The GUI inherits the main system-configured UI font</li>
+	<li>Built-in/fallback SSH_ASKPASS prompts for SSH passwords on
+		fetch/push/pull</li>
+	<li>More logging and user feedback for commands</li>
 </ul>
+</p>
 
-<h2 class="title"><img class="title" src="images/logo-darwin.png"/> Mac OS X</h2>
-I don't have access to an Intel+Tiger or PPC+Leopard machine.<br/>
-Contact the git-cola list if you can help provide other OS X builds.<ul>
-	<li><a href="http://code.google.com/p/git-osx-installer/">git</a></li>
-	<li><a href="releases/darwin/git-cola-intel-leopard.app.tar.bz2">git-cola</a> Intel 10.5 Leopard</li>
-	<li><a href="releases/darwin/git-cola-powerpc-tiger.app.tar.bz2">git-cola</a> PPC 10.4 Tiger</li>
+<p>Technical updates:
+<ul>
+	<li>Removed all usage of Qt Designer .ui files</li>
+	<li>Simpler model/view architecture</li>
+	<li>Rewritten status view</li>
+	<li>Selection now lives in the model</li>
+	<li>Centralized GUI notifications to keep views in sync</li>
+	<li>Less coupling between views and model actions</li>
+	<li>Added thread-safety to the git command class</li>
+	<li>More documentation and tests</li>
 </ul>
+</p>
 
-<h2 class="title"><img class="title" src="images/logo-win32.png"/> Windows</h2>
-Install the latest stable Python 2.6 binary packages listed below <ul>
-	<li><a href="http://code.google.com/p/msysgit/">git</a></li>
-	<li><a href="http://python.org/download/">python</a></li>
-	<li><a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">pyqt4</a></li>
-	<li><a href="releases/win32/cola.exe">git-cola</a></li>
-</ul>
-
-<h1 class="title">Source Releases</h1> <ul>
-	<li><a href="releases/?C=N&amp;O=D">source releases</a></li>
-</ul>
-</span>
 </div>
