@@ -4,15 +4,18 @@
 <head>
 	<title>{{ page.title }}</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<link rel="stylesheet" type="text/css"  href="cola.css" />
-	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link rel="stylesheet" type="text/css"  href="{{ page.prefix }}cola.css" />
+	<link rel="icon" type="image/png" href="{{ page.prefix }}images/favicon.png" />
 </head>
 
 <body>
 <div class="pagetop">
-	<img src="images/logo-cola.png" alt="git-cola logo" />
+	<img src="{{ page.prefix }}images/logo-cola.png" alt="git-cola logo" />
 </div>
-<!-- main content -->
+
+<!-- + logo-top -->
 {{ content }}
+<!-- - logo-top -->
+
 </body>
 </html>
