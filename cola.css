@@ -31,3 +31,9 @@ a:hover { color: black; text-decoration: none; background-color: silver; }
 .extlinks a:visited { color: #ccc; text-decoration: none; }
 .extlinks a:hover { color: black; text-decoration: none; }
 .extlinks img { border: 1px solid; }
+
+ul.posts span {
+	color: #aaa;
+	font-family: Monaco, "Courier New", monospace;
+	font-size: 80%;
+}
