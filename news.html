@@ -1,49 +1,8 @@
 ---
 title: "git-cola: News"
-layout: logo-top
+layout: logo-top-news
 ---
-
-<div class="bodydiv">
-
-<p><a href="index.html">[back]</a></p>
 
 <h1>News</h1>
 
-<h2>Release v1.4.0</h2>
-<h3>Halloween 2009</h3>
-
-<p>
-The focus for this release has been the on a redesign of the main
-git-cola interface and some new minor features.
-</p>
-
-<p>Changes since v1.3.9
-<ul>
-	<li>Flexible, configurable GUI</li>
-	<li>Commit message editor displays current row/column
-		and warns when lines get too long.</li>
-	<li>The "classic" view displays paths that have been changed upstream</li>
-	<li>New interface for creating tags</li>
-	<li>Lots of miscellaneous bug fixes</li>
-	<li>'git cola --classic' launches the classic view in standalone mode</li>
-	<li>The GUI inherits the main system-configured UI font</li>
-	<li>Built-in/fallback SSH_ASKPASS prompts for SSH passwords on
-		fetch/push/pull</li>
-	<li>More logging and user feedback for commands</li>
-</ul>
-</p>
-
-<p>Technical updates:
-<ul>
-	<li>Removed all usage of Qt Designer .ui files</li>
-	<li>Simpler model/view architecture</li>
-	<li>Rewritten status view</li>
-	<li>Selection now lives in the model</li>
-	<li>Centralized GUI notifications to keep views in sync</li>
-	<li>Less coupling between views and model actions</li>
-	<li>Added thread-safety to the git command class</li>
-	<li>More documentation and tests</li>
-</ul>
-</p>
-
-</div>
+{{ site.categories.news[0].content }}
