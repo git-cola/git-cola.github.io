@@ -5,7 +5,9 @@ body {
 	margin-bottom: 0;
 	font-family: sans-serif;
 	text-decoration: none;
+	color: #000;
 	background: url("images/cola-bg.png") repeat-x;
+	background-color: #fff;
 }
 .trademark {
 	position: absolute;
