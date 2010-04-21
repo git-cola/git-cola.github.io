@@ -1,0 +1,123 @@
+---
+title: "git-cola v1.4.2"
+layout: logo-top-news-item
+shortdate: Apr 20, 2010
+summary: "git-cola v1.4.2 tagged and released"
+---
+<h2>Release v1.4.2</h2>
+<h3>Spring 2010</h3>
+
+<p>{{ page.summary }}</p>
+
+<p>
+Usability, bells and whistles
+<ul>
+<li>Added support for the configurable <em>guitool.[tool].*</em>
+actions as described in
+<em><a href="http://www.kernel.org/pub/software/scm/git/docs/git-config.html">git-config(1)</a></em>.
+<br />
+This makes it possible to add new actions to <em>git-cola</em>
+by simply editing <em>~/.gitconfig</em>.  This implements the
+same guitool support as `git-gui`.
+<br/>
+<strong>Closed <a href="http://github.com/davvid/git-cola/issues/closed#issue/44">
+issue #44</a></strong>.</li>
+
+<li>Introduced a stat cache to speed up <em>git-config</em> and
+repository status checks.</li>
+
+<li>Added Alt-key shortcuts to the main `git-cola` interface.</li>
+
+<li>The `Actions` dock widget switches between a horizontal
+and vertical layout when resized.</li>
+
+<li>We now use <em>git diff --submodule</em> for submodules
+(used when git &gt;= 1.6.6).</li>
+
+<li>The context menu for modified submodules includes an option
+to launch <em>git-cola</em>.
+<br />
+<strong>Closed <a href="http://github.com/davvid/git-cola/issues/closed#issue/17">
+issue #17</a></strong>.
+<br />
+
+<li>Prefer <em>$VISUAL</em> over <em>$EDITOR</em> when both are defined.
+These are used to set a default editor in lieu of <em>core.editor</em>
+configuration.</li>
+
+<li>Force the editor to be <em>gvim</em> when we see <em>vim</em>.
+This prevents us from launching an editor in the (typically
+unattached) parent terminal and creating zombie editors
+that cannot be easily killed.</li>
+
+<li>Selections are remembered and restored across updates.
+This makes the `partial-staging` workflow easier since the
+diff view will show the updated diff after staging.</li>
+
+<li>Show the path to the current repository in a tooltip
+over the commit message editor.
+<br />
+<strong>Closed <a href="http://github.com/davvid/git-cola/issues/closed#issue/45">
+issue #45</a></strong>.</li>
+
+<li>Log internal <em>git</em> commands when <em>GIT_COLA_TRACE</em>
+is defined.
+<br />
+<strong>Closed <a href="http://github.com/davvid/git-cola/issues/closed#issue/39">
+issue #39</a></strong>.</li>
+
+</ul>
+</p>
+
+<p>
+Fixes
+<ul>
+<li>Improved backwards compatibility for Python 2.4.</li>
+
+<li><em>Review mode</em> can now review the current branch; it no longer
+requires you to checkout the branch into which the reviewed
+branch will be merged.</li>
+
+<li>Guard against <em>color.ui = always</em> configuration when using
+<em>git log</em> by passing <em>--no-color</em>.</li>
+
+<li><em>yes</em> and <em>no</em> are now supported as valid booleans
+by the <em>git config</em> parser.
+
+<li>Better defaults are used for `fetch`, `push`, and `pull`.
+<br />
+<strong>Closed <a href="http://github.com/davvid/git-cola/issues/closed#issue/43">
+issue #43</a></strong>.</li>
+
+</ul>
+</p>
+
+<p>
+Packaging
+<ul>
+
+<li>Removed colon (`:`) from the applilcation name on Windows
+<br />
+<strong>Closes <a href="http://github.com/davvid/git-cola/issues/closed#issue/41">
+issue #41</a></strong>.</li>
+
+<li>Fixed bugs with the Windows installer
+<br />
+<strong>Closes <a href="http://github.com/davvid/git-cola/issues/closed#issue/40">
+issue #40</a></strong>.</li>
+
+<li>Added a more standard i18n infrastructure.  The install
+tree now has the common <em>$prefix/share/locale/$lang/LC_MESSAGES/git-cola.mo</em>
+layout in use by several projects.</li>
+
+<li>Started trying to accomodate Mac OSX 10.6 (Snow Leopard)
+in the <em>darwin/</em> build scripts but our tester is yet to
+report success building a <em>.app</em> bundle.</li>
+
+<li>Replaced use of <em>perl</em> in Sphinx/documentation Makefile
+with more-portable <em>sed</em> constructs.  Thanks to
+Stefan Naewe for discovering the portability issues and
+providing msysgit-friendly patches.</li>
+
+</ul>
+</p>
