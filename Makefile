@@ -1,8 +1,4 @@
-ifeq ($(shell uname),Darwin)
-prefix	?= $(HOME)/Sites
-else
-prefix	?= $(HOME)/public_html
-endif
+prefix	?= $(CURDIR)/build
 
 # Allow customization via config.mak
 -include config.mak
