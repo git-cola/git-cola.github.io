@@ -5,7 +5,7 @@ prefix	?= $(CURDIR)/build
 
 install:
 	jekyll "$(prefix)"
-	"$(prefix)"/scripts/create-md5sums
+	-"$(prefix)"/scripts/create-md5sums
 
 all: install
 
