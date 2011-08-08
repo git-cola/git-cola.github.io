@@ -1,6 +1,7 @@
 /config.mak
 /doc
-/_site
 .DS_Store
 /Meta
+/share
+/_site
 *.swp
