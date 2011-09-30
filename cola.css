@@ -17,7 +17,13 @@ body {
 	color: gray;
 }
 
-img { border: 1px solid; }
+img {
+	border: 1px solid;
+}
+
+ul {
+	list-style-type: none;
+}
 
 .pagetop { position: relative; top: 0; text-align: right; 0; }
 .pagetop>img { border: 0px; }
