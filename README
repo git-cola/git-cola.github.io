@@ -1,10 +1,7 @@
 git-cola: A highly caffeinated git GUI
 
-This is the source code for for the git-cola homepage:
+This is the source code for for the git-cola homepage
+
 	https://git-cola.github.com/
 
-You can find the git-cola project on github:
-	https://github.com/davvid/git-cola
-
-NOTE: git-cola.github.com is a work in progress.
-Use http://cola.tuxfamily.org/ until further notice.
+	https://github.com/git-cola/git-cola
