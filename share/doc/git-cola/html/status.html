@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Repository Status &mdash; git-cola v1.4.3.5 documentation</title>
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.4.3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="git-cola v1.4.3.5 documentation" href="index.html" />
+    <link rel="up" title="Tools" href="tools.html" />
+    <link rel="next" title="Diff Viewer" href="diffview.html" />
+    <link rel="prev" title="Tools" href="tools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="diffview.html" title="Diff Viewer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="Tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">git-cola v1.4.3.5 documentation</a> &raquo;</li>
+          <li><a href="userguide.html" >User Guide</a> &raquo;</li>
+          <li><a href="tools.html" accesskey="U">Tools</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="repository-status">
+<h1>Repository Status<a class="headerlink" href="#repository-status" title="Permalink to this headline">¶</a></h1>
+<img alt="Repository Status" class="align-center" src="images/repo-status1.png" />
+<p>The status tool shows you a quick summary of the
+state of the entire project.</p>
+<p>Files are categorized similarly to what you&#8217;d see when running
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-status.html">git status</a>
+on the command line.</p>
+<div class="section" id="actions">
+<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<p>Clicking the <cite>Staged</cite> folder shows a diffstat for the index.</p>
+<p>Clicking the <cite>Modified</cite> folder shows a diffstat for the worktree.</p>
+<p>Clicking individual files sends diffs to the <cite>Diff Display</cite>.</p>
+<p>Double-clicking individual files adds and removes their content from the index.</p>
+</div>
+<div class="section" id="right-click-actions">
+<h2>Right-click Actions<a class="headerlink" href="#right-click-actions" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Repository Status</cite> tool has various actions that
+are available through its right-click context menu.</p>
+<p>Different actions are available depending a file&#8217;s status.</p>
+<div class="section" id="staged-files">
+<h3>Staged Files<a class="headerlink" href="#staged-files" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Unstage Selected</dt>
+<dd>Remove from the index/staging area with
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-reset.html">git reset</a></dd>
+<dt>Launch Editor</dt>
+<dd>Launch the configured visual editor</dd>
+<dt>Launch Difftool</dt>
+<dd>Visualize changes with
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-difftool.html">git difftool</a></dd>
+<dt>Remove Unstaged Edits</dt>
+<dd>Throw away unstaged edits.</dd>
+</dl>
+</div>
+<div class="section" id="modified-files">
+<h3>Modified Files<a class="headerlink" href="#modified-files" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Stage Selected</dt>
+<dd>Add to the staging area with
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git add</a></dd>
+<dt>Launch Editor</dt>
+<dd>Launches the configured visual text editor</dd>
+<dt>Launch Difftool</dt>
+<dd>Visualize changes relative to the index with
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-difftool.html">git difftool</a></dd>
+<dt>Remove Unstaged Edits</dt>
+<dd>Removes unstaged content by checking out selected paths
+from the index/staging area</dd>
+<dt>Remove Uncommited Edits</dt>
+<dd>Throw away uncommitted edits</dd>
+</dl>
+</div>
+<div class="section" id="unmerged-files">
+<h3>Unmerged Files<a class="headerlink" href="#unmerged-files" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Launch Merge Tool</dt>
+<dd>Resolve conflicts using
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-mergetool.html">git mergetool</a></dd>
+<dt>Stage Selected</dt>
+<dd>Mark as resolved using
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git add</a></dd>
+<dt>Launch Editor</dt>
+<dd>Launch the configured visual text editor</dd>
+</dl>
+</div>
+<div class="section" id="untracked-files">
+<h3>Untracked Files<a class="headerlink" href="#untracked-files" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Stage Selected</dt>
+<dd>Add to the index/staging area with
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-add.html">git add</a></dd>
+<dt>Launch Editor</dt>
+<dd>Launch the configured visual text editor</dd>
+<dt>Delete File(s)</dt>
+<dd>Delete files from the filesystem</dd>
+<dt>Add to .gitignore</dt>
+<dd>Adds file/files to GIT ignore list for untracked files</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Repository Status</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#right-click-actions">Right-click Actions</a><ul>
+<li><a class="reference internal" href="#staged-files">Staged Files</a></li>
+<li><a class="reference internal" href="#modified-files">Modified Files</a></li>
+<li><a class="reference internal" href="#unmerged-files">Unmerged Files</a></li>
+<li><a class="reference internal" href="#untracked-files">Untracked Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tools.html"
+                        title="previous chapter">Tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="diffview.html"
+                        title="next chapter">Diff Viewer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/status.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="diffview.html" title="Diff Viewer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="Tools"
+             >previous</a> |</li>
+        <li><a href="index.html">git-cola v1.4.3.5 documentation</a> &raquo;</li>
+          <li><a href="userguide.html" >User Guide</a> &raquo;</li>
+          <li><a href="tools.html" >Tools</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2007-2012, David Aguilar and contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

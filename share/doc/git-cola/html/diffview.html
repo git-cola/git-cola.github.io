@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Diff Viewer &mdash; git-cola v1.4.3.5 documentation</title>
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.4.3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="git-cola v1.4.3.5 documentation" href="index.html" />
+    <link rel="up" title="Tools" href="tools.html" />
+    <link rel="next" title="Commit Message Editor" href="commitmsg.html" />
+    <link rel="prev" title="Repository Status" href="status.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="commitmsg.html" title="Commit Message Editor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="status.html" title="Repository Status"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">git-cola v1.4.3.5 documentation</a> &raquo;</li>
+          <li><a href="userguide.html" >User Guide</a> &raquo;</li>
+          <li><a href="tools.html" accesskey="U">Tools</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="diff-viewer">
+<h1>Diff Viewer<a class="headerlink" href="#diff-viewer" title="Permalink to this headline">¶</a></h1>
+<img alt="Diff Viewer" class="align-center" src="images/diff-viewer1.png" />
+<p>The <cite>git-cola</cite> diff view allows you to interactively stage
+and unstage content in the git index.</p>
+<div class="section" id="highlighting">
+<h2>Highlighting<a class="headerlink" href="#highlighting" title="Permalink to this headline">¶</a></h2>
+<p>Additions are shown in green and removals are displayed in light red.
+Extraneous whitespace is shown in a pure red background.</p>
+</div>
+<div class="section" id="diff-regions">
+<h2>Diff Regions<a class="headerlink" href="#diff-regions" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote each diff region.  Selecting lines of diff
+and using the <cite>Stage Selected</cite> command will stage just the selected fragment.
+Clicking within a diff region and selecting the <cite>Stage Hunk</cite> stages that
+region.  The corresponding opposite commands can be performed on staged
+files as well.</p>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong class="command">h</strong> &#8211; Stage/unstage hunk at text cursor position.</li>
+<li><strong class="command">s</strong> &#8211; Stage/unstage selection.  If nothing is selected then
+this is equivalent to the <strong class="command">h</strong> shortcut.</li>
+</ul>
+</div>
+<div class="section" id="right-click-actions">
+<h2>Right-click Actions<a class="headerlink" href="#right-click-actions" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Diff Viewer</cite> tool has various actions that
+are available through its right-click context menu.</p>
+<p>Different actions are available depending a file&#8217;s status.</p>
+<div class="section" id="modified-files">
+<h3>Modified Files<a class="headerlink" href="#modified-files" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Stage Hunk for Commit</dt>
+<dd>Add the diff region at the cursor position to the index.</dd>
+<dt>Stage Selected Lines</dt>
+<dd>Add selected diff lines to the index.
+This corresponds to the gray lines in the image.</dd>
+<dt>Undo Hunk</dt>
+<dd>Apply a reverse patch to the worktree.
+This reverts unstaged modifications to a file.</dd>
+<dt>Undo Selected Lines</dt>
+<dd>Apply a subset of the reverse patch to the worktree.</dd>
+</dl>
+</div>
+<div class="section" id="staged-files">
+<h3>Staged Files<a class="headerlink" href="#staged-files" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Unstage Hunk</dt>
+<dd>Remove the diff region at the cursor position from the index.</dd>
+<dt>Unstage Selected Lines</dt>
+<dd>Remove selected diff lines from the index.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Diff Viewer</a><ul>
+<li><a class="reference internal" href="#highlighting">Highlighting</a></li>
+<li><a class="reference internal" href="#diff-regions">Diff Regions</a></li>
+<li><a class="reference internal" href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+<li><a class="reference internal" href="#right-click-actions">Right-click Actions</a><ul>
+<li><a class="reference internal" href="#modified-files">Modified Files</a></li>
+<li><a class="reference internal" href="#staged-files">Staged Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="status.html"
+                        title="previous chapter">Repository Status</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="commitmsg.html"
+                        title="next chapter">Commit Message Editor</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/diffview.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="commitmsg.html" title="Commit Message Editor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="status.html" title="Repository Status"
+             >previous</a> |</li>
+        <li><a href="index.html">git-cola v1.4.3.5 documentation</a> &raquo;</li>
+          <li><a href="userguide.html" >User Guide</a> &raquo;</li>
+          <li><a href="tools.html" >Tools</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2007-2012, David Aguilar and contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

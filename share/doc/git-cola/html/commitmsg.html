@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Commit Message Editor &mdash; git-cola v1.4.3.5 documentation</title>
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.4.3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="git-cola v1.4.3.5 documentation" href="index.html" />
+    <link rel="up" title="Tools" href="tools.html" />
+    <link rel="next" title="Actions" href="actions.html" />
+    <link rel="prev" title="Diff Viewer" href="diffview.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="actions.html" title="Actions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="diffview.html" title="Diff Viewer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">git-cola v1.4.3.5 documentation</a> &raquo;</li>
+          <li><a href="userguide.html" >User Guide</a> &raquo;</li>
+          <li><a href="tools.html" accesskey="U">Tools</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="commit-message-editor">
+<h1>Commit Message Editor<a class="headerlink" href="#commit-message-editor" title="Permalink to this headline">¶</a></h1>
+<img alt="Commit Message Editor" class="align-center" src="images/commit-message-editor1.png" />
+<p>The <cite>git-cola</cite> commit message editor is a simple text widget
+for entering commit messages.</p>
+<div class="section" id="sign-off">
+<h2>Sign Off<a class="headerlink" href="#sign-off" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Sign Off</cite> button adds the standard:</p>
+<div class="highlight-python"><pre>Signed-off-by: A. U. Thor &lt;a.u.thor@example.com&gt;</pre>
+</div>
+<p>to the bottom of the commit message.</p>
+<p>Pressing this button is equivalent to passing the <tt class="docutils literal"><span class="pre">-s</span></tt> option to
+<a class="reference external" href="http://kernel.org/pub/software/scm/git/docs/git-commit.html">git commit</a>.</p>
+</div>
+<div class="section" id="commit">
+<h2>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h2>
+<p>The commit button runs
+<a class="reference external" href="http://kernel.org/pub/software/scm/git/docs/git-commit.html">git commit</a>.
+The contents of the commit message editor is provided as the commit message.</p>
+<p>Only staged files are included in the commit &#8211; this is the same behavior
+as running <tt class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></tt> on the command-line.</p>
+</div>
+<div class="section" id="line-and-column-display">
+<h2>Line and Column Display<a class="headerlink" href="#line-and-column-display" title="Permalink to this headline">¶</a></h2>
+<p>The current line and column number is displayed below the text entry area.
+The <tt class="docutils literal"><span class="pre">5,0</span></tt> display in the image means that the cursor is located at
+line five, column zero.</p>
+<p>The display changes colors as lines start getting too long.
+Yellow indicates the safe boundary for sending patches to a mailing list
+and keeping space for inline reply markers.</p>
+<p>Orange indicates that the line is starting to run a bit long and should
+break soon.</p>
+<p>Red indicates that the line is running up against the standard
+80-column limit for commit messages.</p>
+<p>Commit messages with lines longer than 80 characters are discouraged.
+<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html">git log</a>
+is a powerful command-line tool so obeying the convention of keeping
+commit messages within the 80-character terminal width is highly encouraged.</p>
+</div>
+<div class="section" id="amend-last-commit">
+<h2>Amend Last Commit<a class="headerlink" href="#amend-last-commit" title="Permalink to this headline">¶</a></h2>
+<p>Clicking on <cite>Amend Last Commit</cite> makes <cite>git-cola</cite> amend the previous commit
+instead of creating a new one.  <cite>git-cola</cite> loads the previous commit message
+into the commit message editor when this option is selected.</p>
+<p>The <cite>Repository Status</cite> tool will display all of the changes for the
+amended commit.  All files that changed in the amended commit will show
+up as <cite>Staged</cite>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Commit Message Editor</a><ul>
+<li><a class="reference internal" href="#sign-off">Sign Off</a></li>
+<li><a class="reference internal" href="#commit">Commit</a></li>
+<li><a class="reference internal" href="#line-and-column-display">Line and Column Display</a></li>
+<li><a class="reference internal" href="#amend-last-commit">Amend Last Commit</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="diffview.html"
+                        title="previous chapter">Diff Viewer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="actions.html"
+                        title="next chapter">Actions</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/commitmsg.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="actions.html" title="Actions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="diffview.html" title="Diff Viewer"
+             >previous</a> |</li>
+        <li><a href="index.html">git-cola v1.4.3.5 documentation</a> &raquo;</li>
+          <li><a href="userguide.html" >User Guide</a> &raquo;</li>
+          <li><a href="tools.html" >Tools</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2007-2012, David Aguilar and contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
