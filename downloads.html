@@ -2,7 +2,8 @@
 title: "git-cola: Downloads"
 layout: logo-top-back
 version: "1.4.3.5"
-release_url: "http://cola.tuxfamily.org/releases"
+github: "https://github.com/git-cola/git-cola"
+downloads: "https://github.com/downloads/git-cola/git-cola"
 ---
 <style type="text/css">
 img.title { border: 0; }
@@ -35,7 +36,7 @@ Download git-cola
 <p><span style="font-size: 1.2em;"><strong>v{{ page.version }}</strong></span></p>
 	<p>
 	<!-- TODO transfer ownership to git-cola user -->
-	<a href="https://github.com/git-cola/git-cola/tarball/v{{ page.version }}">
+	<a href="{{ page.github }}/tarball/v{{ page.version }}">
 		<img src="images/logo-tar.png" alt="tarball logo"
 		style="border-width: 0px;" />
 		<br />
@@ -83,7 +84,7 @@ Brew installs git-cola's dependencies.<br />
 You can install newer versions of git-cola after you've installed it using brew.
 <ul>
 	<li>brew install git-cola</li>
-	<li><a href="{{ page.release_url }}/darwin/git-cola-{{ page.version }}.app.tar.gz">git-cola</a>
+	<li><a href="{{ page.downloads }}/git-cola-{{ page.version }}.app.tar.gz">git-cola</a>
 	application bundle</li>
 </ul>
 
@@ -94,13 +95,13 @@ Install the latest stable Python 2.6 binary packages listed below <ul>
 	<li><a href="http://code.google.com/p/msysgit/">git</a></li>
 	<li><a href="http://python.org/download/">python</a></li>
 	<li><a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">pyqt4</a></li>
-	<li><a href="{{ page.release_url }}/win32/git-cola-{{ page.version }}.exe">git-cola</a></li>
+	<li><a href="{{ page.downloads }}/git-cola-{{ page.version }}.exe">git-cola</a></li>
 </ul>
 
 <h2 class="title"><img class="title" src="images/logo-tar.png"/>
 	Source Releases
 </h2><ul>
 <li>
-	<a href="https://github.com/git-cola/git-cola/downloads">fresh tarballs hot off the presses</a>
+	<a href="{{ page.github }}/downloads">fresh tarballs hot off the presses</a>
 </li>
 </ul>
