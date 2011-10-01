@@ -3,7 +3,7 @@ body {
 	margin-right: 0;
 	margin-top: 0;
 	margin-bottom: 0;
-	font-family: sans-serif;
+	font-family: "Ubuntu", "Droid Sans", "Helvetica", sans-serif;
 	text-decoration: none;
 	color: #000;
 	background: url("images/cola-bg.png") repeat-x;
