@@ -3,7 +3,7 @@ body {
 	margin-right: 0;
 	margin-top: 0;
 	margin-bottom: 0;
-	font-family: "Ubuntu", "Droid Sans", "Helvetica", sans-serif;
+	font-family: "Helvetica", "Ubuntu", "Droid Sans", sans-serif;
 	text-decoration: none;
 	color: #000;
 	background: url("images/cola-bg.png") repeat-x;
@@ -29,7 +29,7 @@ ul {
 .pagetop>img { border: 0px; }
 .sitelinks { position: relative; top: 10; font-weight: bold; }
 .bodydiv { position: relative; top: 10; }
-.git { color: #777; font-size: .6em; }
+.git { color: #777; font-size: .7em; }
 
 a:link { color: #666; text-decoration: none; }
 a:visited { color: #666; text-decoration: none; }
@@ -43,7 +43,6 @@ a:hover { color: black; text-decoration: none; background-color: silver; }
 ul.posts span {
 	color: #aaa;
 	font-family: Monaco, "Courier New", monospace;
-	font-size: 80%;
 }
 
 .centered { text-align: center; }
