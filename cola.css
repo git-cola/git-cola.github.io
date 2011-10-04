@@ -35,6 +35,21 @@ a:link { color: #666; text-decoration: none; }
 a:visited { color: #666; text-decoration: none; }
 a:hover { color: black; text-decoration: none; background-color: silver; }
 
+.downloads {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 6px;
+	font-size: 0.8em;
+	margin: 6px;
+	color: #000;
+	background-color: #ffe9b7;
+}
+
+.downloads img { border: none; }
+.downloads a:link { text-decoration: underline; background-color: transparent; }
+.downloads a:visited { text-decoration: underline; background-color: transparent; }
+.downloads a:hover { text-decoration: underline; background-color: transparent; }
+
 .extlinks a:link { color: #ccc; text-decoration: none; }
 .extlinks a:visited { color: #ccc; text-decoration: none; }
 .extlinks a:hover { color: black; text-decoration: none; }
