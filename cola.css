@@ -11,31 +11,38 @@ body {
 	background: url("images/cola-bg.png") repeat-x;
 	background-color: #fff;
 }
-.trademark {
-	position: absolute;
-	bottom: 0;
-	right: 4;
-	left: 4;
-	color: gray;
-}
 
-img {
-	border: 1px solid;
+.bottom-text-box {
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	left: 6px;
+	color: gray;
 }
 
 ul {
 	list-style-type: none;
 }
 
-.pagetop { position: relative; top: 0; text-align: right; 0; }
-.pagetop>img { border: 0px; }
-.sitelinks { position: relative; top: 10; font-weight: bold; }
-.bodydiv { position: relative; top: 10; }
-.git { color: #777; font-size: .7em; }
+.pagetop {
+	position: relative;
+	top: 0;
+	text-align: right;
+}
+
+.pagetop a:hover {
+	background-color: transparent;
+}
+
+.sitelinks {
+	position: relative;
+	top: 10;
+	font-weight: bold;
+}
 
 a:link { color: #666; text-decoration: none; }
 a:visited { color: #666; text-decoration: none; }
-a:hover { color: black; text-decoration: none; background-color: silver; }
+a:hover { color: black; text-decoration: none; background-color: #f80; }
 
 .downloads {
 	-moz-border-radius: 8px;
@@ -45,6 +52,9 @@ a:hover { color: black; text-decoration: none; background-color: silver; }
 	margin: 6px;
 	color: #000;
 	background-color: #ffe9b7;
+	position: relative;
+	top: 10;
+	z-index: 2;
 }
 
 .downloads img { border: none; }
@@ -52,17 +62,18 @@ a:hover { color: black; text-decoration: none; background-color: silver; }
 .downloads a:visited { text-decoration: underline; background-color: transparent; }
 .downloads a:hover { text-decoration: underline; background-color: transparent; }
 
-.extlinks a:link { color: #ccc; text-decoration: none; }
-.extlinks a:visited { color: #ccc; text-decoration: none; }
-.extlinks a:hover { color: black; text-decoration: none; }
-.extlinks img { border: 1px solid; }
-
-ul.posts span {
-	color: #aaa;
-	font-family: Monaco, "Courier New", monospace;
+.downloads-box {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	position: absolute;
+	top: 113px;
+	padding-top: 6px;
+	right: 6px;
+	color: #fff;
+	background-color: #111;
+	text-align: center;
 }
 
-.centered { text-align: center; }
 .screenshots img {
 	border: 1px solid gray;
 }

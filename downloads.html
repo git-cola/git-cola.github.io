@@ -1,10 +1,6 @@
 ---
 title: "git-cola: Downloads"
-layout: logo-top-page
-github: "https://github.com/git-cola/git-cola"
-downloads: "https://github.com/downloads/git-cola/git-cola"
-version: "1.4.3.5"
-release_date: "2011-08-20"
+layout: logo-top
 ---
 <style type="text/css">
 img.title { border: 0; }
@@ -12,71 +8,9 @@ h1.title { margin-bottom: 0.5em; }
 h2.title { margin-bottom: 0.5em; }
 </style>
 
-<div style="
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	position: absolute;
-	top: 0px;
-	padding-top: 6px;
-	right: 10px;
-	color: #fff;
-	background-color: #111;
-	text-align: center;
-	">
-Download git-cola
+{% include download-box.html %}
 
-<div class="downloads">
-
-<p>The latest stable git-cola release is</p>
-<p>
-<span style="font-size: 2em;"><strong>v{{ page.version }}</strong></span>
-	<br />
-	<a href="share/doc/git-cola/html/relnotes.html">release notes</a>
-	({{ page.release_date }})
-</p>
-<p>
-	<table width="100%">
-	<tbody>
-	<tr>
-	<td width="33%">
-		<a href="{{ page.downloads }}/git-cola-{{ page.version }}.exe"
-		><img src="images/windows_big.png" alt="tarball logo"/></a>
-	</td>
-	<td width="33%">
-		<a href="{{ page.downloads }}/git-cola-{{ page.version }}.app.tar.gz"
-		><img src="images/osx_big.png" alt="tarball logo"/></a>
-	</td>
-	<td width="33%">
-		<a href="{{ page.github }}/tarball/v{{ page.version }}"
-			><img src="images/tux_big.png" alt="tarball logo"/></a>
-	</td>
-
-	</tr>
-	<td width="33%">
-		<a href="{{ page.downloads }}/git-cola-{{ page.version }}.exe"
-			>Windows</a>
-	</td>
-	<td width="33%">
-		<a href="{{ page.downloads }}/git-cola-{{ page.version }}.app.tar.gz"
-			>Mac OSX</a>
-	</td>
-	<td width="33%">
-		<a href="{{ page.github }}/tarball/v{{ page.version }}"
-			>Source</a>
-	</td>
-	<tr>
-	</tr>
-	</tbody>
-	</table>
-	<br />
-	<a href="{{ page.github }}/downloads">Older Releases</a>
-	<br />
-	<a href="{{ page.github }}">Git Source Repository</a>
-</p>
-</div>
-</div>
-
-<h2 class="title"><img class="title" src="images/logo-linux.png"/>
+<h2 class="title"><img class="title" src="images/tux_big.png"/>
 	Linux
 </h2>
 Linux is it!  Your distro has probably already packaged git-cola for you.<br/>
@@ -103,7 +37,7 @@ If not, please file a bug against your distribution ;-)
 </li>
 </ul>
 
-<h2 class="title"><img class="title" src="images/logo-darwin.png"/>
+<h2 class="title"><img class="title" src="images/osx_big.png"/>
 	Mac OS X
 </h2>
 You can install git-cola using
@@ -112,24 +46,24 @@ Brew installs git-cola's dependencies.<br />
 You can install newer versions of git-cola after you've installed it using brew.
 <ul>
 	<li>brew install git-cola</li>
-	<li><a href="{{ page.downloads }}/git-cola-{{ page.version }}.app.tar.gz">git-cola</a>
+	<li><a href="{{ site.cola_downloads }}/git-cola-{{ site.cola_version }}.app.tar.gz">git-cola</a>
 	application bundle</li>
 </ul>
 
-<h2 class="title"><img class="title" src="images/logo-win32.png"/>
+<h2 class="title"><img class="title" src="images/windows_big.png"/>
 	Windows
 </h2>
 Install the latest stable Python 2.6 binary packages listed below <ul>
 	<li><a href="http://code.google.com/p/msysgit/">git</a></li>
 	<li><a href="http://python.org/download/">python</a></li>
 	<li><a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">pyqt4</a></li>
-	<li><a href="{{ page.downloads }}/git-cola-{{ page.version }}.exe">git-cola</a></li>
+	<li><a href="{{ site.cola_downloads }}/git-cola-{{ site.cola_version }}.exe">git-cola</a></li>
 </ul>
 
 <h2 class="title"><img class="title" src="images/logo-tar.png"/>
 	Source Releases
 </h2><ul>
 <li>
-	<a href="{{ page.github }}/downloads">fresh tarballs hot off the presses</a>
+	<a href="{{ site.cola_github }}/downloads">fresh tarballs hot off the presses</a>
 </li>
 </ul>

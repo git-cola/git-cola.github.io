@@ -10,3 +10,9 @@ maruku:
   use_divs:   false
   png_dir:    images/latex
   png_url:    /images/latex
+
+# git-cola variables
+cola_version: "1.4.3.5"
+cola_release_date: "2011-08-20"
+cola_downloads: "https://github.com/downloads/git-cola/git-cola"
+cola_github: "https://github.com/git-cola/git-cola"
