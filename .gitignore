@@ -1,4 +1,5 @@
 .DS_Store
 /Meta
+/share/doc/git-cola/html/.buildinfo
 /_site
 *.swp
