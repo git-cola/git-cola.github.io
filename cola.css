@@ -77,3 +77,7 @@ a:hover { color: black; text-decoration: none; background-color: #f80; }
 .screenshots img {
 	border: 1px solid gray;
 }
+
+.cmd {
+	font-family: monospace;
+}
