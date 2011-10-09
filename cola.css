@@ -8,8 +8,19 @@ body {
 	font-family: "Helvetica", "Ubuntu", "Droid Sans", sans-serif;
 	text-decoration: none;
 	color: #000;
-	background: url("images/cola-bg.png") repeat-x;
 	background-color: #fff;
+}
+
+.logo-top {
+	top: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	z-index: -1;
+	background-color: black;
+	color: black;
+	height: 54px;
+	width: 100%;
 }
 
 .bottom-text-box {
@@ -53,26 +64,25 @@ a:hover { color: black; text-decoration: none; background-color: #f80; }
 	color: #000;
 	background-color: #ffe9b7;
 	position: relative;
-	top: 10;
 	z-index: 2;
+}
+
+.downloads-box {
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	position: absolute;
+	top: 60px;
+	padding-top: 6px;
+	right: 5px;
+	color: #fff;
+	background-color: #111;
+	text-align: center;
 }
 
 .downloads img { border: none; }
 .downloads a:link { text-decoration: underline; background-color: transparent; }
 .downloads a:visited { text-decoration: underline; background-color: transparent; }
 .downloads a:hover { text-decoration: underline; background-color: transparent; }
-
-.downloads-box {
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	position: absolute;
-	top: 113px;
-	padding-top: 6px;
-	right: 6px;
-	color: #fff;
-	background-color: #111;
-	text-align: center;
-}
 
 .screenshots img {
 	border: 1px solid gray;
