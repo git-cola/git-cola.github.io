@@ -1,9 +1,8 @@
 body {
 	font-size: 16pt;
-	top: 0;
 	margin-left: 40px;
 	margin-right: 0;
-	margin-top: 0;
+	margin-top: 90px;
 	margin-bottom: 0;
 	font-family: "Helvetica", "Ubuntu", "Droid Sans", sans-serif;
 	text-decoration: none;
@@ -14,6 +13,7 @@ body {
 .logo-top {
 	top: 0;
 	left: 0;
+	right: 0;
 	margin: 0;
 	position: absolute;
 	z-index: -1;
@@ -26,7 +26,6 @@ body {
 .bottom-text-box {
 	position: absolute;
 	bottom: 6px;
-	right: 6px;
 	left: 6px;
 	color: gray;
 }
@@ -36,8 +35,9 @@ ul {
 }
 
 .pagetop {
-	position: relative;
+	position: absolute;
 	top: 0;
+	right: 0;
 	text-align: right;
 }
 
@@ -46,15 +46,29 @@ ul {
 }
 
 .sitelinks {
-	position: relative;
-	top: 10;
+	position: absolute;
+	text-align: right;
+	top: 38px;
+	right: 0;
+	margin-right: 6px;
 	font-weight: bold;
 	z-index: 2;
 }
 
-a:link { color: #666; text-decoration: none; }
-a:visited { color: #666; text-decoration: none; }
-a:hover { color: black; text-decoration: none; background-color: #f80; }
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: underline;
+}
 
 .downloads {
 	-moz-border-radius: 8px;
@@ -80,10 +94,58 @@ a:hover { color: black; text-decoration: none; background-color: #f80; }
 	text-align: center;
 }
 
-.downloads img { border: none; }
-.downloads a:link { text-decoration: underline; background-color: transparent; }
-.downloads a:visited { text-decoration: underline; background-color: transparent; }
-.downloads a:hover { text-decoration: underline; background-color: transparent; }
+.downloads img {
+	border: none;
+}
+
+.downloads a:link {
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+.downloads a:visited {
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+.downloads a:hover {
+	text-decoration: underline;
+	background-color: transparent;
+	color: black;
+}
+
+.download-button {
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: absolute;
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	background-color: #f60;
+	color: white;
+	top: 98px;
+	left: 120px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	z-index: 3;
+}
+
+.download-button a:link {
+	background-color: transparent;
+	color: white;
+}
+
+.download-button a:visited {
+	background-color: transparent;
+	color: white;
+}
+
+.download-button a:hover {
+	background-color: transparent;
+	color: white;
+	text-decoration: underline;
+}
 
 .screenshots img {
 	border: 1px solid gray;
