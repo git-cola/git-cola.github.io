@@ -49,6 +49,7 @@ ul {
 	position: relative;
 	top: 10;
 	font-weight: bold;
+	z-index: 2;
 }
 
 a:link { color: #666; text-decoration: none; }
@@ -64,7 +65,7 @@ a:hover { color: black; text-decoration: none; background-color: #f80; }
 	color: #000;
 	background-color: #ffe9b7;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 .downloads-box {
