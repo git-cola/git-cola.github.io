@@ -1,6 +1,8 @@
 body {
 	font-size: 16pt;
-	margin-left: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-left: 0;
 	margin-right: 0;
 	margin-top: 90px;
 	margin-bottom: 0;
@@ -178,14 +180,12 @@ a:hover {
 }
 
 .screenshots {
-	width: 100%;
 	overflow: scroll;
 	overflow-y: hidden;
 }
 
 .screenshots img {
 	border: 1px solid gray;
-	margin-right: 50px;
 }
 
 .cmd {
