@@ -23,15 +23,12 @@ body {
 	width: 100%;
 }
 
-.bottom-text-box {
-	position: absolute;
-	bottom: 6px;
-	left: 6px;
-	color: gray;
-}
-
 ul {
 	list-style-type: none;
+}
+
+.bordered {
+	border: 1px black solid;
 }
 
 .pagetop {
@@ -41,8 +38,19 @@ ul {
 	text-align: right;
 }
 
+.pagetop a:link {
+	background-color: transparent;
+	padding: 0;
+}
+
 .pagetop a:hover {
 	background-color: transparent;
+	padding: 0;
+}
+
+.pagetop a:visited {
+	background-color: transparent;
+	padding: 0;
 }
 
 .sitelinks {
@@ -66,8 +74,9 @@ a:visited {
 }
 
 a:hover {
-	color: black;
-	text-decoration: underline;
+	color: white;
+	text-decoration: none;
+	background-color: #ff6600;
 }
 
 .downloads {
@@ -81,6 +90,58 @@ a:hover {
 	position: relative;
 	z-index: 3;
 }
+
+.download-icon {
+	position: absolute;
+	top: 55px;
+	left: 55px;
+	z-index: 3;
+}
+
+.download-button-container {
+	position: absolute;
+	top: 77px;
+	left: 266px;
+	margin-right: 177px;
+}
+
+.download-button {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 24pt;
+	font-weight: bold;
+	background-color: #ff6600;
+	color: white;
+	padding: 5px;
+	text-align: left;
+	z-index: 3;
+}
+
+.download-icon a:hover {
+	background-color: transparent;
+}
+
+.info-text {
+	padding: 5px;
+	color: gray;
+}
+
+.download-button a:link {
+	background-color: transparent;
+	color: white;
+}
+
+.download-button a:visited {
+	background-color: transparent;
+	color: white;
+}
+
+.download-button a:hover {
+	background-color: transparent;
+	color: white;
+	text-decoration: underline;
+}
+
 
 .downloads-box {
 	-moz-border-radius: 8px;
@@ -112,39 +173,6 @@ a:hover {
 	text-decoration: underline;
 	background-color: transparent;
 	color: black;
-}
-
-.download-button {
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	position: absolute;
-	text-align: center;
-	font-size: 24pt;
-	font-weight: bold;
-	background-color: #f60;
-	color: white;
-	top: 98px;
-	left: 120px;
-	padding: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-	z-index: 3;
-}
-
-.download-button a:link {
-	background-color: transparent;
-	color: white;
-}
-
-.download-button a:visited {
-	background-color: transparent;
-	color: white;
-}
-
-.download-button a:hover {
-	background-color: transparent;
-	color: white;
-	text-decoration: underline;
 }
 
 .screenshots img {
