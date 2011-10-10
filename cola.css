@@ -20,7 +20,6 @@ body {
 	background-color: black;
 	color: black;
 	height: 54px;
-	width: 100%;
 }
 
 ul {
@@ -112,7 +111,10 @@ a:hover {
 	font-weight: bold;
 	background-color: #ff6600;
 	color: white;
+	position: absolute;
 	padding: 5px;
+	padding-left: 12px;
+	padding-right: 12px;
 	text-align: left;
 	z-index: 3;
 }
@@ -175,8 +177,15 @@ a:hover {
 	color: black;
 }
 
+.screenshots {
+	width: 100%;
+	overflow: scroll;
+	overflow-y: hidden;
+}
+
 .screenshots img {
 	border: 1px solid gray;
+	margin-right: 50px;
 }
 
 .cmd {
