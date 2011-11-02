@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.5.2" />
-<title>git-cola(1)</title>
+<title>git-dag(1)</title>
 <style type="text/css">
 /* Debug borders */
 p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
@@ -570,26 +570,26 @@ footnotes: function () {
 <body>
 <div id="header">
 <h1>
-git-cola(1) Manual Page
+git-dag(1) Manual Page
 </h1>
 <h2>NAME</h2>
 <div class="sectionbody">
-<p>git-cola -
-   A highly caffeinated git GUI
+<p>git-dag -
+   An advanced git DAG visualizer
 </p>
 </div>
 </div>
 <div id="content">
 <h2 id="_synopsis">SYNOPSIS</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><em>git cola</em> [options]</p></div>
+<div class="paragraph"><p><em>git dag</em> [options]</p></div>
 </div>
 <h2 id="_description">DESCRIPTION</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><em>git-cola</em> is a powerful git GUI written in Python.
-It has many unique features that make git&#8217;s advanced
-features simple and accessible.</p></div>
-<div class="paragraph"><p>See below for a full list of options and usage information.</p></div>
+<div class="paragraph"><p><em>git-dag</em> is a powerful git DAG visualizer written in Python.
+<em>git-dag</em> supports many of the <em>git-log</em> options through its
+graphical interface.</p></div>
+<div class="paragraph"><p>See below for a full list of command-line options and usage information.</p></div>
 </div>
 <h2 id="_options">OPTIONS</h2>
 <div class="sectionbody">
@@ -647,130 +647,6 @@ features simple and accessible.</p></div>
 </dd>
 </dl></div>
 </div>
-<h2 id="_config_variables">CONFIG VARIABLES</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-cola.savewindowsettings
-</dt>
-<dd>
-<p>
-        Whether <em>git-cola</em> should remember its window settings.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.fontdiff
-</dt>
-<dd>
-<p>
-        Specifies the font to use for <em>git-cola</em>'s diff display.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.classicdockable
-</dt>
-<dd>
-<p>
-        Whether to create a dock widget with the <em>Cola Classic</em> tool.
-        Defaults to <em>false</em> to speedup startup time.
-</p>
-</dd>
-<dt class="hdlist1">
-gui.diffcontext
-</dt>
-<dd>
-<p>
-        The number of diff context lines used and displayed by <em>git-cola</em>
-</p>
-</dd>
-<dt class="hdlist1">
-gui.editor
-</dt>
-<dd>
-<p>
-        The default text editor is controlled by gui.editor.
-        The config variable overrides the EDITOR environment variable.
-</p>
-</dd>
-<dt class="hdlist1">
-gui.historybrowser
-</dt>
-<dd>
-<p>
-        Specifies the history browser to use when visualizing history.
-</p>
-</dd>
-<dt class="hdlist1">
-diff.tool
-</dt>
-<dd>
-<p>
-        The default diff tool to use.
-</p>
-</dd>
-<dt class="hdlist1">
-merge.tool
-</dt>
-<dd>
-<p>
-        The default merge tool to use.
-</p>
-</dd>
-<dt class="hdlist1">
-user.email
-</dt>
-<dd>
-<p>
-        Your email address to be recorded in any newly created commits.
-        Can be overridden by the <em>GIT_AUTHOR_EMAIL</em>, <em>GIT_COMMITTER_EMAIL</em>, and
-        <em>EMAIL</em> environment variables.  See linkgit:git-commit-tree[1].
-</p>
-</dd>
-<dt class="hdlist1">
-user.name
-</dt>
-<dd>
-<p>
-        Your full name to be recorded in any newly created commits.
-        Can be overridden by the <em>GIT_AUTHOR_NAME</em> and <em>GIT_COMMITTER_NAME</em>
-        environment variables.  See linkgit:git-commit-tree[1].
-</p>
-</dd>
-</dl></div>
-<div class="paragraph"><p>See linkgit:git-config[1] for more details.</p></div>
-</div>
-<h2 id="_environment_variables">ENVIRONMENT VARIABLES</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-EDITOR
-</dt>
-<dd>
-<p>
-        Specifies the default editor to use.
-        This is ignored when the git config variable <tt>gui.editor</tt> is defined.
-</p>
-</dd>
-<dt class="hdlist1">
-GIT_PYTHON_TRACE
-</dt>
-<dd>
-<p>
-        When defined, prints git commands and status to the terminal.
-        Print more information when set to the value <em>full</em>.
-</p>
-</dd>
-<dt class="hdlist1">
-GIT_COLA_TRACE
-</dt>
-<dd>
-<p>
-        When defined, <em>git-cola</em> outputs the <em>git</em> commands it executes
-        into the <em>Command Output</em> log viewer.
-</p>
-</dd>
-</dl></div>
-</div>
 <h2 id="_source">SOURCE</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>A <em>git-cola</em> development repository can be obtained via git:</p></div>
@@ -817,16 +693,15 @@ linkgit:gitk[1]
 <dd>
 <p>
         The git repository browser.  Shows branches, commit history
-        and file differences.  gitk is the utility started by
-        <em>git-cola</em>'s Repository Visualize actions.
+        and file differences.
 </p>
 </dd>
 </dl></div>
 </div>
 <h2 id="_git">GIT</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><em>git-cola</em> is independently developed from the linkgit:git[7] suite,
-but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p></div>
+<div class="paragraph"><p><em>git-dag</em> is independently developed from the linkgit:git[7] suite,
+but you can use it just like any other git command, e.g. <tt>git dag</tt>.</p></div>
 </div>
 <h2 id="_author">AUTHOR</h2>
 <div class="sectionbody">
@@ -836,7 +711,7 @@ but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p><
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-10-27 00:10:40 PDT
+Last updated 2011-10-27 01:08:31 PDT
 </div>
 </div>
 </body>

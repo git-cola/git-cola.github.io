@@ -1,0 +1,131 @@
+git-cola(1)
+===========
+
+NAME
+----
+git-cola - A highly caffeinated git GUI
+
+SYNOPSIS
+--------
+'git cola' [options]
+
+DESCRIPTION
+-----------
+'git-cola' is a powerful git GUI written in Python.
+It has many unique features that make git's advanced
+features simple and accessible.
+
+See below for a full list of options and usage information.
+
+OPTIONS
+-------
+--classic::
+	Launch the standalone 'cola classic' tool.
+
+-g::
+--git-path::
+	Specifies the path to the 'git' binary.
+
+--prompt::
+	Prompt for a git repository instead of auto-detecting it
+	in the current directory.
+
+-r::
+--repo=<path>::
+	Run 'git-cola' on the git repository in <path>.
+	Defaults to the current directory.
+
+-v::
+--version::
+	Print the 'git-cola' version and exit.
+
+
+CONFIG VARIABLES
+----------------
+cola.savewindowsettings::
+	Whether 'git-cola' should remember its window settings.
+
+cola.fontdiff::
+	Specifies the font to use for 'git-cola''s diff display.
+
+cola.classicdockable::
+	Whether to create a dock widget with the 'Cola Classic' tool.
+	Defaults to 'false' to speedup startup time.
+
+gui.diffcontext::
+	The number of diff context lines used and displayed by 'git-cola'
+
+gui.editor::
+	The default text editor is controlled by gui.editor.
+	The config variable overrides the EDITOR environment variable.
+
+gui.historybrowser::
+	Specifies the history browser to use when visualizing history.
+
+diff.tool::
+	The default diff tool to use.
+
+merge.tool::
+	The default merge tool to use.
+
+user.email::
+	Your email address to be recorded in any newly created commits.
+	Can be overridden by the 'GIT_AUTHOR_EMAIL', 'GIT_COMMITTER_EMAIL', and
+	'EMAIL' environment variables.  See linkgit:git-commit-tree[1].
+
+user.name::
+	Your full name to be recorded in any newly created commits.
+	Can be overridden by the 'GIT_AUTHOR_NAME' and 'GIT_COMMITTER_NAME'
+	environment variables.  See linkgit:git-commit-tree[1].
+
+
+See linkgit:git-config[1] for more details.
+
+ENVIRONMENT VARIABLES
+---------------------
+EDITOR::
+	Specifies the default editor to use.
+	This is ignored when the git config variable `gui.editor` is defined.
+
+GIT_PYTHON_TRACE::
+	When defined, prints git commands and status to the terminal.
+	Print more information when set to the value 'full'.
+
+GIT_COLA_TRACE::
+	When defined, 'git-cola' outputs the 'git' commands it executes
+	into the 'Command Output' log viewer.
+
+SOURCE
+------
+A 'git-cola' development repository can be obtained via git:
+
+	git clone git://github.com/git-cola/git-cola.git
+
+
+LINKS
+-----
+'git-cola' homepage::
+	http://git-cola.github.com/
+
+'git-cola' sources on github::
+	https://github.com/git-cola/git-cola/
+
+
+SEE ALSO
+--------
+linkgit:git-difftool[1]::
+	Compare changes using common merge tools.
+
+linkgit:gitk[1]::
+	The git repository browser.  Shows branches, commit history
+	and file differences.  gitk is the utility started by
+	'git-cola''s Repository Visualize actions.
+
+GIT
+---
+'git-cola' is independently developed from the linkgit:git[7] suite,
+but you can use it just like any other git command, e.g. `git cola`.
+
+AUTHOR
+------
+Written by David Aguilar <davvid@gmail.com>.

@@ -1,0 +1,87 @@
+.\"     Title: git-dag
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 11/02/2011
+.\"    Manual: Git Manual
+.\"    Source: Git
+.\"
+.TH "GIT\-DAG" "1" "11/02/2011" "Git" "Git Manual"
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+git-dag - An advanced git DAG visualizer
+.SH "SYNOPSIS"
+\fIgit dag\fR [options]
+.SH "DESCRIPTION"
+\fIgit\-dag\fR is a powerful git DAG visualizer written in Python\. \fIgit\-dag\fR supports many of the \fIgit\-log\fR options through its graphical interface\.
+
+See below for a full list of command\-line options and usage information\.
+.SH "OPTIONS"
+.PP
+\-\-classic
+.RS 4
+Launch the standalone \fIcola classic\fR tool\.
+.RE
+.PP
+\-g, \-\-git\-path
+.RS 4
+Specifies the path to the \fIgit\fR binary\.
+.RE
+.PP
+\-\-prompt
+.RS 4
+Prompt for a git repository instead of auto\-detecting it in the current directory\.
+.RE
+.PP
+\-r, \-\-repo=<path>
+.RS 4
+Run \fIgit\-cola\fR on the git repository in <path>\. Defaults to the current directory\.
+.RE
+.PP
+\-v, \-\-version
+.RS 4
+Print the \fIgit\-cola\fR version and exit\.
+.RE
+.SH "SOURCE"
+A \fIgit\-cola\fR development repository can be obtained via git:
+
+.sp
+.RS 4
+.nf
+git clone git://github\.com/git\-cola/git\-cola\.git
+.fi
+.RE
+.SH "LINKS"
+.PP
+\fIgit\-cola\fR homepage
+.RS 4
+\fIhttp://git\-cola\.github\.com/\fR
+.RE
+.PP
+\fIgit\-cola\fR sources on github
+.RS 4
+\fIhttps://github\.com/git\-cola/git\-cola/\fR
+.RE
+.SH "SEE ALSO"
+.PP
+linkgit:git\-difftool[1]
+.RS 4
+Compare changes using common merge tools\.
+.RE
+.PP
+linkgit:gitk[1]
+.RS 4
+The git repository browser\. Shows branches, commit history and file differences\.
+.RE
+.SH "GIT"
+\fIgit\-dag\fR is independently developed from the linkgit:git[7] suite, but you can use it just like any other git command, e\.g\. git dag\.
+.SH "AUTHOR"
+Written by David Aguilar <\fIdavvid@gmail\.com\fR\&[1]>\.
+.SH "NOTES"
+.IP " 1." 4
+davvid@gmail.com
+.RS 4
+\%mailto:davvid@gmail.com
+.RE
