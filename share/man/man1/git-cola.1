@@ -1,11 +1,11 @@
 .\"     Title: git-cola
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 11/02/2011
+.\"      Date: 11/21/2011
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-COLA" "1" "11/02/2011" "Git" "Git Manual"
+.TH "GIT\-COLA" "1" "11/21/2011" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -103,14 +103,9 @@ EDITOR
 Specifies the default editor to use\. This is ignored when the git config variable gui\.editor is defined\.
 .RE
 .PP
-GIT_PYTHON_TRACE
-.RS 4
-When defined, prints git commands and status to the terminal\. Print more information when set to the value \fIfull\fR\.
-.RE
-.PP
 GIT_COLA_TRACE
 .RS 4
-When defined, \fIgit\-cola\fR outputs the \fIgit\fR commands it executes into the \fICommand Output\fR log viewer\.
+When defined, \fIgit\-cola\fR logs \fIgit\fR commands to stdout\. When set to \fIfull\fR, \fIgit\-cola\fR also logs the exit status and output\. When set to \fItrace\fR, \fIgit\-cola\fR logs to the \fICommand Output\fR widget\.
 .RE
 .SH "SOURCE"
 A \fIgit\-cola\fR development repository can be obtained via git:

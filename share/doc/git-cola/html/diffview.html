@@ -7,14 +7,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Diff Viewer &mdash; git-cola v1.7.0 documentation</title>
+    <title>Diff Viewer &mdash; git-cola v1.7.1 documentation</title>
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/print.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '1.7.0',
+        VERSION:     '1.7.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,14 +24,14 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola v1.7.0 documentation" href="index.html" />
+    <link rel="top" title="git-cola v1.7.1 documentation" href="index.html" />
     <link rel="up" title="Tools" href="tools.html" />
     <link rel="next" title="Commit Message Editor" href="commitmsg.html" />
     <link rel="prev" title="Repository Status" href="status.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola v1.7.0 documentation</span></a></h1>
+          <span>git-cola v1.7.1 documentation</span></a></h1>
         <h2 class="heading"><span>Diff Viewer</span></h2>
       </div>
       <div class="topnav">
@@ -62,14 +62,14 @@ Extraneous whitespace is shown in a pure red background.</p>
 <h2>Diff Regions<a class="headerlink" href="#diff-regions" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote each diff region.  Selecting lines of diff
 and using the <cite>Stage Selected</cite> command will stage just the selected fragment.
-Clicking within a diff region and selecting the <cite>Stage Hunk</cite> stages that
+Clicking within a diff region and selecting the <cite>Stage Section</cite> stages that
 region.  The corresponding opposite commands can be performed on staged
 files as well.</p>
 </div>
 <div class="section" id="keyboard-shortcuts">
 <h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><strong class="command">h</strong> &#8211; Stage/unstage hunk at text cursor position.</li>
+<li><strong class="command">h</strong> &#8211; Stage/unstage section at text cursor position.</li>
 <li><strong class="command">s</strong> &#8211; Stage/unstage selection.  If nothing is selected then
 this is equivalent to the <strong class="command">h</strong> shortcut.</li>
 </ul>
@@ -82,22 +82,22 @@ are available through its right-click context menu.</p>
 <div class="section" id="modified-files">
 <h3>Modified Files<a class="headerlink" href="#modified-files" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
-<dt>Stage Hunk for Commit</dt>
+<dt>Stage Section</dt>
 <dd>Add the diff region at the cursor position to the index.</dd>
 <dt>Stage Selected Lines</dt>
 <dd>Add selected diff lines to the index.
 This corresponds to the gray lines in the image.</dd>
-<dt>Undo Hunk</dt>
+<dt>Revert Section</dt>
 <dd>Apply a reverse patch to the worktree.
 This reverts unstaged modifications to a file.</dd>
-<dt>Undo Selected Lines</dt>
+<dt>Revert Selected Lines</dt>
 <dd>Apply a subset of the reverse patch to the worktree.</dd>
 </dl>
 </div>
 <div class="section" id="staged-files">
 <h3>Staged Files<a class="headerlink" href="#staged-files" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
-<dt>Unstage Hunk</dt>
+<dt>Unstage Section</dt>
 <dd>Remove the diff region at the cursor position from the index.</dd>
 <dt>Unstage Selected Lines</dt>
 <dd>Remove selected diff lines from the index.</dd>

@@ -752,21 +752,13 @@ EDITOR
 </p>
 </dd>
 <dt class="hdlist1">
-GIT_PYTHON_TRACE
-</dt>
-<dd>
-<p>
-        When defined, prints git commands and status to the terminal.
-        Print more information when set to the value <em>full</em>.
-</p>
-</dd>
-<dt class="hdlist1">
 GIT_COLA_TRACE
 </dt>
 <dd>
 <p>
-        When defined, <em>git-cola</em> outputs the <em>git</em> commands it executes
-        into the <em>Command Output</em> log viewer.
+        When defined, <em>git-cola</em> logs <em>git</em> commands to stdout.
+        When set to <em>full</em>, <em>git-cola</em> also logs the exit status and output.
+        When set to <em>trace</em>, <em>git-cola</em> logs to the <em>Command Output</em> widget.
 </p>
 </dd>
 </dl></div>
@@ -836,7 +828,7 @@ but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p><
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-10-27 00:10:40 PDT
+Last updated 2011-11-18 03:10:42 PDT
 </div>
 </div>
 </body>
