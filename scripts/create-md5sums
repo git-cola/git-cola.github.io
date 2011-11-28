@@ -1,4 +1,0 @@
-#!/bin/sh
-cd $(dirname $0)/..
-cd releases
-md5sum public.key *.gz darwin/* win32/* > md5sum.txt
