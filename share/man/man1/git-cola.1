@@ -1,29 +1,22 @@
 .\"     Title: git-cola
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 11/21/2011
+.\"      Date: 11/26/2011
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-COLA" "1" "11/21/2011" "Git" "Git Manual"
+.TH "GIT\-COLA" "1" "11/26/2011" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
 .ad l
 .SH "NAME"
-git-cola - A highly caffeinated git GUI
+git-cola - The highly caffeinated git GUI
 .SH "SYNOPSIS"
-\fIgit cola\fR [options]
+\fIgit cola\fR [options] [sub\-command]
 .SH "DESCRIPTION"
-\fIgit\-cola\fR is a powerful git GUI written in Python\. It has many unique features that make git\(cqs advanced features simple and accessible\.
-
-See below for a full list of options and usage information\.
+\fIgit\-cola\fR is a sleek and powerful git GUI written in Python\. See below for a full list of options and usage information\.
 .SH "OPTIONS"
-.PP
-\-\-classic
-.RS 4
-Launch the standalone \fIcola classic\fR tool\.
-.RE
 .PP
 \-g, \-\-git\-path
 .RS 4
@@ -32,7 +25,7 @@ Specifies the path to the \fIgit\fR binary\.
 .PP
 \-\-prompt
 .RS 4
-Prompt for a git repository instead of auto\-detecting it in the current directory\.
+Prompt for a git repository instead of using the current directory\.
 .RE
 .PP
 \-r, \-\-repo=<path>
@@ -43,6 +36,37 @@ Run \fIgit\-cola\fR on the git repository in <path>\. Defaults to the current di
 \-v, \-\-version
 .RS 4
 Print the \fIgit\-cola\fR version and exit\.
+.RE
+.SH "SUB-COMMANDS"
+.PP
+classic
+.RS 4
+Launch the \fIclassic\fR tool\.
+.RE
+.PP
+fetch
+.RS 4
+Launch the \fIfetch\fR tool\.
+.RE
+.PP
+pull
+.RS 4
+Launch the \fIpull\fR tool\.
+.RE
+.PP
+push
+.RS 4
+Launch the \fIpush\fR tool\.
+.RE
+.PP
+stash
+.RS 4
+Launch the \fIstash\fR tool\.
+.RE
+.PP
+tag
+.RS 4
+Launch the \fItag\fR tool\.
 .RE
 .SH "CONFIG VARIABLES"
 .PP

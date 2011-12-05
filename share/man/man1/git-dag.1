@@ -1,11 +1,11 @@
 .\"     Title: git-dag
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 11/21/2011
+.\"      Date: 11/26/2011
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-DAG" "1" "11/21/2011" "Git" "Git Manual"
+.TH "GIT\-DAG" "1" "11/26/2011" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -13,17 +13,12 @@
 .SH "NAME"
 git-dag - An advanced git DAG visualizer
 .SH "SYNOPSIS"
-\fIgit dag\fR [options]
+\fIgit dag\fR [options] [<since>\.\.<until>] [[\-\-] [<path>\&...]]
 .SH "DESCRIPTION"
 \fIgit\-dag\fR is a powerful git DAG visualizer written in Python\. \fIgit\-dag\fR supports many of the \fIgit\-log\fR options through its graphical interface\.
 
 See below for a full list of command\-line options and usage information\.
 .SH "OPTIONS"
-.PP
-\-\-classic
-.RS 4
-Launch the standalone \fIcola classic\fR tool\.
-.RE
 .PP
 \-g, \-\-git\-path
 .RS 4
@@ -43,15 +38,6 @@ Run \fIgit\-cola\fR on the git repository in <path>\. Defaults to the current di
 \-v, \-\-version
 .RS 4
 Print the \fIgit\-cola\fR version and exit\.
-.RE
-.SH "SOURCE"
-A \fIgit\-cola\fR development repository can be obtained via git:
-
-.sp
-.RS 4
-.nf
-git clone git://github\.com/git\-cola/git\-cola\.git
-.fi
 .RE
 .SH "LINKS"
 .PP
