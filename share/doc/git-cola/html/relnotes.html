@@ -7,14 +7,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>git-cola v1.7.2 &mdash; git-cola v1.7.2 documentation</title>
+    <title>git-cola v1.7.3 &mdash; git-cola v1.7.3 documentation</title>
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/print.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '1.7.2',
+        VERSION:     '1.7.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,13 +24,13 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola v1.7.2 documentation" href="index.html" />
+    <link rel="top" title="git-cola v1.7.3 documentation" href="index.html" />
     <link rel="prev" title="Shortcut Keys" href="shortcuts.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola v1.7.2 documentation</span></a></h1>
-        <h2 class="heading"><span>git-cola v1.7.2</span></h2>
+          <span>git-cola v1.7.3 documentation</span></a></h1>
+        <h2 class="heading"><span>git-cola v1.7.3</span></h2>
       </div>
       <div class="topnav">
       
@@ -44,10 +44,50 @@
       <div class="content">
         
         
-  <div class="section" id="git-cola-v1-7-2">
-<h1>git-cola v1.7.2<a class="headerlink" href="#git-cola-v1-7-2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-v1-7-3">
+<h1>git-cola v1.7.3<a class="headerlink" href="#git-cola-v1-7-3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usability-bells-and-whistles">
 <h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><cite>git-cola</cite> learned a few new sub commands:</li>
+</ul>
+<div class="highlight-sh"><div class="highlight"><pre>git cola dag
+git cola branch
+git cola search
+</pre></div>
+</div>
+<ul class="simple">
+<li><cite>Return</cite> in the summary field jumps to the extended description.</li>
+<li><cite>Ctrl+Return</cite> is now a shortcut for &#8216;Commit&#8217;.</li>
+<li>Better French translation for &#8216;Sign-off&#8217;.</li>
+<li>The &#8216;Search&#8217; widget now has a much simpler and streamlined
+user interface.</li>
+<li>vim-style <cite>h,j,k,l</cite> navigation shortcuts were added to the DAG widget.</li>
+<li><cite>git-dag</cite> no longer prompts for files when diffing commits if the
+text field contains paths.</li>
+<li>General user interface and performance improvements.</li>
+</ul>
+</div>
+<div class="section" id="fixes">
+<h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The diff viewer no longer changes font size when holding <cite>Control</cite>
+while scrolling with the mouse wheel.</li>
+<li>Files with a typechange (e.g. symlinks that become files, etc.)
+are now correctly identified as being modified.</li>
+</ul>
+</div>
+<div class="section" id="packaging">
+<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The <cite>cola.controllers</cite> and <cite>cola.views</cite> packages were removed.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="git-cola-v1-7-2">
+<h1>git-cola v1.7.2<a class="headerlink" href="#git-cola-v1-7-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><cite>git-cola</cite> can now launch sub commands, e.g.:</li>
 </ul>
@@ -76,8 +116,8 @@ and creating a commit (<cite>Ctrl + m</cite>) were added.</li>
 <li>The status widget was adjusted to use less screen real-estate.</li>
 </ul>
 </div>
-<div class="section" id="fixes">
-<h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>Fixes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Avoid updating the index when responding to inotify events.
 This avoids interfering with operations such as <cite>git rebase &#8211;interactive</cite>.</p>
@@ -85,8 +125,8 @@ This avoids interfering with operations such as <cite>git rebase &#8211;interact
 </li>
 </ul>
 </div>
-<div class="section" id="packaging">
-<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>Packaging<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Create <cite>git-dag.pyw</cite> in the win32 installer.</li>
 <li>win32 shortcuts now contain explicit calls to <cite>pythonw.exe</cite> instead of
@@ -104,8 +144,8 @@ is a simpler alternative.</li>
 </div>
 <div class="section" id="git-cola-v1-7-1-1">
 <h1>git-cola v1.7.1.1<a class="headerlink" href="#git-cola-v1-7-1-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>Fixes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>Fixes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Further enhanced the staging/unstaging behavior in the status widget.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/97">http://github.com/git-cola/git-cola/issues/closed#issue/97</a></p>
@@ -114,8 +154,8 @@ is a simpler alternative.</li>
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h2>Packaging<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>Packaging<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>cola-$version</cite> tarballs on github were originally setup to
 have the same contents as the old tarballs hosted on tuxfamily.
 The <cite>make dist</cite> target was changed to write files to a
@@ -126,8 +166,8 @@ the darwin .app tarball, and the win32 .exe installer.</p>
 </div>
 <div class="section" id="git-cola-v1-7-1">
 <h1>git-cola v1.7.1<a class="headerlink" href="#git-cola-v1-7-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id3">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Refined the staging/unstaging behavior for code reviews.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/97">http://github.com/git-cola/git-cola/issues/closed#issue/97</a></p>
@@ -138,8 +178,8 @@ the darwin .app tarball, and the win32 .exe installer.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h2>Fixes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h2>Fixes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Boolean <cite>git-config</cite> settings with no value are now supported
 (these are not created by git these days but exist in legacy repositories).</li>
@@ -147,8 +187,8 @@ the darwin .app tarball, and the win32 .exe installer.</p>
 <li>Guard against low-memory conditions and more interrupted system calls.</li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h2>Packaging<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h2>Packaging<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Added desktop launchers for git-cola.desktop and git-dag.desktop.
 This replaces the old cola.desktop, so some adjustments to RPM .spec
@@ -166,8 +206,8 @@ so there&#8217;s no need for this option these days.</li>
 </div>
 <div class="section" id="git-cola-v1-7-0">
 <h1>git-cola v1.7.0<a class="headerlink" href="#git-cola-v1-7-0" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id6">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first"><cite>git-dag</cite> is no longer beta™</p>
 </li>
@@ -186,8 +226,8 @@ so there&#8217;s no need for this option these days.</li>
 </li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h2>Fixes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h2>Fixes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Display commits with no file changes.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/82">http://github.com/git-cola/git-cola/issues/closed#issue/82</a></p>
@@ -197,8 +237,8 @@ so there&#8217;s no need for this option these days.</li>
 </li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h2>Packaging<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h2>Packaging<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Bumped version number to ceil(minimum git version).
 <cite>git-cola</cite> now requires <cite>git</cite> &gt;= 1.6.3.</li>
@@ -212,8 +252,8 @@ is not available.</li>
 </div>
 <div class="section" id="git-cola-v1-4-3-5">
 <h1>git-cola v1.4.3.5<a class="headerlink" href="#git-cola-v1-4-3-5" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id9">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>inotify is much snappier and available on Windows
 thanks to Karl Bielefeldt.</li>
@@ -224,8 +264,8 @@ thanks to Audrius Karabanovas.</li>
 <li>stderr is logged when applying partial diffs.</li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h2>Fixes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h2>Fixes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Files can be unstaged when amending.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/82">http://github.com/git-cola/git-cola/issues/closed#issue/82</a></p>
@@ -243,8 +283,8 @@ thanks to Audrius Karabanovas.</li>
 </div>
 <div class="section" id="git-cola-v1-4-3-4">
 <h1>git-cola v1.4.3.4<a class="headerlink" href="#git-cola-v1-4-3-4" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id11">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">We now provide better feedback when <cite>git push</cite> fails.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/69">http://github.com/git-cola/git-cola/issues/closed#issue/69</a></p>
@@ -255,8 +295,8 @@ a progress dialog is used.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id12">
-<h2>Fixes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h2>Fixes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">More unicode fixes, again.  It is now possible to have
 unicode branch names, repository paths, home directories, etc.
@@ -268,8 +308,8 @@ This continued the work initiated by Redhat&#8217;s bugzilla #694806.</p>
 </div>
 <div class="section" id="git-cola-v1-4-3-3">
 <h1>git-cola v1.4.3.3<a class="headerlink" href="#git-cola-v1-4-3-3" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id13">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The <cite>git-cola</cite> desktop launchers now prompt for a repo
 by default.  This is done by using the new <cite>&#8211;prompt</cite>
@@ -277,8 +317,8 @@ flag which tells <cite>git-cola</cite> to ignore any git repositories
 in the current directory and prompt for one instead.</li>
 </ul>
 </div>
-<div class="section" id="id14">
-<h2>Fixes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h2>Fixes<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>More Unicode fixes for repositories and home directories with
 embedded unicode characters.  Thanks to Christian Jann for
@@ -289,8 +329,8 @@ patience and helpful bug reports.</li>
 </div>
 <div class="section" id="git-cola-v1-4-3-2">
 <h1>git-cola v1.4.3.2<a class="headerlink" href="#git-cola-v1-4-3-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id15">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Faster startup time! <cite>git-cola</cite> now offloads initialization
 to a background thread so that the GUI appears almost instantly.</li>
@@ -298,8 +338,8 @@ to a background thread so that the GUI appears almost instantly.</li>
 and ecmerge in difftool (backported from git.git).</li>
 </ul>
 </div>
-<div class="section" id="id16">
-<h2>Fixes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h2>Fixes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Fix launching commands in the background on Windows
 (e.g. when launching <cite>git-difftool</cite>).</p>
@@ -315,8 +355,8 @@ unicode characters.</p>
 </div>
 <div class="section" id="git-cola-v1-4-3-1">
 <h1>git-cola v1.4.3.1<a class="headerlink" href="#git-cola-v1-4-3-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id17">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id20">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">The <cite>cola classic</cite> tool can be now configured to be dockable.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/56">http://github.com/git-cola/git-cola/issues/closed#issue/56</a></p>
@@ -329,8 +369,8 @@ of whether inotify is installed.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id18">
-<h2>Packaging<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id21">
+<h2>Packaging<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fix installation of translations per Fedora
 This incorporates Fedora&#8217;s fix for the translations path
@@ -339,8 +379,8 @@ which originally appeared in cola-1.4.3-translations.patch.</li>
 application bundles using &#8216;make app-bundle&#8217;.</li>
 </ul>
 </div>
-<div class="section" id="id19">
-<h2>Fixes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id22">
+<h2>Fixes<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Fixed a stacktrace when trying to use &#8220;Get Commit Message Template&#8221;
 with an unconfigured &#8220;commit.template&#8221; git config variable.</p>
@@ -361,8 +401,8 @@ with an unconfigured &#8220;commit.template&#8221; git config variable.</p>
 </div>
 <div class="section" id="git-cola-v1-4-3">
 <h1>git-cola v1.4.3<a class="headerlink" href="#git-cola-v1-4-3" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id20">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><cite>git-dag</cite> beta™ now has a separate display area
 for displaying commit metadata.  This area will soon
@@ -370,8 +410,8 @@ grow additional functionality such as cherry-picking,
 branching, etc.</li>
 </ul>
 </div>
-<div class="section" id="id21">
-<h2>Fixes<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id24">
+<h2>Fixes<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Fixed tests from a previous refactoring.</p>
 </li>
@@ -386,8 +426,8 @@ shows the correct number of context lines.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id22">
-<h2>Packaging<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id25">
+<h2>Packaging<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">We now allow distutils to rewrite cola&#8217;s shebang line.
 This allows us to run on systems where &#8220;which python&#8221;
@@ -404,16 +444,16 @@ separate download.</p>
 </div>
 <div class="section" id="git-cola-v1-4-2-5">
 <h1>git-cola v1.4.2.5<a class="headerlink" href="#git-cola-v1-4-2-5" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id23">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Clicking on paths in the status widget copies them into the
 copy/paste buffer for easy middle-clicking into terminals.</li>
 <li>Ctrl+C in diff viewer copies the selected diff to the clipboard.</li>
 </ul>
 </div>
-<div class="section" id="id24">
-<h2>Fixes<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id27">
+<h2>Fixes<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Fixed the disappearing actions buttons on PyQt 4.7.4
 as reported by Arch and Ubuntu 10.10.</p>
@@ -424,8 +464,8 @@ items could not be de-selected.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id25">
-<h2>Packaging<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h2>Packaging<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Removed hard-coded reference to lib/ when calculating Python&#8217;s
 site-packages directory.</li>
@@ -434,8 +474,8 @@ site-packages directory.</li>
 </div>
 <div class="section" id="git-cola-v1-4-2-4">
 <h1>git-cola v1.4.2.4<a class="headerlink" href="#git-cola-v1-4-2-4" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id26">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id29">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Removed &#8220;single-click to (un)stage&#8221; in the status view.
 This is a usability improvement since we no longer perform
@@ -443,8 +483,8 @@ different actions depending on where a row is clicked.</li>
 <li>Added ability to create unsigned, annotated tags.</li>
 </ul>
 </div>
-<div class="section" id="id27">
-<h2>Fixes<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id30">
+<h2>Fixes<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Updated documentation to use <cite>cola.git</cite> instead of <cite>cola.gitcmd</cite>.</li>
 </ul>
@@ -452,8 +492,8 @@ different actions depending on where a row is clicked.</li>
 </div>
 <div class="section" id="git-cola-v1-4-2-3">
 <h1>git-cola v1.4.2.3<a class="headerlink" href="#git-cola-v1-4-2-3" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id28">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Allow un/staging by right-clicking top-level items</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/57">http://github.com/git-cola/git-cola/issues/closed#issue/57</a></p>
@@ -467,8 +507,8 @@ staging all files.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id29">
-<h2>Fixes<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id32">
+<h2>Fixes<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Simplified the actions widget to work around a regression
 in PyQt4 4.7.4.</p>
@@ -479,14 +519,14 @@ in PyQt4 4.7.4.</p>
 </div>
 <div class="section" id="git-cola-v1-4-2-2">
 <h1>git-cola v1.4.2.2<a class="headerlink" href="#git-cola-v1-4-2-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id30">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id33">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><cite>git-dag</cite> beta™ interaction was made faster.</li>
 </ul>
 </div>
-<div class="section" id="id31">
-<h2>Fixes<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id34">
+<h2>Fixes<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Added &#8216;...&#8217; indicators to the buttons for
 &#8216;Fetch...&#8217;, &#8216;Push...&#8217;, &#8216;Pull...&#8217;, and &#8216;Stash...&#8217;.</p>
@@ -500,8 +540,8 @@ in PyQt4 4.7.4.</p>
 </div>
 <div class="section" id="git-cola-v1-4-2-1">
 <h1>git-cola v1.4.2.1<a class="headerlink" href="#git-cola-v1-4-2-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id32">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id35">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Staging and unstaging is faster.</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/48">http://github.com/git-cola/git-cola/issues/closed#issue/48</a></p>
@@ -517,8 +557,8 @@ in PyQt4 4.7.4.</p>
 <li>Improved <cite>PyQt 4.1.x</cite> compatibility.</li>
 </ul>
 </div>
-<div class="section" id="id33">
-<h2>Fixes<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id36">
+<h2>Fixes<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Configured menu actions use <tt class="docutils literal"><span class="pre">sh</span> <span class="pre">-c</span></tt> for Windows portability.</li>
 </ul>
@@ -526,8 +566,8 @@ in PyQt4 4.7.4.</p>
 </div>
 <div class="section" id="git-cola-v1-4-2">
 <h1>git-cola v1.4.2<a class="headerlink" href="#git-cola-v1-4-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id34">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id37">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Added support for the configurable <tt class="docutils literal"><span class="pre">guitool.&lt;tool&gt;.*</span></tt>
 actions as described in <tt class="docutils literal"><span class="pre">git-config(1)</span></tt>.</p>
@@ -574,8 +614,8 @@ over the commit message editor.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id35">
-<h2>Fixes<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id38">
+<h2>Fixes<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Improved backwards compatibility for Python 2.4.</p>
 </li>
@@ -594,8 +634,8 @@ by the <cite>git-config</cite> parser.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id36">
-<h2>Packaging<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id39">
+<h2>Packaging<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Removed colon (<cite>:</cite>) from the applilcation name on Windows</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/41">http://github.com/git-cola/git-cola/issues/closed#issue/41</a></p>
@@ -621,8 +661,8 @@ providing msysgit-friendly patches.</p>
 </div>
 <div class="section" id="git-cola-v1-4-1-2">
 <h1>git-cola v1.4.1.2<a class="headerlink" href="#git-cola-v1-4-1-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id37">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id40">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>It is now possible to checkout from the index as well
 as from <cite>HEAD</cite>.  This corresponds to the
@@ -638,8 +678,8 @@ It doesn&#8217;t do much yet, but it&#8217;s been merged so that we can start
 building and improving upon it.</li>
 </ul>
 </div>
-<div class="section" id="id38">
-<h2>Fixes<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id41">
+<h2>Fixes<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fixed a missing <tt class="docutils literal"><span class="pre">import</span></tt> when showing <cite>right-click</cite> actions
 for unmerged files in the <cite>Repository Status</cite> tool.</li>
@@ -650,8 +690,8 @@ for unmerged files in the <cite>Repository Status</cite> tool.</li>
 the name of the current branch.</li>
 </ul>
 </div>
-<div class="section" id="id39">
-<h2>Packaging<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id42">
+<h2>Packaging<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The <tt class="docutils literal"><span class="pre">Makefile</span></tt> will now conditionally include a <tt class="docutils literal"><span class="pre">config.mak</span></tt>
 file located at the root of the project.  This allows for user
@@ -674,22 +714,22 @@ This corresponds to the <tt class="docutils literal"><span class="pre">--standal
 </div>
 <div class="section" id="git-cola-v1-4-1-1">
 <h1>git-cola v1.4.1.1<a class="headerlink" href="#git-cola-v1-4-1-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id40">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id43">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>We now use patience diff by default when it is available via
 <cite>git diff &#8211;patience</cite>.</li>
 <li>Allow closing the <cite>cola classic</cite> tool with <cite>Ctrl+W</cite>.</li>
 </ul>
 </div>
-<div class="section" id="id41">
-<h2>Fixes<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id44">
+<h2>Fixes<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fixed an unbound variable error in the <cite>push</cite> dialog.</li>
 </ul>
 </div>
-<div class="section" id="id42">
-<h2>Packaging<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id45">
+<h2>Packaging<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Don&#8217;t include <cite>simplejson</cite> in MANIFEST.in.</li>
 <li>Update desktop entry to read <cite>Cola Git GUI</cite>.</li>
@@ -701,8 +741,8 @@ This corresponds to the <tt class="docutils literal"><span class="pre">--standal
 <p>This feature release adds two new features directly from
 <cite>git-cola</cite>&#8216;s github issues backlog.  On the developer
 front, further work was done towards modularizing the code base.</p>
-<div class="section" id="id43">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id46">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Dragging and dropping patches invokes <cite>git-am</cite></p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed#issue/3">http://github.com/git-cola/git-cola/issues/closed#issue/3</a></p>
@@ -718,8 +758,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 </li>
 </ul>
 </div>
-<div class="section" id="id44">
-<h2>Portability<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id47">
+<h2>Portability<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><cite>git-cola</cite> is once again compatible with PyQt 4.3.x.</li>
 </ul>
@@ -736,8 +776,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 </div>
 <div class="section" id="git-cola-v1-4-0-5">
 <h1>git-cola v1.4.0.5<a class="headerlink" href="#git-cola-v1-4-0-5" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id45">
-<h2>Fixes<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id48">
+<h2>Fixes<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fix launching external applications on Windows</li>
 <li>Ensure that the <cite>amend</cite> checkbox is unchecked when switching modes</li>
@@ -747,8 +787,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 </div>
 <div class="section" id="git-cola-v1-4-0-4">
 <h1>git-cola v1.4.0.4<a class="headerlink" href="#git-cola-v1-4-0-4" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id46">
-<h2>Packaging<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id49">
+<h2>Packaging<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fix Lintian warnings</li>
 </ul>
@@ -756,8 +796,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 </div>
 <div class="section" id="git-cola-v1-4-0-3">
 <h1>git-cola v1.4.0.3<a class="headerlink" href="#git-cola-v1-4-0-3" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id47">
-<h2>Fixes<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id50">
+<h2>Fixes<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fix X11 warnings on application startup</li>
 </ul>
@@ -765,8 +805,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 </div>
 <div class="section" id="git-cola-v1-4-0-2">
 <h1>git-cola v1.4.0.2<a class="headerlink" href="#git-cola-v1-4-0-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id48">
-<h2>Fixes<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id51">
+<h2>Fixes<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Added missing &#8216;Exit Diff Mode&#8217; button for &#8216;Diff Expression&#8217; mode</p>
 <p><a class="reference external" href="http://github.com/git-cola/git-cola/issues/closed/#issue/31">http://github.com/git-cola/git-cola/issues/closed/#issue/31</a></p>
@@ -779,8 +819,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 </div>
 <div class="section" id="git-cola-v1-4-0-1">
 <h1>git-cola v1.4.0.1<a class="headerlink" href="#git-cola-v1-4-0-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id49">
-<h2>Fixes<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id52">
+<h2>Fixes<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">Keep entries in sorted order in the <cite>cola classic</cite> tool</p>
 </li>
@@ -802,8 +842,8 @@ is presented when <cite>git-cola</cite> is launched outside of a git repository.
 a tags interface, and better integration of the <cite>cola classic</cite> tool.
 A flexible interface based on configurable docks is used to manage the
 various cola widgets.</p>
-<div class="section" id="id50">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id53">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>New GUI is flexible and user-configurable</li>
 <li>Individual widgets can be detached and rearranged arbitrarily</li>
@@ -817,15 +857,15 @@ warns when lines get too long</li>
 <li>Provide more information in log messages</li>
 </ul>
 </div>
-<div class="section" id="id51">
-<h2>Fixes<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id54">
+<h2>Fixes<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Inherit the window manager&#8217;s font settings</li>
 <li>Miscellaneous PyQt4 bug fixes and workarounds</li>
 </ul>
 </div>
-<div class="section" id="id52">
-<h2>Developer<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id55">
+<h2>Developer<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Removed all usage of Qt Designer <cite>.ui</cite> files</li>
 <li>Simpler model/view architecture</li>
@@ -840,16 +880,16 @@ warns when lines get too long</li>
 </div>
 <div class="section" id="git-cola-v1-3-9">
 <h1>git-cola v1.3.9<a class="headerlink" href="#git-cola-v1-3-9" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id53">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id56">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Added a <cite>cola classic</cite> tool for browsing the entire repository</li>
 <li>Handle diff expressions with spaces</li>
 <li>Handle renamed files</li>
 </ul>
 </div>
-<div class="section" id="id54">
-<h2>Portability<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id57">
+<h2>Portability<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Handle carat <cite>^</cite> characters in diff expressions on Windows</li>
 <li>Worked around a PyQt 4.5/4.6 QThreadPool bug</li>
@@ -862,8 +902,8 @@ warns when lines get too long</li>
 <li>Added developer API documentation</li>
 </ul>
 </div>
-<div class="section" id="id55">
-<h2>Fixes<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id58">
+<h2>Fixes<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fix the diff expression used when reviewing branches</li>
 <li>Fix a bug when pushing branches</li>
@@ -874,8 +914,8 @@ warns when lines get too long</li>
 </div>
 <div class="section" id="git-cola-v1-3-8">
 <h1>git-cola v1.3.8<a class="headerlink" href="#git-cola-v1-3-8" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id56">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id59">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fresh and tasty SVG logos</li>
 <li>Added <cite>Branch Review</cite> mode for reviewing topic branches</li>
@@ -892,8 +932,8 @@ Disabling it for unmerged items was inconsistent, though safer.</li>
 <li>Show diffs when navigating the status tree with the keyboard</li>
 </ul>
 </div>
-<div class="section" id="id57">
-<h2>Packaging<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id60">
+<h2>Packaging<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Worked around <cite>pyuic4</cite> bugs in the <cite>setup.py</cite> build script</li>
 <li>Added Mac OSX application bundles to the download page</li>
@@ -910,29 +950,29 @@ Disabling it for unmerged items was inconsistent, though safer.</li>
 <cite>difftool.prompt</cite> configuration variable</li>
 </ul>
 </div>
-<div class="section" id="id58">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id61">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Warn when <cite>non-fast-forward</cite> is used with fetch, push or pull</li>
 <li>Allow <cite>Ctrl+C</cite> to exit cola when run from the command line</li>
 </ul>
 </div>
-<div class="section" id="id59">
-<h2>Fixes<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id62">
+<h2>Fixes<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Support Unicode font names</li>
 <li>Handle interrupted system calls</li>
 </ul>
 </div>
-<div class="section" id="id60">
-<h2>Developer<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id63">
+<h2>Developer<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><cite>PEP-8</cite>-ified more of the cola code base</li>
 <li>Added more tests</li>
 </ul>
 </div>
-<div class="section" id="id61">
-<h2>Packaging<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id64">
+<h2>Packaging<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p class="first">All resources are now installed into <cite>$prefix/share/git-cola</cite>.
 Closed Debian bug #519972</p>
@@ -943,16 +983,16 @@ Closed Debian bug #519972</p>
 </div>
 <div class="section" id="git-cola-v1-3-6">
 <h1>git-cola v1.3.6<a class="headerlink" href="#git-cola-v1-3-6" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id62">
-<h2>Subsystems<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id65">
+<h2>Subsystems<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Added support for Kompare in <cite>git-difftool</cite></li>
 <li>Added a separate configuration namespace for <cite>git-difftool</cite></li>
 <li>Added the <cite>diff.tool</cite> configuration variable to define the default diff tool</li>
 </ul>
 </div>
-<div class="section" id="id63">
-<h2>Usability, bells and whistles<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id66">
+<h2>Usability, bells and whistles<a class="headerlink" href="#id66" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The stash dialog allows passing the <cite>&#8211;keep-index</cite> option to <cite>git stash</cite></li>
 <li>Amending a published commit warns at commit time</li>
@@ -965,14 +1005,14 @@ Closed Debian bug #519972</p>
 <li><cite>NOTE</cite> &#8211; <cite>cola.showoutput</cite> was removed with the GUI rewrite in 1.4.0.</li>
 </ul>
 </div>
-<div class="section" id="id64">
-<h2>Developer<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id67">
+<h2>Developer<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Improved nose unittest usage</li>
 </ul>
 </div>
-<div class="section" id="id65">
-<h2>Packaging<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id68">
+<h2>Packaging<a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Added a Windows/msysGit installer</li>
 <li>Included private versions of <cite>simplejson</cite> and <cite>jsonpickle</cite>
