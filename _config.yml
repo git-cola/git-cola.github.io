@@ -12,7 +12,7 @@ maruku:
   png_url:    /images/latex
 
 # git-cola variables
-cola_version: "1.7.4.1"
-cola_release_date: "2012-01-07"
+cola_version: "1.7.5"
+cola_release_date: "2012-01-24"
 cola_downloads: "https://github.com/downloads/git-cola/git-cola"
 cola_github: "https://github.com/git-cola/git-cola"
