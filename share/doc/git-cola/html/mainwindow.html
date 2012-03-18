@@ -7,14 +7,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>The Interface &mdash; git-cola v1.7.5 documentation</title>
+    <title>Keyboard Shortcuts &mdash; git-cola v1.7.6 documentation</title>
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/print.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '1.7.5',
+        VERSION:     '1.7.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,93 +24,60 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola v1.7.5 documentation" href="index.html" />
-    <link rel="up" title="User Guide" href="userguide.html" />
-    <link rel="next" title="Tools" href="tools.html" />
-    <link rel="prev" title="Introduction" href="intro.html" /> 
+    <link rel="top" title="git-cola v1.7.6 documentation" href="index.html" />
+    <link rel="next" title="Thanks" href="thanks.html" />
+    <link rel="prev" title="Tools" href="tools.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola v1.7.5 documentation</span></a></h1>
-        <h2 class="heading"><span>The Interface</span></h2>
+          <span>git-cola v1.7.6 documentation</span></a></h1>
+        <h2 class="heading"><span>Keyboard Shortcuts</span></h2>
       </div>
       <div class="topnav">
       
         <p>
-        «&#160;&#160;<a href="intro.html">Introduction</a>
+        «&#160;&#160;<a href="tools.html">Tools</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="tools.html">Tools</a>&#160;&#160;»
+        <a href="thanks.html">Thanks</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content">
         
         
-  <div class="section" id="the-interface">
-<h1>The Interface<a class="headerlink" href="#the-interface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="cooperating-tools">
-<h2>Cooperating Tools<a class="headerlink" href="#cooperating-tools" title="Permalink to this headline">¶</a></h2>
-<p>The <cite>git-cola</cite> interface is composed of various cooperating tools.</p>
-<p>Double-clicking a tool opens it in its own subwindow.</p>
-<p>Dragging it around moves and places it within the window.</p>
-<div class="figure align-center">
-<img alt="images/cola-macosx.png" src="images/cola-macosx.png" />
-<p class="caption"><cite>git-cola</cite> 1.3.x running on Mac OSX</p>
-</div>
-<div class="section" id="repository-status-1">
-<h3>Repository Status (1)<a class="headerlink" href="#repository-status-1" title="Permalink to this headline">¶</a></h3>
-<p>The repository status view displays paths that git detects as either
-staged for the next commit (<cite>Staged</cite>),
-modified relative to the staging area (<cite>Modified</cite>), or
-an unresolved file from a merge (<cite>Unmerged</cite>).</p>
-<p>A file can be staged or unstaged by either double-clicking on its name or
-single-clicking on its icon.  Right-clicking on an entry displays additional
-actions that can be performed such as launching <cite>git-difftool</cite> or
-<cite>git-mergetool</cite>.</p>
-</div>
-<div class="section" id="diff-viewer-2">
-<h3>Diff Viewer (2)<a class="headerlink" href="#diff-viewer-2" title="Permalink to this headline">¶</a></h3>
-<p>The diff viewer displays diffs for selected files.
-Additions are shown in green and removals are displayed in light red.
-Extraneous whitespace is shown in a pure red background.</p>
-<p>Right-clicking in the diff viewer provides access to additional actions
-that can operate on the cursor location or selection.</p>
-</div>
-<div class="section" id="diff-regions-3">
-<h3>Diff Regions (3)<a class="headerlink" href="#diff-regions-3" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote each diff region.  Selecting lines of diff
-and using the <cite>Stage Selected</cite> command will stage just the selected fragment.
-Clicking within a diff region and selecting the <cite>Stage Hunk</cite> stages that
-region.  The corresponding opposite commands can be performed on staged
-files as well.</p>
-</div>
+  <div class="section" id="keyboard-shortcuts">
+<h1>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h1>
+<p><cite>git cola</cite> has many useful keyboard shortcuts.</p>
+<p>Learn about them by either pressing the <tt class="docutils literal"><span class="pre">?</span></tt> key,
+choosing <tt class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></tt> from the main menu,
+or by consulting the
+<a class="reference external" href="../hotkeys.html">git cola keyboard shortcuts reference</a>.</p>
 </div>
 <div class="section" id="drag-and-drop-git-am">
-<h2>Drag and Drop <cite>git am</cite><a class="headerlink" href="#drag-and-drop-git-am" title="Permalink to this headline">¶</a></h2>
-<p>Dragging and dropping patches onto the <cite>git-cola</cite> interface
+<h1>Drag and Drop <cite>git am</cite><a class="headerlink" href="#drag-and-drop-git-am" title="Permalink to this headline">¶</a></h1>
+<p>Dragging and dropping patches onto the <cite>git cola</cite> interface
 applies patches using
-<a class="reference external" href="http://www.kernel.org/pub/software/scm/git/docs/git-am.html">git am</a></p>
+<a class="reference external" href="http://schacon.github.com/git/git-am.html">git am</a>.</p>
 <p>You can drag either a set of patches or a directory containing patches.
 All files are sorted alphanumerically before being applied.
 This means that patches named <tt class="docutils literal"><span class="pre">0001-foo.patch</span></tt> are applied
 before <tt class="docutils literal"><span class="pre">0002-bar.patch</span></tt>.</p>
-<p>When a directory is dropped <cite>git-cola</cite> walks the directory
-tree in search of patches.  <cite>git-cola</cite> sorts the list of
+<p>When a directory is dropped <cite>git cola</cite> walks the directory
+tree in search of patches.  <cite>git cola</cite> sorts the list of
 patches after they have all been found.  This allows you
 to control the order in which patchs are applied by placing
 patchsets into alphanumerically-sorted directories.</p>
 </div>
 <div class="section" id="custom-gui-layouts">
-<h2>Custom GUI Layouts<a class="headerlink" href="#custom-gui-layouts" title="Permalink to this headline">¶</a></h2>
-<p><cite>git-cola</cite> remembers modifications to the layout and arrangement
-of tools within the <cite>git-cola</cite> interface.  Changes are saved
+<h1>Custom GUI Layouts<a class="headerlink" href="#custom-gui-layouts" title="Permalink to this headline">¶</a></h1>
+<p><cite>git cola</cite> remembers modifications to the layout and arrangement
+of tools within the <cite>git cola</cite> interface.  Changes are saved
 and restored at application shutdown/startup.</p>
-<p><cite>git-cola</cite> can be configured to not save custom layouts&#8211;
+<p><cite>git cola</cite> can be configured to not save custom layouts&#8211;
 simply uncheck the <cite>Save Window Settings</cite> option in the
-<cite>git-cola</cite> preferences.</p>
-</div>
+<cite>git cola</cite> preferences.</p>
 </div>
 
 
@@ -118,11 +85,11 @@ simply uncheck the <cite>Save Window Settings</cite> option in the
       <div class="bottomnav">
       
         <p>
-        «&#160;&#160;<a href="intro.html">Introduction</a>
+        «&#160;&#160;<a href="tools.html">Tools</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="tools.html">Tools</a>&#160;&#160;»
+        <a href="thanks.html">Thanks</a>&#160;&#160;»
         </p>
 
       </div>
