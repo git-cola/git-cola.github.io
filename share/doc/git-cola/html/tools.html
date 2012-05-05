@@ -7,14 +7,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Tools &mdash; git-cola v1.7.6 documentation</title>
+    <title>Tools &mdash; git-cola v1.7.7 documentation</title>
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/print.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '1.7.6',
+        VERSION:     '1.7.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,13 +24,13 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola v1.7.6 documentation" href="index.html" />
+    <link rel="top" title="git-cola v1.7.7 documentation" href="index.html" />
     <link rel="next" title="Keyboard Shortcuts" href="mainwindow.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola v1.7.6 documentation</span></a></h1>
+          <span>git-cola v1.7.7 documentation</span></a></h1>
         <h2 class="heading"><span>Tools</span></h2>
       </div>
       <div class="topnav">
@@ -77,6 +77,19 @@ the <cite>Ctrl-s</cite> shortcut key.</p>
 <cite>Ctrl-d</cite> opens selected files using
 <a class="reference external" href="http://schacon.github.com/git/git-difftool.html">git difftool</a>.</p>
 <p>Additional actions can be performed using the right-click context menu.</p>
+<div class="section" id="configuring-your-editor">
+<h3>Configuring your $EDITOR<a class="headerlink" href="#configuring-your-editor" title="Permalink to this headline">¶</a></h3>
+<p>The editor used by <cite>Ctrl-e</cite> is configured from the Preferences screen.
+The environment variables <cite>$VISUAL</cite> and <cite>$EDITOR</cite> are used when no editor
+has been configured.</p>
+<p>The editor preference is saved in the <cite>gui.editor</cite> variable using
+<a class="reference external" href="http://schacon.github.com/git/git-config.html">git config</a>.</p>
+<p><em>ProTip</em> &#8211; Setting <cite>gvim -p</cite> as your configured editor opens
+multiple files using tabs (and <cite>gvim -o</cite> uses splits).</p>
+<p><cite>git cola</cite> is {vim, emacs, textpad, notepad++}-aware.
+When you select a line in the <cite>grep</cite> screen and press any of
+<cite>Enter</cite>, <cite>Ctrl-e</cite>, or the &#8220;Edit&#8221; button, you are taken to that exact line.</p>
+</div>
 <div class="section" id="actions">
 <h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
 <p>Clicking the <cite>Staged</cite> folder shows a diffstat for the index.</p>
@@ -214,8 +227,8 @@ so please be mindful when writing commit messages.</p>
 </div>
 <div class="section" id="amend-last-commit">
 <h3>Amend Last Commit<a class="headerlink" href="#amend-last-commit" title="Permalink to this headline">¶</a></h3>
-<p>Clicking on <cite>Amend Last Commit</cite> makes <cite>git-cola</cite> amend the previous commit
-instead of creating a new one.  <cite>git-cola</cite> loads the previous commit message
+<p>Clicking on <cite>Amend Last Commit</cite> makes <cite>git cola</cite> amend the previous commit
+instead of creating a new one.  <cite>git cola</cite> loads the previous commit message
 into the commit message editor when this option is selected.</p>
 <p>The <a href="#id9"><span class="problematic" id="id10">:ref:`Status &lt;status&gt;`_</span></a> tool will display all of the changes for the
 amended commit.</p>
