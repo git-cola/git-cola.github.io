@@ -1,11 +1,11 @@
 .\"     Title: git-cola
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 05/04/2012
+.\"      Date: 08/19/2012
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-COLA" "1" "05/04/2012" "Git" "Git Manual"
+.TH "GIT\-COLA" "1" "08/19/2012" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -41,53 +41,63 @@ Print the \fIgit\-cola\fR version and exit\.
 .PP
 branch
 .RS 4
-Launch the \fIbranch\fR tool\.
+Create branches\.
 .RE
 .PP
 browse
 .RS 4
-Launch the \fIbrowser\fR tool\.
+Browse tracked files\.
+.RE
+.PP
+config
+.RS 4
+Configure \fIgit\-cola\fR settings\.
 .RE
 .PP
 fetch
 .RS 4
-Launch the \fIfetch\fR tool\.
+Fetch remote branches\.
 .RE
 .PP
 grep
 .RS 4
-Launch the \fIgrep\fR tool\.
+Use git grep to search for content\.
 .RE
 .PP
 pull
 .RS 4
-Launch the \fIpull\fR tool\.
+Fetch and merge remote branches\.
 .RE
 .PP
 push
 .RS 4
-Launch the \fIpush\fR tool\.
+Push branches to remotes\.
 .RE
 .PP
 search
 .RS 4
-Launch the \fIsearch\fR tool\.
+Search for commits\.
 .RE
 .PP
 stash
 .RS 4
-Launch the \fIstash\fR tool\.
+Stash modifications\.
 .RE
 .PP
 tag
 .RS 4
-Launch the \fItag\fR tool\.
+Create tags\.
 .RE
 .SH "CONFIG VARIABLES"
 .PP
 cola\.savewindowsettings
 .RS 4
 Whether \fIgit\-cola\fR should remember its window settings\.
+.RE
+.PP
+cola\.fileattributes
+.RS 4
+Enables per\-file linkgit:gitattributes[5] encoding support when set to true\. This tells \fIgit\-cola\fR to honor the configured encoding when displaying and applying diffs\.
 .RE
 .PP
 cola\.fontdiff
@@ -100,9 +110,24 @@ cola\.browserdockable
 Whether to create a dock widget with the \fIBrowser\fR tool\. Defaults to \fIfalse\fR to speedup startup time\.
 .RE
 .PP
+cola\.tabwidth
+.RS 4
+The number of columns occupied by a tab character\.
+.RE
+.PP
+cola\.linebreak
+.RS 4
+Whether to automatically break long lines while editing commit messages\. Defaults to \fItrue\fR\. This setting is configured using the \fIPreferences\fR dialog, but it can be toggled for one\-off usage using the commit message editor\(cqs settings sub\-menu\.
+.RE
+.PP
+cola\.textwidth
+.RS 4
+The number of columns used for line wrapping\. Tabs are counted according to cola\.tabwidth\.
+.RE
+.PP
 gui\.diffcontext
 .RS 4
-The number of diff context lines used and displayed by \fIgit\-cola\fR
+The number of diff context lines used and displayed by \fIgit\-cola\fR\.
 .RE
 .PP
 gui\.editor

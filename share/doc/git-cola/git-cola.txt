@@ -35,37 +35,45 @@ OPTIONS
 SUB-COMMANDS
 ------------
 branch::
-	Launch the 'branch' tool.
+	Create branches.
 
 browse::
-	Launch the 'browser' tool.
+	Browse tracked files.
+
+config::
+	Configure 'git-cola' settings.
 
 fetch::
-	Launch the 'fetch' tool.
+	Fetch remote branches.
 
 grep::
-	Launch the 'grep' tool.
+	Use `git grep` to search for content.
 
 pull::
-	Launch the 'pull' tool.
+	Fetch and merge remote branches.
 
 push::
-	Launch the 'push' tool.
+	Push branches to remotes.
 
 search::
-	Launch the 'search' tool.
+	Search for commits.
 
 stash::
-	Launch the 'stash' tool.
+	Stash modifications.
 
 tag::
-	Launch the 'tag' tool.
+	Create tags.
 
 
 CONFIG VARIABLES
 ----------------
 cola.savewindowsettings::
 	Whether 'git-cola' should remember its window settings.
+
+cola.fileattributes::
+	Enables per-file linkgit:gitattributes[5] encoding support
+	when set to `true`.  This tells 'git-cola' to honor the
+	configured encoding when displaying and applying diffs.
 
 cola.fontdiff::
 	Specifies the font to use for 'git-cola''s diff display.
@@ -74,8 +82,21 @@ cola.browserdockable::
 	Whether to create a dock widget with the 'Browser' tool.
 	Defaults to 'false' to speedup startup time.
 
+cola.tabwidth::
+	The number of columns occupied by a tab character.
+
+cola.linebreak::
+	Whether to automatically break long lines while editing commit
+	messages.  Defaults to 'true'.  This setting is configured using
+	the 'Preferences' dialog, but it can be toggled for one-off usage
+	using the commit message editor's settings sub-menu.
+
+cola.textwidth::
+	The number of columns used for line wrapping.
+	Tabs are counted according to `cola.tabwidth`.
+
 gui.diffcontext::
-	The number of diff context lines used and displayed by 'git-cola'
+	The number of diff context lines used and displayed by 'git-cola'.
 
 gui.editor::
 	The default text editor is controlled by gui.editor.

@@ -644,7 +644,7 @@ branch
 </dt>
 <dd>
 <p>
-        Launch the <em>branch</em> tool.
+        Create branches.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -652,7 +652,15 @@ browse
 </dt>
 <dd>
 <p>
-        Launch the <em>browser</em> tool.
+        Browse tracked files.
+</p>
+</dd>
+<dt class="hdlist1">
+config
+</dt>
+<dd>
+<p>
+        Configure <em>git-cola</em> settings.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -660,7 +668,7 @@ fetch
 </dt>
 <dd>
 <p>
-        Launch the <em>fetch</em> tool.
+        Fetch remote branches.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -668,7 +676,7 @@ grep
 </dt>
 <dd>
 <p>
-        Launch the <em>grep</em> tool.
+        Use <tt>git grep</tt> to search for content.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -676,7 +684,7 @@ pull
 </dt>
 <dd>
 <p>
-        Launch the <em>pull</em> tool.
+        Fetch and merge remote branches.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -684,7 +692,7 @@ push
 </dt>
 <dd>
 <p>
-        Launch the <em>push</em> tool.
+        Push branches to remotes.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -692,7 +700,7 @@ search
 </dt>
 <dd>
 <p>
-        Launch the <em>search</em> tool.
+        Search for commits.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -700,7 +708,7 @@ stash
 </dt>
 <dd>
 <p>
-        Launch the <em>stash</em> tool.
+        Stash modifications.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -708,7 +716,7 @@ tag
 </dt>
 <dd>
 <p>
-        Launch the <em>tag</em> tool.
+        Create tags.
 </p>
 </dd>
 </dl></div>
@@ -722,6 +730,16 @@ cola.savewindowsettings
 <dd>
 <p>
         Whether <em>git-cola</em> should remember its window settings.
+</p>
+</dd>
+<dt class="hdlist1">
+cola.fileattributes
+</dt>
+<dd>
+<p>
+        Enables per-file linkgit:gitattributes[5] encoding support
+        when set to <tt>true</tt>.  This tells <em>git-cola</em> to honor the
+        configured encoding when displaying and applying diffs.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -742,11 +760,39 @@ cola.browserdockable
 </p>
 </dd>
 <dt class="hdlist1">
+cola.tabwidth
+</dt>
+<dd>
+<p>
+        The number of columns occupied by a tab character.
+</p>
+</dd>
+<dt class="hdlist1">
+cola.linebreak
+</dt>
+<dd>
+<p>
+        Whether to automatically break long lines while editing commit
+        messages.  Defaults to <em>true</em>.  This setting is configured using
+        the <em>Preferences</em> dialog, but it can be toggled for one-off usage
+        using the commit message editor&#8217;s settings sub-menu.
+</p>
+</dd>
+<dt class="hdlist1">
+cola.textwidth
+</dt>
+<dd>
+<p>
+        The number of columns used for line wrapping.
+        Tabs are counted according to <tt>cola.tabwidth</tt>.
+</p>
+</dd>
+<dt class="hdlist1">
 gui.diffcontext
 </dt>
 <dd>
 <p>
-        The number of diff context lines used and displayed by <em>git-cola</em>
+        The number of diff context lines used and displayed by <em>git-cola</em>.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -894,7 +940,7 @@ but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p><
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-03-28 02:25:53 PDT
+Last updated 2012-07-24 01:00:29 PDT
 </div>
 </div>
 </body>

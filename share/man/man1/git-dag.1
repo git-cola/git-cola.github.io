@@ -1,11 +1,11 @@
 .\"     Title: git-dag
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 03/17/2012
+.\"      Date: 08/19/2012
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-DAG" "1" "03/17/2012" "Git" "Git Manual"
+.TH "GIT\-DAG" "1" "08/19/2012" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -38,6 +38,12 @@ Run \fIgit\-cola\fR on the git repository in <path>\. Defaults to the current di
 \-v, \-\-version
 .RS 4
 Print the \fIgit\-cola\fR version and exit\.
+.RE
+.SH "CONFIG VARIABLES"
+.PP
+log\.date
+.RS 4
+Set the default date\-time format for the \fIDate\fR field\. Setting a value for log\.date is similar to using \fIgit log\fR\'s \-\-date option\. Possible values are relative, local, default, iso, rfc, and short; see linkgit:git\-log[1] for details\.
 .RE
 .SH "LINKS"
 .PP
