@@ -94,60 +94,46 @@ a:hover {
 	z-index: 3;
 }
 
-.download-icon {
-	position: absolute;
-	top: 55px;
-	left: 75px;
-	z-index: 3;
-}
-
 .download-button-container {
-	position: absolute;
-	top: 77px;
-	left: 266px;
-	margin-right: 177px;
+	margin-top: 77px;
+	margin-left: 150px;
+	margin-right: 20ex;
 }
 
-.download-button {
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	font-size: 24pt;
+a.button {
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-size: 1.5em;
 	font-weight: bold;
 	background-color: #ff6600;
 	color: white;
 	position: absolute;
 	padding: 5px;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-left: 1ex;
+	padding-right:1ex;
 	text-align: left;
 	z-index: 3;
+	border-top: 2px solid #ff8800;
+	border-left: 2px solid #ff8800;
+	border-bottom: 2px solid #885500;
+	border-right: 2px solid #885500;
 }
 
-.download-icon a:hover {
-	background-color: transparent;
+a.button:visited:hover, a.button:hover {
+	color: #333;
+	background-color: #ffee00;
+	border-top-color: #ddd;
+	border-left-color: #ddd;
+}
+
+a.button:visited {
+	color: white;
 }
 
 .info-text {
 	padding: 5px;
 	color: gray;
 }
-
-.download-button a:link {
-	background-color: transparent;
-	color: white;
-}
-
-.download-button a:visited {
-	background-color: transparent;
-	color: white;
-}
-
-.download-button a:hover {
-	background-color: transparent;
-	color: white;
-	text-decoration: underline;
-}
-
 
 .downloads-box {
 	-moz-border-radius: 8px;
