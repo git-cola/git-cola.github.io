@@ -680,6 +680,14 @@ grep
 </p>
 </dd>
 <dt class="hdlist1">
+merge
+</dt>
+<dd>
+<p>
+        Merge branches.
+</p>
+</dd>
+<dt class="hdlist1">
 pull
 </dt>
 <dd>
@@ -729,7 +737,8 @@ cola.savewindowsettings
 </dt>
 <dd>
 <p>
-        Whether <em>git-cola</em> should remember its window settings.
+        <em>git-cola</em> will remember its window settings when set to <tt>true</tt>.
+        These settings are saved in <tt>$HOME/.config/git-cola</tt>.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -788,6 +797,16 @@ cola.textwidth
 </p>
 </dd>
 <dt class="hdlist1">
+cola.readsize
+</dt>
+<dd>
+<p>
+        <em>git-cola</em> avoids reading large binary untracked files.
+        The maximum size to read is controlled by <tt>cola.readsize</tt>
+        and defaults to <tt>2048</tt>.
+</p>
+</dd>
+<dt class="hdlist1">
 gui.diffcontext
 </dt>
 <dd>
@@ -800,7 +819,7 @@ gui.editor
 </dt>
 <dd>
 <p>
-        The default text editor is controlled by gui.editor.
+        The default text editor is controlled by <tt>gui.editor</tt>.
         The config variable overrides the EDITOR environment variable.
 </p>
 </dd>
@@ -875,6 +894,19 @@ GIT_COLA_TRACE
 </dd>
 </dl></div>
 </div>
+<h2 id="_language_settings">LANGUAGE SETTINGS</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>git-cola</em> automatically detects your language and presents some
+translations when available.  This may not be desired, or you
+may want <em>git-cola</em> to use a specific language.</p></div>
+<div class="paragraph"><p>You can make <em>git-cola</em> use an alternative language by creating a
+<tt>~/.config/git-cola/language</tt> file containing the standard two-letter
+gettext language code, e.g. "en", "de", "ja", "zh", etc.::</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>echo en &gt;~/.config/git-cola/language</tt></pre>
+</div></div>
+</div>
 <h2 id="_source">SOURCE</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>A <em>git-cola</em> development repository can be obtained via git:</p></div>
@@ -940,7 +972,7 @@ but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p><
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-07-24 01:00:29 PDT
+Last updated 2012-12-07 22:18:50 PDT
 </div>
 </div>
 </body>

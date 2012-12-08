@@ -1,11 +1,11 @@
 .\"     Title: git-cola
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 08/19/2012
+.\"      Date: 12/08/2012
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-COLA" "1" "08/19/2012" "Git" "Git Manual"
+.TH "GIT\-COLA" "1" "12/08/2012" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -64,6 +64,11 @@ grep
 Use git grep to search for content\.
 .RE
 .PP
+merge
+.RS 4
+Merge branches\.
+.RE
+.PP
 pull
 .RS 4
 Fetch and merge remote branches\.
@@ -92,7 +97,7 @@ Create tags\.
 .PP
 cola\.savewindowsettings
 .RS 4
-Whether \fIgit\-cola\fR should remember its window settings\.
+\fIgit\-cola\fR will remember its window settings when set to true\. These settings are saved in $HOME/\.config/git\-cola\.
 .RE
 .PP
 cola\.fileattributes
@@ -123,6 +128,11 @@ Whether to automatically break long lines while editing commit messages\. Defaul
 cola\.textwidth
 .RS 4
 The number of columns used for line wrapping\. Tabs are counted according to cola\.tabwidth\.
+.RE
+.PP
+cola\.readsize
+.RS 4
+\fIgit\-cola\fR avoids reading large binary untracked files\. The maximum size to read is controlled by cola\.readsize and defaults to 2048\.
 .RE
 .PP
 gui\.diffcontext
@@ -170,6 +180,17 @@ Specifies the default editor to use\. This is ignored when the git config variab
 GIT_COLA_TRACE
 .RS 4
 When defined, \fIgit\-cola\fR logs \fIgit\fR commands to stdout\. When set to \fIfull\fR, \fIgit\-cola\fR also logs the exit status and output\. When set to \fItrace\fR, \fIgit\-cola\fR logs to the \fIConsole\fR widget\.
+.RE
+.SH "LANGUAGE SETTINGS"
+\fIgit\-cola\fR automatically detects your language and presents some translations when available\. This may not be desired, or you may want \fIgit\-cola\fR to use a specific language\.
+
+You can make \fIgit\-cola\fR use an alternative language by creating a ~/\.config/git\-cola/language file containing the standard two\-letter gettext language code, e\.g\. "en", "de", "ja", "zh", etc\.::
+
+.sp
+.RS 4
+.nf
+echo en >~/\.config/git\-cola/language
+.fi
 .RE
 .SH "SOURCE"
 A \fIgit\-cola\fR development repository can be obtained via git:
