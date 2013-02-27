@@ -23,6 +23,7 @@ Thanks
 * Karl Bielefeldt
 * Karthik Manamcheri
 * Kelvie Wong
+* Kerrick Staley
 * Kevin Kofler
 * Libor Jelinek
 * Mahmoud Hossam
@@ -33,6 +34,9 @@ Thanks
 * Michael Homer
 * Omega Weapon
 * Paolo G. Giarrusso
+* Peter Júnoš
+* Rustam Safin
+* Sergey Leschina
 * Stefan Naewe
 * Steffen Prohaska
 * Ugo Riboni
