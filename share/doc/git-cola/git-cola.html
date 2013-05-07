@@ -954,11 +954,12 @@ cola.browserdockable
 </p>
 </dd>
 <dt class="hdlist1">
-cola.tabwidth
+cola.inotify
 </dt>
 <dd>
 <p>
-        The number of columns occupied by a tab character.
+        Set to <em>false</em> to disable inotify support.
+        Defaults to <em>true</em> when the <em>pyinotify</em> module is available.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -970,6 +971,14 @@ cola.linebreak
         messages.  Defaults to <em>true</em>.  This setting is configured using
         the <em>Preferences</em> dialog, but it can be toggled for one-off usage
         using the commit message editor&#8217;s settings sub-menu.
+</p>
+</dd>
+<dt class="hdlist1">
+cola.tabwidth
+</dt>
+<dd>
+<p>
+        The number of columns occupied by a tab character.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1172,7 +1181,7 @@ but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p><
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-02-26 22:58:40 PST
+Last updated 2013-04-06 16:42:45 PDT
 </div>
 </div>
 </body>

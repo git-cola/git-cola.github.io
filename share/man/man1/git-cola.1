@@ -1,11 +1,11 @@
 .\"     Title: git-cola
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 02/26/2013
+.\"      Date: 05/06/2013
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-COLA" "1" "02/26/2013" "Git" "Git Manual"
+.TH "GIT\-COLA" "1" "05/06/2013" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -120,14 +120,19 @@ cola\.browserdockable
 Whether to create a dock widget with the \fIBrowser\fR tool\. Defaults to \fIfalse\fR to speedup startup time\.
 .RE
 .PP
-cola\.tabwidth
+cola\.inotify
 .RS 4
-The number of columns occupied by a tab character\.
+Set to \fIfalse\fR to disable inotify support\. Defaults to \fItrue\fR when the \fIpyinotify\fR module is available\.
 .RE
 .PP
 cola\.linebreak
 .RS 4
 Whether to automatically break long lines while editing commit messages\. Defaults to \fItrue\fR\. This setting is configured using the \fIPreferences\fR dialog, but it can be toggled for one\-off usage using the commit message editor\(cqs settings sub\-menu\.
+.RE
+.PP
+cola\.tabwidth
+.RS 4
+The number of columns occupied by a tab character\.
 .RE
 .PP
 cola\.textwidth
@@ -210,7 +215,7 @@ git clone git://github\.com/git\-cola/git\-cola\.git
 .PP
 \fIgit\-cola\fR homepage
 .RS 4
-\fIhttp://git\-cola\.github\.com/\fR
+\fIhttp://git\-cola\.github\.io/\fR
 .RE
 .PP
 \fIgit\-cola\fR sources on github
