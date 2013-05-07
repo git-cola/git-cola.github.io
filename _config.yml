@@ -15,4 +15,5 @@ maruku:
 cola_version: "1.8.3"
 cola_release_date: "2013-05-06"
 cola_downloads: "releases"
+cola_archive: "https://github.com/git-cola/git-cola/archive"
 cola_github: "https://github.com/git-cola/git-cola"
