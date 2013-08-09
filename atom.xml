@@ -1,29 +1,27 @@
 ---
-title: "git-cola: A highly caffeinated Git GUI"
+title: "git-cola: The highly caffeinated Git GUI"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-<title>git-cola news feed</title>
-<subtitle>git-cola: A highly caffeinated Git GUI</subtitle>
+<title>git-cola news</title>
+<subtitle>git-cola: The highly caffeinated Git GUI</subtitle>
 
-<link rel="self" href="http://cola.tuxfamily.org/atom.xml" />
-<link rel="alternate" type="text/html" href="http://cola.tuxfamily.org/" />
+<link rel="self" href="http://git-cola.github.io/atom.xml" />
+<link rel="alternate" type="text/html" href="http://git-cola.github.io/" />
 
-<id>http://cola.tuxfamily.org/atom.xml</id>
+<id>http://git-cola.github.io/atom.xml</id>
 <updated>{{ site.posts[0].date }}</updated>
 
 <author>
 	<name>David Aguilar</name>
 	<email>davvid -at- gmail</email>
 </author>
-
 {% for post in site.posts %}
-
 <entry>
 	<title>{{ post.title }}</title>
 	<modified>{{ post.date }}</modified>
-	<id>tag:cola.tuxfamily.org,{{ post.url }}</id>
+	<id>tag:git-cola.github.io,{{ post.url }}</id>
 	<summary>{{ post.summary }}</summary>
 	<link rel="alternate" type="text/html" href="{{ page.prefix }}{{ post.url }}" />
 </entry>
