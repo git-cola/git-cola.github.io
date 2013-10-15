@@ -11,7 +11,6 @@ maruku:
   png_dir:    images/latex
   png_url:    /images/latex
 
-# git-cola variables
 cola_version: "1.9.0"
 cola_release_date: "2013-10-14"
 cola_downloads: "https://github.com/git-cola/git-cola/releases/download"
