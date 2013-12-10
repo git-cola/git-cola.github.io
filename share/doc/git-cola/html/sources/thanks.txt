@@ -24,6 +24,7 @@ Thanks
 * Iulian Udrea
 * Ivar Smolin
 * Jakub Wilk
+* Jérôme Carretero
 * Johann Schmitz
 * Jeff Dagenais
 * Justin Lecher
@@ -41,6 +42,7 @@ Thanks
 * Matthew Levine
 * Michael Geddes
 * Michael Homer
+* Nicolas Dietrich
 * Omega Weapon
 * Paolo G. Giarrusso
 * Peter Júnoš
