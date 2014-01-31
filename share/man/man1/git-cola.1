@@ -1,11 +1,11 @@
 .\"     Title: git-cola
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 12/10/2013
+.\"      Date: 01/30/2014
 .\"    Manual: Git Manual
 .\"    Source: Git
 .\"
-.TH "GIT\-COLA" "1" "12/10/2013" "Git" "Git Manual"
+.TH "GIT\-COLA" "1" "01/30/2014" "Git" "Git Manual"
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
@@ -44,6 +44,16 @@ Print the \fIgit\-cola\fR version and exit\.
 .RE
 .SH "SUB-COMMANDS"
 .PP
+am
+.RS 4
+Apply patches\.
+.RE
+.PP
+archive
+.RS 4
+Export tarballs from Git\.
+.RE
+.PP
 branch
 .RS 4
 Create branches\.
@@ -57,6 +67,11 @@ Browse tracked files\.
 config
 .RS 4
 Configure \fIgit\-cola\fR settings\.
+.RE
+.PP
+dag
+.RS 4
+Start the \fIgit\-dag\fR visualizer\.
 .RE
 .PP
 diff
@@ -92,6 +107,11 @@ Push branches to remotes\.
 rebase
 .RS 4
 Start an interactive rebase\.
+.RE
+.PP
+remote
+.RS 4
+Create and edit remotes\.
 .RE
 .PP
 search

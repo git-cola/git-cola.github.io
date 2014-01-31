@@ -3,11 +3,14 @@ Thanks
 `git-cola` was made possible thanks to the contributions of the following people:
 
 * Aaron Cook
+* Alex Chernetz
+* Alexander Kozienko
 * Andreas Sommer
 * Audrius Karabanovas
 * Barry Roberts
 * Boris W
 * Ben Boeckel
+* Benoît Nouyrigat
 * Christian Jann
 * Christopher Meng
 * Daniel King
@@ -42,8 +45,10 @@ Thanks
 * Matthew Levine
 * Michael Geddes
 * Michael Homer
+* Minarto Margoliono
 * Nicolas Dietrich
 * Omega Weapon
+* Owen Healy
 * Paolo G. Giarrusso
 * Peter Júnoš
 * Rustam Safin
