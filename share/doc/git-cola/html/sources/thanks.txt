@@ -39,6 +39,7 @@ Thanks
 * Libor Jelinek
 * Maciej Filipiak
 * Mahmoud Hossam
+* Maicon D. Filippsen
 * Marco Costalba
 * Markus Heidelberg
 * Maarten Nieber
@@ -61,3 +62,4 @@ Thanks
 * Taylor Braun-Jones
 * Ugo Riboni
 * Uri Okrent
+* Virgil Dupras
