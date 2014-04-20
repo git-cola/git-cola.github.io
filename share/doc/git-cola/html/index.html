@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to git-cola’s Documentation &mdash; git-cola 2.0.1 documentation</title>
+    <title>Git Cola Documentation &mdash; git-cola 2.0.2 documentation</title>
     
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '2.0.1',
+        VERSION:     '2.0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,75 +27,157 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola 2.0.1 documentation" href="#" />
-    <link rel="next" title="Introduction" href="intro.html" /> 
+    <link rel="top" title="git-cola 2.0.2 documentation" href="#" />
+    <link rel="next" title="git-cola(1)" href="git-cola.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="#">
-          <span>git-cola 2.0.1 documentation</span></a></h1>
-        <h2 class="heading"><span>Welcome to git-cola’s Documentation</span></h2>
+          <span>git-cola 2.0.2 documentation</span></a></h1>
+        <h2 class="heading"><span>Git Cola Documentation</span></h2>
       </div>
       <div class="topnav">
       
         <p>
         <a class="uplink" href="#">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="intro.html">Introduction</a>&#160;&#160;»
+        <a href="git-cola.html">git-cola(1)</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content">
         
         
-  <div class="section" id="welcome-to-git-cola-s-documentation">
-<h1>Welcome to git-cola&#8217;s Documentation<a class="headerlink" href="#welcome-to-git-cola-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-documentation">
+<h1>Git Cola Documentation<a class="headerlink" href="#git-cola-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#git-cola">Git Cola?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#running-git-cola">Running <cite>git cola</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#options">OPTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#amend">&#8211;amend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#g-git-path-path">-g, &#8211;git-path &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#prompt">&#8211;prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#r-repo-path">-r, &#8211;repo &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#version">&#8211;version</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#status">Status</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#configuring-your-editor">Configuring your $EDITOR</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#actions">Actions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tools.html#staged-files">Staged Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tools.html#modified-files">Modified Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tools.html#unmerged-files">Unmerged Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tools.html#untracked-files">Untracked Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#sub-commands">SUB-COMMANDS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#am">am</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#archive">archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#branch">branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#browse">browse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#config">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#dag">dag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#diff">diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#fetch">fetch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#grep">grep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#merge">merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#pull">pull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#push">push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#rebase">rebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#remote">remote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#search">search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#stash">stash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#tag">tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#id1">version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#configure-your-editor">CONFIGURE YOUR EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#tools">TOOLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#status">STATUS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#actions">Actions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#stage-selected">Stage Selected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#launch-editor">Launch Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#launch-difftool">Launch Difftool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#revert-unstaged-edits">Revert Unstaged Edits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#revert-uncommited-edits">Revert Uncommited Edits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#unstage-selected">Unstage Selected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#launch-merge-tool">Launch Merge Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#delete-file-s">Delete File(s)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-cola.html#add-to-gitignore">Add to .gitignore</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#diff">Diff</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#staging-content-for-commit">Staging content for commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#id4">DIFF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#staging-content-for-commit">Staging content for commit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tools.html#commit-message-editor">Commit Message Editor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#sign-off">Sign Off</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#commit">Commit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#line-and-column-display">Line and Column Display</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tools.html#amend-last-commit">Amend Last Commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#commit-message-editor">COMMIT MESSAGE EDITOR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#sign-off">Sign Off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#commit">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#line-and-column-display">Line and Column Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#amend-last-commit">Amend Last Commit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#apply-patches">APPLY PATCHES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#configuration-variables">CONFIGURATION VARIABLES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-savewindowsettings">cola.savewindowsettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fileattributes">cola.fileattributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fontdiff">cola.fontdiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-browserdockable">cola.browserdockable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-inotify">cola.inotify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-linebreak">cola.linebreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-tabwidth">cola.tabwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-textwidth">cola.textwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-readsize">cola.readsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#gui-diffcontext">gui.diffcontext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#gui-displayuntracked">gui.displayuntracked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#gui-editor">gui.editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#gui-historybrowser">gui.historybrowser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#diff-tool">diff.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#merge-tool">merge.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#user-email">user.email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#user-name">user.name</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#environment-variables">ENVIRONMENT VARIABLES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-trace">GIT_COLA_TRACE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#visual">VISUAL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#language-settings">LANGUAGE SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#custom-gui-actions">CUSTOM GUI ACTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-cmd">guitool.&lt;name&gt;.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-needsfile">guitool.&lt;name&gt;.needsfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-noconsole">guitool.&lt;name&gt;.noconsole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-norescan">guitool.&lt;name&gt;.norescan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-confirm">guitool.&lt;name&gt;.confirm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-argprompt">guitool.&lt;name&gt;.argprompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-revprompt">guitool.&lt;name&gt;.revprompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-revunmerged">guitool.&lt;name&gt;.revunmerged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-title">guitool.&lt;name&gt;.title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#guitool-name-prompt">guitool.&lt;name&gt;.prompt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#links">LINKS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-s-git-repository">Git Cola&#8217;s Git Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-homepage">Git Cola Homepage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#mailing-list">Mailing List</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mainwindow.html">Keyboard Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mainwindow.html#apply-patches-using-git-am">Apply Patches using <cite>git am</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="mainwindow.html#custom-gui-layouts">Custom GUI Layouts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom.html">Custom GUI Actions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-cmd">guitool.&lt;name&gt;.cmd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-needsfile">guitool.&lt;name&gt;.needsfile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-noconsole">guitool.&lt;name&gt;.noconsole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-norescan">guitool.&lt;name&gt;.norescan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-confirm">guitool.&lt;name&gt;.confirm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-argprompt">guitool.&lt;name&gt;.argprompt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-revprompt">guitool.&lt;name&gt;.revprompt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-revunmerged">guitool.&lt;name&gt;.revunmerged</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-title">guitool.&lt;name&gt;.title</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html#guitool-name-prompt">guitool.&lt;name&gt;.prompt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#options">OPTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#g-git-path-path">-g, &#8211;git-path &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#prompt">&#8211;prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#r-repo-path">-r, &#8211;repo &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#version">&#8211;version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-options">Log Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#diff-commits">DIFF COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#configuration-variables">CONFIGURATION VARIABLES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#log-date">log.date</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="thanks.html">Thanks</a></li>
@@ -105,7 +187,8 @@
 <h2>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="relnotes.html">git-cola v2.0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relnotes.html">git-cola v2.0.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relnotes.html#git-cola-v2-0-1">git-cola v2.0.1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html#git-cola-v2-0-0">git-cola v2.0.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html#git-cola-v1-9-4">git-cola v1.9.4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html#git-cola-v1-9-3">git-cola v1.9.3</a></li>
@@ -160,7 +243,6 @@
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
 <li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
 </ul>
 </div>
@@ -173,13 +255,13 @@
         <p>
         <a class="uplink" href="#">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="intro.html">Introduction</a>&#160;&#160;»
+        <a href="git-cola.html">git-cola(1)</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer">
-        &copy; Copyright 2007-2012, David Aguilar and contributors.
+        &copy; Copyright 2007-2014, David Aguilar and contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

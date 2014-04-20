@@ -1,1056 +1,570 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.5.2" />
-<title>git-cola(1)</title>
-<style type="text/css">
-/* Debug borders */
-p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
-/*
-  border: 1px solid red;
-*/
-}
 
-body {
-  margin: 1em 5% 1em 5%;
-}
 
-a {
-  color: blue;
-  text-decoration: underline;
-}
-a:visited {
-  color: fuchsia;
-}
-
-em {
-  font-style: italic;
-  color: navy;
-}
-
-strong {
-  font-weight: bold;
-  color: #083194;
-}
-
-tt {
-  color: navy;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #527bbd;
-  font-family: sans-serif;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-  line-height: 1.3;
-}
-
-h1, h2, h3 {
-  border-bottom: 2px solid silver;
-}
-h2 {
-  padding-top: 0.5em;
-}
-h3 {
-  float: left;
-}
-h3 + * {
-  clear: left;
-}
-
-div.sectionbody {
-  font-family: serif;
-  margin-left: 0;
-}
-
-hr {
-  border: 1px solid silver;
-}
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-ul, ol, li > p {
-  margin-top: 0;
-}
-
-pre {
-  padding: 0;
-  margin: 0;
-}
-
-span#author {
-  color: #527bbd;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-span#email {
-}
-span#revnumber, span#revdate, span#revremark {
-  font-family: sans-serif;
-}
-
-div#footer {
-  font-family: sans-serif;
-  font-size: small;
-  border-top: 2px solid silver;
-  padding-top: 0.5em;
-  margin-top: 4.0em;
-}
-div#footer-text {
-  float: left;
-  padding-bottom: 0.5em;
-}
-div#footer-badges {
-  float: right;
-  padding-bottom: 0.5em;
-}
-
-div#preamble {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
-div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
-div.admonitionblock {
-  margin-top: 1.0em;
-  margin-bottom: 1.5em;
-}
-div.admonitionblock {
-  margin-top: 2.0em;
-  margin-bottom: 2.0em;
-  margin-right: 10%;
-  color: #606060;
-}
-
-div.content { /* Block element content. */
-  padding: 0;
-}
-
-/* Block element titles. */
-div.title, caption.title {
-  color: #527bbd;
-  font-family: sans-serif;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 1.0em;
-  margin-bottom: 0.5em;
-}
-div.title + * {
-  margin-top: 0;
-}
-
-td div.title:first-child {
-  margin-top: 0.0em;
-}
-div.content div.title:first-child {
-  margin-top: 0.0em;
-}
-div.content + div.title {
-  margin-top: 0.0em;
-}
-
-div.sidebarblock > div.content {
-  background: #ffffee;
-  border: 1px solid silver;
-  padding: 0.5em;
-}
-
-div.listingblock > div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
-  padding: 0.5em;
-}
-
-div.quoteblock, div.verseblock {
-  padding-left: 1.0em;
-  margin-left: 1.0em;
-  margin-right: 10%;
-  border-left: 5px solid #dddddd;
-  color: #777777;
-}
-
-div.quoteblock > div.attribution {
-  padding-top: 0.5em;
-  text-align: right;
-}
-
-div.verseblock > div.content {
-  white-space: pre;
-}
-div.verseblock > div.attribution {
-  padding-top: 0.75em;
-  text-align: left;
-}
-/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
-div.verseblock + div.attribution {
-  text-align: left;
-}
-
-div.admonitionblock .icon {
-  vertical-align: top;
-  font-size: 1.1em;
-  font-weight: bold;
-  text-decoration: underline;
-  color: #527bbd;
-  padding-right: 0.5em;
-}
-div.admonitionblock td.content {
-  padding-left: 0.5em;
-  border-left: 3px solid #dddddd;
-}
-
-div.exampleblock > div.content {
-  border-left: 3px solid #dddddd;
-  padding-left: 0.5em;
-}
-
-div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
-a.image:visited { color: white; }
-
-dl {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-dt {
-  margin-top: 0.5em;
-  margin-bottom: 0;
-  font-style: normal;
-  color: navy;
-}
-dd > *:first-child {
-  margin-top: 0.1em;
-}
-
-ul, ol {
-    list-style-position: outside;
-}
-ol.arabic {
-  list-style-type: decimal;
-}
-ol.loweralpha {
-  list-style-type: lower-alpha;
-}
-ol.upperalpha {
-  list-style-type: upper-alpha;
-}
-ol.lowerroman {
-  list-style-type: lower-roman;
-}
-ol.upperroman {
-  list-style-type: upper-roman;
-}
-
-div.compact ul, div.compact ol,
-div.compact p, div.compact p,
-div.compact div, div.compact div {
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-}
-
-div.tableblock > table {
-  border: 3px solid #527bbd;
-}
-thead, p.table.header {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-tfoot {
-  font-weight: bold;
-}
-td > div.verse {
-  white-space: pre;
-}
-p.table {
-  margin-top: 0;
-}
-/* Because the table frame attribute is overriden by CSS in most browsers. */
-div.tableblock > table[frame="void"] {
-  border-style: none;
-}
-div.tableblock > table[frame="hsides"] {
-  border-left-style: none;
-  border-right-style: none;
-}
-div.tableblock > table[frame="vsides"] {
-  border-top-style: none;
-  border-bottom-style: none;
-}
-
-
-div.hdlist {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-div.hdlist tr {
-  padding-bottom: 15px;
-}
-dt.hdlist1.strong, td.hdlist1.strong {
-  font-weight: bold;
-}
-td.hdlist1 {
-  vertical-align: top;
-  font-style: normal;
-  padding-right: 0.8em;
-  color: navy;
-}
-td.hdlist2 {
-  vertical-align: top;
-}
-div.hdlist.compact tr {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-.comment {
-  background: yellow;
-}
-
-.footnote, .footnoteref {
-  font-size: 0.8em;
-}
-
-span.footnote, span.footnoteref {
-  vertical-align: super;
-}
-
-#footnotes {
-  margin: 20px 0 20px 0;
-  padding: 7px 0 0 0;
-}
-
-#footnotes div.footnote {
-  margin: 0 0 5px 0;
-}
-
-#footnotes hr {
-  border: none;
-  border-top: 1px solid silver;
-  height: 1px;
-  text-align: left;
-  margin-left: 0;
-  width: 20%;
-  min-width: 100px;
-}
-
-
-@media print {
-  div#footer-badges { display: none; }
-}
-
-div#toc {
-  margin-bottom: 2.5em;
-}
-
-div#toctitle {
-  color: #527bbd;
-  font-family: sans-serif;
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-top: 1.0em;
-  margin-bottom: 0.1em;
-}
-
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-div.toclevel2 {
-  margin-left: 2em;
-  font-size: 0.9em;
-}
-div.toclevel3 {
-  margin-left: 4em;
-  font-size: 0.9em;
-}
-div.toclevel4 {
-  margin-left: 6em;
-  font-size: 0.9em;
-}
-/* Overrides for manpage documents */
-h1 {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-top: 2px solid silver;
-  border-bottom: 2px solid silver;
-}
-h2 {
-  border-style: none;
-}
-div.sectionbody {
-  margin-left: 5%;
-}
-
-@media print {
-  div#toc { display: none; }
-}
-
-/* Workarounds for IE6's broken and incomplete CSS2. */
-
-div.sidebar-content {
-  background: #ffffee;
-  border: 1px solid silver;
-  padding: 0.5em;
-}
-div.sidebar-title, div.image-title {
-  color: #527bbd;
-  font-family: sans-serif;
-  font-weight: bold;
-  margin-top: 0.0em;
-  margin-bottom: 0.5em;
-}
-
-div.listingblock div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
-  padding: 0.5em;
-}
-
-div.quoteblock-attribution {
-  padding-top: 0.5em;
-  text-align: right;
-}
-
-div.verseblock-content {
-  white-space: pre;
-}
-div.verseblock-attribution {
-  padding-top: 0.75em;
-  text-align: left;
-}
-
-div.exampleblock-content {
-  border-left: 3px solid #dddddd;
-  padding-left: 0.5em;
-}
-
-/* IE6 sets dynamically generated links as visited. */
-div#toc a:visited { color: blue; }
-</style>
-<script type="text/javascript">
-/*<![CDATA[*/
-window.onload = function(){asciidoc.footnotes();}
-var asciidoc = {  // Namespace.
-
-/////////////////////////////////////////////////////////////////////
-// Table Of Contents generator
-/////////////////////////////////////////////////////////////////////
-
-/* Author: Mihai Bazon, September 2002
- * http://students.infoiasi.ro/~mishoo
- *
- * Table Of Content generator
- * Version: 0.4
- *
- * Feel free to use this script under the terms of the GNU General Public
- * License, as long as you do not remove or alter this notice.
- */
-
- /* modified by Troy D. Hanson, September 2006. License: GPL */
- /* modified by Stuart Rackham, 2006, 2009. License: GPL */
-
-// toclevels = 1..4.
-toc: function (toclevels) {
-
-  function getText(el) {
-    var text = "";
-    for (var i = el.firstChild; i != null; i = i.nextSibling) {
-      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
-        text += i.data;
-      else if (i.firstChild != null)
-        text += getText(i);
-    }
-    return text;
-  }
-
-  function TocEntry(el, text, toclevel) {
-    this.element = el;
-    this.text = text;
-    this.toclevel = toclevel;
-  }
-
-  function tocEntries(el, toclevels) {
-    var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
-    // Function that scans the DOM tree for header elements (the DOM2
-    // nodeIterator API would be a better technique but not supported by all
-    // browsers).
-    var iterate = function (el) {
-      for (var i = el.firstChild; i != null; i = i.nextSibling) {
-        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
-          var mo = re.exec(i.tagName);
-          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
-            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
-          }
-          iterate(i);
-        }
-      }
-    }
-    iterate(el);
-    return result;
-  }
-
-  var toc = document.getElementById("toc");
-  var entries = tocEntries(document.getElementById("content"), toclevels);
-  for (var i = 0; i < entries.length; ++i) {
-    var entry = entries[i];
-    if (entry.element.id == "")
-      entry.element.id = "_toc_" + i;
-    var a = document.createElement("a");
-    a.href = "#" + entry.element.id;
-    a.appendChild(document.createTextNode(entry.text));
-    var div = document.createElement("div");
-    div.appendChild(a);
-    div.className = "toclevel" + entry.toclevel;
-    toc.appendChild(div);
-  }
-  if (entries.length == 0)
-    toc.parentNode.removeChild(toc);
-},
-
-
-/////////////////////////////////////////////////////////////////////
-// Footnotes generator
-/////////////////////////////////////////////////////////////////////
-
-/* Based on footnote generation code from:
- * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
- */
-
-footnotes: function () {
-  var cont = document.getElementById("content");
-  var noteholder = document.getElementById("footnotes");
-  var spans = cont.getElementsByTagName("span");
-  var refs = {};
-  var n = 0;
-  for (i=0; i<spans.length; i++) {
-    if (spans[i].className == "footnote") {
-      n++;
-      // Use [\s\S] in place of . so multi-line matches work.
-      // Because JavaScript has no s (dotall) regex flag.
-      note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
-      noteholder.innerHTML +=
-        "<div class='footnote' id='_footnote_" + n + "'>" +
-        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
-        n + "</a>. " + note + "</div>";
-      spans[i].innerHTML =
-        "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
-        "' title='View footnote' class='footnote'>" + n + "</a>]";
-      var id =spans[i].getAttribute("id");
-      if (id != null) refs["#"+id] = n;
-    }
-  }
-  if (n == 0)
-    noteholder.parentNode.removeChild(noteholder);
-  else {
-    // Process footnoterefs.
-    for (i=0; i<spans.length; i++) {
-      if (spans[i].className == "footnoteref") {
-        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
-        href = href.match(/#.*/)[0];  // Because IE return full URL.
-        n = refs[href];
-        spans[i].innerHTML =
-          "[<a href='#_footnote_" + n +
-          "' title='View footnote' class='footnote'>" + n + "</a>]";
-      }
-    }
-  }
-}
-
-}
-/*]]>*/
-</script>
-</head>
-<body>
-<div id="header">
-<h1>
-git-cola(1) Manual Page
-</h1>
-<h2>NAME</h2>
-<div class="sectionbody">
-<p>git-cola -
-   The highly caffeinated git GUI
-</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>git-cola(1) &mdash; git-cola 2.0.2 documentation</title>
+    
+    <link rel="stylesheet" href="static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="git-cola 2.0.2 documentation" href="index.html" />
+    <link rel="next" title="git-dag(1)" href="git-dag.html" />
+    <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="index.html">
+          <span>git-cola 2.0.2 documentation</span></a></h1>
+        <h2 class="heading"><span>git-cola(1)</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Git Cola Documentation</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="git-dag.html">git-dag(1)</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="git-cola-1">
+<h1>git-cola(1)<a class="headerlink" href="#git-cola-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>SYNOPSIS<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>git cola [options] [sub-command]</p>
+</div>
+<div class="section" id="description">
+<h2>DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>git cola is a sleek and powerful Git GUI.</p>
+</div>
+<div class="section" id="options">
+<h2>OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="amend">
+<h3>&#8211;amend<a class="headerlink" href="#amend" title="Permalink to this headline">¶</a></h3>
+<p>Start <cite>git cola</cite> in amend mode.</p>
+</div>
+<div class="section" id="g-git-path-path">
+<h3>-g, &#8211;git-path &lt;path&gt;<a class="headerlink" href="#g-git-path-path" title="Permalink to this headline">¶</a></h3>
+<p>Path to the <cite>git</cite> binary.  Defaults to the <cite>git</cite> command found in <cite>$PATH</cite>.</p>
+</div>
+<div class="section" id="prompt">
+<h3>&#8211;prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">¶</a></h3>
+<p>Prompt for a Git repository.  Defaults to the current directory.</p>
+</div>
+<div class="section" id="r-repo-path">
+<h3>-r, &#8211;repo &lt;path&gt;<a class="headerlink" href="#r-repo-path" title="Permalink to this headline">¶</a></h3>
+<p>Open the Git repository at <cite>&lt;path&gt;</cite>.  Defaults to the current directory.</p>
+</div>
+<div class="section" id="version">
+<h3>&#8211;version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
+<p>Print the <cite>git cola</cite> version and exit.</p>
 </div>
 </div>
-<div id="content">
-<h2 id="_synopsis">SYNOPSIS</h2>
-<div class="sectionbody">
-<div class="paragraph"><p><em>git cola</em> [options] [sub-command]</p></div>
+<div class="section" id="sub-commands">
+<h2>SUB-COMMANDS<a class="headerlink" href="#sub-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="am">
+<h3>am<a class="headerlink" href="#am" title="Permalink to this headline">¶</a></h3>
+<p>Apply patches.</p>
 </div>
-<h2 id="_description">DESCRIPTION</h2>
-<div class="sectionbody">
-<div class="paragraph"><p><em>git-cola</em> is a sleek and powerful git GUI.</p></div>
+<div class="section" id="archive">
+<h3>archive<a class="headerlink" href="#archive" title="Permalink to this headline">¶</a></h3>
+<p>Export tarballs from Git.</p>
 </div>
-<h2 id="_options">OPTIONS</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
---amend
-</dt>
-<dd>
-<p>
-        Start <em>git-cola</em> in amend mode.
-</p>
-</dd>
-<dt class="hdlist1">
--g
-</dt>
-<dt class="hdlist1">
---git-path
-</dt>
-<dd>
-<p>
-        Specifies the path to the <em>git</em> binary.
-</p>
-</dd>
-<dt class="hdlist1">
---prompt
-</dt>
-<dd>
-<p>
-        Prompt for a git repository instead of using the current directory.
-</p>
-</dd>
-<dt class="hdlist1">
--r
-</dt>
-<dt class="hdlist1">
---repo=&lt;path&gt;
-</dt>
-<dd>
-<p>
-        Run <em>git-cola</em> on the git repository in &lt;path&gt;.
-        Defaults to the current directory.
-</p>
-</dd>
-<dt class="hdlist1">
---version
-</dt>
-<dd>
-<p>
-        Print the <em>git-cola</em> version and exit.
-</p>
-</dd>
-</dl></div>
+<div class="section" id="branch">
+<h3>branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h3>
+<p>Create branches.</p>
 </div>
-<h2 id="_sub_commands">SUB-COMMANDS</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-am
-</dt>
-<dd>
-<p>
-        Apply patches.
-</p>
-</dd>
-<dt class="hdlist1">
-archive
-</dt>
-<dd>
-<p>
-        Export tarballs from Git.
-</p>
-</dd>
-<dt class="hdlist1">
-branch
-</dt>
-<dd>
-<p>
-        Create branches.
-</p>
-</dd>
-<dt class="hdlist1">
-browse
-</dt>
-<dd>
-<p>
-        Browse tracked files.
-</p>
-</dd>
-<dt class="hdlist1">
-config
-</dt>
-<dd>
-<p>
-        Configure <em>git-cola</em> settings.
-</p>
-</dd>
-<dt class="hdlist1">
-dag
-</dt>
-<dd>
-<p>
-        Start the <em>git-dag</em> visualizer.
-</p>
-</dd>
-<dt class="hdlist1">
-diff
-</dt>
-<dd>
-<p>
-        Diff changed files.
-</p>
-</dd>
-<dt class="hdlist1">
-fetch
-</dt>
-<dd>
-<p>
-        Fetch remote branches.
-</p>
-</dd>
-<dt class="hdlist1">
-grep
-</dt>
-<dd>
-<p>
-        Use <tt>git grep</tt> to search for content.
-</p>
-</dd>
-<dt class="hdlist1">
-merge
-</dt>
-<dd>
-<p>
-        Merge branches.
-</p>
-</dd>
-<dt class="hdlist1">
-pull
-</dt>
-<dd>
-<p>
-        Fetch and merge remote branches.
-</p>
-</dd>
-<dt class="hdlist1">
-push
-</dt>
-<dd>
-<p>
-        Push branches to remotes.
-</p>
-</dd>
-<dt class="hdlist1">
-rebase
-</dt>
-<dd>
-<p>
-        Start an interactive rebase.
-</p>
-</dd>
-<dt class="hdlist1">
-remote
-</dt>
-<dd>
-<p>
-        Create and edit remotes.
-</p>
-</dd>
-<dt class="hdlist1">
-search
-</dt>
-<dd>
-<p>
-        Search for commits.
-</p>
-</dd>
-<dt class="hdlist1">
-stash
-</dt>
-<dd>
-<p>
-        Stash modifications.
-</p>
-</dd>
-<dt class="hdlist1">
-tag
-</dt>
-<dd>
-<p>
-        Create tags.
-</p>
-</dd>
-<dt class="hdlist1">
-version
-</dt>
-<dd>
-<p>
-        Print the <em>git-cola</em> version.
-</p>
-</dd>
-</dl></div>
+<div class="section" id="browse">
+<h3>browse<a class="headerlink" href="#browse" title="Permalink to this headline">¶</a></h3>
+<p>Browse tracked files.</p>
 </div>
-<h2 id="_config_variables">CONFIG VARIABLES</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-cola.savewindowsettings
-</dt>
-<dd>
-<p>
-        <em>git-cola</em> will remember its window settings when set to <tt>true</tt>.
-        These settings are saved in <tt>$HOME/.config/git-cola</tt>.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.fileattributes
-</dt>
-<dd>
-<p>
-        Enables per-file linkgit:gitattributes[5] encoding support
-        when set to <tt>true</tt>.  This tells <em>git-cola</em> to honor the
-        configured encoding when displaying and applying diffs.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.fontdiff
-</dt>
-<dd>
-<p>
-        Specifies the font to use for <em>git-cola</em>'s diff display.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.browserdockable
-</dt>
-<dd>
-<p>
-        Whether to create a dock widget with the <em>Browser</em> tool.
-        Defaults to <em>false</em> to speedup startup time.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.inotify
-</dt>
-<dd>
-<p>
-        Set to <em>false</em> to disable inotify support.
-        Defaults to <em>true</em> when the <em>pyinotify</em> module is available.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.linebreak
-</dt>
-<dd>
-<p>
-        Whether to automatically break long lines while editing commit
-        messages.  Defaults to <em>true</em>.  This setting is configured using
-        the <em>Preferences</em> dialog, but it can be toggled for one-off usage
-        using the commit message editor&#8217;s settings sub-menu.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.tabwidth
-</dt>
-<dd>
-<p>
-        The number of columns occupied by a tab character.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.textwidth
-</dt>
-<dd>
-<p>
-        The number of columns used for line wrapping.
-        Tabs are counted according to <tt>cola.tabwidth</tt>.
-</p>
-</dd>
-<dt class="hdlist1">
-cola.readsize
-</dt>
-<dd>
-<p>
-        <em>git-cola</em> avoids reading large binary untracked files.
-        The maximum size to read is controlled by <tt>cola.readsize</tt>
-        and defaults to <tt>2048</tt>.
-</p>
-</dd>
-<dt class="hdlist1">
-gui.diffcontext
-</dt>
-<dd>
-<p>
-        The number of diff context lines used and displayed by <em>git-cola</em>.
-</p>
-</dd>
-<dt class="hdlist1">
-gui.displayuntracked
-</dt>
-<dd>
-<p>
-        <em>git-cola</em> avoids showing untracked files when set to <tt>false</tt>.
-</p>
-</dd>
-<dt class="hdlist1">
-gui.editor
-</dt>
-<dd>
-<p>
-        The default text editor is controlled by <tt>gui.editor</tt>.
-        The config variable overrides the EDITOR environment variable.
-</p>
-</dd>
-<dt class="hdlist1">
-gui.historybrowser
-</dt>
-<dd>
-<p>
-        Specifies the history browser to use when visualizing history.
-</p>
-</dd>
-<dt class="hdlist1">
-diff.tool
-</dt>
-<dd>
-<p>
-        The default diff tool to use.
-</p>
-</dd>
-<dt class="hdlist1">
-merge.tool
-</dt>
-<dd>
-<p>
-        The default merge tool to use.
-</p>
-</dd>
-<dt class="hdlist1">
-user.email
-</dt>
-<dd>
-<p>
-        Your email address to be recorded in any newly created commits.
-        Can be overridden by the <em>GIT_AUTHOR_EMAIL</em>, <em>GIT_COMMITTER_EMAIL</em>, and
-        <em>EMAIL</em> environment variables.  See linkgit:git-commit-tree[1].
-</p>
-</dd>
-<dt class="hdlist1">
-user.name
-</dt>
-<dd>
-<p>
-        Your full name to be recorded in any newly created commits.
-        Can be overridden by the <em>GIT_AUTHOR_NAME</em> and <em>GIT_COMMITTER_NAME</em>
-        environment variables.  See linkgit:git-commit-tree[1].
-</p>
-</dd>
-</dl></div>
-<div class="paragraph"><p>See linkgit:git-config[1] for more details.</p></div>
+<div class="section" id="config">
+<h3>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h3>
+<p>Configure settings.</p>
 </div>
-<h2 id="_environment_variables">ENVIRONMENT VARIABLES</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-EDITOR
-</dt>
-<dd>
-<p>
-        Specifies the default editor to use.
-        This is ignored when the git config variable <tt>gui.editor</tt> is defined.
-</p>
-</dd>
-<dt class="hdlist1">
-GIT_COLA_TRACE
-</dt>
-<dd>
-<p>
-        When defined, <em>git-cola</em> logs <em>git</em> commands to stdout.
-        When set to <em>full</em>, <em>git-cola</em> also logs the exit status and output.
-        When set to <em>trace</em>, <em>git-cola</em> logs to the <em>Console</em> widget.
-</p>
-</dd>
-</dl></div>
+<div class="section" id="dag">
+<h3>dag<a class="headerlink" href="#dag" title="Permalink to this headline">¶</a></h3>
+<p>Start the <cite>git dag</cite> Git history browser.</p>
 </div>
-<h2 id="_language_settings">LANGUAGE SETTINGS</h2>
-<div class="sectionbody">
-<div class="paragraph"><p><em>git-cola</em> automatically detects your language and presents some
+<div class="section" id="diff">
+<h3>diff<a class="headerlink" href="#diff" title="Permalink to this headline">¶</a></h3>
+<p>Diff changed files.</p>
+</div>
+<div class="section" id="fetch">
+<h3>fetch<a class="headerlink" href="#fetch" title="Permalink to this headline">¶</a></h3>
+<p>Fetch history from remote repositories.</p>
+</div>
+<div class="section" id="grep">
+<h3>grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h3>
+<p>Use <cite>git grep</cite> to search for content.</p>
+</div>
+<div class="section" id="merge">
+<h3>merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h3>
+<p>Merge branches.</p>
+</div>
+<div class="section" id="pull">
+<h3>pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h3>
+<p>Fetch and merge remote branches.</p>
+</div>
+<div class="section" id="push">
+<h3>push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h3>
+<p>Push branches to remotes.</p>
+</div>
+<div class="section" id="rebase">
+<h3>rebase<a class="headerlink" href="#rebase" title="Permalink to this headline">¶</a></h3>
+<p>Start an interactive rebase.</p>
+</div>
+<div class="section" id="remote">
+<h3>remote<a class="headerlink" href="#remote" title="Permalink to this headline">¶</a></h3>
+<p>Create and edit remotes.</p>
+</div>
+<div class="section" id="search">
+<h3>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
+<p>Search for commits.</p>
+</div>
+<div class="section" id="stash">
+<h3>stash<a class="headerlink" href="#stash" title="Permalink to this headline">¶</a></h3>
+<p>Stash uncommitted modifications.</p>
+</div>
+<div class="section" id="tag">
+<h3>tag<a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h3>
+<p>Create tags.</p>
+</div>
+<div class="section" id="id1">
+<h3>version<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Print the <cite>git cola</cite> version.</p>
+</div>
+</div>
+<div class="section" id="configure-your-editor">
+<h2>CONFIGURE YOUR EDITOR<a class="headerlink" href="#configure-your-editor" title="Permalink to this headline">¶</a></h2>
+<p>The editor used by <cite>Ctrl-e</cite> is configured from the Preferences screen.
+The environment variable <cite>$VISUAL</cite> is consulted when no editor has been
+configured.</p>
+<p><em>ProTip</em>: Setting <cite>gvim -p -f</cite> as your configured editor opens
+multiple files using tabs (and <cite>gvim -o -f</cite> uses splits).</p>
+<p><cite>git cola</cite> is {vim, emacs, textpad, notepad++}-aware.
+When you select a line in the <cite>grep</cite> screen and press any of
+<cite>Enter</cite>, <cite>Ctrl-e</cite>, or the <cite>Edit</cite> button, you are taken to that exact line.</p>
+<p>The editor preference is saved in the <cite>gui.editor</cite> variable using
+<a class="reference external" href="http://git-scm.com/docs/git-config">git config</a>.</p>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>KEYBOARD SHORTCUTS<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> has many useful keyboard shortcuts.</p>
+<p>You can see the available shortcuts by pressing the <tt class="docutils literal"><span class="pre">?</span></tt> key,
+choosing <tt class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></tt> from the main menu,
+or by consulting the <a class="reference external" href="../hotkeys.html">keyboard shortcuts reference</a>.</p>
+</div>
+<div class="section" id="tools">
+<h2>TOOLS<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>git cola</cite> interface is composed of various cooperating tools.
+Double-clicking a tool opens it in its own subwindow.
+Dragging it around moves and places it within the window.</p>
+<p>Tools can be hidden and rearranged however you like.
+<cite>git cola</cite> carefully remembers your window layout and restores
+it the next time it is launched.</p>
+<p>The <cite>Control-{1,2,3,..}</cite> hotkey gives focus to a specific tool.
+A hidden tool can be re-opened using the <cite>Tools</cite> menu as well
+as the <cite>Shift+Control-{1,2,3,.}</cite>, shortcut keys.</p>
+</div>
+<div class="section" id="status">
+<span id="id2"></span><h2>STATUS<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Status</cite> tool provides a visual analog to the
+<a class="reference external" href="http://git-scm.com/docs/git-status">git status</a> command.</p>
+<p><cite>Status</cite> displays files that are <cite>modified</cite> relative to the staging area,
+<cite>staged</cite> for the next commit, <cite>unmerged</cite> files from an in-progress merge,
+and files that are <cite>untracked</cite> to git.</p>
+<p>These are the same categories one sees when running
+<a class="reference external" href="http://git-scm.com/docs/git-status">git status</a>
+on the command line.</p>
+<p>You can navigate through the list of files using keyboard arrows as well
+as the ergonomical and vim-like <cite>j</cite> and <cite>k</cite> shortcut keys.</p>
+<p>There are several convenient ways to interact with files in the <cite>Status</cite> tool.</p>
+<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><em>DIFF</em></a> viewer.
+Double-clicking a file stages its contents, as does the
+the <cite>Ctrl-s</cite> shortcut key.</p>
+<p><cite>Ctrl-e</cite> opens selected files in the conifgured editor, and
+<cite>Ctrl-d</cite> opens selected files using <a class="reference external" href="http://git-scm.com/docs/git-difftool">git difftool</a></p>
+<p>Additional actions can be performed using the right-click context menu.</p>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>Clicking the <cite>Staged</cite> folder shows a diffstat for the index.</p>
+<p>Clicking the <cite>Modified</cite> folder shows a diffstat for the worktree.</p>
+<p>Clicking individual files sends diffs to the <cite>Diff Display</cite>.</p>
+<p>Double-clicking individual files adds and removes their content from the index.</p>
+<p>Various actions that are available through the right-click context menu.
+Different actions are available depending a file&#8217;s status.</p>
+<div class="section" id="stage-selected">
+<h4>Stage Selected<a class="headerlink" href="#stage-selected" title="Permalink to this headline">¶</a></h4>
+<p>Add to the staging area using <a class="reference external" href="http://git-scm.com/docs/git-add">git add</a>
+Marks unmerged files as resolved.</p>
+</div>
+<div class="section" id="launch-editor">
+<h4>Launch Editor<a class="headerlink" href="#launch-editor" title="Permalink to this headline">¶</a></h4>
+<p>Launches the configured visual text editor</p>
+</div>
+<div class="section" id="launch-difftool">
+<h4>Launch Difftool<a class="headerlink" href="#launch-difftool" title="Permalink to this headline">¶</a></h4>
+<p>Visualize changes using <cite>git difftool</cite>.</p>
+</div>
+<div class="section" id="revert-unstaged-edits">
+<h4>Revert Unstaged Edits<a class="headerlink" href="#revert-unstaged-edits" title="Permalink to this headline">¶</a></h4>
+<p>Reverts unstaged content by checking out selected paths
+from the index/staging area</p>
+</div>
+<div class="section" id="revert-uncommited-edits">
+<h4>Revert Uncommited Edits<a class="headerlink" href="#revert-uncommited-edits" title="Permalink to this headline">¶</a></h4>
+<p>Throws away uncommitted edits</p>
+</div>
+<div class="section" id="unstage-selected">
+<h4>Unstage Selected<a class="headerlink" href="#unstage-selected" title="Permalink to this headline">¶</a></h4>
+<p>Remove from the index/staging area with
+<a class="reference external" href="http://git-scm.com/docs/git-reset">git reset</a></p>
+</div>
+<div class="section" id="launch-merge-tool">
+<h4>Launch Merge Tool<a class="headerlink" href="#launch-merge-tool" title="Permalink to this headline">¶</a></h4>
+<p>Resolve conflicts using <a class="reference external" href="http://git-scm.com/docs/git-mergetool">git mergetool</a>.</p>
+</div>
+<div class="section" id="delete-file-s">
+<h4>Delete File(s)<a class="headerlink" href="#delete-file-s" title="Permalink to this headline">¶</a></h4>
+<p>Delete untracked files from the filesystem.</p>
+</div>
+<div class="section" id="add-to-gitignore">
+<h4>Add to .gitignore<a class="headerlink" href="#add-to-gitignore" title="Permalink to this headline">¶</a></h4>
+<p>Adds untracked files to to the .gitignore file.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<span id="id5"></span><h2>DIFF<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>The diff viewer/editor displays diffs for selected files.
+Additions are shown in green and removals are displayed in light red.
+Extraneous whitespace is shown with a pure-red background.</p>
+<p>Right-clicking in the diff provides access to additional actions
+that use either the cursor location or text selection.</p>
+<div class="section" id="staging-content-for-commit">
+<h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote a new diff region.  Selecting lines of diff
+and using the <cite>Stage Selected</cite> command will stage just the selected lines.
+Clicking within a diff region and selecting <cite>Stage Section</cite> stages the
+entire patch region.</p>
+<p>The corresponding opposite commands can be performed on staged files as well,
+e.g. staged content can be selectively removed from the index when we are
+viewing diffs for staged content.</p>
+</div>
+</div>
+<div class="section" id="commit-message-editor">
+<h2>COMMIT MESSAGE EDITOR<a class="headerlink" href="#commit-message-editor" title="Permalink to this headline">¶</a></h2>
+<p>The commit message editor is a simple text widget
+for entering commit messages.</p>
+<p>You can navigate between the <cite>Subject</cite> and <cite>Extended description...</cite>
+fields using the keyboard arrow keys.</p>
+<p>Pressing enter when inside the <cite>Subject</cite> field jumps down to the
+extended description field.</p>
+<p>The <cite>Options</cite> button menu to the left of the subject field
+provides access to the additional actions.</p>
+<p>The <cite>Ctrl+i</cite> keyboard shortcut adds a standard &#8220;Signed-off-by: &#8221; line,
+and <cite>Ctrl+Enter</cite> creates a new commit using the commit message and
+staged content.</p>
+<div class="section" id="sign-off">
+<h3>Sign Off<a class="headerlink" href="#sign-off" title="Permalink to this headline">¶</a></h3>
+<p>The <cite>Sign Off</cite> button adds a standard:</p>
+<div class="highlight-python"><pre>Signed-off-by: A. U. Thor &lt;a.u.thor@example.com&gt;</pre>
+</div>
+<p>line to the bottom of the commit message.</p>
+<p>Invoking this action is equivalent to passing the <tt class="docutils literal"><span class="pre">-s</span></tt> option
+to <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.</p>
+</div>
+<div class="section" id="commit">
+<h3>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h3>
+<p>The commit button runs
+<a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.
+The contents of the commit message editor is provided as the commit message.</p>
+<p>Only staged files are included in the commit &#8211; this is the same behavior
+as running <tt class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></tt> on the command-line.</p>
+</div>
+<div class="section" id="line-and-column-display">
+<h3>Line and Column Display<a class="headerlink" href="#line-and-column-display" title="Permalink to this headline">¶</a></h3>
+<p>The current line and column number is displayed by the editor.
+E.g. a <tt class="docutils literal"><span class="pre">5,0</span></tt> display means that the cursor is located at
+line five, column zero.</p>
+<p>The display changes colors when lines get too long.
+Yellow indicates the safe boundary for sending patches to a mailing list
+while keeping space for inline reply markers.</p>
+<p>Orange indicates that the line is starting to run a bit long and should
+break soon.</p>
+<p>Red indicates that the line is running up against the standard
+80-column limit for commit messages.</p>
+<p>Keeping commit messages less than 76-characters wide is encouraged.
+<a class="reference external" href="http://git-scm.com/docs/git-log">git log</a>
+is a great tool but long lines mess up its formatting for everyone else,
+so please be mindful when writing commit messages.</p>
+</div>
+<div class="section" id="amend-last-commit">
+<h3>Amend Last Commit<a class="headerlink" href="#amend-last-commit" title="Permalink to this headline">¶</a></h3>
+<p>Clicking on <cite>Amend Last Commit</cite> makes <cite>git cola</cite> amend the previous commit
+instead of creating a new one.  <cite>git cola</cite> loads the previous commit message
+into the commit message editor when this option is selected.</p>
+<p>The <cite>Status</cite> tool will display all of the changes for the amended commit.</p>
+</div>
+</div>
+<div class="section" id="apply-patches">
+<h2>APPLY PATCHES<a class="headerlink" href="#apply-patches" title="Permalink to this headline">¶</a></h2>
+<p>Use the <tt class="docutils literal"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></tt> menu item to begin applying patches.</p>
+<p>Dragging and dropping patches onto the <cite>git cola</cite> interface
+adds the patches to the list of patches to apply using
+<a class="reference external" href="http://git-scm.com/docs/git-am">git am</a>.</p>
+<p>You can drag either a set of patches or a directory containing patches.
+Patches can be sorted using in the interface and are applied in the
+same order as is listed in the list.</p>
+<p>When a directory is dropped <cite>git cola</cite> walks the directory
+tree in search of patches.  <cite>git cola</cite> sorts the list of
+patches after they have all been found.  This allows you
+to control the order in which patchs are applied by placing
+patchsets into alphanumerically-sorted directories.</p>
+</div>
+<div class="section" id="custom-window-settings">
+<h2>CUSTOM WINDOW SETTINGS<a class="headerlink" href="#custom-window-settings" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> remembers modifications to the layout and arrangement
+of tools within the <cite>git cola</cite> interface.  Changes are saved
+and restored at application shutdown/startup.</p>
+<p><cite>git cola</cite> can be configured to not save custom layouts by unsetting
+the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> preferences.</p>
+</div>
+<div class="section" id="configuration-variables">
+<h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
+<p>These variables can be set using <cite>git config</cite> or from the settings.</p>
+<div class="section" id="cola-savewindowsettings">
+<h3>cola.savewindowsettings<a class="headerlink" href="#cola-savewindowsettings" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> will remember its window settings when set to <cite>true</cite>.
+Window settings and X11 sessions are saved in <cite>$HOME/.config/git-cola</cite>.</p>
+</div>
+<div class="section" id="cola-fileattributes">
+<h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
+<p>Enables per-file gitattributes encoding support when set to <cite>true</cite>.
+This tells <cite>git cola</cite> to honor the configured encoding when displaying
+and applying diffs.</p>
+</div>
+<div class="section" id="cola-fontdiff">
+<h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the font to use for <cite>git cola</cite>&#8216;s diff display.</p>
+</div>
+<div class="section" id="cola-browserdockable">
+<h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this headline">¶</a></h3>
+<p>Whether to create a dock widget with the <cite>Browser</cite> tool.
+Defaults to <cite>false</cite> to speedup startup time.</p>
+</div>
+<div class="section" id="cola-inotify">
+<h3>cola.inotify<a class="headerlink" href="#cola-inotify" title="Permalink to this headline">¶</a></h3>
+<p>Set to <cite>false</cite> to disable inotify support.
+Defaults to <cite>true</cite> when the <cite>pyinotify</cite> module is available.</p>
+</div>
+<div class="section" id="cola-linebreak">
+<h3>cola.linebreak<a class="headerlink" href="#cola-linebreak" title="Permalink to this headline">¶</a></h3>
+<p>Whether to automatically break long lines while editing commit messages.
+Defaults to <cite>true</cite>.  This setting is configured using the <cite>Preferences</cite>
+dialog, but it can be toggled for one-off usage using the commit message
+editor&#8217;s options sub-menu.</p>
+</div>
+<div class="section" id="cola-tabwidth">
+<h3>cola.tabwidth<a class="headerlink" href="#cola-tabwidth" title="Permalink to this headline">¶</a></h3>
+<p>The number of columns occupied by a tab character.  Defaults to 8.</p>
+</div>
+<div class="section" id="cola-textwidth">
+<h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
+<p>The number of columns used for line wrapping.
+Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
+</div>
+<div class="section" id="cola-readsize">
+<h3>cola.readsize<a class="headerlink" href="#cola-readsize" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> avoids reading large binary untracked files.
+The maximum size to read is controlled by <cite>cola.readsize</cite>
+and defaults to <cite>2048</cite>.</p>
+</div>
+<div class="section" id="gui-diffcontext">
+<h3>gui.diffcontext<a class="headerlink" href="#gui-diffcontext" title="Permalink to this headline">¶</a></h3>
+<p>The number of diff context lines to display.</p>
+</div>
+<div class="section" id="gui-displayuntracked">
+<h3>gui.displayuntracked<a class="headerlink" href="#gui-displayuntracked" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> avoids showing untracked files when set to <cite>false</cite>.</p>
+</div>
+<div class="section" id="gui-editor">
+<h3>gui.editor<a class="headerlink" href="#gui-editor" title="Permalink to this headline">¶</a></h3>
+<p>The default text editor to use is defined in <cite>gui.editor</cite>.
+The config variable overrides the VISUAL environment variable.
+e.g. <cite>gvim -f -p</cite>.</p>
+</div>
+<div class="section" id="gui-historybrowser">
+<h3>gui.historybrowser<a class="headerlink" href="#gui-historybrowser" title="Permalink to this headline">¶</a></h3>
+<p>The history browser to use when visualizing history.
+Defaults to <cite>gitk</cite>.</p>
+</div>
+<div class="section" id="diff-tool">
+<h3>diff.tool<a class="headerlink" href="#diff-tool" title="Permalink to this headline">¶</a></h3>
+<p>The default diff tool to use.</p>
+</div>
+<div class="section" id="merge-tool">
+<h3>merge.tool<a class="headerlink" href="#merge-tool" title="Permalink to this headline">¶</a></h3>
+<p>The default merge tool to use.</p>
+</div>
+<div class="section" id="user-email">
+<h3>user.email<a class="headerlink" href="#user-email" title="Permalink to this headline">¶</a></h3>
+<p>Your email address to be recorded in any newly created commits.
+Can be overridden by the &#8216;GIT_AUTHOR_EMAIL&#8217;, &#8216;GIT_COMMITTER_EMAIL&#8217;, and
+&#8216;EMAIL&#8217; environment variables.</p>
+</div>
+<div class="section" id="user-name">
+<h3>user.name<a class="headerlink" href="#user-name" title="Permalink to this headline">¶</a></h3>
+<p>Your full name to be recorded in any newly created commits.
+Can be overridden by the &#8216;GIT_AUTHOR_NAME&#8217; and &#8216;GIT_COMMITTER_NAME&#8217;
+environment variables.</p>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<h2>ENVIRONMENT VARIABLES<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-cola-trace">
+<h3>GIT_COLA_TRACE<a class="headerlink" href="#git-cola-trace" title="Permalink to this headline">¶</a></h3>
+<p>When defined, <cite>git cola</cite> logs <cite>git</cite> commands to stdout.
+When set to <cite>full</cite>, <cite>git cola</cite> also logs the exit status and output.
+When set to <cite>trace</cite>, <cite>git cola</cite> logs to the <cite>Console</cite> widget.</p>
+</div>
+<div class="section" id="visual">
+<h3>VISUAL<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the default editor to use.
+This is ignored when the <cite>gui.editor</cite> configuration variable is defined.</p>
+</div>
+</div>
+<div class="section" id="language-settings">
+<h2>LANGUAGE SETTINGS<a class="headerlink" href="#language-settings" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> automatically detects your language and presents some
 translations when available.  This may not be desired, or you
-may want <em>git-cola</em> to use a specific language.</p></div>
-<div class="paragraph"><p>You can make <em>git-cola</em> use an alternative language by creating a
-<tt>~/.config/git-cola/language</tt> file containing the standard two-letter
-gettext language code, e.g. "en", "de", "ja", "zh", etc.::</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>echo en &gt;~/.config/git-cola/language</tt></pre>
-</div></div>
-</div>
-<h2 id="_source">SOURCE</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>A <em>git-cola</em> development repository can be obtained via git:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>git clone git://github.com/git-cola/git-cola.git</tt></pre>
-</div></div>
-</div>
-<h2 id="_links">LINKS</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-<em>git-cola</em> homepage
-</dt>
-<dd>
-<p>
-        <a href="http://git-cola.github.io/">http://git-cola.github.io/</a>
-</p>
-</dd>
-<dt class="hdlist1">
-<em>git-cola</em> sources on github
-</dt>
-<dd>
-<p>
-        <a href="https://github.com/git-cola/git-cola/">https://github.com/git-cola/git-cola/</a>
-</p>
-</dd>
-</dl></div>
-</div>
-<h2 id="_see_also">SEE ALSO</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-linkgit:git-difftool[1]
-</dt>
-<dd>
-<p>
-        Compare changes using common merge tools.
-</p>
-</dd>
-<dt class="hdlist1">
-linkgit:gitk[1]
-</dt>
-<dd>
-<p>
-        The git repository browser.  Shows branches, commit history
-        and file differences.  gitk is the utility started by
-        <em>git-cola</em>'s Repository Visualize actions.
-</p>
-</dd>
-</dl></div>
-</div>
-<h2 id="_git">GIT</h2>
-<div class="sectionbody">
-<div class="paragraph"><p><em>git-cola</em> is independently developed from the linkgit:git[7] suite,
-but you can use it just like any other git command, e.g. <tt>git cola</tt>.</p></div>
-</div>
-<h2 id="_author">AUTHOR</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Written by David Aguilar &lt;<a href="mailto:davvid@gmail.com">davvid@gmail.com</a>&gt;.</p></div>
+may want <cite>git cola</cite> to use a specific language.</p>
+<p>You can make <cite>git cola</cite> use an alternative language by creating a
+<cite>~/.config/git-cola/language</cite> file containing the standard two-letter
+gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;, &#8220;zh&#8221;, etc.:</p>
+<div class="highlight-python"><pre>echo en &gt;~/.config/git-cola/language</pre>
 </div>
 </div>
-<div id="footnotes"><hr /></div>
-<div id="footer">
-<div id="footer-text">
-Last updated 2014-01-25 02:23:31 PDT
+<div class="section" id="custom-gui-actions">
+<h2>CUSTOM GUI ACTIONS<a class="headerlink" href="#custom-gui-actions" title="Permalink to this headline">¶</a></h2>
+<p><cite>git cola</cite> allows you to define custom GUI actions by setting <cite>git config</cite>
+variables.  The &#8220;name&#8221; of the command appears in the &#8220;Actions&#8221; menu.</p>
+<div class="section" id="guitool-name-cmd">
+<h3>guitool.&lt;name&gt;.cmd<a class="headerlink" href="#guitool-name-cmd" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the shell command line to execute when the corresponding item of the
+Tools menu is invoked. This option is mandatory for every tool. The command is
+executed from the root of the working directory, and in the environment it
+receives the name of the tool as GIT_GUITOOL, the name of the currently
+selected file as FILENAME, and the name of the current branch as CUR_BRANCH
+(if the head is detached, CUR_BRANCH is empty).</p>
+</div>
+<div class="section" id="guitool-name-needsfile">
+<h3>guitool.&lt;name&gt;.needsfile<a class="headerlink" href="#guitool-name-needsfile" title="Permalink to this headline">¶</a></h3>
+<p>Run the tool only if a diff is selected in the GUI. It guarantees that
+FILENAME is not empty.</p>
+</div>
+<div class="section" id="guitool-name-noconsole">
+<h3>guitool.&lt;name&gt;.noconsole<a class="headerlink" href="#guitool-name-noconsole" title="Permalink to this headline">¶</a></h3>
+<p>Run the command silently, without creating a window to display its output.</p>
+</div>
+<div class="section" id="guitool-name-norescan">
+<h3>guitool.&lt;name&gt;.norescan<a class="headerlink" href="#guitool-name-norescan" title="Permalink to this headline">¶</a></h3>
+<p>Don’t rescan the working directory for changes after the tool finishes
+execution.</p>
+</div>
+<div class="section" id="guitool-name-confirm">
+<h3>guitool.&lt;name&gt;.confirm<a class="headerlink" href="#guitool-name-confirm" title="Permalink to this headline">¶</a></h3>
+<p>Show a confirmation dialog before actually running the tool.</p>
+</div>
+<div class="section" id="guitool-name-argprompt">
+<h3>guitool.&lt;name&gt;.argprompt<a class="headerlink" href="#guitool-name-argprompt" title="Permalink to this headline">¶</a></h3>
+<p>Request a string argument from the user, and pass it to the tool through the
+ARGS environment variable. Since requesting an argument implies confirmation,
+the confirm option has no effect if this is enabled. If the option is set to
+true, yes, or 1, the dialog uses a built-in generic prompt; otherwise the
+exact value of the variable is used.</p>
+</div>
+<div class="section" id="guitool-name-revprompt">
+<h3>guitool.&lt;name&gt;.revprompt<a class="headerlink" href="#guitool-name-revprompt" title="Permalink to this headline">¶</a></h3>
+<p>Request a single valid revision from the user, and set the REVISION
+environment variable. In other aspects this option is similar to argprompt,
+and can be used together with it.</p>
+</div>
+<div class="section" id="guitool-name-revunmerged">
+<h3>guitool.&lt;name&gt;.revunmerged<a class="headerlink" href="#guitool-name-revunmerged" title="Permalink to this headline">¶</a></h3>
+<p>Show only unmerged branches in the revprompt subdialog. This is useful for
+tools similar to merge or rebase, but not for things like checkout or reset.</p>
+</div>
+<div class="section" id="guitool-name-title">
+<h3>guitool.&lt;name&gt;.title<a class="headerlink" href="#guitool-name-title" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the title to use for the prompt dialog.
+Defaults to the tool name.</p>
+</div>
+<div class="section" id="guitool-name-prompt">
+<h3>guitool.&lt;name&gt;.prompt<a class="headerlink" href="#guitool-name-prompt" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the general prompt string to display at the top of the dialog,
+before subsections for argprompt and revprompt.
+The default value includes the actual command.</p>
 </div>
 </div>
-</body>
+<div class="section" id="links">
+<h2>LINKS<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-cola-s-git-repository">
+<h3>Git Cola&#8217;s Git Repository<a class="headerlink" href="#git-cola-s-git-repository" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/">https://github.com/git-cola/git-cola/</a></p>
+</div>
+<div class="section" id="git-cola-homepage">
+<h3>Git Cola Homepage<a class="headerlink" href="#git-cola-homepage" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://git-cola.github.io/">http://git-cola.github.io/</a></p>
+</div>
+<div class="section" id="mailing-list">
+<h3>Mailing List<a class="headerlink" href="#mailing-list" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://groups.google.com/group/git-cola">https://groups.google.com/group/git-cola</a></p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Git Cola Documentation</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="git-dag.html">git-dag(1)</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2007-2014, David Aguilar and contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
 </html>

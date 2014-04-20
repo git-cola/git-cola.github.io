@@ -1,285 +1,485 @@
-.\"     Title: git-cola
-.\"    Author: 
-.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
-.\"      Date: 01/30/2014
-.\"    Manual: Git Manual
-.\"    Source: Git
-.\"
-.TH "GIT\-COLA" "1" "01/30/2014" "Git" "Git Manual"
-.\" disable hyphenation
-.nh
-.\" disable justification (adjust text to left margin only)
-.ad l
-.SH "NAME"
-git-cola - The highly caffeinated git GUI
-.SH "SYNOPSIS"
-\fIgit cola\fR [options] [sub\-command]
-.SH "DESCRIPTION"
-\fIgit\-cola\fR is a sleek and powerful git GUI\.
-.SH "OPTIONS"
-.PP
-\-\-amend
-.RS 4
-Start \fIgit\-cola\fR in amend mode\.
-.RE
-.PP
-\-g, \-\-git\-path
-.RS 4
-Specifies the path to the \fIgit\fR binary\.
-.RE
-.PP
-\-\-prompt
-.RS 4
-Prompt for a git repository instead of using the current directory\.
-.RE
-.PP
-\-r, \-\-repo=<path>
-.RS 4
-Run \fIgit\-cola\fR on the git repository in <path>\. Defaults to the current directory\.
-.RE
-.PP
-\-\-version
-.RS 4
-Print the \fIgit\-cola\fR version and exit\.
-.RE
-.SH "SUB-COMMANDS"
-.PP
-am
-.RS 4
-Apply patches\.
-.RE
-.PP
-archive
-.RS 4
-Export tarballs from Git\.
-.RE
-.PP
-branch
-.RS 4
-Create branches\.
-.RE
-.PP
-browse
-.RS 4
-Browse tracked files\.
-.RE
-.PP
-config
-.RS 4
-Configure \fIgit\-cola\fR settings\.
-.RE
-.PP
-dag
-.RS 4
-Start the \fIgit\-dag\fR visualizer\.
-.RE
-.PP
-diff
-.RS 4
-Diff changed files\.
-.RE
-.PP
-fetch
-.RS 4
-Fetch remote branches\.
-.RE
-.PP
-grep
-.RS 4
-Use git grep to search for content\.
-.RE
-.PP
-merge
-.RS 4
-Merge branches\.
-.RE
-.PP
-pull
-.RS 4
-Fetch and merge remote branches\.
-.RE
-.PP
-push
-.RS 4
-Push branches to remotes\.
-.RE
-.PP
-rebase
-.RS 4
-Start an interactive rebase\.
-.RE
-.PP
-remote
-.RS 4
-Create and edit remotes\.
-.RE
-.PP
-search
-.RS 4
-Search for commits\.
-.RE
-.PP
-stash
-.RS 4
-Stash modifications\.
-.RE
-.PP
-tag
-.RS 4
-Create tags\.
-.RE
-.PP
-version
-.RS 4
-Print the \fIgit\-cola\fR version\.
-.RE
-.SH "CONFIG VARIABLES"
-.PP
-cola\.savewindowsettings
-.RS 4
-\fIgit\-cola\fR will remember its window settings when set to true\. These settings are saved in $HOME/\.config/git\-cola\.
-.RE
-.PP
-cola\.fileattributes
-.RS 4
-Enables per\-file linkgit:gitattributes[5] encoding support when set to true\. This tells \fIgit\-cola\fR to honor the configured encoding when displaying and applying diffs\.
-.RE
-.PP
-cola\.fontdiff
-.RS 4
-Specifies the font to use for \fIgit\-cola\fR\'s diff display\.
-.RE
-.PP
-cola\.browserdockable
-.RS 4
-Whether to create a dock widget with the \fIBrowser\fR tool\. Defaults to \fIfalse\fR to speedup startup time\.
-.RE
-.PP
-cola\.inotify
-.RS 4
-Set to \fIfalse\fR to disable inotify support\. Defaults to \fItrue\fR when the \fIpyinotify\fR module is available\.
-.RE
-.PP
-cola\.linebreak
-.RS 4
-Whether to automatically break long lines while editing commit messages\. Defaults to \fItrue\fR\. This setting is configured using the \fIPreferences\fR dialog, but it can be toggled for one\-off usage using the commit message editor\(cqs settings sub\-menu\.
-.RE
-.PP
-cola\.tabwidth
-.RS 4
-The number of columns occupied by a tab character\.
-.RE
-.PP
-cola\.textwidth
-.RS 4
-The number of columns used for line wrapping\. Tabs are counted according to cola\.tabwidth\.
-.RE
-.PP
-cola\.readsize
-.RS 4
-\fIgit\-cola\fR avoids reading large binary untracked files\. The maximum size to read is controlled by cola\.readsize and defaults to 2048\.
-.RE
-.PP
-gui\.diffcontext
-.RS 4
-The number of diff context lines used and displayed by \fIgit\-cola\fR\.
-.RE
-.PP
-gui\.displayuntracked
-.RS 4
-\fIgit\-cola\fR avoids showing untracked files when set to false\.
-.RE
-.PP
-gui\.editor
-.RS 4
-The default text editor is controlled by gui\.editor\. The config variable overrides the EDITOR environment variable\.
-.RE
-.PP
-gui\.historybrowser
-.RS 4
-Specifies the history browser to use when visualizing history\.
-.RE
-.PP
-diff\.tool
-.RS 4
-The default diff tool to use\.
-.RE
-.PP
-merge\.tool
-.RS 4
-The default merge tool to use\.
-.RE
-.PP
-user\.email
-.RS 4
-Your email address to be recorded in any newly created commits\. Can be overridden by the \fIGIT_AUTHOR_EMAIL\fR, \fIGIT_COMMITTER_EMAIL\fR, and \fIEMAIL\fR environment variables\. See linkgit:git\-commit\-tree[1]\.
-.RE
-.PP
-user\.name
-.RS 4
-Your full name to be recorded in any newly created commits\. Can be overridden by the \fIGIT_AUTHOR_NAME\fR and \fIGIT_COMMITTER_NAME\fR environment variables\. See linkgit:git\-commit\-tree[1]\.
-.RE
-See linkgit:git\-config[1] for more details\.
-.SH "ENVIRONMENT VARIABLES"
-.PP
-EDITOR
-.RS 4
-Specifies the default editor to use\. This is ignored when the git config variable gui\.editor is defined\.
-.RE
-.PP
-GIT_COLA_TRACE
-.RS 4
-When defined, \fIgit\-cola\fR logs \fIgit\fR commands to stdout\. When set to \fIfull\fR, \fIgit\-cola\fR also logs the exit status and output\. When set to \fItrace\fR, \fIgit\-cola\fR logs to the \fIConsole\fR widget\.
-.RE
-.SH "LANGUAGE SETTINGS"
-\fIgit\-cola\fR automatically detects your language and presents some translations when available\. This may not be desired, or you may want \fIgit\-cola\fR to use a specific language\.
-
-You can make \fIgit\-cola\fR use an alternative language by creating a ~/\.config/git\-cola/language file containing the standard two\-letter gettext language code, e\.g\. "en", "de", "ja", "zh", etc\.::
-
+.TH "GIT-COLA" "1" "April 19, 2014" "2.0.2" "git-cola"
+.SH NAME
+git-cola \- The highly caffeinated Git GUI
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.SH SYNOPSIS
 .sp
-.RS 4
-.nf
-echo en >~/\.config/git\-cola/language
-.fi
-.RE
-.SH "SOURCE"
-A \fIgit\-cola\fR development repository can be obtained via git:
-
+git cola [options] [sub\-command]
+.SH DESCRIPTION
 .sp
-.RS 4
+git cola is a sleek and powerful Git GUI.
+.SH OPTIONS
+.SS \-\-amend
+.sp
+Start \fIgit cola\fP in amend mode.
+.SS \-g, \-\-git\-path <path>
+.sp
+Path to the \fIgit\fP binary.  Defaults to the \fIgit\fP command found in \fI$PATH\fP.
+.SS \-\-prompt
+.sp
+Prompt for a Git repository.  Defaults to the current directory.
+.SS \-r, \-\-repo <path>
+.sp
+Open the Git repository at \fI<path>\fP.  Defaults to the current directory.
+.SS \-\-version
+.sp
+Print the \fIgit cola\fP version and exit.
+.SH SUB-COMMANDS
+.SS am
+.sp
+Apply patches.
+.SS archive
+.sp
+Export tarballs from Git.
+.SS branch
+.sp
+Create branches.
+.SS browse
+.sp
+Browse tracked files.
+.SS config
+.sp
+Configure settings.
+.SS dag
+.sp
+Start the \fIgit dag\fP Git history browser.
+.SS diff
+.sp
+Diff changed files.
+.SS fetch
+.sp
+Fetch history from remote repositories.
+.SS grep
+.sp
+Use \fIgit grep\fP to search for content.
+.SS merge
+.sp
+Merge branches.
+.SS pull
+.sp
+Fetch and merge remote branches.
+.SS push
+.sp
+Push branches to remotes.
+.SS rebase
+.sp
+Start an interactive rebase.
+.SS remote
+.sp
+Create and edit remotes.
+.SS search
+.sp
+Search for commits.
+.SS stash
+.sp
+Stash uncommitted modifications.
+.SS tag
+.sp
+Create tags.
+.SS version
+.sp
+Print the \fIgit cola\fP version.
+.SH CONFIGURE YOUR EDITOR
+.sp
+The editor used by \fICtrl\-e\fP is configured from the Preferences screen.
+The environment variable \fI$VISUAL\fP is consulted when no editor has been
+configured.
+.sp
+\fIProTip\fP: Setting \fIgvim \-p \-f\fP as your configured editor opens
+multiple files using tabs (and \fIgvim \-o \-f\fP uses splits).
+.sp
+\fIgit cola\fP is {vim, emacs, textpad, notepad++}\-aware.
+When you select a line in the \fIgrep\fP screen and press any of
+\fIEnter\fP, \fICtrl\-e\fP, or the \fIEdit\fP button, you are taken to that exact line.
+.sp
+The editor preference is saved in the \fIgui.editor\fP variable using
+\fI\%git config\fP.
+.SH KEYBOARD SHORTCUTS
+.sp
+\fIgit cola\fP has many useful keyboard shortcuts.
+.sp
+You can see the available shortcuts by pressing the \fB?\fP key,
+choosing \fBHelp \-> Keyboard shortcuts\fP from the main menu,
+or by consulting the \fI\%keyboard shortcuts reference\fP.
+.SH TOOLS
+.sp
+The \fIgit cola\fP interface is composed of various cooperating tools.
+Double\-clicking a tool opens it in its own subwindow.
+Dragging it around moves and places it within the window.
+.sp
+Tools can be hidden and rearranged however you like.
+\fIgit cola\fP carefully remembers your window layout and restores
+it the next time it is launched.
+.sp
+The \fIControl\-{1,2,3,..}\fP hotkey gives focus to a specific tool.
+A hidden tool can be re\-opened using the \fITools\fP menu as well
+as the \fIShift+Control\-{1,2,3,.}\fP, shortcut keys.
+.SH STATUS
+.sp
+The \fIStatus\fP tool provides a visual analog to the
+\fI\%git status\fP command.
+.sp
+\fIStatus\fP displays files that are \fImodified\fP relative to the staging area,
+\fIstaged\fP for the next commit, \fIunmerged\fP files from an in\-progress merge,
+and files that are \fIuntracked\fP to git.
+.sp
+These are the same categories one sees when running
+\fI\%git status\fP
+on the command line.
+.sp
+You can navigate through the list of files using keyboard arrows as well
+as the ergonomical and vim\-like \fIj\fP and \fIk\fP shortcut keys.
+.sp
+There are several convenient ways to interact with files in the \fIStatus\fP tool.
+.sp
+Selecting a file displays its diff in the \fI\%DIFF\fP viewer.
+Double\-clicking a file stages its contents, as does the
+the \fICtrl\-s\fP shortcut key.
+.sp
+\fICtrl\-e\fP opens selected files in the conifgured editor, and
+\fICtrl\-d\fP opens selected files using \fI\%git difftool\fP
+.sp
+Additional actions can be performed using the right\-click context menu.
+.SS Actions
+.sp
+Clicking the \fIStaged\fP folder shows a diffstat for the index.
+.sp
+Clicking the \fIModified\fP folder shows a diffstat for the worktree.
+.sp
+Clicking individual files sends diffs to the \fIDiff Display\fP.
+.sp
+Double\-clicking individual files adds and removes their content from the index.
+.sp
+Various actions that are available through the right\-click context menu.
+Different actions are available depending a file\(aqs status.
+.SS Stage Selected
+.sp
+Add to the staging area using \fI\%git add\fP
+Marks unmerged files as resolved.
+.SS Launch Editor
+.sp
+Launches the configured visual text editor
+.SS Launch Difftool
+.sp
+Visualize changes using \fIgit difftool\fP.
+.SS Revert Unstaged Edits
+.sp
+Reverts unstaged content by checking out selected paths
+from the index/staging area
+.SS Revert Uncommited Edits
+.sp
+Throws away uncommitted edits
+.SS Unstage Selected
+.sp
+Remove from the index/staging area with
+\fI\%git reset\fP
+.SS Launch Merge Tool
+.sp
+Resolve conflicts using \fI\%git mergetool\fP.
+.SS Delete File(s)
+.sp
+Delete untracked files from the filesystem.
+.SS Add to .gitignore
+.sp
+Adds untracked files to to the .gitignore file.
+.SH DIFF
+.sp
+The diff viewer/editor displays diffs for selected files.
+Additions are shown in green and removals are displayed in light red.
+Extraneous whitespace is shown with a pure\-red background.
+.sp
+Right\-clicking in the diff provides access to additional actions
+that use either the cursor location or text selection.
+.SS Staging content for commit
+.sp
+The \fB@@\fP patterns denote a new diff region.  Selecting lines of diff
+and using the \fIStage Selected\fP command will stage just the selected lines.
+Clicking within a diff region and selecting \fIStage Section\fP stages the
+entire patch region.
+.sp
+The corresponding opposite commands can be performed on staged files as well,
+e.g. staged content can be selectively removed from the index when we are
+viewing diffs for staged content.
+.SH COMMIT MESSAGE EDITOR
+.sp
+The commit message editor is a simple text widget
+for entering commit messages.
+.sp
+You can navigate between the \fISubject\fP and \fIExtended description...\fP
+fields using the keyboard arrow keys.
+.sp
+Pressing enter when inside the \fISubject\fP field jumps down to the
+extended description field.
+.sp
+The \fIOptions\fP button menu to the left of the subject field
+provides access to the additional actions.
+.sp
+The \fICtrl+i\fP keyboard shortcut adds a standard "Signed\-off\-by: " line,
+and \fICtrl+Enter\fP creates a new commit using the commit message and
+staged content.
+.SS Sign Off
+.sp
+The \fISign Off\fP button adds a standard:
+.sp
 .nf
-git clone git://github\.com/git\-cola/git\-cola\.git
+.ft C
+Signed\-off\-by: A. U. Thor <a.u.thor@example.com>
+.ft P
 .fi
-.RE
-.SH "LINKS"
-.PP
-\fIgit\-cola\fR homepage
-.RS 4
-\fIhttp://git\-cola\.github\.io/\fR
-.RE
-.PP
-\fIgit\-cola\fR sources on github
-.RS 4
-\fIhttps://github\.com/git\-cola/git\-cola/\fR
-.RE
-.SH "SEE ALSO"
-.PP
-linkgit:git\-difftool[1]
-.RS 4
-Compare changes using common merge tools\.
-.RE
-.PP
-linkgit:gitk[1]
-.RS 4
-The git repository browser\. Shows branches, commit history and file differences\. gitk is the utility started by \fIgit\-cola\fR\'s Repository Visualize actions\.
-.RE
-.SH "GIT"
-\fIgit\-cola\fR is independently developed from the linkgit:git[7] suite, but you can use it just like any other git command, e\.g\. git cola\.
-.SH "AUTHOR"
-Written by David Aguilar <\fIdavvid@gmail\.com\fR\&[1]>\.
-.SH "NOTES"
-.IP " 1." 4
-davvid@gmail.com
-.RS 4
-\%mailto:davvid@gmail.com
-.RE
+.sp
+line to the bottom of the commit message.
+.sp
+Invoking this action is equivalent to passing the \fB\-s\fP option
+to \fI\%git commit\fP.
+.SS Commit
+.sp
+The commit button runs
+\fI\%git commit\fP.
+The contents of the commit message editor is provided as the commit message.
+.sp
+Only staged files are included in the commit \-\- this is the same behavior
+as running \fBgit commit\fP on the command\-line.
+.SS Line and Column Display
+.sp
+The current line and column number is displayed by the editor.
+E.g. a \fB5,0\fP display means that the cursor is located at
+line five, column zero.
+.sp
+The display changes colors when lines get too long.
+Yellow indicates the safe boundary for sending patches to a mailing list
+while keeping space for inline reply markers.
+.sp
+Orange indicates that the line is starting to run a bit long and should
+break soon.
+.sp
+Red indicates that the line is running up against the standard
+80\-column limit for commit messages.
+.sp
+Keeping commit messages less than 76\-characters wide is encouraged.
+\fI\%git log\fP
+is a great tool but long lines mess up its formatting for everyone else,
+so please be mindful when writing commit messages.
+.SS Amend Last Commit
+.sp
+Clicking on \fIAmend Last Commit\fP makes \fIgit cola\fP amend the previous commit
+instead of creating a new one.  \fIgit cola\fP loads the previous commit message
+into the commit message editor when this option is selected.
+.sp
+The \fIStatus\fP tool will display all of the changes for the amended commit.
+.SH APPLY PATCHES
+.sp
+Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
+.sp
+Dragging and dropping patches onto the \fIgit cola\fP interface
+adds the patches to the list of patches to apply using
+\fI\%git am\fP.
+.sp
+You can drag either a set of patches or a directory containing patches.
+Patches can be sorted using in the interface and are applied in the
+same order as is listed in the list.
+.sp
+When a directory is dropped \fIgit cola\fP walks the directory
+tree in search of patches.  \fIgit cola\fP sorts the list of
+patches after they have all been found.  This allows you
+to control the order in which patchs are applied by placing
+patchsets into alphanumerically\-sorted directories.
+.SH CUSTOM WINDOW SETTINGS
+.sp
+\fIgit cola\fP remembers modifications to the layout and arrangement
+of tools within the \fIgit cola\fP interface.  Changes are saved
+and restored at application shutdown/startup.
+.sp
+\fIgit cola\fP can be configured to not save custom layouts by unsetting
+the \fISave Window Settings\fP option in the \fIgit cola\fP preferences.
+.SH CONFIGURATION VARIABLES
+.sp
+These variables can be set using \fIgit config\fP or from the settings.
+.SS cola.savewindowsettings
+.sp
+\fIgit cola\fP will remember its window settings when set to \fItrue\fP.
+Window settings and X11 sessions are saved in \fI$HOME/.config/git\-cola\fP.
+.SS cola.fileattributes
+.sp
+Enables per\-file gitattributes encoding support when set to \fItrue\fP.
+This tells \fIgit cola\fP to honor the configured encoding when displaying
+and applying diffs.
+.SS cola.fontdiff
+.sp
+Specifies the font to use for \fIgit cola\fP\(aqs diff display.
+.SS cola.browserdockable
+.sp
+Whether to create a dock widget with the \fIBrowser\fP tool.
+Defaults to \fIfalse\fP to speedup startup time.
+.SS cola.inotify
+.sp
+Set to \fIfalse\fP to disable inotify support.
+Defaults to \fItrue\fP when the \fIpyinotify\fP module is available.
+.SS cola.linebreak
+.sp
+Whether to automatically break long lines while editing commit messages.
+Defaults to \fItrue\fP.  This setting is configured using the \fIPreferences\fP
+dialog, but it can be toggled for one\-off usage using the commit message
+editor\(aqs options sub\-menu.
+.SS cola.tabwidth
+.sp
+The number of columns occupied by a tab character.  Defaults to 8.
+.SS cola.textwidth
+.sp
+The number of columns used for line wrapping.
+Tabs are counted according to \fIcola.tabwidth\fP.
+.SS cola.readsize
+.sp
+\fIgit cola\fP avoids reading large binary untracked files.
+The maximum size to read is controlled by \fIcola.readsize\fP
+and defaults to \fI2048\fP.
+.SS gui.diffcontext
+.sp
+The number of diff context lines to display.
+.SS gui.displayuntracked
+.sp
+\fIgit cola\fP avoids showing untracked files when set to \fIfalse\fP.
+.SS gui.editor
+.sp
+The default text editor to use is defined in \fIgui.editor\fP.
+The config variable overrides the VISUAL environment variable.
+e.g. \fIgvim \-f \-p\fP.
+.SS gui.historybrowser
+.sp
+The history browser to use when visualizing history.
+Defaults to \fIgitk\fP.
+.SS diff.tool
+.sp
+The default diff tool to use.
+.SS merge.tool
+.sp
+The default merge tool to use.
+.SS user.email
+.sp
+Your email address to be recorded in any newly created commits.
+Can be overridden by the \(aqGIT_AUTHOR_EMAIL\(aq, \(aqGIT_COMMITTER_EMAIL\(aq, and
+\(aqEMAIL\(aq environment variables.
+.SS user.name
+.sp
+Your full name to be recorded in any newly created commits.
+Can be overridden by the \(aqGIT_AUTHOR_NAME\(aq and \(aqGIT_COMMITTER_NAME\(aq
+environment variables.
+.SH ENVIRONMENT VARIABLES
+.SS GIT_COLA_TRACE
+.sp
+When defined, \fIgit cola\fP logs \fIgit\fP commands to stdout.
+When set to \fIfull\fP, \fIgit cola\fP also logs the exit status and output.
+When set to \fItrace\fP, \fIgit cola\fP logs to the \fIConsole\fP widget.
+.SS VISUAL
+.sp
+Specifies the default editor to use.
+This is ignored when the \fIgui.editor\fP configuration variable is defined.
+.SH LANGUAGE SETTINGS
+.sp
+\fIgit cola\fP automatically detects your language and presents some
+translations when available.  This may not be desired, or you
+may want \fIgit cola\fP to use a specific language.
+.sp
+You can make \fIgit cola\fP use an alternative language by creating a
+\fI~/.config/git\-cola/language\fP file containing the standard two\-letter
+gettext language code, e.g. "en", "de", "ja", "zh", etc.:
+.sp
+.nf
+.ft C
+echo en >~/.config/git\-cola/language
+.ft P
+.fi
+.SH CUSTOM GUI ACTIONS
+.sp
+\fIgit cola\fP allows you to define custom GUI actions by setting \fIgit config\fP
+variables.  The "name" of the command appears in the "Actions" menu.
+.SS guitool.<name>.cmd
+.sp
+Specifies the shell command line to execute when the corresponding item of the
+Tools menu is invoked. This option is mandatory for every tool. The command is
+executed from the root of the working directory, and in the environment it
+receives the name of the tool as GIT_GUITOOL, the name of the currently
+selected file as FILENAME, and the name of the current branch as CUR_BRANCH
+(if the head is detached, CUR_BRANCH is empty).
+.SS guitool.<name>.needsfile
+.sp
+Run the tool only if a diff is selected in the GUI. It guarantees that
+FILENAME is not empty.
+.SS guitool.<name>.noconsole
+.sp
+Run the command silently, without creating a window to display its output.
+.SS guitool.<name>.norescan
+.sp
+Don’t rescan the working directory for changes after the tool finishes
+execution.
+.SS guitool.<name>.confirm
+.sp
+Show a confirmation dialog before actually running the tool.
+.SS guitool.<name>.argprompt
+.sp
+Request a string argument from the user, and pass it to the tool through the
+ARGS environment variable. Since requesting an argument implies confirmation,
+the confirm option has no effect if this is enabled. If the option is set to
+true, yes, or 1, the dialog uses a built\-in generic prompt; otherwise the
+exact value of the variable is used.
+.SS guitool.<name>.revprompt
+.sp
+Request a single valid revision from the user, and set the REVISION
+environment variable. In other aspects this option is similar to argprompt,
+and can be used together with it.
+.SS guitool.<name>.revunmerged
+.sp
+Show only unmerged branches in the revprompt subdialog. This is useful for
+tools similar to merge or rebase, but not for things like checkout or reset.
+.SS guitool.<name>.title
+.sp
+Specifies the title to use for the prompt dialog.
+Defaults to the tool name.
+.SS guitool.<name>.prompt
+.sp
+Specifies the general prompt string to display at the top of the dialog,
+before subsections for argprompt and revprompt.
+The default value includes the actual command.
+.SH LINKS
+.SS Git Cola\(aqs Git Repository
+.sp
+\fI\%https://github.com/git-cola/git-cola/\fP
+.SS Git Cola Homepage
+.sp
+\fI\%http://git-cola.github.io/\fP
+.SS Mailing List
+.sp
+\fI\%https://groups.google.com/group/git-cola\fP
+.SH AUTHOR
+David Aguilar and contributors
+.SH COPYRIGHT
+2007-2014, David Aguilar and contributors
+.\" Generated by docutils manpage writer.
+.
