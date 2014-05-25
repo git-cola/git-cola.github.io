@@ -11,10 +11,12 @@ Thanks
 * Boris W
 * Ben Boeckel
 * Benoît Nouyrigat
+* Charles 101
 * Christian Jann
 * Christopher Meng
-* Daniel King
 * Daniel Fahlke
+* Daniel Harding
+* Daniel King
 * David Aguilar
 * David Martínez Martí
 * Dennis Gilmore
@@ -38,6 +40,7 @@ Thanks
 * Kerrick Staley
 * Kevin Kofler
 * Libor Jelinek
+* Liviu Cristian Mirea-Ghiban
 * Maciej Filipiak
 * Mahmoud Hossam
 * Maicon D. Filippsen
@@ -61,6 +64,7 @@ Thanks
 * Steffen Prohaska
 * Sven Claussner
 * Taylor Braun-Jones
+* Thomas Kluyver
 * Ugo Riboni
 * Uri Okrent
 * Virgil Dupras

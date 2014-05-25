@@ -1,4 +1,4 @@
-.TH "GIT-COLA" "1" "April 19, 2014" "2.0.2" "git-cola"
+.TH "GIT-COLA" "1" "May 24, 2014" "2.0.3" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -113,8 +113,8 @@ The editor used by \fICtrl\-e\fP is configured from the Preferences screen.
 The environment variable \fI$VISUAL\fP is consulted when no editor has been
 configured.
 .sp
-\fIProTip\fP: Setting \fIgvim \-p \-f\fP as your configured editor opens
-multiple files using tabs (and \fIgvim \-o \-f\fP uses splits).
+\fIProTip\fP: Configuring your editor to \fIgvim \-f \-p\fP will open multiple tabs
+when editing files.  \fIgvim \-f \-o\fP uses splits.
 .sp
 \fIgit cola\fP is {vim, emacs, textpad, notepad++}\-aware.
 When you select a line in the \fIgrep\fP screen and press any of
@@ -139,9 +139,9 @@ Tools can be hidden and rearranged however you like.
 \fIgit cola\fP carefully remembers your window layout and restores
 it the next time it is launched.
 .sp
-The \fIControl\-{1,2,3,..}\fP hotkey gives focus to a specific tool.
-A hidden tool can be re\-opened using the \fITools\fP menu as well
-as the \fIShift+Control\-{1,2,3,.}\fP, shortcut keys.
+The \fIControl\-{1, 2, 3, ...}\fP hotkey gives focus to a specific tool.
+A hidden tool can be re\-opened using the \fITools\fP menu or
+the \fIShift+Control\-{1, 2, 3, ...}\fP shortcut keys.
 .SH STATUS
 .sp
 The \fIStatus\fP tool provides a visual analog to the
@@ -178,7 +178,7 @@ Clicking individual files sends diffs to the \fIDiff Display\fP.
 .sp
 Double\-clicking individual files adds and removes their content from the index.
 .sp
-Various actions that are available through the right\-click context menu.
+Various actions are available through the right\-click context menu.
 Different actions are available depending a file\(aqs status.
 .SS Stage Selected
 .sp
@@ -413,6 +413,7 @@ gettext language code, e.g. "en", "de", "ja", "zh", etc.:
 .sp
 .nf
 .ft C
+mkdir \-p ~/.config/git\-cola &&
 echo en >~/.config/git\-cola/language
 .ft P
 .fi

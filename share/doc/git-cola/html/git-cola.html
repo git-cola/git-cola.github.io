@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>git-cola(1) &mdash; git-cola 2.0.2 documentation</title>
+    <title>git-cola(1) &mdash; git-cola 2.0.3 documentation</title>
     
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '2.0.2',
+        VERSION:     '2.0.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,13 +27,13 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola 2.0.2 documentation" href="index.html" />
+    <link rel="top" title="git-cola 2.0.3 documentation" href="index.html" />
     <link rel="next" title="git-dag(1)" href="git-dag.html" />
     <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola 2.0.2 documentation</span></a></h1>
+          <span>git-cola 2.0.3 documentation</span></a></h1>
         <h2 class="heading"><span>git-cola(1)</span></h2>
       </div>
       <div class="topnav">
@@ -163,8 +163,8 @@
 <p>The editor used by <cite>Ctrl-e</cite> is configured from the Preferences screen.
 The environment variable <cite>$VISUAL</cite> is consulted when no editor has been
 configured.</p>
-<p><em>ProTip</em>: Setting <cite>gvim -p -f</cite> as your configured editor opens
-multiple files using tabs (and <cite>gvim -o -f</cite> uses splits).</p>
+<p><em>ProTip</em>: Configuring your editor to <cite>gvim -f -p</cite> will open multiple tabs
+when editing files.  <cite>gvim -f -o</cite> uses splits.</p>
 <p><cite>git cola</cite> is {vim, emacs, textpad, notepad++}-aware.
 When you select a line in the <cite>grep</cite> screen and press any of
 <cite>Enter</cite>, <cite>Ctrl-e</cite>, or the <cite>Edit</cite> button, you are taken to that exact line.</p>
@@ -186,9 +186,9 @@ Dragging it around moves and places it within the window.</p>
 <p>Tools can be hidden and rearranged however you like.
 <cite>git cola</cite> carefully remembers your window layout and restores
 it the next time it is launched.</p>
-<p>The <cite>Control-{1,2,3,..}</cite> hotkey gives focus to a specific tool.
-A hidden tool can be re-opened using the <cite>Tools</cite> menu as well
-as the <cite>Shift+Control-{1,2,3,.}</cite>, shortcut keys.</p>
+<p>The <cite>Control-{1, 2, 3, ...}</cite> hotkey gives focus to a specific tool.
+A hidden tool can be re-opened using the <cite>Tools</cite> menu or
+the <cite>Shift+Control-{1, 2, 3, ...}</cite> shortcut keys.</p>
 </div>
 <div class="section" id="status">
 <span id="id2"></span><h2>STATUS<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
@@ -215,7 +215,7 @@ the <cite>Ctrl-s</cite> shortcut key.</p>
 <p>Clicking the <cite>Modified</cite> folder shows a diffstat for the worktree.</p>
 <p>Clicking individual files sends diffs to the <cite>Diff Display</cite>.</p>
 <p>Double-clicking individual files adds and removes their content from the index.</p>
-<p>Various actions that are available through the right-click context menu.
+<p>Various actions are available through the right-click context menu.
 Different actions are available depending a file&#8217;s status.</p>
 <div class="section" id="stage-selected">
 <h4>Stage Selected<a class="headerlink" href="#stage-selected" title="Permalink to this headline">¶</a></h4>
@@ -466,7 +466,8 @@ may want <cite>git cola</cite> to use a specific language.</p>
 <p>You can make <cite>git cola</cite> use an alternative language by creating a
 <cite>~/.config/git-cola/language</cite> file containing the standard two-letter
 gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;, &#8220;zh&#8221;, etc.:</p>
-<div class="highlight-python"><pre>echo en &gt;~/.config/git-cola/language</pre>
+<div class="highlight-python"><pre>mkdir -p ~/.config/git-cola &amp;&amp;
+echo en &gt;~/.config/git-cola/language</pre>
 </div>
 </div>
 <div class="section" id="custom-gui-actions">

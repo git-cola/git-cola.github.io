@@ -114,8 +114,8 @@ The editor used by `Ctrl-e` is configured from the Preferences screen.
 The environment variable `$VISUAL` is consulted when no editor has been
 configured.
 
-*ProTip*: Setting `gvim -p -f` as your configured editor opens
-multiple files using tabs (and `gvim -o -f` uses splits).
+*ProTip*: Configuring your editor to `gvim -f -p` will open multiple tabs
+when editing files.  `gvim -f -o` uses splits.
 
 `git cola` is {vim, emacs, textpad, notepad++}-aware.
 When you select a line in the `grep` screen and press any of
@@ -142,9 +142,9 @@ Tools can be hidden and rearranged however you like.
 `git cola` carefully remembers your window layout and restores
 it the next time it is launched.
 
-The `Control-{1,2,3,..}` hotkey gives focus to a specific tool.
-A hidden tool can be re-opened using the `Tools` menu as well
-as the `Shift+Control-{1,2,3,.}`, shortcut keys.
+The `Control-{1, 2, 3, ...}` hotkey gives focus to a specific tool.
+A hidden tool can be re-opened using the `Tools` menu or
+the `Shift+Control-{1, 2, 3, ...}` shortcut keys.
 
 .. _status:
 
@@ -185,7 +185,7 @@ Clicking individual files sends diffs to the `Diff Display`.
 
 Double-clicking individual files adds and removes their content from the index.
 
-Various actions that are available through the right-click context menu.
+Various actions are available through the right-click context menu.
 Different actions are available depending a file's status.
 
 Stage Selected
@@ -460,6 +460,7 @@ You can make `git cola` use an alternative language by creating a
 `~/.config/git-cola/language` file containing the standard two-letter
 gettext language code, e.g. "en", "de", "ja", "zh", etc.::
 
+    mkdir -p ~/.config/git-cola &&
     echo en >~/.config/git-cola/language
 
 
