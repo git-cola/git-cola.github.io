@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>git-cola(1) &mdash; git-cola 2.0.3 documentation</title>
+    <title>git-cola(1) &mdash; git-cola 2.0.4 documentation</title>
     
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '2.0.3',
+        VERSION:     '2.0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,13 +27,13 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola 2.0.3 documentation" href="index.html" />
+    <link rel="top" title="git-cola 2.0.4 documentation" href="index.html" />
     <link rel="next" title="git-dag(1)" href="git-dag.html" />
     <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola 2.0.3 documentation</span></a></h1>
+          <span>git-cola 2.0.4 documentation</span></a></h1>
         <h2 class="heading"><span>git-cola(1)</span></h2>
       </div>
       <div class="topnav">
@@ -269,8 +269,8 @@ that use either the cursor location or text selection.</p>
 <h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this headline">¶</a></h3>
 <p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote a new diff region.  Selecting lines of diff
 and using the <cite>Stage Selected</cite> command will stage just the selected lines.
-Clicking within a diff region and selecting <cite>Stage Section</cite> stages the
-entire patch region.</p>
+Clicking within a diff region and selecting <cite>Stage Diff Region</cite> stages the
+entire patch diff region.</p>
 <p>The corresponding opposite commands can be performed on staged files as well,
 e.g. staged content can be selectively removed from the index when we are
 viewing diffs for staged content.</p>
@@ -469,6 +469,15 @@ gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;
 <div class="highlight-python"><pre>mkdir -p ~/.config/git-cola &amp;&amp;
 echo en &gt;~/.config/git-cola/language</pre>
 </div>
+<p>Alternatively you may also use LANGAUGE environmental variable to temporarily
+change <cite>git cola</cite>&#8216;s language just like any other gettext-based program.  For
+example to temporarily change <cite>git cola</cite>&#8216;s language to English:</p>
+<div class="highlight-python"><pre>LANGUAGE=en git cola</pre>
+</div>
+<p>To make <cite>git cola</cite> use the zh_TW translation with zh_HK, zh, and en as a
+fallback.:</p>
+<div class="highlight-python"><pre>LANGUAGE=zh_TW:zh_HK:zh:en git cola</pre>
+</div>
 </div>
 <div class="section" id="custom-gui-actions">
 <h2>CUSTOM GUI ACTIONS<a class="headerlink" href="#custom-gui-actions" title="Permalink to this headline">¶</a></h2>
@@ -482,6 +491,12 @@ executed from the root of the working directory, and in the environment it
 receives the name of the tool as GIT_GUITOOL, the name of the currently
 selected file as FILENAME, and the name of the current branch as CUR_BRANCH
 (if the head is detached, CUR_BRANCH is empty).</p>
+</div>
+<div class="section" id="guitool-name-background">
+<h3>guitool.&lt;name&gt;.background<a class="headerlink" href="#guitool-name-background" title="Permalink to this headline">¶</a></h3>
+<p>Run the command in the background (similar to editing and difftool actions).
+This avoids blocking the GUI.  Setting <cite>background</cite> to <cite>true</cite> implies
+<cite>noconsole</cite> and <cite>norescan</cite>.</p>
 </div>
 <div class="section" id="guitool-name-needsfile">
 <h3>guitool.&lt;name&gt;.needsfile<a class="headerlink" href="#guitool-name-needsfile" title="Permalink to this headline">¶</a></h3>

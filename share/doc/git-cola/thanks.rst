@@ -10,6 +10,7 @@ Thanks
 * Barry Roberts
 * Boris W
 * Ben Boeckel
+* Ben Cole
 * Benoît Nouyrigat
 * Charles 101
 * Christian Jann
@@ -39,6 +40,7 @@ Thanks
 * Kelvie Wong
 * Kerrick Staley
 * Kevin Kofler
+* Leho Kraav
 * Libor Jelinek
 * Liviu Cristian Mirea-Ghiban
 * Maciej Filipiak
@@ -47,6 +49,7 @@ Thanks
 * Marco Costalba
 * Markus Heidelberg
 * Maarten Nieber
+* Matěj Šmíd
 * Matthew Levine
 * Michael Geddes
 * Michael Homer
@@ -67,4 +70,5 @@ Thanks
 * Thomas Kluyver
 * Ugo Riboni
 * Uri Okrent
+* Ｖ字龍 (Vdragon)
 * Virgil Dupras

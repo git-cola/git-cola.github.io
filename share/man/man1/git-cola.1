@@ -1,4 +1,4 @@
-.TH "GIT-COLA" "1" "May 24, 2014" "2.0.3" "git-cola"
+.TH "GIT-COLA" "1" "June 25, 2014" "2.0.4" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -222,8 +222,8 @@ that use either the cursor location or text selection.
 .sp
 The \fB@@\fP patterns denote a new diff region.  Selecting lines of diff
 and using the \fIStage Selected\fP command will stage just the selected lines.
-Clicking within a diff region and selecting \fIStage Section\fP stages the
-entire patch region.
+Clicking within a diff region and selecting \fIStage Diff Region\fP stages the
+entire patch diff region.
 .sp
 The corresponding opposite commands can be performed on staged files as well,
 e.g. staged content can be selectively removed from the index when we are
@@ -417,6 +417,25 @@ mkdir \-p ~/.config/git\-cola &&
 echo en >~/.config/git\-cola/language
 .ft P
 .fi
+.sp
+Alternatively you may also use LANGAUGE environmental variable to temporarily
+change \fIgit cola\fP\(aqs language just like any other gettext\-based program.  For
+example to temporarily change \fIgit cola\fP\(aqs language to English:
+.sp
+.nf
+.ft C
+LANGUAGE=en git cola
+.ft P
+.fi
+.sp
+To make \fIgit cola\fP use the zh_TW translation with zh_HK, zh, and en as a
+fallback.:
+.sp
+.nf
+.ft C
+LANGUAGE=zh_TW:zh_HK:zh:en git cola
+.ft P
+.fi
 .SH CUSTOM GUI ACTIONS
 .sp
 \fIgit cola\fP allows you to define custom GUI actions by setting \fIgit config\fP
@@ -429,6 +448,11 @@ executed from the root of the working directory, and in the environment it
 receives the name of the tool as GIT_GUITOOL, the name of the currently
 selected file as FILENAME, and the name of the current branch as CUR_BRANCH
 (if the head is detached, CUR_BRANCH is empty).
+.SS guitool.<name>.background
+.sp
+Run the command in the background (similar to editing and difftool actions).
+This avoids blocking the GUI.  Setting \fIbackground\fP to \fItrue\fP implies
+\fInoconsole\fP and \fInorescan\fP.
 .SS guitool.<name>.needsfile
 .sp
 Run the tool only if a diff is selected in the GUI. It guarantees that
