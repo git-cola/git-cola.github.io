@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>git-cola(1) &mdash; git-cola 2.0.4 documentation</title>
+    <title>git-cola(1) &mdash; git-cola 2.0.5 documentation</title>
     
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '2.0.4',
+        VERSION:     '2.0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,13 +27,13 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola 2.0.4 documentation" href="index.html" />
+    <link rel="top" title="git-cola 2.0.5 documentation" href="index.html" />
     <link rel="next" title="git-dag(1)" href="git-dag.html" />
     <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola 2.0.4 documentation</span></a></h1>
+          <span>git-cola 2.0.5 documentation</span></a></h1>
         <h2 class="heading"><span>git-cola(1)</span></h2>
       </div>
       <div class="topnav">
@@ -267,10 +267,10 @@ Extraneous whitespace is shown with a pure-red background.</p>
 that use either the cursor location or text selection.</p>
 <div class="section" id="staging-content-for-commit">
 <h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote a new diff region.  Selecting lines of diff
+<p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote a new diff hunk.  Selecting lines of diff
 and using the <cite>Stage Selected</cite> command will stage just the selected lines.
-Clicking within a diff region and selecting <cite>Stage Diff Region</cite> stages the
-entire patch diff region.</p>
+Clicking within a diff hunk and selecting <cite>Stage Diff Hunk</cite> stages the
+entire patch diff hunk.</p>
 <p>The corresponding opposite commands can be performed on staged files as well,
 e.g. staged content can be selectively removed from the index when we are
 viewing diffs for staged content.</p>

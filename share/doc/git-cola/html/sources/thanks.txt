@@ -58,8 +58,10 @@ Thanks
 * OmegaPhil (Omega Weapon)
 * Owen Healy
 * Paolo G. Giarrusso
+* Paul Hildebrandt
 * Peter Júnoš
 * Rustam Safin
+* Samsul Ma'arif
 * Sergey Leschina
 * Srinivasa Nallapati
 * Stanisław Halik
@@ -72,3 +74,5 @@ Thanks
 * Uri Okrent
 * Ｖ字龍 (Vdragon)
 * Virgil Dupras
+* Vitor Lobo
+* Zhang Han

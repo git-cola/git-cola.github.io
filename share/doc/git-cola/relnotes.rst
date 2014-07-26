@@ -1,3 +1,43 @@
+git-cola v2.0.5
+===============
+Usability, bells and whistles
+-----------------------------
+* New Brazillian Portuguese translation thanks to Vitor Lobo.
+
+* New Indonesian translation thanks to Samsul Ma'arif.
+
+* Updated Simplified Chinese translation thanks to Zhang Han.
+
+* `Ctrl+Backspace` is now a hotkey for "delete untracked files" in
+  the status widget.
+
+* Fetch/Push/Pull dialogs now use the configured remote of the current
+  branch by default.
+
+  https://github.com/git-cola/git-cola/pull/324
+
+Fixes
+-----
+* We now use `os.getcwd()` on Python3.
+
+  https://github.com/git-cola/git-cola/pull/316
+
+  https://github.com/git-cola/git-cola/pull/326
+
+* The `Ctrl+P` hotkey was overloaded to both "push" and "cherry-pick",
+  so "cherry-pick" was moved to `Shift+Ctrl+C`.
+
+* Custom GUI tools with mixed-case names are now properly supported.
+
+* "Diff Region" is now referred to as "Diff Hunk" for consistency
+  with common terminology from diff/patch tools.
+
+  https://github.com/git-cola/git-cola/issues/328
+
+* git-cola's test suite is now portable to MS Windows.
+
+  https://github.com/git-cola/git-cola/pull/332
+
 git-cola v2.0.4
 ===============
 Usability, bells and whistles
@@ -23,8 +63,8 @@ Usability, bells and whistles
 
   https://github.com/git-cola/git-cola/pull/272
 
-* New hotkeys: Ctrl+f for fetch, Ctrl+p for push,
-  and Ctrl-shift-p for pull.
+* New hotkeys: `Ctrl+F` for fetch, `Ctrl+P` for push,
+  and `Shift+Ctrl+P` for pull.
 
 * The bookmarks widget's context menu actions were made clearer.
 
@@ -455,7 +495,7 @@ Usability, bells and whistles
 
   https://github.com/git-cola/git-cola/pull/175
 
-* Ctrl+M can now be used to toggle the "Amend last commit"
+* `Ctrl+M` can now be used to toggle the "Amend last commit"
   checkbox in the commit message editor.
 
   https://github.com/git-cola/git-cola/pull/161
@@ -540,9 +580,9 @@ Usability, bells and whistles
 -----------------------------
 * `git dag` got a big visual upgrade.
 
-* Ctrl+G now launches the "Grep" tool.
+* `Ctrl+G` now launches the "Grep" tool.
 
-* Ctrl+D launches difftool and Ctrl+E launches your editor
+* `Ctrl+D` launches difftool and `Ctrl+E` launches your editor
   when in the diff panel.
 
 * git-cola can now be told to use an alternative language.
