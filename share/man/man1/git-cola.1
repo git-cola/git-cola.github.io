@@ -1,4 +1,4 @@
-.TH "GIT-COLA" "1" "July 26, 2014" "2.0.5" "git-cola"
+.TH "GIT-COLA" "1" "August 31, 2014" "2.0.6" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -49,9 +49,18 @@ Prompt for a Git repository.  Defaults to the current directory.
 .SS \-r, \-\-repo <path>
 .sp
 Open the Git repository at \fI<path>\fP.  Defaults to the current directory.
+.SS \-s, \-\-status\-filter <filter>
+.sp
+Apply the path filter to the status widget.
 .SS \-\-version
 .sp
 Print the \fIgit cola\fP version and exit.
+.SS \-h, \-\-help
+.sp
+Show usage and optional arguments.
+.SS \-\-help\-commands
+.sp
+Show available sub\-commands.
 .SH SUB-COMMANDS
 .SS am
 .sp
@@ -221,8 +230,8 @@ that use either the cursor location or text selection.
 .SS Staging content for commit
 .sp
 The \fB@@\fP patterns denote a new diff hunk.  Selecting lines of diff
-and using the \fIStage Selected\fP command will stage just the selected lines.
-Clicking within a diff hunk and selecting \fIStage Diff Hunk\fP stages the
+and using the \fIStage Selected Lines\fP command will stage just the selected
+lines.  Clicking within a diff hunk and selecting \fIStage Diff Hunk\fP stages the
 entire patch diff hunk.
 .sp
 The corresponding opposite commands can be performed on staged files as well,

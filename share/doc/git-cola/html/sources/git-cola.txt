@@ -29,9 +29,21 @@ Prompt for a Git repository.  Defaults to the current directory.
 -----------------
 Open the Git repository at `<path>`.  Defaults to the current directory.
 
+-s, --status-filter <filter>
+----------------------------
+Apply the path filter to the status widget.
+
 --version
 ---------
 Print the `git cola` version and exit.
+
+-h, --help
+----------
+Show usage and optional arguments.
+
+--help-commands
+---------------
+Show available sub-commands.
 
 SUB-COMMANDS
 ============
@@ -241,8 +253,8 @@ that use either the cursor location or text selection.
 Staging content for commit
 --------------------------
 The ``@@`` patterns denote a new diff hunk.  Selecting lines of diff
-and using the `Stage Selected` command will stage just the selected lines.
-Clicking within a diff hunk and selecting `Stage Diff Hunk` stages the
+and using the `Stage Selected Lines` command will stage just the selected
+lines.  Clicking within a diff hunk and selecting `Stage Diff Hunk` stages the
 entire patch diff hunk.
 
 The corresponding opposite commands can be performed on staged files as well,
