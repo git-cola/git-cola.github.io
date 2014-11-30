@@ -1,4 +1,4 @@
-.TH "GIT-COLA" "1" "September 30, 2014" "2.0.7" "git-cola"
+.TH "GIT-COLA" "1" "November 30, 2014" "2.0.8" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -303,6 +303,16 @@ instead of creating a new one.  \fIgit cola\fP loads the previous commit message
 into the commit message editor when this option is selected.
 .sp
 The \fIStatus\fP tool will display all of the changes for the amended commit.
+.SS Create Signed Commit
+.sp
+Tell \fIgit commit\fP and \fIgit merge\fP to sign commits using GPG.
+.sp
+Using this option is equivalent to passing the \fB\-\-gpg\-sign\fP option to
+\fI\%git commit\fP and
+\fI\%git merge\fP.
+.sp
+This option\(aqs default value can be configured using the \fIcola.signcommits\fP
+configuration variable.
 .SH APPLY PATCHES
 .sp
 Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
@@ -331,10 +341,10 @@ the \fISave Window Settings\fP option in the \fIgit cola\fP preferences.
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
-.SS cola.savewindowsettings
+.SS cola.browserdockable
 .sp
-\fIgit cola\fP will remember its window settings when set to \fItrue\fP.
-Window settings and X11 sessions are saved in \fI$HOME/.config/git\-cola\fP.
+Whether to create a dock widget with the \fIBrowser\fP tool.
+Defaults to \fIfalse\fP to speedup startup time.
 .SS cola.fileattributes
 .sp
 Enables per\-file gitattributes encoding support when set to \fItrue\fP.
@@ -343,10 +353,6 @@ and applying diffs.
 .SS cola.fontdiff
 .sp
 Specifies the font to use for \fIgit cola\fP\(aqs diff display.
-.SS cola.browserdockable
-.sp
-Whether to create a dock widget with the \fIBrowser\fP tool.
-Defaults to \fIfalse\fP to speedup startup time.
 .SS cola.inotify
 .sp
 Set to \fIfalse\fP to disable inotify support.
@@ -357,18 +363,42 @@ Whether to automatically break long lines while editing commit messages.
 Defaults to \fItrue\fP.  This setting is configured using the \fIPreferences\fP
 dialog, but it can be toggled for one\-off usage using the commit message
 editor\(aqs options sub\-menu.
-.SS cola.tabwidth
+.SS cola.dragencoding
 .sp
-The number of columns occupied by a tab character.  Defaults to 8.
-.SS cola.textwidth
-.sp
-The number of columns used for line wrapping.
-Tabs are counted according to \fIcola.tabwidth\fP.
+\fIgit cola\fP encodes paths dragged from its widgets into \fIutf\-16\fP when adding
+them to the drag\-and\-drop mime data (specifically, the \fItext/x\-moz\-url\fP entry).
+\fIutf\-16\fP is used to make \fIgnome\-terminal\fP see the right paths, but other
+terminals may expect a different encoding.  If you are using a terminal that
+expects a modern encoding, e.g. \fIterminator\fP, then set this value to \fIutf\-8\fP.
 .SS cola.readsize
 .sp
 \fIgit cola\fP avoids reading large binary untracked files.
 The maximum size to read is controlled by \fIcola.readsize\fP
 and defaults to \fI2048\fP.
+.SS cola.savewindowsettings
+.sp
+\fIgit cola\fP will remember its window settings when set to \fItrue\fP.
+Window settings and X11 sessions are saved in \fI$HOME/.config/git\-cola\fP.
+.SS cola.signcommits
+.sp
+\fIgit cola\fP will sign commits by default when set \fItrue\fP. Defaults to \fIfalse\fP.
+See the section below on setting up GPG for more details.
+.SS cola.tabwidth
+.sp
+The number of columns occupied by a tab character.  Defaults to 8.
+.SS cola.terminal
+.sp
+The command to use when launching commands within a graphical terminal.
+.sp
+\fIcola.terminal\fP defaults to \fIxterm \-e\fP when unset.
+e.g. when opening a shell, \fIgit cola\fP will run \fIxterm \-e $SHELL\fP.
+.sp
+If either \fIgnome\-terminal\fP, \fIxfce4\-terminal\fP, or \fIkonsole\fP are installed
+then they will be preferred over \fIxterm\fP when \fIcola.terminal\fP is unset.
+.SS cola.textwidth
+.sp
+The number of columns used for line wrapping.
+Tabs are counted according to \fIcola.tabwidth\fP.
 .SS gui.diffcontext
 .sp
 The number of diff context lines to display.
@@ -501,6 +531,83 @@ Defaults to the tool name.
 Specifies the general prompt string to display at the top of the dialog,
 before subsections for argprompt and revprompt.
 The default value includes the actual command.
+.SS guitool.<name>.shortcut
+.sp
+Specifies a keyboard shortcut for the custom tool.
+.sp
+The value must be a valid string understood by the \fIQAction::setShortcut()\fP API.
+See \fI\%http://qt-project.org/doc/qt-4.8/qkeysequence.html#QKeySequence-2\fP
+for more details about the supported values.
+.sp
+Avoid creating shortcuts that conflict with existing built\-in \fIgit cola\fP
+shortcuts.  Creating a conflict will result in no action when the shortcut
+is used.
+.SH SETTING UP GPG FOR SIGNED COMMITS
+.sp
+When creating signed commits \fIgpg\fP will attempt to read your password from the
+terminal from which \fIgit cola\fP was launched.
+The way to make this work smoothly is to use a GPG agent so that you can avoid
+needing to re\-enter your password every time you commit.
+.sp
+This also gets you a graphical passphrase prompt instead of getting prompted
+for your password in the terminal.
+.SS Install gpg\-agent and friends
+.sp
+On Mac OS X, you may need to \fIbrew install gpg\-agent\fP and install the
+\fI\%Mac GPG Suite\fP.
+.sp
+On Linux use your package manager to install gnupg\-agent and pinentry\-qt4, e.g.:
+.sp
+.nf
+.ft C
+sudo apt\-get install gnupg\-agent pinentry\-qt4
+.ft P
+.fi
+.SS Configure gpg\-agent and a pin\-entry program
+.sp
+Edit \fI~/.gnupg/gpg.conf\fP to include the line,:
+.sp
+.nf
+.ft C
+use\-agent
+.ft P
+.fi
+.sp
+Edit \fI~/.gnupg/gpg\-agent.conf\fP to contain a pinentry\-program line pointing to
+the pin\-entry program for your platform.
+.sp
+The following example \fIgpg\-agent.conf\fP shows how to use pinentry\-qt4 on Linux:
+.sp
+.nf
+.ft C
+pinentry\-program /usr/bin/pinentry\-qt4
+default\-cache\-ttl 3600
+enable\-ssh\-support
+use\-standard\-socket
+.ft P
+.fi
+.sp
+This following example \fIgpg\-agent.conf\fP shows how to use MacGPG2\(aqs
+pinentry app on On Mac OS X:
+.sp
+.nf
+.ft C
+pinentry\-program /usr/local/MacGPG2/libexec/pinentry\-mac.app/Contents/MacOS/pinentry\-mac
+default\-cache\-ttl 3600
+enable\-ssh\-support
+use\-standard\-socket
+.ft P
+.fi
+.sp
+Once this has been setup then you will need to eval the output
+of \fIgpg\-agent \-\-daemon\fP in your shell prior to launching git\-cola.:
+.sp
+.nf
+.ft C
+eval $(gpg\-agent \-\-daemon)
+bin/git\-cola
+.ft P
+.fi
 .SH LINKS
 .SS Git Cola\(aqs Git Repository
 .sp

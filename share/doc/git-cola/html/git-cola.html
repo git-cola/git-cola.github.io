@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>git-cola(1) &mdash; git-cola 2.0.7 documentation</title>
+    <title>git-cola(1) &mdash; git-cola 2.0.8 documentation</title>
     
     <link rel="stylesheet" href="static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '2.0.7',
+        VERSION:     '2.0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,13 +27,13 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="git-cola 2.0.7 documentation" href="index.html" />
+    <link rel="top" title="git-cola 2.0.8 documentation" href="index.html" />
     <link rel="next" title="git-dag(1)" href="git-dag.html" />
     <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
-          <span>git-cola 2.0.7 documentation</span></a></h1>
+          <span>git-cola 2.0.8 documentation</span></a></h1>
         <h2 class="heading"><span>git-cola(1)</span></h2>
       </div>
       <div class="topnav">
@@ -342,6 +342,15 @@ instead of creating a new one.  <cite>git cola</cite> loads the previous commit 
 into the commit message editor when this option is selected.</p>
 <p>The <cite>Status</cite> tool will display all of the changes for the amended commit.</p>
 </div>
+<div class="section" id="create-signed-commit">
+<h3>Create Signed Commit<a class="headerlink" href="#create-signed-commit" title="Permalink to this headline">¶</a></h3>
+<p>Tell <cite>git commit</cite> and <cite>git merge</cite> to sign commits using GPG.</p>
+<p>Using this option is equivalent to passing the <tt class="docutils literal"><span class="pre">--gpg-sign</span></tt> option to
+<a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a> and
+<a class="reference external" href="http://git-scm.com/docs/git-merge">git merge</a>.</p>
+<p>This option&#8217;s default value can be configured using the <cite>cola.signcommits</cite>
+configuration variable.</p>
+</div>
 </div>
 <div class="section" id="apply-patches">
 <h2>APPLY PATCHES<a class="headerlink" href="#apply-patches" title="Permalink to this headline">¶</a></h2>
@@ -369,10 +378,10 @@ the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> prefer
 <div class="section" id="configuration-variables">
 <h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
 <p>These variables can be set using <cite>git config</cite> or from the settings.</p>
-<div class="section" id="cola-savewindowsettings">
-<h3>cola.savewindowsettings<a class="headerlink" href="#cola-savewindowsettings" title="Permalink to this headline">¶</a></h3>
-<p><cite>git cola</cite> will remember its window settings when set to <cite>true</cite>.
-Window settings and X11 sessions are saved in <cite>$HOME/.config/git-cola</cite>.</p>
+<div class="section" id="cola-browserdockable">
+<h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this headline">¶</a></h3>
+<p>Whether to create a dock widget with the <cite>Browser</cite> tool.
+Defaults to <cite>false</cite> to speedup startup time.</p>
 </div>
 <div class="section" id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
@@ -383,11 +392,6 @@ and applying diffs.</p>
 <div class="section" id="cola-fontdiff">
 <h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the font to use for <cite>git cola</cite>&#8216;s diff display.</p>
-</div>
-<div class="section" id="cola-browserdockable">
-<h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this headline">¶</a></h3>
-<p>Whether to create a dock widget with the <cite>Browser</cite> tool.
-Defaults to <cite>false</cite> to speedup startup time.</p>
 </div>
 <div class="section" id="cola-inotify">
 <h3>cola.inotify<a class="headerlink" href="#cola-inotify" title="Permalink to this headline">¶</a></h3>
@@ -401,20 +405,46 @@ Defaults to <cite>true</cite>.  This setting is configured using the <cite>Prefe
 dialog, but it can be toggled for one-off usage using the commit message
 editor&#8217;s options sub-menu.</p>
 </div>
-<div class="section" id="cola-tabwidth">
-<h3>cola.tabwidth<a class="headerlink" href="#cola-tabwidth" title="Permalink to this headline">¶</a></h3>
-<p>The number of columns occupied by a tab character.  Defaults to 8.</p>
-</div>
-<div class="section" id="cola-textwidth">
-<h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
-<p>The number of columns used for line wrapping.
-Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
+<div class="section" id="cola-dragencoding">
+<h3>cola.dragencoding<a class="headerlink" href="#cola-dragencoding" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> encodes paths dragged from its widgets into <cite>utf-16</cite> when adding
+them to the drag-and-drop mime data (specifically, the <cite>text/x-moz-url</cite> entry).
+<cite>utf-16</cite> is used to make <cite>gnome-terminal</cite> see the right paths, but other
+terminals may expect a different encoding.  If you are using a terminal that
+expects a modern encoding, e.g. <cite>terminator</cite>, then set this value to <cite>utf-8</cite>.</p>
 </div>
 <div class="section" id="cola-readsize">
 <h3>cola.readsize<a class="headerlink" href="#cola-readsize" title="Permalink to this headline">¶</a></h3>
 <p><cite>git cola</cite> avoids reading large binary untracked files.
 The maximum size to read is controlled by <cite>cola.readsize</cite>
 and defaults to <cite>2048</cite>.</p>
+</div>
+<div class="section" id="cola-savewindowsettings">
+<h3>cola.savewindowsettings<a class="headerlink" href="#cola-savewindowsettings" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> will remember its window settings when set to <cite>true</cite>.
+Window settings and X11 sessions are saved in <cite>$HOME/.config/git-cola</cite>.</p>
+</div>
+<div class="section" id="cola-signcommits">
+<h3>cola.signcommits<a class="headerlink" href="#cola-signcommits" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> will sign commits by default when set <cite>true</cite>. Defaults to <cite>false</cite>.
+See the section below on setting up GPG for more details.</p>
+</div>
+<div class="section" id="cola-tabwidth">
+<h3>cola.tabwidth<a class="headerlink" href="#cola-tabwidth" title="Permalink to this headline">¶</a></h3>
+<p>The number of columns occupied by a tab character.  Defaults to 8.</p>
+</div>
+<div class="section" id="cola-terminal">
+<h3>cola.terminal<a class="headerlink" href="#cola-terminal" title="Permalink to this headline">¶</a></h3>
+<p>The command to use when launching commands within a graphical terminal.</p>
+<p><cite>cola.terminal</cite> defaults to <cite>xterm -e</cite> when unset.
+e.g. when opening a shell, <cite>git cola</cite> will run <cite>xterm -e $SHELL</cite>.</p>
+<p>If either <cite>gnome-terminal</cite>, <cite>xfce4-terminal</cite>, or <cite>konsole</cite> are installed
+then they will be preferred over <cite>xterm</cite> when <cite>cola.terminal</cite> is unset.</p>
+</div>
+<div class="section" id="cola-textwidth">
+<h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
+<p>The number of columns used for line wrapping.
+Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
 </div>
 <div class="section" id="gui-diffcontext">
 <h3>gui.diffcontext<a class="headerlink" href="#gui-diffcontext" title="Permalink to this headline">¶</a></h3>
@@ -557,6 +587,60 @@ Defaults to the tool name.</p>
 <p>Specifies the general prompt string to display at the top of the dialog,
 before subsections for argprompt and revprompt.
 The default value includes the actual command.</p>
+</div>
+<div class="section" id="guitool-name-shortcut">
+<h3>guitool.&lt;name&gt;.shortcut<a class="headerlink" href="#guitool-name-shortcut" title="Permalink to this headline">¶</a></h3>
+<p>Specifies a keyboard shortcut for the custom tool.</p>
+<p>The value must be a valid string understood by the <cite>QAction::setShortcut()</cite> API.
+See <a class="reference external" href="http://qt-project.org/doc/qt-4.8/qkeysequence.html#QKeySequence-2">http://qt-project.org/doc/qt-4.8/qkeysequence.html#QKeySequence-2</a>
+for more details about the supported values.</p>
+<p>Avoid creating shortcuts that conflict with existing built-in <cite>git cola</cite>
+shortcuts.  Creating a conflict will result in no action when the shortcut
+is used.</p>
+</div>
+</div>
+<div class="section" id="setting-up-gpg-for-signed-commits">
+<h2>SETTING UP GPG FOR SIGNED COMMITS<a class="headerlink" href="#setting-up-gpg-for-signed-commits" title="Permalink to this headline">¶</a></h2>
+<p>When creating signed commits <cite>gpg</cite> will attempt to read your password from the
+terminal from which <cite>git cola</cite> was launched.
+The way to make this work smoothly is to use a GPG agent so that you can avoid
+needing to re-enter your password every time you commit.</p>
+<p>This also gets you a graphical passphrase prompt instead of getting prompted
+for your password in the terminal.</p>
+<div class="section" id="install-gpg-agent-and-friends">
+<h3>Install gpg-agent and friends<a class="headerlink" href="#install-gpg-agent-and-friends" title="Permalink to this headline">¶</a></h3>
+<p>On Mac OS X, you may need to <cite>brew install gpg-agent</cite> and install the
+<a class="reference external" href="https://gpgtools.org/macgpg2/">Mac GPG Suite</a>.</p>
+<p>On Linux use your package manager to install gnupg-agent and pinentry-qt4, e.g.:</p>
+<div class="highlight-python"><pre>sudo apt-get install gnupg-agent pinentry-qt4</pre>
+</div>
+</div>
+<div class="section" id="configure-gpg-agent-and-a-pin-entry-program">
+<h3>Configure gpg-agent and a pin-entry program<a class="headerlink" href="#configure-gpg-agent-and-a-pin-entry-program" title="Permalink to this headline">¶</a></h3>
+<p>Edit <cite>~/.gnupg/gpg.conf</cite> to include the line,:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
+</pre></div>
+</div>
+<p>Edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line pointing to
+the pin-entry program for your platform.</p>
+<p>The following example <cite>gpg-agent.conf</cite> shows how to use pinentry-qt4 on Linux:</p>
+<div class="highlight-python"><pre>pinentry-program /usr/bin/pinentry-qt4
+default-cache-ttl 3600
+enable-ssh-support
+use-standard-socket</pre>
+</div>
+<p>This following example <cite>gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
+pinentry app on On Mac OS X:</p>
+<div class="highlight-python"><pre>pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+default-cache-ttl 3600
+enable-ssh-support
+use-standard-socket</pre>
+</div>
+<p>Once this has been setup then you will need to eval the output
+of <cite>gpg-agent &#8211;daemon</cite> in your shell prior to launching git-cola.:</p>
+<div class="highlight-python"><pre>eval $(gpg-agent --daemon)
+bin/git-cola</pre>
+</div>
 </div>
 </div>
 <div class="section" id="links">
