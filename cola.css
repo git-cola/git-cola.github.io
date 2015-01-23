@@ -52,14 +52,22 @@ ul {
 	padding: 0;
 }
 
+.frontpage-screenshot {
+	float: right;
+	max-height: 380px;
+	margin: 1em;
+}
+
 .sitelinks {
-	position: absolute;
+	float: right;
 	text-align: right;
-	top: 38px;
-	right: 0;
 	margin-right: 6px;
 	font-weight: bold;
 	z-index: 2;
+}
+
+.sitelinks ul {
+	margin-top: 0;
 }
 
 a:link {
@@ -95,9 +103,10 @@ a:hover {
 }
 
 .download-button-container {
-	margin-top: 77px;
+	float: left;
 	margin-left: 150px;
-	margin-right: 20ex;
+	margin-right: 1em;
+	margin-bottom: 1em;
 }
 
 a.button {
@@ -107,7 +116,7 @@ a.button {
 	font-weight: bold;
 	background-color: #ff6600;
 	color: white;
-	position: absolute;
+	white-space: nowrap;
 	padding: 5px;
 	padding-left: 1ex;
 	padding-right:1ex;
