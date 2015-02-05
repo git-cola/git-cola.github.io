@@ -15,6 +15,7 @@ Thanks
 * Charles 101
 * Christian Jann
 * Christopher Meng
+* Clément Pit--Claudel
 * Daniel Fahlke
 * Daniel Harding
 * Daniel King
@@ -81,4 +82,5 @@ Thanks
 * Virgil Dupras
 * Vitor Lobo
 * v.paritskiy
+* Wolfgang Ocker
 * Zhang Han

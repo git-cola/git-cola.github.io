@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>git-cola v1.4.2 &mdash; git-cola 2.1.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="git-cola 2.1.1 documentation" href="../index.html"/>
+        <link rel="up" title="Releases" href="../relnotes.html"/>
+        <link rel="next" title="git-cola v1.4.1.2" href="v1.4.1.2.html"/>
+        <link rel="prev" title="git-cola v1.4.2.1" href="v1.4.2.1.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> git-cola</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../git-cola.html">git-cola(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#options">OPTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#sub-commands">SUB-COMMANDS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#configure-your-editor">CONFIGURE YOUR EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#tools">TOOLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#status">STATUS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#id4">DIFF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#commit-message-editor">COMMIT MESSAGE EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#apply-patches">APPLY PATCHES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#configuration-variables">CONFIGURATION VARIABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#environment-variables">ENVIRONMENT VARIABLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#language-settings">LANGUAGE SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#custom-gui-actions">CUSTOM GUI ACTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#links">LINKS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../git-dag.html">git-dag(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#options">OPTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#log-options">Log Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#diff-commits">DIFF COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-dag.html#configuration-variables">CONFIGURATION VARIABLES</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thanks.html">Thanks</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="v2.1.1.html">git-cola v2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.1.0.html">git-cola v2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.8.html">git-cola v2.0.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.7.html">git-cola v2.0.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.6.html">git-cola v2.0.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.5.html">git-cola v2.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.4.html">git-cola v2.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.3.html">git-cola v2.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.2.html">git-cola v2.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.1.html">git-cola v2.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.0.html">git-cola v2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.9.4.html">git-cola v1.9.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.9.3.html">git-cola v1.9.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.9.2.html">git-cola v1.9.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.9.1.html">git-cola v1.9.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.9.0.html">git-cola v1.9.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.5.html">git-cola v1.8.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.4.html">git-cola v1.8.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.3.html">git-cola v1.8.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.2.html">git-cola v1.8.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.1.html">git-cola v1.8.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.0.html">git-cola v1.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.7.html">git-cola v1.7.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.6.html">git-cola v1.7.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.5.html">git-cola v1.7.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.4.1.html">git-cola v1.7.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.4.html">git-cola v1.7.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.3.html">git-cola v1.7.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.2.html">git-cola v1.7.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.1.1.html">git-cola v1.7.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.1.html">git-cola v1.7.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.7.0.html">git-cola v1.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.5.html">git-cola v1.4.3.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.4.html">git-cola v1.4.3.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.3.html">git-cola v1.4.3.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.2.html">git-cola v1.4.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.1.html">git-cola v1.4.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.html">git-cola v1.4.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.2.5.html">git-cola v1.4.2.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.2.4.html">git-cola v1.4.2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.2.3.html">git-cola v1.4.2.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.2.2.html">git-cola v1.4.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.2.1.html">git-cola v1.4.2.1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v1.4.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.1.2.html">git-cola v1.4.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.1.1.html">git-cola v1.4.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.1.html">git-cola v1.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.0.5.html">git-cola v1.4.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.0.4.html">git-cola v1.4.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.0.3.html">git-cola v1.4.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.0.2.html">git-cola v1.4.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.0.1.html">git-cola v1.4.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.0.html">git-cola v1.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.3.9.html">git-cola v1.3.9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.3.8.html">git-cola v1.3.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.3.7.html">git-cola v1.3.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.3.6.html">git-cola v1.3.6</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">git-cola</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../relnotes.html">Releases</a> &raquo;</li>
+      
+    <li>git-cola v1.4.2</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../sources/relnotes/v1.4.2.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="git-cola-v1-4-2">
+<h1>git-cola v1.4.2<a class="headerlink" href="#git-cola-v1-4-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="usability-bells-and-whistles">
+<h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Added support for the configurable <code class="docutils literal"><span class="pre">guitool.&lt;tool&gt;.*</span></code>
+actions as described in <code class="docutils literal"><span class="pre">git-config(1)</span></code>.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/44">https://github.com/git-cola/git-cola/issues/44</a></p>
+<p><a class="reference external" href="http://schacon.github.com/git/git-config.html">http://schacon.github.com/git/git-config.html</a></p>
+<p>This makes it possible to add new actions to <cite>git cola</cite>
+by simply editing <code class="docutils literal"><span class="pre">~/.gitconfig</span></code>.  This implements the
+same guitool support as <cite>git gui</cite>.</p>
+</li>
+<li><p class="first">Introduced a stat cache to speed up <cite>git config</cite> and
+repository status checks.</p>
+</li>
+<li><p class="first">Added Alt-key shortcuts to the main <cite>git cola</cite> interface.</p>
+</li>
+<li><p class="first">The <cite>Actions</cite> dock widget switches between a horizontal
+and vertical layout when resized.</p>
+</li>
+<li><p class="first">We now use <code class="docutils literal"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--submodule</span></code> for submodules
+(used when git &gt;= 1.6.6).</p>
+</li>
+<li><p class="first">The context menu for modified submodules includes an option
+to launch <cite>git cola</cite>.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/17">https://github.com/git-cola/git-cola/issues/17</a></p>
+</li>
+<li><p class="first">Prefer <code class="docutils literal"><span class="pre">$VISUAL</span></code> over <code class="docutils literal"><span class="pre">$EDITOR</span></code> when both are defined.
+These are used to set a default editor in lieu of <cite>core.editor</cite>
+configuration.</p>
+</li>
+<li><p class="first">Force the editor to be <code class="docutils literal"><span class="pre">gvim</span></code> when we see <code class="docutils literal"><span class="pre">vim</span></code>.
+This prevents us from launching an editor in the (typically
+unattached) parent terminal and creating zombie editors
+that cannot be easily killed.</p>
+</li>
+<li><p class="first">Selections are remembered and restored across updates.
+This makes the <cite>partial-staging</cite> workflow easier since the
+diff view will show the updated diff after staging.</p>
+</li>
+<li><p class="first">Show the path to the current repository in a tooltip
+over the commit message editor.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/45">https://github.com/git-cola/git-cola/issues/45</a></p>
+</li>
+<li><p class="first">Log internal <code class="docutils literal"><span class="pre">git</span></code> commands when <code class="docutils literal"><span class="pre">GIT_COLA_TRACE</span></code> is defined.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/39">https://github.com/git-cola/git-cola/issues/39</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="fixes">
+<h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Improved backwards compatibility for Python 2.4.</p>
+</li>
+<li><p class="first"><cite>Review mode</cite> can now review the current branch; it no longer
+requires you to checkout the branch into which the reviewed
+branch will be merged.</p>
+</li>
+<li><p class="first">Guard against <cite>color.ui = always</cite> configuration when using
+<cite>git log</cite> by passing <code class="docutils literal"><span class="pre">--no-color</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">yes</span></code> and <code class="docutils literal"><span class="pre">no</span></code> are now supported as valid booleans
+by the <cite>git config</cite> parser.</p>
+</li>
+<li><p class="first">Better defaults are used for <cite>fetch</cite>, <cite>push</cite>, and <cite>pull</cite>..</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/43">https://github.com/git-cola/git-cola/issues/43</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="packaging">
+<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Removed colon (<cite>:</cite>) from the applilcation name on Windows</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/41">https://github.com/git-cola/git-cola/issues/41</a></p>
+</li>
+<li><p class="first">Fixed bugs with the Windows installer</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/40">https://github.com/git-cola/git-cola/issues/40</a></p>
+</li>
+<li><p class="first">Added a more standard i18n infrastructure.  The install
+tree now has the common <code class="docutils literal"><span class="pre">share/locale/$lang/LC_MESSAGES/git-cola.mo</span></code>
+layout in use by several projects.</p>
+</li>
+<li><p class="first">Started trying to accomodate Mac OSX 10.6 (Snow Leopard)
+in the <code class="docutils literal"><span class="pre">darwin/</span></code> build scripts but our tester is yet to
+report success building a <cite>.app</cite> bundle.</p>
+</li>
+<li><p class="first">Replaced use of <code class="docutils literal"><span class="pre">perl</span></code> in Sphinx/documentation Makefile
+with more-portable <code class="docutils literal"><span class="pre">sed</span></code> constructs.  Thanks to
+Stefan Naewe for discovering the portability issues and
+providing msysgit-friendly patches.</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="v1.4.1.2.html" class="btn btn-neutral float-right" title="git-cola v1.4.1.2">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="v1.4.2.1.html" class="btn btn-neutral" title="git-cola v1.4.2.1"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2007-2015, David Aguilar and contributors.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
