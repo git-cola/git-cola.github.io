@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v1.4.3.1 &mdash; git-cola 2.1.2 documentation</title>
+  <title>Unreleased Topics &mdash; git-cola 2.1.2 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
   
     <link rel="top" title="git-cola 2.1.2 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v1.4.3" href="v1.4.3.html"/>
-        <link rel="prev" title="git-cola v1.4.3.2" href="v1.4.3.2.html"/> 
+        <link rel="next" title="git-cola v2.1.2" href="v2.1.2.html"/>
+        <link rel="prev" title="Releases" href="../relnotes.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -99,7 +99,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="unreleased.html">Unreleased Topics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Unreleased Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.2.html">git-cola v2.1.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.1.html">git-cola v2.1.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.0.html">git-cola v2.1.0</a></li>
@@ -137,7 +137,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.4.html">git-cola v1.4.3.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.3.html">git-cola v1.4.3.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.2.html">git-cola v1.4.3.2</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v1.4.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.1.html">git-cola v1.4.3.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.html">git-cola v1.4.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.2.5.html">git-cola v1.4.2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.2.4.html">git-cola v1.4.2.4</a></li>
@@ -186,10 +186,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v1.4.3.1</li>
+    <li>Unreleased Topics</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v1.4.3.1.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/unreleased.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -197,51 +197,11 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v1-4-3-1">
-<span id="v1-4-3-1"></span><h1>git-cola v1.4.3.1<a class="headerlink" href="#git-cola-v1-4-3-1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="usability-bells-and-whistles">
-<h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">The <cite>cola classic</cite> tool can be now configured to be dockable.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/56">https://github.com/git-cola/git-cola/issues/56</a></p>
-</li>
-<li><p class="first">The <cite>cola classic</cite> tool now uses visual sigils to indicate a file&#8217;s status.
-The idea and icons were provided by Uri Okrent.</p>
-</li>
-<li><p class="first">Include the &#8216;Rescan&#8217; button in the &#8216;Actions&#8217; widget regardless
-of whether inotify is installed.</p>
-</li>
-</ul>
-</div>
-<div class="section" id="packaging">
-<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Fix installation of translations per Fedora
-This incorporates Fedora&#8217;s fix for the translations path
-which originally appeared in cola-1.4.3-translations.patch.</li>
-<li>Mac OS X git-cola developers can now generate git-cola.app
-application bundles using &#8216;make app-bundle&#8217;.</li>
-</ul>
-</div>
-<div class="section" id="fixes">
-<h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Fixed a stacktrace when trying to use &#8220;Get Commit Message Template&#8221;
-with an unconfigured &#8220;commit.template&#8221; git config variable.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/72">https://github.com/git-cola/git-cola/issues/72</a></p>
-<p>This bug originated in Redhat&#8217;s bugzilla #675721 via a Fedora user.</p>
-<p><a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=675721">https://bugzilla.redhat.com/show_bug.cgi?id=675721</a></p>
-</li>
-<li><p class="first">Properly raise the main window on Mac OS X.</p>
-</li>
-<li><p class="first">Properly handle staging a huge numbers of files at once.</p>
-</li>
-<li><p class="first">Speed up &#8216;git config&#8217; usage by fixing cola&#8217;s caching proxy.</p>
-</li>
-<li><p class="first">Guard against damaged ~/.cola files.</p>
-</li>
-</ul>
-</div>
+  <div class="section" id="unreleased-topics">
+<span id="unreleased"></span><h1>Unreleased Topics<a class="headerlink" href="#unreleased-topics" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="v2.1.2.html#v2-1-2"><em>v2.1.2</em></a> is the latest stable release.</p>
+<p>Clone the git-cola repo to get the latest development version:</p>
+<p><tt class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git://github.com/git-cola/git-cola.git</span></tt></p>
 </div>
 
 
@@ -250,10 +210,10 @@ with an unconfigured &#8220;commit.template&#8221; git config variable.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v1.4.3.html" class="btn btn-neutral float-right" title="git-cola v1.4.3">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.1.2.html" class="btn btn-neutral float-right" title="git-cola v2.1.2">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v1.4.3.2.html" class="btn btn-neutral" title="git-cola v1.4.3.2"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../relnotes.html" class="btn btn-neutral" title="Releases"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

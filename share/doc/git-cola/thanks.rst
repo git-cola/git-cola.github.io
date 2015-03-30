@@ -3,6 +3,7 @@ Thanks
 `git-cola` was made possible thanks to the contributions of the following people:
 
 * Aaron Cook
+* Adrien be
 * Alex Chernetz
 * Alexander Kozienko
 * Andreas Sommer
@@ -22,6 +23,7 @@ Thanks
 * David Aguilar
 * David Martínez Martí
 * Dennis Gilmore
+* Dmitry Kann
 * Eric Drechsel
 * `GIT Hackers <http://git-scm.com/about>`_
 * Glen Mailer
@@ -34,6 +36,7 @@ Thanks
 * James Geiger
 * Jérôme Carretero
 * Johann Schmitz
+* Josh Taylor
 * Jeff Dagenais
 * Justin Lecher
 * Karl Bielefeldt
@@ -60,8 +63,10 @@ Thanks
 * OmegaPhil (Omega Weapon)
 * Owen Healy
 * Paolo G. Giarrusso
+* Patrick Browne
 * Paul Hildebrandt
 * Paul Weingardt
+* Peter Dave Hello
 * Peter Júnoš
 * Pilar Molina Lopez
 * Raghavendra Karunanidhi
@@ -69,6 +74,7 @@ Thanks
 * Samsul Ma'arif
 * Sergey Leschina
 * Srinivasa Nallapati
+* Stan Angeloff
 * Stanisław Halik
 * Stefan Naewe
 * Steffen Prohaska
