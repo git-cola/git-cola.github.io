@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v1.4.3.2 &mdash; git-cola 2.2 documentation</title>
+  <title>git-cola v2.2 &mdash; git-cola 2.2 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
   
     <link rel="top" title="git-cola 2.2 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v1.4.3.1" href="v1.4.3.1.html"/>
-        <link rel="prev" title="git-cola v1.4.3.3" href="v1.4.3.3.html"/> 
+        <link rel="next" title="git-cola v2.1.2" href="v2.1.2.html"/>
+        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -102,7 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#unreleased-topics">Unreleased Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v2.2.html">git-cola v2.2</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.2.html">git-cola v2.1.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.1.html">git-cola v2.1.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.0.html">git-cola v2.1.0</a></li>
@@ -139,7 +139,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.5.html">git-cola v1.4.3.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.4.html">git-cola v1.4.3.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.3.html">git-cola v1.4.3.3</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v1.4.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.2.html">git-cola v1.4.3.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.1.html">git-cola v1.4.3.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.html">git-cola v1.4.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.2.5.html">git-cola v1.4.2.5</a></li>
@@ -189,10 +189,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v1.4.3.2</li>
+    <li>git-cola v2.2</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v1.4.3.2.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/v2.2.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -200,29 +200,68 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v1-4-3-2">
-<span id="v1-4-3-2"></span><h1>git-cola v1.4.3.2<a class="headerlink" href="#git-cola-v1-4-3-2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-v2-2">
+<span id="v2-2"></span><h1>git-cola v2.2<a class="headerlink" href="#git-cola-v2-2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usability-bells-and-whistles">
 <h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Faster startup time! <cite>git cola</cite> now offloads initialization
-to a background thread so that the GUI appears almost instantly.</li>
-<li>Specialized diff options for p4merge, vimdiff, araxis, emerge,
-and ecmerge in difftool (backported from git.git).</li>
+<ul>
+<li><p class="first">Double-click will now choose a commit in the &#8220;Select commit&#8221; dialog.</p>
+</li>
+<li><p class="first"><cite>git cola</cite> has a feature that reads <cite>.git/MERGE_MSG</cite> and friends for the
+commit message when a merge is in-progress.  Upon refresh, <cite>git cola</cite> will
+now detect when a merge has completed and reset the commit message back to
+its previous state.  It is only reset if the editor contains a message
+that was read from the file and has not been manually edited by the user.</p>
+</li>
+<li><p class="first">The commit message editor&#8217;s context menu now has a &#8220;Clear...&#8221; action for
+clearing the message across both the summary and description fields.</p>
+</li>
+<li><p class="first">Traditional Chinese (Taiwan) translation updates.</p>
+</li>
+<li><p class="first">The system theme&#8217;s icons are now used whereever possible.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/458">https://github.com/git-cola/git-cola/pull/458</a></p>
+</li>
 </ul>
 </div>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Fix launching commands in the background on Windows
-(e.g. when launching <cite>git difftool</cite>).</p>
+<li><p class="first">The stash viewer now uses <tt class="docutils literal"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">--no-ext-diff</span></tt> to avoid running
+user-configured diff tools.</p>
 </li>
-<li><p class="first">Fix unicode errors when home or repository directories contain
-unicode characters.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/74">https://github.com/git-cola/git-cola/issues/74</a></p>
-<p>Redhat&#8217;s bugzilla #694806</p>
-<p><a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=694806">https://bugzilla.redhat.com/show_bug.cgi?id=694806</a></p>
+<li><p class="first"><cite>git cola</cite> now uses the <cite>setsid()</cite> system call to ensure that the
+<cite>GIT_ASKPASS</cite> and <cite>SSH_ASKPASS</cite> helper programs are used when pushing
+changes using <cite>git</cite>.  The askpass helpers will now be used even when
+<cite>git cola</cite> is launched from a terminal.</p>
+<p>The behavior without <cite>setsid()</cite> is that <cite>git cola</cite> can appear to hang while
+pushing changes.  The hang happens when <cite>git</cite> prompts the user for a
+password using the terminal, but the user never sees the prompt.  <cite>setsid()</cite>
+detaches the terminal, which ensures that the askpass helpers are used.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/218">https://github.com/git-cola/git-cola/issues/218</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/262">https://github.com/git-cola/git-cola/issues/262</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/377">https://github.com/git-cola/git-cola/issues/377</a></p>
 </li>
+<li><p class="first"><cite>git dag</cite>&#8216;s file list tool was updated to properly handle unicode paths.</p>
+</li>
+<li><p class="first"><cite>gnome-terminal</cite> is no longer used by default when <cite>cola.terminal</cite> is unset.
+It is broken, as was detailed in #456.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/456">https://github.com/git-cola/git-cola/issues/456</a></p>
+</li>
+<li><p class="first">The interactive rebase feature was not always setting <cite>$GIT_EDITOR</cite>
+to the value of <cite>gui.editor</cite>, thus there could be instances where rebase
+will seem to not stop, or hang, when performing &#8220;reword&#8221; actions.</p>
+<p>We now set the <cite>$GIT_EDITOR</cite> environment variable when performing the
+&#8220;Continue&#8221;, &#8220;Skip&#8221;, and &#8220;Edit Todo&#8221; rebase actions so that the correct
+editor is used during the rebase.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/445">https://github.com/git-cola/git-cola/issues/445</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="packaging">
+<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><cite>git cola</cite> moved from a 3-part version number to a simpler 2-part &#8220;vX.Y&#8221;
+version number.  Most of our releases tend to contain new features.</li>
 </ul>
 </div>
 </div>
@@ -233,10 +272,10 @@ unicode characters.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v1.4.3.1.html" class="btn btn-neutral float-right" title="git-cola v1.4.3.1">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.1.2.html" class="btn btn-neutral float-right" title="git-cola v2.1.2">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v1.4.3.3.html" class="btn btn-neutral" title="git-cola v1.4.3.3"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

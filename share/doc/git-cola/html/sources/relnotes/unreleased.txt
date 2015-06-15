@@ -1,9 +1,17 @@
 .. _unreleased:
 
+Latest Release
+==============
+
+:ref:`v2.2 <v2.2>` is the latest stable release.
+
 Unreleased Topics
 =================
 
-:ref:`v2.1.2 <v2.1.2>` is the latest stable release.
+* Coming soon...
+
+Development version
+===================
 
 Clone the git-cola repo to get the latest development version:
 
