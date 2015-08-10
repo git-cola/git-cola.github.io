@@ -1,4 +1,6 @@
-.TH "GIT-COLA" "1" "June 15, 2015" "2.2.1" "git-cola"
+.\" Man page generated from reStructuredText.
+.
+.TH "GIT-COLA" "1" "August 09, 2015" "2.3" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -28,8 +30,6 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.\" Man page generated from reStructuredText.
-.
 .SH SYNOPSIS
 .sp
 git cola [options] [sub\-command]
@@ -45,7 +45,7 @@ Start \fIgit cola\fP in amend mode.
 Prompt for a Git repository.  Defaults to the current directory.
 .SS \-r, \-\-repo <path>
 .sp
-Open the Git repository at \fI<path>\fP.  Defaults to the current directory.
+Open the Git repository at \fI<path>\fP\&.  Defaults to the current directory.
 .SS \-s, \-\-status\-filter <filter>
 .sp
 Apply the path filter to the status widget.
@@ -127,14 +127,14 @@ When you select a line in the \fIgrep\fP screen and press any of
 \fIEnter\fP, \fICtrl\-e\fP, or the \fIEdit\fP button, you are taken to that exact line.
 .sp
 The editor preference is saved in the \fIgui.editor\fP variable using
-\fI\%git config\fP.
+\fI\%git config\fP\&.
 .SH KEYBOARD SHORTCUTS
 .sp
 \fIgit cola\fP has many useful keyboard shortcuts.
 .sp
 You can see the available shortcuts by pressing the \fB?\fP key,
 choosing \fBHelp \-> Keyboard shortcuts\fP from the main menu,
-or by consulting the \fI\%git cola keyboard shortcuts reference\fP.
+or by consulting the \fI\%git cola keyboard shortcuts reference\fP\&.
 .SH TOOLS
 .sp
 The \fIgit cola\fP interface is composed of various cooperating tools.
@@ -180,7 +180,7 @@ Clicking the \fIStaged\fP folder shows a diffstat for the index.
 .sp
 Clicking the \fIModified\fP folder shows a diffstat for the worktree.
 .sp
-Clicking individual files sends diffs to the \fIDiff Display\fP.
+Clicking individual files sends diffs to the \fIDiff Display\fP\&.
 .sp
 Double\-clicking individual files adds and removes their content from the index.
 .sp
@@ -195,7 +195,7 @@ Marks unmerged files as resolved.
 Launches the configured visual text editor
 .SS Launch Difftool
 .sp
-Visualize changes using \fIgit difftool\fP.
+Visualize changes using \fIgit difftool\fP\&.
 .SS Revert Unstaged Edits
 .sp
 Reverts unstaged content by checking out selected paths
@@ -209,7 +209,7 @@ Remove from the index/staging area with
 \fI\%git reset\fP
 .SS Launch Merge Tool
 .sp
-Resolve conflicts using \fI\%git mergetool\fP.
+Resolve conflicts using \fI\%git mergetool\fP\&.
 .SS Delete File(s)
 .sp
 Delete untracked files from the filesystem.
@@ -254,21 +254,25 @@ staged content.
 .SS Sign Off
 .sp
 The \fISign Off\fP button adds a standard:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
 Signed\-off\-by: A. U. Thor <a.u.thor@example.com>
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .sp
 line to the bottom of the commit message.
 .sp
 Invoking this action is equivalent to passing the \fB\-s\fP option
-to \fI\%git commit\fP.
+to \fI\%git commit\fP\&.
 .SS Commit
 .sp
 The commit button runs
-\fI\%git commit\fP.
+\fI\%git commit\fP\&.
 The contents of the commit message editor is provided as the commit message.
 .sp
 Only staged files are included in the commit \-\- this is the same behavior
@@ -306,7 +310,7 @@ Tell \fIgit commit\fP and \fIgit merge\fP to sign commits using GPG.
 .sp
 Using this option is equivalent to passing the \fB\-\-gpg\-sign\fP option to
 \fI\%git commit\fP and
-\fI\%git merge\fP.
+\fI\%git merge\fP\&.
 .sp
 This option\(aqs default value can be configured using the \fIcola.signcommits\fP
 configuration variable.
@@ -316,7 +320,7 @@ Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
 .sp
 Dragging and dropping patches onto the \fIgit cola\fP interface
 adds the patches to the list of patches to apply using
-\fI\%git am\fP.
+\fI\%git am\fP\&.
 .sp
 You can drag either a set of patches or a directory containing patches.
 Patches can be sorted using in the interface and are applied in the
@@ -342,9 +346,14 @@ These variables can be set using \fIgit config\fP or from the settings.
 .sp
 Whether to create a dock widget with the \fIBrowser\fP tool.
 Defaults to \fIfalse\fP to speedup startup time.
+.SS cola.checkconflicts
+.sp
+Inspect unmerged files for conflict markers before staging them.
+This feature helps prevent accidental staging of unresolved merge conflicts.
+Defaults to \fItrue\fP\&.
 .SS cola.fileattributes
 .sp
-Enables per\-file gitattributes encoding support when set to \fItrue\fP.
+Enables per\-file gitattributes encoding support when set to \fItrue\fP\&.
 This tells \fIgit cola\fP to honor the configured encoding when displaying
 and applying diffs.
 .SS cola.fontdiff
@@ -362,7 +371,7 @@ another application.
 .SS cola.linebreak
 .sp
 Whether to automatically break long lines while editing commit messages.
-Defaults to \fItrue\fP.  This setting is configured using the \fIPreferences\fP
+Defaults to \fItrue\fP\&.  This setting is configured using the \fIPreferences\fP
 dialog, but it can be toggled for one\-off usage using the commit message
 editor\(aqs options sub\-menu.
 .SS cola.dragencoding
@@ -371,19 +380,19 @@ editor\(aqs options sub\-menu.
 them to the drag\-and\-drop mime data (specifically, the \fItext/x\-moz\-url\fP entry).
 \fIutf\-16\fP is used to make \fIgnome\-terminal\fP see the right paths, but other
 terminals may expect a different encoding.  If you are using a terminal that
-expects a modern encoding, e.g. \fIterminator\fP, then set this value to \fIutf\-8\fP.
+expects a modern encoding, e.g. \fIterminator\fP, then set this value to \fIutf\-8\fP\&.
 .SS cola.readsize
 .sp
 \fIgit cola\fP avoids reading large binary untracked files.
 The maximum size to read is controlled by \fIcola.readsize\fP
-and defaults to \fI2048\fP.
+and defaults to \fI2048\fP\&.
 .SS cola.savewindowsettings
 .sp
-\fIgit cola\fP will remember its window settings when set to \fItrue\fP.
-Window settings and X11 sessions are saved in \fI$HOME/.config/git\-cola\fP.
+\fIgit cola\fP will remember its window settings when set to \fItrue\fP\&.
+Window settings and X11 sessions are saved in \fI$HOME/.config/git\-cola\fP\&.
 .SS cola.signcommits
 .sp
-\fIgit cola\fP will sign commits by default when set \fItrue\fP. Defaults to \fIfalse\fP.
+\fIgit cola\fP will sign commits by default when set \fItrue\fP\&. Defaults to \fIfalse\fP\&.
 See the section below on setting up GPG for more details.
 .SS cola.tabwidth
 .sp
@@ -393,14 +402,14 @@ The number of columns occupied by a tab character.  Defaults to 8.
 The command to use when launching commands within a graphical terminal.
 .sp
 \fIcola.terminal\fP defaults to \fIxterm \-e\fP when unset.
-e.g. when opening a shell, \fIgit cola\fP will run \fIxterm \-e $SHELL\fP.
+e.g. when opening a shell, \fIgit cola\fP will run \fIxterm \-e $SHELL\fP\&.
 .sp
 If either \fIgnome\-terminal\fP, \fIxfce4\-terminal\fP, or \fIkonsole\fP are installed
 then they will be preferred over \fIxterm\fP when \fIcola.terminal\fP is unset.
 .SS cola.textwidth
 .sp
 The number of columns used for line wrapping.
-Tabs are counted according to \fIcola.tabwidth\fP.
+Tabs are counted according to \fIcola.tabwidth\fP\&.
 .SS cola.color.text
 .sp
 The default diff text color, in hexadecimal RRGGBB notation.
@@ -422,16 +431,16 @@ Defaults to "bbbbbb".
 The number of diff context lines to display.
 .SS gui.displayuntracked
 .sp
-\fIgit cola\fP avoids showing untracked files when set to \fIfalse\fP.
+\fIgit cola\fP avoids showing untracked files when set to \fIfalse\fP\&.
 .SS gui.editor
 .sp
-The default text editor to use is defined in \fIgui.editor\fP.
+The default text editor to use is defined in \fIgui.editor\fP\&.
 The config variable overrides the VISUAL environment variable.
-e.g. \fIgvim \-f \-p\fP.
+e.g. \fIgvim \-f \-p\fP\&.
 .SS gui.historybrowser
 .sp
 The history browser to use when visualizing history.
-Defaults to \fIgitk\fP.
+Defaults to \fIgitk\fP\&.
 .SS diff.tool
 .sp
 The default diff tool to use.
@@ -467,6 +476,8 @@ may want \fIgit cola\fP to use a specific language.
 You can make \fIgit cola\fP use an alternative language by creating a
 \fI~/.config/git\-cola/language\fP file containing the standard two\-letter
 gettext language code, e.g. "en", "de", "ja", "zh", etc.:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
@@ -474,25 +485,35 @@ mkdir \-p ~/.config/git\-cola &&
 echo en >~/.config/git\-cola/language
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .sp
 Alternatively you may also use LANGAUGE environmental variable to temporarily
 change \fIgit cola\fP\(aqs language just like any other gettext\-based program.  For
 example to temporarily change \fIgit cola\fP\(aqs language to English:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
 LANGUAGE=en git cola
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .sp
 To make \fIgit cola\fP use the zh_TW translation with zh_HK, zh, and en as a
 fallback.:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
 LANGUAGE=zh_TW:zh_HK:zh:en git cola
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .SH CUSTOM GUI ACTIONS
 .sp
 \fIgit cola\fP allows you to define custom GUI actions by setting \fIgit config\fP
@@ -509,7 +530,7 @@ selected file as FILENAME, and the name of the current branch as CUR_BRANCH
 .sp
 Run the command in the background (similar to editing and difftool actions).
 This avoids blocking the GUI.  Setting \fIbackground\fP to \fItrue\fP implies
-\fInoconsole\fP and \fInorescan\fP.
+\fInoconsole\fP and \fInorescan\fP\&.
 .SS guitool.<name>.needsfile
 .sp
 Run the tool only if a diff is selected in the GUI. It guarantees that
@@ -554,7 +575,7 @@ The default value includes the actual command.
 Specifies a keyboard shortcut for the custom tool.
 .sp
 The value must be a valid string understood by the \fIQAction::setShortcut()\fP API.
-See \fI\%http://qt-project.org/doc/qt-4.8/qkeysequence.html#QKeySequence-2\fP
+See \fI\%http://qt\-project.org/doc/qt\-4.8/qkeysequence.html#QKeySequence\-2\fP
 for more details about the supported values.
 .sp
 Avoid creating shortcuts that conflict with existing built\-in \fIgit cola\fP
@@ -572,29 +593,39 @@ for your password in the terminal.
 .SS Install gpg\-agent and friends
 .sp
 On Mac OS X, you may need to \fIbrew install gpg\-agent\fP and install the
-\fI\%Mac GPG Suite\fP.
+\fI\%Mac GPG Suite\fP\&.
 .sp
 On Linux use your package manager to install gnupg\-agent and pinentry\-qt4, e.g.:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
 sudo apt\-get install gnupg\-agent pinentry\-qt4
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .SS Configure gpg\-agent and a pin\-entry program
 .sp
 Edit \fI~/.gnupg/gpg.conf\fP to include the line,:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
 use\-agent
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .sp
 Edit \fI~/.gnupg/gpg\-agent.conf\fP to contain a pinentry\-program line pointing to
 the pin\-entry program for your platform.
 .sp
 The following example \fIgpg\-agent.conf\fP shows how to use pinentry\-qt4 on Linux:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
@@ -604,9 +635,13 @@ enable\-ssh\-support
 use\-standard\-socket
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .sp
 This following example \fIgpg\-agent.conf\fP shows how to use MacGPG2\(aqs
 pinentry app on On Mac OS X:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
@@ -616,9 +651,13 @@ enable\-ssh\-support
 use\-standard\-socket
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .sp
 Once this has been setup then you will need to eval the output
 of \fIgpg\-agent \-\-daemon\fP in your shell prior to launching git\-cola.:
+.INDENT 0.0
+.INDENT 3.5
 .sp
 .nf
 .ft C
@@ -626,16 +665,18 @@ eval $(gpg\-agent \-\-daemon)
 bin/git\-cola
 .ft P
 .fi
+.UNINDENT
+.UNINDENT
 .SH LINKS
 .SS Git Cola\(aqs Git Repository
 .sp
-\fI\%https://github.com/git-cola/git-cola/\fP
+\fI\%https://github.com/git\-cola/git\-cola/\fP
 .SS Git Cola Homepage
 .sp
-\fI\%https://git-cola.github.io/\fP
+\fI\%https://git\-cola.github.io/\fP
 .SS Mailing List
 .sp
-\fI\%https://groups.google.com/group/git-cola\fP
+\fI\%https://groups.google.com/group/git\-cola\fP
 .SH AUTHOR
 David Aguilar and contributors
 .SH COPYRIGHT

@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.2.1 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 2.3 documentation</title>
   
 
   
@@ -29,7 +28,7 @@
   
 
   
-    <link rel="top" title="git-cola 2.2.1 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 2.3 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -101,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#unreleased-topics">Unreleased Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.1.html">git-cola v2.2.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.html">git-cola v2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.1.2.html">git-cola v2.1.2</a></li>
@@ -448,7 +448,8 @@ staged content.</p>
 <div class="section" id="sign-off">
 <h3>Sign Off<a class="headerlink" href="#sign-off" title="Permalink to this headline">¶</a></h3>
 <p>The <cite>Sign Off</cite> button adds a standard:</p>
-<div class="highlight-python"><pre>Signed-off-by: A. U. Thor &lt;a.u.thor@example.com&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>Signed-off-by: A. U. Thor &lt;a.u.thor@example.com&gt;
+</pre></div>
 </div>
 <p>line to the bottom of the commit message.</p>
 <p>Invoking this action is equivalent to passing the <tt class="docutils literal"><span class="pre">-s</span></tt> option
@@ -526,6 +527,12 @@ the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> prefer
 <h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this headline">¶</a></h3>
 <p>Whether to create a dock widget with the <cite>Browser</cite> tool.
 Defaults to <cite>false</cite> to speedup startup time.</p>
+</div>
+<div class="section" id="cola-checkconflicts">
+<h3>cola.checkconflicts<a class="headerlink" href="#cola-checkconflicts" title="Permalink to this headline">¶</a></h3>
+<p>Inspect unmerged files for conflict markers before staging them.
+This feature helps prevent accidental staging of unresolved merge conflicts.
+Defaults to <cite>true</cite>.</p>
 </div>
 <div class="section" id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
@@ -678,17 +685,20 @@ may want <cite>git cola</cite> to use a specific language.</p>
 <p>You can make <cite>git cola</cite> use an alternative language by creating a
 <cite>~/.config/git-cola/language</cite> file containing the standard two-letter
 gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;, &#8220;zh&#8221;, etc.:</p>
-<div class="highlight-python"><pre>mkdir -p ~/.config/git-cola &amp;&amp;
-echo en &gt;~/.config/git-cola/language</pre>
+<div class="highlight-python"><div class="highlight"><pre>mkdir -p ~/.config/git-cola &amp;&amp;
+echo en &gt;~/.config/git-cola/language
+</pre></div>
 </div>
 <p>Alternatively you may also use LANGAUGE environmental variable to temporarily
 change <cite>git cola</cite>&#8216;s language just like any other gettext-based program.  For
 example to temporarily change <cite>git cola</cite>&#8216;s language to English:</p>
-<div class="highlight-python"><pre>LANGUAGE=en git cola</pre>
+<div class="highlight-python"><div class="highlight"><pre>LANGUAGE=en git cola
+</pre></div>
 </div>
 <p>To make <cite>git cola</cite> use the zh_TW translation with zh_HK, zh, and en as a
 fallback.:</p>
-<div class="highlight-python"><pre>LANGUAGE=zh_TW:zh_HK:zh:en git cola</pre>
+<div class="highlight-python"><div class="highlight"><pre>LANGUAGE=zh_TW:zh_HK:zh:en git cola
+</pre></div>
 </div>
 </div>
 <div class="section" id="custom-gui-actions">
@@ -782,7 +792,8 @@ for your password in the terminal.</p>
 <p>On Mac OS X, you may need to <cite>brew install gpg-agent</cite> and install the
 <a class="reference external" href="https://gpgtools.org/macgpg2/">Mac GPG Suite</a>.</p>
 <p>On Linux use your package manager to install gnupg-agent and pinentry-qt4, e.g.:</p>
-<div class="highlight-python"><pre>sudo apt-get install gnupg-agent pinentry-qt4</pre>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install gnupg-agent pinentry-qt4
+</pre></div>
 </div>
 </div>
 <div class="section" id="configure-gpg-agent-and-a-pin-entry-program">
@@ -794,22 +805,25 @@ for your password in the terminal.</p>
 <p>Edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line pointing to
 the pin-entry program for your platform.</p>
 <p>The following example <cite>gpg-agent.conf</cite> shows how to use pinentry-qt4 on Linux:</p>
-<div class="highlight-python"><pre>pinentry-program /usr/bin/pinentry-qt4
+<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/bin/pinentry-qt4
 default-cache-ttl 3600
 enable-ssh-support
-use-standard-socket</pre>
+use-standard-socket
+</pre></div>
 </div>
 <p>This following example <cite>gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
 pinentry app on On Mac OS X:</p>
-<div class="highlight-python"><pre>pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
 default-cache-ttl 3600
 enable-ssh-support
-use-standard-socket</pre>
+use-standard-socket
+</pre></div>
 </div>
 <p>Once this has been setup then you will need to eval the output
 of <cite>gpg-agent &#8211;daemon</cite> in your shell prior to launching git-cola.:</p>
-<div class="highlight-python"><pre>eval $(gpg-agent --daemon)
-bin/git-cola</pre>
+<div class="highlight-python"><div class="highlight"><pre>eval $(gpg-agent --daemon)
+bin/git-cola
+</pre></div>
 </div>
 </div>
 </div>
@@ -868,8 +882,8 @@ bin/git-cola</pre>
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'',
-            VERSION:'2.2.1',
+            URL_ROOT:'./',
+            VERSION:'2.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

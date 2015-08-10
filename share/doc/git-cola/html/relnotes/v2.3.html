@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v1.8.3 &mdash; git-cola 2.3 documentation</title>
+  <title>git-cola v2.3 &mdash; git-cola 2.3 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="git-cola 2.3 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v1.8.2" href="v1.8.2.html"/>
-        <link rel="prev" title="git-cola v1.8.4" href="v1.8.4.html"/> 
+        <link rel="next" title="git-cola v2.2.1" href="v2.2.1.html"/>
+        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#unreleased-topics">Unreleased Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v2.3.html">git-cola v2.3</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.1.html">git-cola v2.2.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.html">git-cola v2.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.2.html">git-cola v2.1.2</a></li>
@@ -123,7 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v1.9.0.html">git-cola v1.9.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.8.5.html">git-cola v1.8.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.8.4.html">git-cola v1.8.4</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v1.8.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.8.3.html">git-cola v1.8.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.8.2.html">git-cola v1.8.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.8.1.html">git-cola v1.8.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.8.0.html">git-cola v1.8.0</a></li>
@@ -190,10 +190,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v1.8.3</li>
+    <li>git-cola v2.3</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v1.8.3.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/v2.3.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -201,52 +201,65 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v1-8-3">
-<span id="v1-8-3"></span><h1>git-cola v1.8.3<a class="headerlink" href="#git-cola-v1-8-3" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-v2-3">
+<span id="v2-3"></span><h1>git-cola v2.3<a class="headerlink" href="#git-cola-v2-3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usability-bells-and-whistles">
 <h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">The diff viewer now has an &#8220;Options&#8221; menu which can be
-used to set &#8220;git diff&#8221; options.  This can be used to
-ignore whitespace changes or to show a change with its
-surrounding function as context.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/150">https://github.com/git-cola/git-cola/issues/150</a></p>
+<li><p class="first">The Interactive Rebase feature now works on Windows!</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/463">https://github.com/git-cola/git-cola/issues/463</a></p>
 </li>
-<li><p class="first"><cite>git cola</cite> now remembers your commit message and will restore it
-when <cite>git cola</cite> is restarted.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/175">https://github.com/git-cola/git-cola/pull/175</a></p>
+<li><p class="first">The <cite>diff</cite> editor now understands vim-style <cite>hjkl</cite> navigation hotkeys.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/476">https://github.com/git-cola/git-cola/issues/476</a></p>
 </li>
-<li><p class="first"><cite>Ctrl+M</cite> can now be used to toggle the &#8220;Amend last commit&#8221;
-checkbox in the commit message editor.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/161">https://github.com/git-cola/git-cola/pull/161</a></p>
+<li><p class="first"><cite>Alt-{j,k}</cite> navigation hotkeys were added to allow changing to the
+next/previous file from the diff and commit editors.</p>
 </li>
-<li><p class="first">Deleting remote branches can now be done from the &#8220;Branch&#8221; menu.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/152">https://github.com/git-cola/git-cola/issues/152</a></p>
+<li><p class="first">The <cite>Rename branch</cite> menu action is now disabled in empty repositories.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/475">https://github.com/git-cola/git-cola/pull/475</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/459">https://github.com/git-cola/git-cola/issues/459</a></p>
 </li>
-<li><p class="first">The commit message editor now has a built-in spell checker.</p>
+<li><p class="first"><cite>git cola</cite> now checks unmerged files for conflict markers before
+staging them.  This feature can be disabled in the preferences.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/464">https://github.com/git-cola/git-cola/issues/464</a></p>
+</li>
+<li><p class="first"><cite>git dag</cite> now remembers which commits were selected when refreshing
+so that it can restore the selection afterwards.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/480">https://github.com/git-cola/git-cola/issues/480</a></p>
+</li>
+<li><p class="first">&#8220;Launch Editor&#8221;, &#8220;Launch Difftool&#8221;, &#8220;Stage/Unstage&#8221;,
+and &#8220;Move Up/Down&#8221; hotkeys now work when the commit message
+editor has focus.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/453">https://github.com/git-cola/git-cola/issues/453</a></p>
+</li>
+<li><p class="first">The diff editor now supports the <cite>Ctrl+u</cite> hotkey for reverting
+diff hunks and selected lines.</p>
+</li>
+<li><p class="first">The <cite>core.commentChar</cite> Git configuration value is now honored.
+Commit messages and rebase instruction sheets will now use
+the configured character for comments.  This allows having
+commit messages that start with <cite>#</cite> when <cite>core.commentChar</cite>
+is configured to its non-default value.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/446">https://github.com/git-cola/git-cola/issues/446</a></p>
 </li>
 </ul>
 </div>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">We now avoid invoking external diffs when showing diffstats.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/163">https://github.com/git-cola/git-cola/pull/163</a></p>
+<li><p class="first">Diff syntax highlighting was improved to handle more edge cases
+and false positives.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/467">https://github.com/git-cola/git-cola/pull/467</a></p>
 </li>
-<li><p class="first">The <cite>Status</cite> tool learned to reselect files when refreshing.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/165">https://github.com/git-cola/git-cola/issues/165</a></p>
+<li><p class="first">Setting commands in the interactive rebase editor was fixed.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/472">https://github.com/git-cola/git-cola/issues/472</a></p>
 </li>
-<li><p class="first"><cite>git cola</cite> now remembers whether it has been maximized and will restore the
-maximized state when <cite>git cola</cite> is restarted.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/172">https://github.com/git-cola/git-cola/issues/172</a></p>
+<li><p class="first">git-cola no longer clobbers the Ctrl+Backspace text editing shortcut
+in the commit message editor.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/453">https://github.com/git-cola/git-cola/issues/453</a></p>
 </li>
-<li><p class="first">Performance is now vastly improved when staging hundreds or
-thousands of files.</p>
-</li>
-<li><p class="first"><cite>git cola</cite> was not correctly saving repo-specific configuration.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/174">https://github.com/git-cola/git-cola/issues/174</a></p>
-</li>
-<li><p class="first">Fix a UnicodeDecode in sphinxtogithub when building from source.</p>
+<li><p class="first">The copy/paste clipboard now persists after <cite>git cola</cite> exits.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/484">https://github.com/git-cola/git-cola/issues/484</a></p>
 </li>
 </ul>
 </div>
@@ -258,10 +271,10 @@ thousands of files.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v1.8.2.html" class="btn btn-neutral float-right" title="git-cola v1.8.2">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.2.1.html" class="btn btn-neutral float-right" title="git-cola v2.2.1">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v1.8.4.html" class="btn btn-neutral" title="git-cola v1.8.4"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
