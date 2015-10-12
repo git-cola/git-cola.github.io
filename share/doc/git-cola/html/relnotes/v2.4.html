@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v2.0.7 &mdash; git-cola 2.4 documentation</title>
+  <title>git-cola v2.4 &mdash; git-cola 2.4 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="git-cola 2.4 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v2.0.6" href="v2.0.6.html"/>
-        <link rel="prev" title="git-cola v2.0.8" href="v2.0.8.html"/> 
+        <link rel="next" title="git-cola v2.3" href="v2.3.html"/>
+        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#unreleased-topics">Unreleased Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v2.4.html">git-cola v2.4</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.1.html">git-cola v2.2.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.html">git-cola v2.2</a></li>
@@ -109,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v2.1.1.html">git-cola v2.1.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.1.0.html">git-cola v2.1.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.8.html">git-cola v2.0.8</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.0.7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.7.html">git-cola v2.0.7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.6.html">git-cola v2.0.6</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.5.html">git-cola v2.0.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.4.html">git-cola v2.0.4</a></li>
@@ -191,10 +191,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v2.0.7</li>
+    <li>git-cola v2.4</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v2.0.7.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/v2.4.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -202,34 +202,97 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v2-0-7">
-<span id="v2-0-7"></span><h1>git-cola v2.0.7<a class="headerlink" href="#git-cola-v2-0-7" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-v2-4">
+<span id="v2-4"></span><h1>git-cola v2.4<a class="headerlink" href="#git-cola-v2-4" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usability-bells-and-whistles">
 <h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">New hotkey: <cite>Ctrl+Shift+M</cite> merges branches.</p>
+<li><p class="first">The user interface is now HiDPI-capable.  git-cola now uses SVG
+icons, and its interface can be scaled by setting the <cite>GIT_COLA_SCALE</cite>
+environment variable.</p>
 </li>
-<li><p class="first">New hotkey: <cite>Ctrl+R</cite> refreshes the DAG viewer.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/347">https://github.com/git-cola/git-cola/issues/347</a></p>
+<li><p class="first"><cite>git dag</cite> now supports the standard editor, difftool, and history hotkeys.
+It is now possible to invoke these actions from file widget&#8217;s context
+menu and through the standard hotkeys.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/473">https://github.com/git-cola/git-cola/pull/473</a></p>
+</li>
+<li><p class="first">The <cite>Status</cite> tool also learned about the history hotkey.
+Additionally, the <cite>Alt-{j,k}</cite> aliases are also supported in the <cite>Status</cite>
+tool for consistency with the other tools where the non-Alt hotkeys are not
+available.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/488">https://github.com/git-cola/git-cola/pull/488</a></p>
+</li>
+<li><p class="first">The <cite>File Browser</cite> tool now has better default column sizes,
+and remembers its window size and placement.</p>
+</li>
+<li><p class="first">The <cite>File Browser</cite> now supports the refresh hotkey, and has better
+behavior when refreshing.  The selection is now retained, and new and
+removed files are found when refreshing.</p>
+</li>
+<li><p class="first">A new <cite>git-cola-completion.bash</cite> completion script is provided in the
+<cite>contrib/</cite> directory.  It must be used alongside Git&#8217;s completion script.
+Source it from your <cite>~/.bashrc</cite> (or <cite>~/.zshrc</cite>, etc) after sourcing
+the <cite>git-completion.bash</cite> script and you will have command-line completion
+support for the <cite>git cola</cite> and <cite>git dag</cite> sub-commands.</p>
+</li>
+<li><p class="first">The &#8220;checkout&#8221; dialog now offers completion for remote branches and other
+git refs.  This makes it easier to checkout remote branches in a detached
+head state.  Additionally, the checkout dialog also offers completion for
+remote branches that have not yet been checked out, which makes it easier to
+create a local tracking branch by just completing for that potential name.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/390">https://github.com/git-cola/git-cola/issues/390</a></p>
+</li>
+<li><p class="first">The &#8220;create branch&#8221; and &#8220;create tag&#8221; dialogs now save and restore their
+window settings.</p>
+</li>
+<li><p class="first">The &#8220;status&#8221; widget can now be configured to use a bold font with a darker
+background for the header items.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/506">https://github.com/git-cola/git-cola/pull/506</a></p>
+</li>
+<li><p class="first">The &#8220;status&#8221; widget now remembers its horizontol scrollbar position across
+updates.  This is helpful when working on projects with long paths.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/494">https://github.com/git-cola/git-cola/issues/494</a></p>
 </li>
 </ul>
 </div>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">We now use <cite>git config</cite> to parse the list of remotes
-instead of parsing the output of <cite>git remote</cite>, which
-is a Git porcelain and should not be used by scripts.</p>
+<li><p class="first">When using <em>Git for Windows</em>, a <cite>git</cite> window would appear
+when running <em>Windows 8</em>.  We now pass additional flags to
+<cite>subprocess.Popen</cite> to prevent a <cite>git</cite> window from appearing.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/477">https://github.com/git-cola/git-cola/issues/477</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/486">https://github.com/git-cola/git-cola/pull/486</a></p>
 </li>
-<li><p class="first">Avoid &#8220;C++ object has been deleted&#8221; errors from PyQt4.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/346">https://github.com/git-cola/git-cola/issues/346</a></p>
+<li><p class="first">Launching difftool with <cite>.PY</cite> in <cite>$PATHEXT</cite> on Windows was fixed.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/492">https://github.com/git-cola/git-cola/issues/492</a></p>
+</li>
+<li><p class="first">Creating a local branch tracking a remote branch that contains
+slashes in its name is now properly handled.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/496">https://github.com/git-cola/git-cola/issues/496</a></p>
+</li>
+<li><p class="first">The &#8220;Browse Other Branch&#8221; feature was broken by Python3, and is now fixed.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/501">https://github.com/git-cola/git-cola/issues/501</a></p>
+</li>
+<li><p class="first">We now avoid <cite>long</cite> for better Python3 compatibility.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/502">https://github.com/git-cola/git-cola/issues/502</a></p>
+</li>
+<li><p class="first">We now use Git&#8217;s default merge message when merging branches.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/508">https://github.com/git-cola/git-cola/issues/508</a></p>
+</li>
+<li><p class="first">Miscellaneous fixes</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/485">https://github.com/git-cola/git-cola/pull/485</a></p>
 </li>
 </ul>
 </div>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>The <cite>make install</cite> target now uses <cite>install</cite> instead of <cite>cp</cite>.</li>
+<ul>
+<li><p class="first">git-cola&#8217;s documentation no longer uses an intersphinx link mapping
+to docs.python.org.  This fixes warnings when building rpms using koji,
+where network access is prevented.</p>
+<p><a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=1231812">https://bugzilla.redhat.com/show_bug.cgi?id=1231812</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -240,10 +303,10 @@ is a Git porcelain and should not be used by scripts.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v2.0.6.html" class="btn btn-neutral float-right" title="git-cola v2.0.6">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.3.html" class="btn btn-neutral float-right" title="git-cola v2.3">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v2.0.8.html" class="btn btn-neutral" title="git-cola v2.0.8"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

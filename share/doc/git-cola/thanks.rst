@@ -3,11 +3,13 @@ Thanks
 `git-cola` was made possible thanks to the contributions of the following people:
 
 * Aaron Cook
+* Aaron Wolf
 * Adrien be
 * AJ Bagwell
 * Alex Chernetz
 * Alexander Kozienko
 * Andreas Sommer
+* Andrew Chen
 * Audrius Karabanovas
 * Barry Roberts
 * Boris W
@@ -21,10 +23,12 @@ Thanks
 * Christopher Meng
 * Clément Pit--Claudel
 * Daniel Fahlke
+* Daniel Jay Haskin
 * Daniel Harding
 * Daniel King
 * Dave Thomas
 * David Aguilar
+* David LeGare
 * David Martínez Martí
 * Dennis Gilmore
 * deniz1a

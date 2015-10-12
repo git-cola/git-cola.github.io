@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.3 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 2.4 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   
 
   
-    <link rel="top" title="git-cola 2.3 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 2.4 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -98,8 +98,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html">Latest Release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#unreleased-topics">Unreleased Topics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#unreleased-topics">Unreleased Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.1.html">git-cola v2.2.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.html">git-cola v2.2</a></li>
@@ -665,6 +666,14 @@ environment variables.</p>
 </div>
 <div class="section" id="environment-variables">
 <h2>ENVIRONMENT VARIABLES<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-cola-scale">
+<h3>GIT_COLA_SCALE<a class="headerlink" href="#git-cola-scale" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> can be made to scale its interface for HiDPI displays.
+When defined, <cite>git cola</cite> will scale icons, radioboxes, and checkboxes
+according to the scale factor.  The default value is <cite>1</cite>.
+A value is <cite>2</cite> for high-resolution displays.</p>
+<p>Fonts are not scaled, as their size can already be set in the settings.</p>
+</div>
 <div class="section" id="git-cola-trace">
 <h3>GIT_COLA_TRACE<a class="headerlink" href="#git-cola-trace" title="Permalink to this headline">¶</a></h3>
 <p>When defined, <cite>git cola</cite> logs <cite>git</cite> commands to stdout.
@@ -883,7 +892,7 @@ bin/git-cola
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.3',
+            VERSION:'2.4',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

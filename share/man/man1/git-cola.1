@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "August 09, 2015" "2.3" "git-cola"
+.TH "GIT-COLA" "1" "October 12, 2015" "2.4" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -458,6 +458,14 @@ Your full name to be recorded in any newly created commits.
 Can be overridden by the \(aqGIT_AUTHOR_NAME\(aq and \(aqGIT_COMMITTER_NAME\(aq
 environment variables.
 .SH ENVIRONMENT VARIABLES
+.SS GIT_COLA_SCALE
+.sp
+\fIgit cola\fP can be made to scale its interface for HiDPI displays.
+When defined, \fIgit cola\fP will scale icons, radioboxes, and checkboxes
+according to the scale factor.  The default value is \fI1\fP\&.
+A value is \fI2\fP for high\-resolution displays.
+.sp
+Fonts are not scaled, as their size can already be set in the settings.
 .SS GIT_COLA_TRACE
 .sp
 When defined, \fIgit cola\fP logs \fIgit\fP commands to stdout.
