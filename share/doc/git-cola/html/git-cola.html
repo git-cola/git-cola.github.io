@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.4 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 2.5 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   
 
   
-    <link rel="top" title="git-cola 2.4 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 2.5 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -80,6 +80,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#language-settings">LANGUAGE SETTINGS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-gui-actions">CUSTOM GUI ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-notes">WINDOWS NOTES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#links">LINKS</a></li>
 </ul>
 </li>
@@ -99,7 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#unreleased-topics">Unreleased Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.1.html">git-cola v2.2.1</a></li>
@@ -331,8 +332,8 @@ When you select a line in the <cite>grep</cite> screen and press any of
 <div class="section" id="keyboard-shortcuts">
 <h2>KEYBOARD SHORTCUTS<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
 <p><cite>git cola</cite> has many useful keyboard shortcuts.</p>
-<p>You can see the available shortcuts by pressing the <tt class="docutils literal"><span class="pre">?</span></tt> key,
-choosing <tt class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></tt> from the main menu,
+<p>You can see the available shortcuts by pressing the <code class="docutils literal"><span class="pre">?</span></code> key,
+choosing <code class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></code> from the main menu,
 or by consulting the <a class="reference external" href="https://git-cola.github.io/share/doc/git-cola/hotkeys.html">git cola keyboard shortcuts reference</a>.</p>
 </div>
 <div class="section" id="tools">
@@ -360,7 +361,7 @@ on the command line.</p>
 <p>You can navigate through the list of files using keyboard arrows as well
 as the ergonomical and vim-like <cite>j</cite> and <cite>k</cite> shortcut keys.</p>
 <p>There are several convenient ways to interact with files in the <cite>Status</cite> tool.</p>
-<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><em>DIFF</em></a> viewer.
+<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><span>DIFF</span></a> viewer.
 Double-clicking a file stages its contents, as does the
 the <cite>Ctrl-s</cite> shortcut key.</p>
 <p><cite>Ctrl-e</cite> opens selected files in the conifgured editor, and
@@ -424,7 +425,7 @@ Extraneous whitespace is shown with a pure-red background.</p>
 that use either the cursor location or text selection.</p>
 <div class="section" id="staging-content-for-commit">
 <h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">&#64;&#64;</span></tt> patterns denote a new diff hunk.  Selecting lines of diff
+<p>The <code class="docutils literal"><span class="pre">&#64;&#64;</span></code> patterns denote a new diff hunk.  Selecting lines of diff
 and using the <cite>Stage Selected Lines</cite> command will stage just the selected
 lines.  Clicking within a diff hunk and selecting <cite>Stage Diff Hunk</cite> stages the
 entire patch diff hunk.</p>
@@ -453,7 +454,7 @@ staged content.</p>
 </pre></div>
 </div>
 <p>line to the bottom of the commit message.</p>
-<p>Invoking this action is equivalent to passing the <tt class="docutils literal"><span class="pre">-s</span></tt> option
+<p>Invoking this action is equivalent to passing the <code class="docutils literal"><span class="pre">-s</span></code> option
 to <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.</p>
 </div>
 <div class="section" id="commit">
@@ -462,12 +463,12 @@ to <a class="reference external" href="http://git-scm.com/docs/git-commit">git c
 <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.
 The contents of the commit message editor is provided as the commit message.</p>
 <p>Only staged files are included in the commit &#8211; this is the same behavior
-as running <tt class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></tt> on the command-line.</p>
+as running <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> on the command-line.</p>
 </div>
 <div class="section" id="line-and-column-display">
 <h3>Line and Column Display<a class="headerlink" href="#line-and-column-display" title="Permalink to this headline">¶</a></h3>
 <p>The current line and column number is displayed by the editor.
-E.g. a <tt class="docutils literal"><span class="pre">5,0</span></tt> display means that the cursor is located at
+E.g. a <code class="docutils literal"><span class="pre">5,0</span></code> display means that the cursor is located at
 line five, column zero.</p>
 <p>The display changes colors when lines get too long.
 Yellow indicates the safe boundary for sending patches to a mailing list
@@ -491,7 +492,7 @@ into the commit message editor when this option is selected.</p>
 <div class="section" id="create-signed-commit">
 <h3>Create Signed Commit<a class="headerlink" href="#create-signed-commit" title="Permalink to this headline">¶</a></h3>
 <p>Tell <cite>git commit</cite> and <cite>git merge</cite> to sign commits using GPG.</p>
-<p>Using this option is equivalent to passing the <tt class="docutils literal"><span class="pre">--gpg-sign</span></tt> option to
+<p>Using this option is equivalent to passing the <code class="docutils literal"><span class="pre">--gpg-sign</span></code> option to
 <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a> and
 <a class="reference external" href="http://git-scm.com/docs/git-merge">git merge</a>.</p>
 <p>This option&#8217;s default value can be configured using the <cite>cola.signcommits</cite>
@@ -500,7 +501,7 @@ configuration variable.</p>
 </div>
 <div class="section" id="apply-patches">
 <h2>APPLY PATCHES<a class="headerlink" href="#apply-patches" title="Permalink to this headline">¶</a></h2>
-<p>Use the <tt class="docutils literal"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></tt> menu item to begin applying patches.</p>
+<p>Use the <code class="docutils literal"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></code> menu item to begin applying patches.</p>
 <p>Dragging and dropping patches onto the <cite>git cola</cite> interface
 adds the patches to the list of patches to apply using
 <a class="reference external" href="http://git-scm.com/docs/git-am">git am</a>.</p>
@@ -524,6 +525,10 @@ the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> prefer
 <div class="section" id="configuration-variables">
 <h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
 <p>These variables can be set using <cite>git config</cite> or from the settings.</p>
+<div class="section" id="cola-blameviewer">
+<h3>cola.blameviewer<a class="headerlink" href="#cola-blameviewer" title="Permalink to this headline">¶</a></h3>
+<p>The command used to blame files.  Defaults to <cite>git gui blame</cite>.</p>
+</div>
 <div class="section" id="cola-browserdockable">
 <h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this headline">¶</a></h3>
 <p>Whether to create a dock widget with the <cite>Browser</cite> tool.
@@ -534,6 +539,13 @@ Defaults to <cite>false</cite> to speedup startup time.</p>
 <p>Inspect unmerged files for conflict markers before staging them.
 This feature helps prevent accidental staging of unresolved merge conflicts.
 Defaults to <cite>true</cite>.</p>
+</div>
+<div class="section" id="cola-defaultrepo">
+<h3>cola.defaultrepo<a class="headerlink" href="#cola-defaultrepo" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite>, when run outside of a Git repository, prompts the user for a
+repository.  Set <cite>cola.defaultrepo</cite> to the path of a Git repostiory to make
+<cite>git cola</cite> attempt to use that repository before falling back to prompting
+the user for a repository.</p>
 </div>
 <div class="section" id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
@@ -547,8 +559,9 @@ and applying diffs.</p>
 </div>
 <div class="section" id="cola-inotify">
 <h3>cola.inotify<a class="headerlink" href="#cola-inotify" title="Permalink to this headline">¶</a></h3>
-<p>Set to <cite>false</cite> to disable inotify support.
-Defaults to <cite>true</cite> when the <cite>pyinotify</cite> module is available.</p>
+<p>Set to <cite>false</cite> to disable file system change monitoring.  Defaults to <cite>true</cite>,
+but also requires either Linux with inotify support or Windows with <cite>pywin32</cite>
+installed for file system change monitoring to actually function.</p>
 </div>
 <div class="section" id="cola-refreshonfocus">
 <h3>cola.refreshonfocus<a class="headerlink" href="#cola-refreshonfocus" title="Permalink to this headline">¶</a></h3>
@@ -671,7 +684,7 @@ environment variables.</p>
 <p><cite>git cola</cite> can be made to scale its interface for HiDPI displays.
 When defined, <cite>git cola</cite> will scale icons, radioboxes, and checkboxes
 according to the scale factor.  The default value is <cite>1</cite>.
-A value is <cite>2</cite> for high-resolution displays.</p>
+A good value is <cite>2</cite> for high-resolution displays.</p>
 <p>Fonts are not scaled, as their size can already be set in the settings.</p>
 </div>
 <div class="section" id="git-cola-trace">
@@ -800,27 +813,36 @@ for your password in the terminal.</p>
 <h3>Install gpg-agent and friends<a class="headerlink" href="#install-gpg-agent-and-friends" title="Permalink to this headline">¶</a></h3>
 <p>On Mac OS X, you may need to <cite>brew install gpg-agent</cite> and install the
 <a class="reference external" href="https://gpgtools.org/macgpg2/">Mac GPG Suite</a>.</p>
-<p>On Linux use your package manager to install gnupg-agent and pinentry-qt4, e.g.:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install gnupg-agent pinentry-qt4
+<p>On Linux use your package manager to install gnupg2,
+gnupg-agent and pinentry-qt, e.g.:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install gnupg2 gnupg-agent pinentry-qt
+</pre></div>
+</div>
+<p>On Linux, you should also configure Git so that it uses gpg2 (gnupg2),
+otherwise you will get errors mentioning, &#8220;unable to open /dev/tty&#8221;.
+Set Git&#8217;s <cite>gpg.program</cite> to <cite>gpg2</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre>git config --global gpg.program gpg2
 </pre></div>
 </div>
 </div>
 <div class="section" id="configure-gpg-agent-and-a-pin-entry-program">
 <h3>Configure gpg-agent and a pin-entry program<a class="headerlink" href="#configure-gpg-agent-and-a-pin-entry-program" title="Permalink to this headline">¶</a></h3>
-<p>Edit <cite>~/.gnupg/gpg.conf</cite> to include the line,:</p>
+<p>On Mac OS X, edit <cite>~/.gnupg/gpg.conf</cite> to include the line,:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
 </pre></div>
 </div>
-<p>Edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line pointing to
-the pin-entry program for your platform.</p>
-<p>The following example <cite>gpg-agent.conf</cite> shows how to use pinentry-qt4 on Linux:</p>
-<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/bin/pinentry-qt4
+<p>This is typically not needed on Linux, where <cite>gpg2</cite> is used, as
+this is the default value when using <cite>gpg2</cite>.</p>
+<p>Next, edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line
+pointing to the pinentry program for your platform.</p>
+<p>The following example <cite>~/.gnupg/gpg-agent.conf</cite> shows how to use pinentry-qt on Linux:</p>
+<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/bin/pinentry-qt
 default-cache-ttl 3600
 enable-ssh-support
 use-standard-socket
 </pre></div>
 </div>
-<p>This following example <cite>gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
+<p>This following example <cite>.gnupg/gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
 pinentry app on On Mac OS X:</p>
 <div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
 default-cache-ttl 3600
@@ -828,10 +850,35 @@ enable-ssh-support
 use-standard-socket
 </pre></div>
 </div>
-<p>Once this has been setup then you will need to eval the output
-of <cite>gpg-agent &#8211;daemon</cite> in your shell prior to launching git-cola.:</p>
+<p>Once this has been setup then you will need to start the gpg-agent daemon.
+First, check if it is already running.:</p>
+<div class="highlight-python"><div class="highlight"><pre>env | grep GPG_AGENT_INFO
+echo bye | gpg-connect-agent
+</pre></div>
+</div>
+<p>If you see the following output:</p>
+<div class="highlight-python"><div class="highlight"><pre>GPG_AGENT_INFO=...
+OK closing connection
+</pre></div>
+</div>
+<p>Then the daemon is already running, and you do not need to start it yourself.</p>
+<p>If it is not running, eval the output of <cite>gpg-agent &#8211;daemon</cite> in your shell
+prior to launching <cite>git cola</cite>.:</p>
 <div class="highlight-python"><div class="highlight"><pre>eval $(gpg-agent --daemon)
-bin/git-cola
+git cola
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="windows-notes">
+<h2>WINDOWS NOTES<a class="headerlink" href="#windows-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-installation">
+<h3>Git Installation<a class="headerlink" href="#git-installation" title="Permalink to this headline">¶</a></h3>
+<p>If Git is installed in a custom location, e.g. not installed in <cite>C:/Git</cite> or
+Program Files, then the path to Git must be configured by creating a file in
+your home directory <cite>~/.config/git-cola/git-bindir</cite> that points to your git
+installation.  e.g.:</p>
+<div class="highlight-python"><div class="highlight"><pre>C:/Tools/Git/bin
 </pre></div>
 </div>
 </div>
@@ -892,7 +939,7 @@ bin/git-cola
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

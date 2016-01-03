@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v1.4.1.2 &mdash; git-cola 2.4 documentation</title>
+  <title>git-cola v1.4.1.2 &mdash; git-cola 2.5 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   
 
   
-    <link rel="top" title="git-cola 2.4 documentation" href="../index.html"/>
+    <link rel="top" title="git-cola 2.5 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
         <link rel="next" title="git-cola v1.4.1.1" href="v1.4.1.1.html"/>
         <link rel="prev" title="git-cola v1.4.2" href="v1.4.2.html"/> 
@@ -81,6 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../git-cola.html#language-settings">LANGUAGE SETTINGS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../git-cola.html#custom-gui-actions">CUSTOM GUI ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../git-cola.html#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-cola.html#windows-notes">WINDOWS NOTES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../git-cola.html#links">LINKS</a></li>
 </ul>
 </li>
@@ -100,7 +101,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unreleased.html#unreleased-topics">Unreleased Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.1.html">git-cola v2.2.1</a></li>
@@ -224,34 +225,34 @@ building and improving upon it.</li>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Fixed a missing <tt class="docutils literal"><span class="pre">import</span></tt> when showing <cite>right-click</cite> actions
+<li>Fixed a missing <code class="docutils literal"><span class="pre">import</span></code> when showing <cite>right-click</cite> actions
 for unmerged files in the <cite>Repository Status</cite> tool.</li>
-<li><tt class="docutils literal"><span class="pre">git</span> <span class="pre">update-index</span> <span class="pre">--refresh</span></tt> is no longer run every time
-<tt class="docutils literal"><span class="pre">git</span> <span class="pre">cola</span> <span class="pre">version</span></tt> is run.</li>
+<li><code class="docutils literal"><span class="pre">git</span> <span class="pre">update-index</span> <span class="pre">--refresh</span></code> is no longer run every time
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">cola</span> <span class="pre">version</span></code> is run.</li>
 <li>Don&#8217;t try to watch non-existent directories when using <cite>inotify</cite>.</li>
-<li>Use <tt class="docutils literal"><span class="pre">git</span> <span class="pre">rev-parse</span> <span class="pre">--symbolic-full-name</span></tt> plumbing to find
+<li>Use <code class="docutils literal"><span class="pre">git</span> <span class="pre">rev-parse</span> <span class="pre">--symbolic-full-name</span></code> plumbing to find
 the name of the current branch.</li>
 </ul>
 </div>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>The <tt class="docutils literal"><span class="pre">Makefile</span></tt> will now conditionally include a <tt class="docutils literal"><span class="pre">config.mak</span></tt>
+<li>The <code class="docutils literal"><span class="pre">Makefile</span></code> will now conditionally include a <code class="docutils literal"><span class="pre">config.mak</span></code>
 file located at the root of the project.  This allows for user
 customizations such as changes to the <cite>prefix</cite> variable
 to be stored in a file so that custom settings do not need to
 be specified every time on the command-line.</li>
-<li>The build scripts no longer require a <tt class="docutils literal"><span class="pre">.git</span></tt> directory to
-generate the <tt class="docutils literal"><span class="pre">builtin_version.py</span></tt> module.  The release tarballs
-now include a <tt class="docutils literal"><span class="pre">version</span></tt> file at the root of the project which
+<li>The build scripts no longer require a <code class="docutils literal"><span class="pre">.git</span></code> directory to
+generate the <code class="docutils literal"><span class="pre">builtin_version.py</span></code> module.  The release tarballs
+now include a <code class="docutils literal"><span class="pre">version</span></code> file at the root of the project which
 is used in lieu of having the git repository available.
-This allows for <tt class="docutils literal"><span class="pre">make</span> <span class="pre">clean</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span></tt> to function outside of
+This allows for <code class="docutils literal"><span class="pre">make</span> <span class="pre">clean</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span></code> to function outside of
 a git repository.</li>
-<li>Added maintainer&#8217;s <tt class="docutils literal"><span class="pre">make</span> <span class="pre">dist</span></tt> target to the <tt class="docutils literal"><span class="pre">Makefile</span></tt>.</li>
+<li>Added maintainer&#8217;s <code class="docutils literal"><span class="pre">make</span> <span class="pre">dist</span></code> target to the <code class="docutils literal"><span class="pre">Makefile</span></code>.</li>
 <li>The built-in <cite>simplejson</cite> and <cite>jsonpickle</cite> libraries can be
-excluded from <tt class="docutils literal"><span class="pre">make</span> <span class="pre">install</span></tt> by specifying the <tt class="docutils literal"><span class="pre">standalone=true</span></tt>
-<cite>make</cite> variable.  For example, <tt class="docutils literal"><span class="pre">make</span> <span class="pre">standalone=true</span> <span class="pre">install</span></tt>.
-This corresponds to the <tt class="docutils literal"><span class="pre">--standalone</span></tt> option to <tt class="docutils literal"><span class="pre">setup.py</span></tt>.</li>
+excluded from <code class="docutils literal"><span class="pre">make</span> <span class="pre">install</span></code> by specifying the <code class="docutils literal"><span class="pre">standalone=true</span></code>
+<cite>make</cite> variable.  For example, <code class="docutils literal"><span class="pre">make</span> <span class="pre">standalone=true</span> <span class="pre">install</span></code>.
+This corresponds to the <code class="docutils literal"><span class="pre">--standalone</span></code> option to <code class="docutils literal"><span class="pre">setup.py</span></code>.</li>
 </ul>
 </div>
 </div>
@@ -295,7 +296,7 @@ This corresponds to the <tt class="docutils literal"><span class="pre">--standal
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

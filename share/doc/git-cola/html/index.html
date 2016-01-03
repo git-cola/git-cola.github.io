@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Git Cola Documentation &mdash; git-cola 2.4 documentation</title>
+  <title>Git Cola Documentation &mdash; git-cola 2.5 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   
 
   
-    <link rel="top" title="git-cola 2.4 documentation" href="#"/>
+    <link rel="top" title="git-cola 2.5 documentation" href="#"/>
         <link rel="next" title="git-cola(1)" href="git-cola.html"/> 
 
   
@@ -79,6 +79,7 @@
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#language-settings">LANGUAGE SETTINGS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#custom-gui-actions">CUSTOM GUI ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#windows-notes">WINDOWS NOTES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#links">LINKS</a></li>
 </ul>
 </li>
@@ -98,7 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#unreleased-topics">Unreleased Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.2.1.html">git-cola v2.2.1</a></li>
@@ -269,8 +270,10 @@
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#apply-patches">APPLY PATCHES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#configuration-variables">CONFIGURATION VARIABLES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-blameviewer">cola.blameviewer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-browserdockable">cola.browserdockable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-checkconflicts">cola.checkconflicts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-defaultrepo">cola.defaultrepo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fileattributes">cola.fileattributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fontdiff">cola.fontdiff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-inotify">cola.inotify</a></li>
@@ -324,6 +327,10 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#configure-gpg-agent-and-a-pin-entry-program">Configure gpg-agent and a pin-entry program</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#windows-notes">WINDOWS NOTES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-installation">Git Installation</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#links">LINKS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-s-git-repository">Git Cola&#8217;s Git Repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-homepage">Git Cola Homepage</a></li>
@@ -365,8 +372,8 @@
 <div class="section" id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
 </ul>
 </div>
 </div>
@@ -408,7 +415,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.4',
+            VERSION:'2.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

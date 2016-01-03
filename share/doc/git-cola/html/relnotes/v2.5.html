@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v2.0.5 &mdash; git-cola 2.5 documentation</title>
+  <title>git-cola v2.5 &mdash; git-cola 2.5 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="git-cola 2.5 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v2.0.4" href="v2.0.4.html"/>
-        <link rel="prev" title="git-cola v2.0.6" href="v2.0.6.html"/> 
+        <link rel="next" title="git-cola v2.4" href="v2.4.html"/>
+        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v2.5.html">git-cola v2.5</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.3.html">git-cola v2.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.2.1.html">git-cola v2.2.1</a></li>
@@ -112,7 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v2.0.8.html">git-cola v2.0.8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.7.html">git-cola v2.0.7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.6.html">git-cola v2.0.6</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.0.5.html">git-cola v2.0.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.4.html">git-cola v2.0.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.3.html">git-cola v2.0.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.0.2.html">git-cola v2.0.2</a></li>
@@ -192,10 +192,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v2.0.5</li>
+    <li>git-cola v2.5</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v2.0.5.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/v2.5.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -203,44 +203,70 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v2-0-5">
-<span id="v2-0-5"></span><h1>git-cola v2.0.5<a class="headerlink" href="#git-cola-v2-0-5" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-v2-5">
+<span id="v2-5"></span><h1>git-cola v2.5<a class="headerlink" href="#git-cola-v2-5" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usability-bells-and-whistles">
 <h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">New Brazillian Portuguese translation thanks to Vitor Lobo.</p>
+<li><p class="first">The icon for untracked files was adjusted to better differentiate
+between files and the &#8220;Untracked&#8221; header.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/509">https://github.com/git-cola/git-cola/issues/509</a></p>
 </li>
-<li><p class="first">New Indonesian translation thanks to Samsul Ma&#8217;arif.</p>
+<li><p class="first">Ctrl+O was added as a hotkey for opening repositories.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/507">https://github.com/git-cola/git-cola/pull/507</a></p>
 </li>
-<li><p class="first">Updated Simplified Chinese translation thanks to Zhang Han.</p>
+<li><p class="first"><cite>git dag</cite> now uses consistent edge colors across updates.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/512">https://github.com/git-cola/git-cola/issues/512</a></p>
 </li>
-<li><p class="first"><cite>Ctrl+Backspace</cite> is now a hotkey for &#8220;delete untracked files&#8221; in
-the status widget.</p>
+<li><p class="first"><cite>git cola</cite>&#8216;s Bookmarks widget can now be used to set a &#8220;Default Repository&#8221;.
+Under the hood, we set the <cite>cola.defaultrepo</cite> configuration variable.
+The default repository is used whenever <cite>git cola</cite> is launched outside of
+a Git repostiory.  When unset, or when set to a bogus value, <cite>git cola</cite>
+will prompt for a repository, as it previously did.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/513">https://github.com/git-cola/git-cola/issues/513</a></p>
 </li>
-<li><p class="first">Fetch/Push/Pull dialogs now use the configured remote of the current
-branch by default.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/324">https://github.com/git-cola/git-cola/pull/324</a></p>
+<li><p class="first"><cite>git cola</cite>&#8216;s Russian and Spanish translations were improved
+thanks to Vaiz and Zeioth.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/514">https://github.com/git-cola/git-cola/pull/514</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/515">https://github.com/git-cola/git-cola/pull/515</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/523">https://github.com/git-cola/git-cola/pull/523</a></p>
+</li>
+<li><p class="first"><cite>git cola</cite> was translated to Turkish thanks to Barış ÇELİK.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/520">https://github.com/git-cola/git-cola/pull/520</a></p>
+</li>
+<li><p class="first">The status view now supports launching <cite>git gui blame</cite>.  It can be
+configured to use a different command by setting <cite>cola.blameviewer</cite>.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/521">https://github.com/git-cola/git-cola/pull/521</a></p>
+</li>
+<li><p class="first"><cite>git dag</cite> now allows selecting non-contiguous ranges in the log widget.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/468">https://github.com/git-cola/git-cola/issues/468</a></p>
+</li>
+<li><p class="first">Any font can now be chosen for the diff editor, not just monospace fonts.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/525">https://github.com/git-cola/git-cola/issues/525</a></p>
 </li>
 </ul>
 </div>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">We now use <cite>os.getcwd()</cite> on Python3.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/316">https://github.com/git-cola/git-cola/pull/316</a></p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/326">https://github.com/git-cola/git-cola/pull/326</a></p>
+<li><p class="first"><cite>xfce4-terminal</cite> and <cite>gnome-terminal</cite> are now supported when launching
+<cite>git mergetool</cite> to resolve merges.  These terminals require that the command
+to execute is shell-quoted and passed as a single string argument to <cite>-e</cite>
+rather than as additional command line arguments.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/524">https://github.com/git-cola/git-cola/issues/524</a></p>
 </li>
-<li><p class="first">The <cite>Ctrl+P</cite> hotkey was overloaded to both &#8220;push&#8221; and &#8220;cherry-pick&#8221;,
-so &#8220;cherry-pick&#8221; was moved to <cite>Ctrl+Shift+C</cite>.</p>
+<li><p class="first">Fixed a unicode problem when formatting the error message that is shown
+when <cite>gitk</cite> is not installed.  We now handle unicode data in tracebacks
+generated by python itself.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/528">https://github.com/git-cola/git-cola/issues/528</a></p>
 </li>
-<li><p class="first">Custom GUI tools with mixed-case names are now properly supported.</p>
+<li><p class="first">The <cite>New repository</cite> feature was fixed.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/533">https://github.com/git-cola/git-cola/pull/533</a></p>
 </li>
-<li><p class="first">&#8220;Diff Region&#8221; is now referred to as &#8220;Diff Hunk&#8221; for consistency
-with common terminology from diff/patch tools.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/328">https://github.com/git-cola/git-cola/issues/328</a></p>
-</li>
-<li><p class="first">git-cola&#8217;s test suite is now portable to MS Windows.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/332">https://github.com/git-cola/git-cola/pull/332</a></p>
+<li><p class="first">We now use omit the extended description when creating &#8220;fixup!&#8221; commits,
+for consistency with the Git CLI.  We now include only the one-line summary
+in the final commit message.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/522">https://github.com/git-cola/git-cola/issues/522</a></p>
 </li>
 </ul>
 </div>
@@ -252,10 +278,10 @@ with common terminology from diff/patch tools.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v2.0.4.html" class="btn btn-neutral float-right" title="git-cola v2.0.4">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.4.html" class="btn btn-neutral float-right" title="git-cola v2.4">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v2.0.6.html" class="btn btn-neutral" title="git-cola v2.0.6"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

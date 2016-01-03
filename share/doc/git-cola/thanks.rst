@@ -8,9 +8,11 @@ Thanks
 * AJ Bagwell
 * Alex Chernetz
 * Alexander Kozienko
+* anderben
 * Andreas Sommer
 * Andrew Chen
 * Audrius Karabanovas
+* Barış ÇELİK
 * Barry Roberts
 * Boris W
 * Ben Boeckel
@@ -87,12 +89,14 @@ Thanks
 * Patrick Browne
 * Paul Hildebrandt
 * Paul Weingardt
+* Paulo Fidalgo
 * Peter Dave Hello
 * Peter Júnoš
 * Pilar Molina Lopez
 * Raghavendra Karunanidhi
 * Rustam Safin
 * Samsul Ma'arif
+* Sebastian Brass
 * Sergey Leschina
 * Srinivasa Nallapati
 * Stan Angeloff
@@ -108,9 +112,12 @@ Thanks
 * Uri Okrent
 * Ｖ字龍 (Vdragon)
 * Vaibhav Sagar
+* Vaiz
 * Ville Skyttä
 * Virgil Dupras
 * Vitor Lobo
 * v.paritskiy
 * Wolfgang Ocker
+* Yi EungJun
+* Zeioth
 * Zhang Han

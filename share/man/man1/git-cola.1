@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "October 12, 2015" "2.4" "git-cola"
+.TH "GIT-COLA" "1" "January 02, 2016" "2.5" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -342,6 +342,9 @@ the \fISave Window Settings\fP option in the \fIgit cola\fP preferences.
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
+.SS cola.blameviewer
+.sp
+The command used to blame files.  Defaults to \fIgit gui blame\fP\&.
 .SS cola.browserdockable
 .sp
 Whether to create a dock widget with the \fIBrowser\fP tool.
@@ -351,6 +354,12 @@ Defaults to \fIfalse\fP to speedup startup time.
 Inspect unmerged files for conflict markers before staging them.
 This feature helps prevent accidental staging of unresolved merge conflicts.
 Defaults to \fItrue\fP\&.
+.SS cola.defaultrepo
+.sp
+\fIgit cola\fP, when run outside of a Git repository, prompts the user for a
+repository.  Set \fIcola.defaultrepo\fP to the path of a Git repostiory to make
+\fIgit cola\fP attempt to use that repository before falling back to prompting
+the user for a repository.
 .SS cola.fileattributes
 .sp
 Enables per\-file gitattributes encoding support when set to \fItrue\fP\&.
@@ -361,8 +370,9 @@ and applying diffs.
 Specifies the font to use for \fIgit cola\fP\(aqs diff display.
 .SS cola.inotify
 .sp
-Set to \fIfalse\fP to disable inotify support.
-Defaults to \fItrue\fP when the \fIpyinotify\fP module is available.
+Set to \fIfalse\fP to disable file system change monitoring.  Defaults to \fItrue\fP,
+but also requires either Linux with inotify support or Windows with \fIpywin32\fP
+installed for file system change monitoring to actually function.
 .SS cola.refreshonfocus
 .sp
 Set to \fItrue\fP to automatically refresh when \fIgit cola\fP gains focus.  Defaults
@@ -463,7 +473,7 @@ environment variables.
 \fIgit cola\fP can be made to scale its interface for HiDPI displays.
 When defined, \fIgit cola\fP will scale icons, radioboxes, and checkboxes
 according to the scale factor.  The default value is \fI1\fP\&.
-A value is \fI2\fP for high\-resolution displays.
+A good value is \fI2\fP for high\-resolution displays.
 .sp
 Fonts are not scaled, as their size can already be set in the settings.
 .SS GIT_COLA_TRACE
@@ -603,20 +613,35 @@ for your password in the terminal.
 On Mac OS X, you may need to \fIbrew install gpg\-agent\fP and install the
 \fI\%Mac GPG Suite\fP\&.
 .sp
-On Linux use your package manager to install gnupg\-agent and pinentry\-qt4, e.g.:
+On Linux use your package manager to install gnupg2,
+gnupg\-agent and pinentry\-qt, e.g.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
-sudo apt\-get install gnupg\-agent pinentry\-qt4
+sudo apt\-get install gnupg2 gnupg\-agent pinentry\-qt
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+On Linux, you should also configure Git so that it uses gpg2 (gnupg2),
+otherwise you will get errors mentioning, "unable to open /dev/tty".
+Set Git\(aqs \fIgpg.program\fP to \fIgpg2\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config \-\-global gpg.program gpg2
 .ft P
 .fi
 .UNINDENT
 .UNINDENT
 .SS Configure gpg\-agent and a pin\-entry program
 .sp
-Edit \fI~/.gnupg/gpg.conf\fP to include the line,:
+On Mac OS X, edit \fI~/.gnupg/gpg.conf\fP to include the line,:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -628,16 +653,19 @@ use\-agent
 .UNINDENT
 .UNINDENT
 .sp
-Edit \fI~/.gnupg/gpg\-agent.conf\fP to contain a pinentry\-program line pointing to
-the pin\-entry program for your platform.
+This is typically not needed on Linux, where \fIgpg2\fP is used, as
+this is the default value when using \fIgpg2\fP\&.
 .sp
-The following example \fIgpg\-agent.conf\fP shows how to use pinentry\-qt4 on Linux:
+Next, edit \fI~/.gnupg/gpg\-agent.conf\fP to contain a pinentry\-program line
+pointing to the pinentry program for your platform.
+.sp
+The following example \fI~/.gnupg/gpg\-agent.conf\fP shows how to use pinentry\-qt on Linux:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
-pinentry\-program /usr/bin/pinentry\-qt4
+pinentry\-program /usr/bin/pinentry\-qt
 default\-cache\-ttl 3600
 enable\-ssh\-support
 use\-standard\-socket
@@ -646,7 +674,7 @@ use\-standard\-socket
 .UNINDENT
 .UNINDENT
 .sp
-This following example \fIgpg\-agent.conf\fP shows how to use MacGPG2\(aqs
+This following example \fI\&.gnupg/gpg\-agent.conf\fP shows how to use MacGPG2\(aqs
 pinentry app on On Mac OS X:
 .INDENT 0.0
 .INDENT 3.5
@@ -662,15 +690,61 @@ use\-standard\-socket
 .UNINDENT
 .UNINDENT
 .sp
-Once this has been setup then you will need to eval the output
-of \fIgpg\-agent \-\-daemon\fP in your shell prior to launching git\-cola.:
+Once this has been setup then you will need to start the gpg\-agent daemon.
+First, check if it is already running.:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+env | grep GPG_AGENT_INFO
+echo bye | gpg\-connect\-agent
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+If you see the following output:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+GPG_AGENT_INFO=...
+OK closing connection
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Then the daemon is already running, and you do not need to start it yourself.
+.sp
+If it is not running, eval the output of \fIgpg\-agent \-\-daemon\fP in your shell
+prior to launching \fIgit cola\fP\&.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
 eval $(gpg\-agent \-\-daemon)
-bin/git\-cola
+git cola
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH WINDOWS NOTES
+.SS Git Installation
+.sp
+If Git is installed in a custom location, e.g. not installed in \fIC:/Git\fP or
+Program Files, then the path to Git must be configured by creating a file in
+your home directory \fI~/.config/git\-cola/git\-bindir\fP that points to your git
+installation.  e.g.:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+C:/Tools/Git/bin
 .ft P
 .fi
 .UNINDENT
