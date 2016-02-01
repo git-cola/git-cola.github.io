@@ -1,8 +1,6 @@
 destination: ./_site
 lsi:         false
 port: 4000
-highlighter: pygments
-markdown:    kramdown
 permalink:   date
 maruku:
   use_tex:    false
