@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v1.9.2 &mdash; git-cola 2.6 documentation</title>
+  <title>git-cola v2.6 &mdash; git-cola 2.6 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="git-cola 2.6 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v1.9.1" href="v1.9.1.html"/>
-        <link rel="prev" title="git-cola v1.9.3" href="v1.9.3.html"/> 
+        <link rel="next" title="git-cola v2.5" href="v2.5.html"/>
+        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v2.6.html">git-cola v2.6</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.6</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.3.html">git-cola v2.3</a></li>
@@ -121,7 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v2.0.0.html">git-cola v2.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.9.4.html">git-cola v1.9.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.9.3.html">git-cola v1.9.3</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v1.9.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.9.2.html">git-cola v1.9.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.9.1.html">git-cola v1.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.9.0.html">git-cola v1.9.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.8.5.html">git-cola v1.8.5</a></li>
@@ -193,10 +193,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v1.9.2</li>
+    <li>git-cola v2.6</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v1.9.2.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/v2.6.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -204,26 +204,51 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v1-9-2">
-<span id="v1-9-2"></span><h1>git-cola v1.9.2<a class="headerlink" href="#git-cola-v1-9-2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-cola-v2-6">
+<span id="v2-6"></span><h1>git-cola v2.6<a class="headerlink" href="#git-cola-v2-6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="usability-bells-and-whistles">
+<h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">A new &#8220;Reset&#8221; sub-menu provides access to running &#8220;git reset &#8211;mixed&#8221;
+when resetting branch heads and &#8220;git reset  &#8211;merge&#8221; when resetting
+worktrees.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/542">https://github.com/git-cola/git-cola/issues/542</a></p>
+</li>
+<li><p class="first"><cite>git cola</cite> now supports linked worktrees, i.e. worktrees created by
+<cite>git worktree</cite>.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/554">https://github.com/git-cola/git-cola/issues/554</a></p>
+</li>
+</ul>
+</div>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Fix a traceback when <cite>git push</cite> fails.</p>
-<p><a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=1034778">https://bugzilla.redhat.com/show_bug.cgi?id=1034778</a></p>
+<li><p class="first">Diff highlighting is now robust to the user having
+diff.supressBlankEmpty=true in their git config.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/541">https://github.com/git-cola/git-cola/issues/541</a></p>
+</li>
+<li><p class="first">The filesystem monitor now properly handles repositories that use
+<cite>.git</cite>-files, e.g. when using submodules.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/545">https://github.com/git-cola/git-cola/issues/545</a></p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pulls/546">https://github.com/git-cola/git-cola/pulls/546</a></p>
+</li>
+<li><p class="first">Per-repository git configuration is now properly detected when launching
+<cite>git cola</cite> from an application launcher.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/548">https://github.com/git-cola/git-cola/issues/548</a></p>
+</li>
+<li><p class="first"><cite>git cola</cite> now cleans up after itself immediately to avoid leaving behind
+empty <cite>/tmp/git-cola-XXXXXX</cite> directories when the user uses <cite>Ctrl+C</cite>
+to quit the app.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/566">https://github.com/git-cola/git-cola/issues/566</a></p>
 </li>
 </ul>
 </div>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Most of the git-cola sub-packages have been removed.
-The only remaining packages are <cite>cola</cite>, <cite>cola.models</cite>,
-and <cite>cola.widgets</cite>.</p>
-</li>
-<li><p class="first">The translation file for Simplified Chinese was renamed
-to <cite>zh_CN.po</cite>.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/209">https://github.com/git-cola/git-cola/issues/209</a></p>
+<li><p class="first">It is now possible to install <cite>git cola</cite> to and from utf8-encoded
+filesystem paths.  Previously, Python&#8217;s stdlib would during installation.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/551">https://github.com/git-cola/git-cola/issues/551</a></p>
 </li>
 </ul>
 </div>
@@ -235,10 +260,10 @@ to <cite>zh_CN.po</cite>.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v1.9.1.html" class="btn btn-neutral float-right" title="git-cola v1.9.1">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.5.html" class="btn btn-neutral float-right" title="git-cola v2.5">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v1.9.3.html" class="btn btn-neutral" title="git-cola v1.9.3"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
