@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.6 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 2.7 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   
 
   
-    <link rel="top" title="git-cola 2.6 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 2.7 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -62,7 +62,7 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">git-cola(1)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">git-cola(1)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a></li>
@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/unreleased.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes/v2.7.html">git-cola v2.7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.6.html">git-cola v2.6</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes/v2.4.html">git-cola v2.4</a></li>
@@ -362,7 +363,7 @@ on the command line.</p>
 <p>You can navigate through the list of files using keyboard arrows as well
 as the ergonomical and vim-like <cite>j</cite> and <cite>k</cite> shortcut keys.</p>
 <p>There are several convenient ways to interact with files in the <cite>Status</cite> tool.</p>
-<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><span>DIFF</span></a> viewer.
+<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><span class="std std-ref">DIFF</span></a> viewer.
 Double-clicking a file stages its contents, as does the
 the <cite>Ctrl-s</cite> shortcut key.</p>
 <p><cite>Ctrl-e</cite> opens selected files in the conifgured editor, and
@@ -451,7 +452,7 @@ staged content.</p>
 <div class="section" id="sign-off">
 <h3>Sign Off<a class="headerlink" href="#sign-off" title="Permalink to this headline">¶</a></h3>
 <p>The <cite>Sign Off</cite> button adds a standard:</p>
-<div class="highlight-python"><div class="highlight"><pre>Signed-off-by: A. U. Thor &lt;a.u.thor@example.com&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">A</span><span class="o">.</span> <span class="n">U</span><span class="o">.</span> <span class="n">Thor</span> <span class="o">&lt;</span><span class="n">a</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">thor</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>line to the bottom of the commit message.</p>
@@ -708,19 +709,19 @@ may want <cite>git cola</cite> to use a specific language.</p>
 <p>You can make <cite>git cola</cite> use an alternative language by creating a
 <cite>~/.config/git-cola/language</cite> file containing the standard two-letter
 gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;, &#8220;zh&#8221;, etc.:</p>
-<div class="highlight-python"><div class="highlight"><pre>mkdir -p ~/.config/git-cola &amp;&amp;
-echo en &gt;~/.config/git-cola/language
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span> <span class="o">&amp;&amp;</span>
+<span class="n">echo</span> <span class="n">en</span> <span class="o">&gt;~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span><span class="o">/</span><span class="n">language</span>
 </pre></div>
 </div>
 <p>Alternatively you may also use LANGAUGE environmental variable to temporarily
 change <cite>git cola</cite>&#8216;s language just like any other gettext-based program.  For
 example to temporarily change <cite>git cola</cite>&#8216;s language to English:</p>
-<div class="highlight-python"><div class="highlight"><pre>LANGUAGE=en git cola
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
 </pre></div>
 </div>
 <p>To make <cite>git cola</cite> use the zh_TW translation with zh_HK, zh, and en as a
 fallback.:</p>
-<div class="highlight-python"><div class="highlight"><pre>LANGUAGE=zh_TW:zh_HK:zh:en git cola
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">zh_TW</span><span class="p">:</span><span class="n">zh_HK</span><span class="p">:</span><span class="n">zh</span><span class="p">:</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
 </pre></div>
 </div>
 </div>
@@ -816,20 +817,20 @@ for your password in the terminal.</p>
 <a class="reference external" href="https://gpgtools.org/macgpg2/">Mac GPG Suite</a>.</p>
 <p>On Linux use your package manager to install gnupg2,
 gnupg-agent and pinentry-qt, e.g.:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install gnupg2 gnupg-agent pinentry-qt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gnupg2</span> <span class="n">gnupg</span><span class="o">-</span><span class="n">agent</span> <span class="n">pinentry</span><span class="o">-</span><span class="n">qt</span>
 </pre></div>
 </div>
 <p>On Linux, you should also configure Git so that it uses gpg2 (gnupg2),
 otherwise you will get errors mentioning, &#8220;unable to open /dev/tty&#8221;.
 Set Git&#8217;s <cite>gpg.program</cite> to <cite>gpg2</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre>git config --global gpg.program gpg2
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">gpg</span><span class="o">.</span><span class="n">program</span> <span class="n">gpg2</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="configure-gpg-agent-and-a-pin-entry-program">
 <h3>Configure gpg-agent and a pin-entry program<a class="headerlink" href="#configure-gpg-agent-and-a-pin-entry-program" title="Permalink to this headline">¶</a></h3>
 <p>On Mac OS X, edit <cite>~/.gnupg/gpg.conf</cite> to include the line,:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
 </pre></div>
 </div>
 <p>This is typically not needed on Linux, where <cite>gpg2</cite> is used, as
@@ -837,35 +838,35 @@ this is the default value when using <cite>gpg2</cite>.</p>
 <p>Next, edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line
 pointing to the pinentry program for your platform.</p>
 <p>The following example <cite>~/.gnupg/gpg-agent.conf</cite> shows how to use pinentry-qt on Linux:</p>
-<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/bin/pinentry-qt
-default-cache-ttl 3600
-enable-ssh-support
-use-standard-socket
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">qt</span>
+<span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
+<span class="n">enable</span><span class="o">-</span><span class="n">ssh</span><span class="o">-</span><span class="n">support</span>
+<span class="n">use</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">socket</span>
 </pre></div>
 </div>
 <p>This following example <cite>.gnupg/gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
 pinentry app on On Mac OS X:</p>
-<div class="highlight-python"><div class="highlight"><pre>pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
-default-cache-ttl 3600
-enable-ssh-support
-use-standard-socket
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">MacGPG2</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span>
+<span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
+<span class="n">enable</span><span class="o">-</span><span class="n">ssh</span><span class="o">-</span><span class="n">support</span>
+<span class="n">use</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">socket</span>
 </pre></div>
 </div>
 <p>Once this has been setup then you will need to start the gpg-agent daemon.
 First, check if it is already running.:</p>
-<div class="highlight-python"><div class="highlight"><pre>env | grep GPG_AGENT_INFO
-echo bye | gpg-connect-agent
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">GPG_AGENT_INFO</span>
+<span class="n">echo</span> <span class="n">bye</span> <span class="o">|</span> <span class="n">gpg</span><span class="o">-</span><span class="n">connect</span><span class="o">-</span><span class="n">agent</span>
 </pre></div>
 </div>
 <p>If you see the following output:</p>
-<div class="highlight-python"><div class="highlight"><pre>GPG_AGENT_INFO=...
-OK closing connection
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GPG_AGENT_INFO</span><span class="o">=...</span>
+<span class="n">OK</span> <span class="n">closing</span> <span class="n">connection</span>
 </pre></div>
 </div>
 <p>Then the daemon is already running, and you do not need to start it yourself.</p>
 <p>If it is not running, eval the output of <cite>gpg-agent &#8211;daemon</cite> in your shell
 prior to launching <cite>git cola</cite>.:</p>
-<div class="highlight-python"><div class="highlight"><pre>eval $(gpg-agent --daemon)
+<div class="highlight-default"><div class="highlight"><pre><span></span>eval $(gpg-agent --daemon)
 git cola
 </pre></div>
 </div>
@@ -879,7 +880,7 @@ git cola
 Program Files, then the path to Git must be configured by creating a file in
 your home directory <cite>~/.config/git-cola/git-bindir</cite> that points to your git
 installation.  e.g.:</p>
-<div class="highlight-python"><div class="highlight"><pre>C:/Tools/Git/bin
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Tools</span><span class="o">/</span><span class="n">Git</span><span class="o">/</span><span class="nb">bin</span>
 </pre></div>
 </div>
 </div>
@@ -919,11 +920,11 @@ installation.  e.g.:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2007-2015, David Aguilar and contributors.
+        &copy; Copyright 2007-2016, David Aguilar and contributors.
     </p>
   </div>
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.io">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
   
 </footer>
         </div>
@@ -940,7 +941,7 @@ installation.  e.g.:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.6',
+            VERSION:'2.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

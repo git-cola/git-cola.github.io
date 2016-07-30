@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v2.6 &mdash; git-cola 2.6 documentation</title>
+  <title>git-cola v2.6 &mdash; git-cola 2.7 documentation</title>
   
 
   
@@ -28,10 +28,10 @@
   
 
   
-    <link rel="top" title="git-cola 2.6 documentation" href="../index.html"/>
+    <link rel="top" title="git-cola 2.7 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
         <link rel="next" title="git-cola v2.5" href="v2.5.html"/>
-        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
+        <link rel="prev" title="git-cola v2.7" href="v2.7.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -101,7 +101,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">git-cola v2.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v2.7.html">git-cola v2.7</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">git-cola v2.6</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.4.html">git-cola v2.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.3.html">git-cola v2.3</a></li>
@@ -246,8 +247,10 @@ to quit the app.</p>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">It is now possible to install <cite>git cola</cite> to and from utf8-encoded
-filesystem paths.  Previously, Python&#8217;s stdlib would during installation.</p>
+<li><p class="first">It is now possible to install <cite>git cola</cite> to and from utf8-encoded filesystem
+paths.  Previously, Python&#8217;s stdlib would throw an encoding error during
+installation.  We workaround the stdlib by forcing python2 to use utf-8,
+thus fixing assumptions in the stdlib library code.</p>
 <p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/551">https://github.com/git-cola/git-cola/issues/551</a></p>
 </li>
 </ul>
@@ -263,7 +266,7 @@ filesystem paths.  Previously, Python&#8217;s stdlib would during installation.<
         <a href="v2.5.html" class="btn btn-neutral float-right" title="git-cola v2.5">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="v2.7.html" class="btn btn-neutral" title="git-cola v2.7"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -272,11 +275,11 @@ filesystem paths.  Previously, Python&#8217;s stdlib would during installation.<
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2007-2015, David Aguilar and contributors.
+        &copy; Copyright 2007-2016, David Aguilar and contributors.
     </p>
   </div>
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.io">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
   
 </footer>
         </div>
@@ -293,7 +296,7 @@ filesystem paths.  Previously, Python&#8217;s stdlib would during installation.<
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.6',
+            VERSION:'2.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

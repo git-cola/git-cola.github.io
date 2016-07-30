@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola v1.4.3.2 &mdash; git-cola 2.7 documentation</title>
+  <title>git-cola v2.7 &mdash; git-cola 2.7 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   
     <link rel="top" title="git-cola 2.7 documentation" href="../index.html"/>
         <link rel="up" title="Releases" href="../relnotes.html"/>
-        <link rel="next" title="git-cola v1.4.3.1" href="v1.4.3.1.html"/>
-        <link rel="prev" title="git-cola v1.4.3.3" href="v1.4.3.3.html"/> 
+        <link rel="next" title="git-cola v2.6" href="v2.6.html"/>
+        <link rel="prev" title="Latest Release" href="unreleased.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -101,7 +101,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../relnotes.html">Releases</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unreleased.html#development-version">Development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="v2.7.html">git-cola v2.7</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">git-cola v2.7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.6.html">git-cola v2.6</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.5.html">git-cola v2.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v2.4.html">git-cola v2.4</a></li>
@@ -144,7 +144,7 @@
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.5.html">git-cola v1.4.3.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.4.html">git-cola v1.4.3.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.3.html">git-cola v1.4.3.3</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">git-cola v1.4.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1.4.3.2.html">git-cola v1.4.3.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.1.html">git-cola v1.4.3.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.3.html">git-cola v1.4.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1.4.2.5.html">git-cola v1.4.2.5</a></li>
@@ -194,10 +194,10 @@
       
           <li><a href="../relnotes.html">Releases</a> &raquo;</li>
       
-    <li>git-cola v1.4.3.2</li>
+    <li>git-cola v2.7</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../sources/relnotes/v1.4.3.2.txt" rel="nofollow"> View page source</a>
+          <a href="../sources/relnotes/v2.7.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -205,28 +205,53 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="git-cola-v1-4-3-2">
-<span id="v1-4-3-2"></span><h1>git-cola v1.4.3.2<a class="headerlink" href="#git-cola-v1-4-3-2" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="usability-bells-and-whistles">
-<h2>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Faster startup time! <cite>git cola</cite> now offloads initialization
-to a background thread so that the GUI appears almost instantly.</li>
-<li>Specialized diff options for p4merge, vimdiff, araxis, emerge,
-and ecmerge in difftool (backported from git.git).</li>
-</ul>
-</div>
+  <div class="section" id="git-cola-v2-7">
+<span id="v2-7"></span><h1>git-cola v2.7<a class="headerlink" href="#git-cola-v2-7" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="fixes">
 <h2>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Fix launching commands in the background on Windows
-(e.g. when launching <cite>git difftool</cite>).</p>
+<li><p class="first">When repositories stored in non-ASCII, UTF-8-encoded filesystem paths
+were operated upon with <cite>LC_ALL=C</cite> set in the environment, unicode errors
+would occur when using <cite>python2</cite>.  <cite>git cola</cite> was made more robust and will
+now operate correctly within this environment.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/581">https://github.com/git-cola/git-cola/issues/581</a></p>
 </li>
-<li><p class="first">Fix unicode errors when home or repository directories contain
-unicode characters.</p>
-<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/74">https://github.com/git-cola/git-cola/issues/74</a></p>
-<p>Redhat&#8217;s bugzilla #694806</p>
-<p><a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=694806">https://bugzilla.redhat.com/show_bug.cgi?id=694806</a></p>
+<li><p class="first">Support for the <cite>GIT_WORK_TREE</cite> environment variable was fixed.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/pull/582">https://github.com/git-cola/git-cola/pull/582</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">The <cite>unittest.mock</cite> module is now used instead of the original <cite>mock</cite> module
+when running the <cite>git cola</cite> test suite using Python3.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/569">https://github.com/git-cola/git-cola/issues/569</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="packaging">
+<h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><cite>git cola</cite> is now compatible with <em>PyQt5</em>, <em>PyQt4</em>, and <em>Pyside</em>.
+<cite>git cola</cite> previously supported <em>PyQt4</em> only, but will now use whichever
+library is available.  Users are not required to upgrade at this time,
+but <em>PyQt5</em> support can be enabled anytime by making its python
+modules available.</p>
+<p><a class="reference external" href="https://github.com/git-cola/git-cola/issues/232">https://github.com/git-cola/git-cola/issues/232</a></p>
+<p><em>NOTE</em>: We do not yet recommend using <em>PyQt5</em> because there are known
+exit-on-segfault bugs in <em>Qt5</em> that have not yet been addressed.
+<cite>git cola</cite> is sensitive to this bug and is known to crash on exit
+when using <cite>git dag</cite> or the interactive rebase feature on <em>PyQt5</em>.</p>
+<p><a class="reference external" href="https://bugreports.qt.io/browse/QTBUG-52988">https://bugreports.qt.io/browse/QTBUG-52988</a></p>
+<p><em>PyQt4</em> is stable and there are no known issues when using it so
+we recommend using it until the Qt5 bugs have been resolved.</p>
+</li>
+<li><p class="first"><cite>git cola</cite> now depends on <em>QtPy</em> and includes a bundled copy of the
+<cite>qtpy</cite> library.  If you are packaging <cite>git cola</cite> and would prefer to use
+<cite>qtpy</cite> from your distribution instead of the built-in version then use
+<cite>make NO_VENDOR_LIBS=1</cite> when building <cite>git cola</cite>.  This will prevent
+vendored libraries from being installed.</p>
 </li>
 </ul>
 </div>
@@ -238,10 +263,10 @@ unicode characters.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v1.4.3.1.html" class="btn btn-neutral float-right" title="git-cola v1.4.3.1">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v2.6.html" class="btn btn-neutral float-right" title="git-cola v2.6">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="v1.4.3.3.html" class="btn btn-neutral" title="git-cola v1.4.3.3"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unreleased.html" class="btn btn-neutral" title="Latest Release"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
