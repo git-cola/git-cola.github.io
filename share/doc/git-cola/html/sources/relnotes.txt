@@ -2,16 +2,10 @@
 Releases
 ========
 
-.. toctree::
-    :maxdepth: 1
-    :titlesonly:
-
-.. _unreleased:
-
 Latest Release
 ==============
 
-:ref:`v2.7 <v2.7>` is the latest stable release.
+:ref:`v2.8 <v2.8>` is the latest stable release.
 
 Development version
 ===================
@@ -22,14 +16,25 @@ Clone the git-cola repo to get the latest development version:
 
 .. _v2.8:
 
-git-cola v2.8 (beta)
-====================
+git-cola v2.8
+=============
 
 Usability, bells and whistles
 -----------------------------
 * `git cola push` learned to configure upstream branches.
 
   https://github.com/git-cola/git-cola/issues/563
+
+Fixes
+-----
+* The diffstat view is now properly updated when notifications are
+  received via inotify filesystem monitoring.
+
+  https://github.com/git-cola/git-cola/issues/577
+
+* Python3 with PyQt5 had a bug that prevented `git cola` from starting.
+
+  https://github.com/git-cola/git-cola/pull/589
 
 .. _v2.7:
 
