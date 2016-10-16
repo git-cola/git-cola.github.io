@@ -4,39 +4,52 @@ layout: logo-top
 ---
 <style>
 .download-button-container {
-	float: left;
-	margin-left: 150px;
-	margin-right: 1em;
-	margin-bottom: 1em;
+    margin: 1em;
+    text-align: center;
+}
+
+.code {
+    font-family: monospace;
 }
 
 .info-text {
-	padding: 5px;
-	color: gray;
+    color: gray;
+    text-align: center;
+}
+
+#screenshot {
+    clear: both;
+    margin-top: 2em;
+    margin-right: 1em;
+    margin-left: 0;
+    text-align: center;
 }
 
 </style>
 
-<div class="download-button-container">
-<div class="info-text">
-	Git Cola is a sleek and powerful
-	<a href="http://git-scm.com/">Git</a> GUI.
-<br />
-	Git Cola is written in Python and
-	<a href="license.html">GPL licensed</a>.
-</div>
-
-<div style="margin-top: 1em; margin-bottom: 1em">
-<a class="button" href="downloads.html">
-	Download git-cola
-</a>
-</div>
-</div>
-
 {% include links.html %}
 
-<div style="text-align: center">
+<br>
+<br>
+
+<div class="download-button-container">
+
+    <div class="info-text">
+        Git Cola is a sleek and powerful graphical
+        <a href="http://git-scm.com/">Git</a> client.
+        <br>
+        Written in Python and <a href="license.html">GPL licensed</a>.
+    </div>
+
+    <div style="margin: 2em">
+    <a class="button" href="downloads.html">
+        Download
+    </a>
+    </div>
+</div>
+
+<div id="screenshot">
 <a href="downloads.html">
-	<img src="images/screenshot-main-linux.png">
+    <img src="images/screenshot-main-linux.png">
 </a>
 </div>

@@ -6,19 +6,36 @@ layout: logo-top
 img.title { border: 0; }
 h1.title { margin-bottom: 0.5em; }
 h2.title { margin-bottom: 0.5em; }
+
 .cmd { font-family: monospace; }
-.downloads-page { padding-left: 50px; }
+
+.page {
+    margin: 1em;
+    float: left;
+    padding-right: 300px;
+}
+
 </style>
 
-<div class="downloads-page">
+{% include links.html %}
 
+<div style="
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-left: -330px;
+    position: relative;
+    float: right;
+    clear: right;">
 {% include download-box.html %}
+</div>
 
-<div style="margin-right: 292px;">
+<div class="page">
 
-<h2 class="title"><img class="title" src="images/logo-tar.png"/>
+<h2 class="title">
+    <img class="title" src="images/logo-tar.png"/>
     Source Releases
 </h2><ul>
+
 <li>
 <a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz">
     git-cola v{{ site.cola_version }}</a> (latest stable release)
@@ -95,7 +112,6 @@ If not, please file a bug against your distribution ;-)
 </tbody>
 </table>
 
-</div><!-- margin-right -->
 <p style="font-size: 12pt;">
     More?  Contact the list if you've packaged
     git-cola for other distributions.

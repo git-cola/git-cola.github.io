@@ -1,46 +1,45 @@
 <style>
 .downloads-box {
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	position: absolute;
-	top: 60px;
-	padding-top: 6px;
-	right: 5px;
-	color: #fff;
-	background-color: #111;
-	text-align: center;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #fff;
+    background-color: #111;
+    text-align: center;
+    max-width: 310px;
 }
 
 .downloads {
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	padding: 6px;
-	font-size: 0.8em;
-	margin: 6px;
-	color: #000;
-	background-color: #ffe9b7;
-	position: relative;
-	z-index: 3;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 0.8em;
+    margin: 6px;
+    color: #000;
+    background-color: #ffe9b7;
+    position: relative;
+    z-index: 3;
 }
 
 .downloads img {
-	border: none;
+    border: none;
 }
 
 .downloads a:link {
-	text-decoration: underline;
-	background-color: transparent;
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 .downloads a:visited {
-	text-decoration: underline;
-	background-color: transparent;
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 .downloads a:hover {
-	text-decoration: underline;
-	background-color: transparent;
-	color: black;
+    text-decoration: underline;
+    background-color: transparent;
+    color: black;
 }
 </style>
 
@@ -48,52 +47,52 @@
 Download git-cola
 
 <div class="downloads">
-	The latest stable git-cola release is<br />
-	<span style="font-size: 20pt;">
-		<strong>v{{ site.cola_version }}</strong>
-	</span>
-	<br />
-	<a href="{{ page.prefix }}share/doc/git-cola/html/relnotes.html">release notes</a>
-	({{ site.cola_release_date }})
-	<br />
-	<br />
+    The latest stable git-cola release is<br />
+    <span style="font-size: 20pt;">
+        <strong>v{{ site.cola_version }}</strong>
+    </span>
+    <br />
+    <a href="{{ page.prefix }}share/doc/git-cola/html/relnotes.html">release notes</a>
+    ({{ site.cola_release_date }})
+    <br />
+    <br />
 
-	<table width="100%">
-	<tbody>
-	<tr>
-	<td width="33%">
-		<a href="{{ site.cola_downloads }}/v{{ site.cola_version }}/git-cola-{{ site.cola_version }}.windows.zip"
-		><img src="images/windows_big.png" alt="windows logo"/></a>
-	</td>
-	<td width="33%">
-		<a href="https://github.com/git-cola/git-cola#mac-os-x"
-		><img src="images/osx_big.png" alt="mac logo"/></a>
-	</td>
-	<td width="33%">
-		<a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz"
-		><img src="images/tux_big.png" alt="tarball logo"/></a>
-	</td>
+    <table width="100%">
+    <tbody>
+    <tr>
+    <td width="33%">
+        <a href="{{ site.cola_downloads }}/v{{ site.cola_version }}/git-cola-{{ site.cola_version }}.windows.zip"
+        ><img src="images/windows_big.png" alt="windows logo"/></a>
+    </td>
+    <td width="33%">
+        <a href="https://github.com/git-cola/git-cola#mac-os-x"
+        ><img src="images/osx_big.png" alt="mac logo"/></a>
+    </td>
+    <td width="33%">
+        <a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz"
+        ><img src="images/tux_big.png" alt="tarball logo"/></a>
+    </td>
 
-	</tr>
-	<td width="33%">
-		<a href="{{ site.cola_downloads }}/v{{ site.cola_version }}/git-cola-{{ site.cola_version }}.windows.zip"
-			>Windows</a>
-	</td>
-	<td width="33%">
-		<a href="https://github.com/git-cola/git-cola#mac-os-x"
-			>Mac OSX</a>
-	</td>
-	<td width="33%">
-		<a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz"
-			>Source</a>
-	</td>
-	<tr>
-	</tr>
-	</tbody>
-	</table>
-	<br />
-	<a href="{{ site.cola_github }}">Git Source Repository</a>
-	<br />
-	<a href="{{ site.cola_github }}/releases">Older Releases</a>
+    </tr>
+    <td width="33%">
+        <a href="{{ site.cola_downloads }}/v{{ site.cola_version }}/git-cola-{{ site.cola_version }}.windows.zip"
+            >Windows</a>
+    </td>
+    <td width="33%">
+        <a href="https://github.com/git-cola/git-cola#mac-os-x"
+            >Mac OSX</a>
+    </td>
+    <td width="33%">
+        <a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz"
+            >Source</a>
+    </td>
+    <tr>
+    </tr>
+    </tbody>
+    </table>
+    <br />
+    <a href="{{ site.cola_github }}">Git Source Repository</a>
+    <br />
+    <a href="{{ site.cola_github }}/releases">Older Releases</a>
 </div>
 </div>
