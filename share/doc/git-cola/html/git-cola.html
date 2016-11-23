@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.8 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 2.9 documentation</title>
   
 
   
@@ -28,7 +28,10 @@
   
 
   
-    <link rel="top" title="git-cola 2.8 documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="git-cola 2.9 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -100,6 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-8">git-cola v2.8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-7">git-cola v2.7</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-6">git-cola v2.6</a></li>
@@ -396,8 +400,8 @@ Marks unmerged files as resolved.</p>
 <p>Reverts unstaged content by checking out selected paths
 from the index/staging area</p>
 </div>
-<div class="section" id="revert-uncommited-edits">
-<h4>Revert Uncommited Edits<a class="headerlink" href="#revert-uncommited-edits" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="revert-uncommitted-edits">
+<h4>Revert Uncommitted Edits<a class="headerlink" href="#revert-uncommitted-edits" title="Permalink to this headline">¶</a></h4>
 <p>Throws away uncommitted edits</p>
 </div>
 <div class="section" id="unstage-selected">
@@ -546,7 +550,7 @@ Defaults to <cite>true</cite>.</p>
 <div class="section" id="cola-defaultrepo">
 <h3>cola.defaultrepo<a class="headerlink" href="#cola-defaultrepo" title="Permalink to this headline">¶</a></h3>
 <p><cite>git cola</cite>, when run outside of a Git repository, prompts the user for a
-repository.  Set <cite>cola.defaultrepo</cite> to the path of a Git repostiory to make
+repository.  Set <cite>cola.defaultrepo</cite> to the path of a Git repository to make
 <cite>git cola</cite> attempt to use that repository before falling back to prompting
 the user for a repository.</p>
 </div>
@@ -714,7 +718,7 @@ gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;
 <span class="n">echo</span> <span class="n">en</span> <span class="o">&gt;~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span><span class="o">/</span><span class="n">language</span>
 </pre></div>
 </div>
-<p>Alternatively you may also use LANGAUGE environmental variable to temporarily
+<p>Alternatively you may also use LANGUAGE environmental variable to temporarily
 change <cite>git cola</cite>&#8216;s language just like any other gettext-based program.  For
 example to temporarily change <cite>git cola</cite>&#8216;s language to English:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
@@ -942,7 +946,7 @@ installation.  e.g.:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.8',
+            VERSION:'2.9',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

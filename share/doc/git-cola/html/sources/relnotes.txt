@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v2.8 <v2.8>` is the latest stable release.
+:ref:`v2.9 <v2.9>` is the latest stable release.
 
 Development version
 ===================
@@ -13,6 +13,127 @@ Development version
 Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
+
+.. _v2.9:
+
+git-cola v2.9
+=============
+
+Usability, bells and whistles
+-----------------------------
+* New Polish translation thanks to Łukasz Wojniłowicz
+
+  https://github.com/git-cola/git-cola/pull/598
+
+* The `Bypass Commit Hooks` feature now disables itself automatically
+  when a new commit is created.  The new behavior turns the option into a
+  single-use flag, which helps prevent users from accidentally leaving it
+  active longer than intended.
+
+  https://github.com/git-cola/git-cola/pull/595
+
+* `git dag` learned to launch an external diff viewer on selected commits.
+  The standard `Ctrl+D` shortcut can be used to view diffs.
+
+  https://github.com/git-cola/git-cola/issues/468
+
+* `git dag` learned to launch directory diffs via `git difftool --dir-diff`.
+  The `Ctrl+Shift+D` shortcut launches difftool in directory-diff mode.
+
+  https://github.com/git-cola/git-cola/issues/468
+
+* Items in the "Favorites" list can now be renamed, which makes it
+  easier to differentiate between several checkouts of the same repository.
+
+  https://github.com/git-cola/git-cola/issues/599
+
+  https://github.com/git-cola/git-cola/pull/601
+
+* The startup screen now includes a logo and `git cola` version information.
+
+  https://github.com/git-cola/git-cola/issues/526
+
+* The `About` page was revamped to contain multiple tabs.  A new tab was added
+  that provides details about `git cola`''s dependencies.  New tabs were also
+  added for giving credit to `git cola`'s authors and translators.
+
+* The `About` page can now be accessed via `git cola about`.
+
+* The "Fast-forward only" and "No fast-forward" options supported by
+  `git pull` are now accessible via `git cola pull`.
+
+* Doing a forced push no longer requires selecting the remote branch.
+
+  https://github.com/git-cola/git-cola/pull/618
+
+* `git cola push` now has an option to suppress the prompt that is shown
+  when pushing would create new remote branches.
+
+  https://github.com/git-cola/git-cola/issues/605
+
+* `git dag` now shows commit messages in a more readable color.
+
+  https://github.com/git-cola/git-cola/issues/574
+
+* `git cola browse` and the `status` widget learned to launch the OS-specified
+  default action for a file.  When used on directories via `git cola browse`,
+  or when "Open Parent Directory" is used on files, the OS-specified
+  file browser will typically be used.
+
+* `git cola browse` and the `status` widget learned to launch terminals.
+
+Fixes
+-----
+* `git cola browse` was not updating when expanding items.
+
+  https://github.com/git-cola/git-cola/issues/588
+
+* Typofixes in comments, naming, and strings have been applied.
+
+  https://github.com/git-cola/git-cola/pull/593
+
+* The inotify and win32 filesystem monitoring no longer refreshes
+  when updates are made to ignored files.
+
+  https://github.com/git-cola/git-cola/issues/517
+
+  https://github.com/git-cola/git-cola/issues/516
+
+* The `Refresh` button on the actions panel no longer raises an
+  exception when using PyQt5.
+
+  https://github.com/git-cola/git-cola/issues/604
+
+* Fixed a typo in the inotify backend that is triggered when files are removed.
+
+  https://github.com/git-cola/git-cola/issues/607
+
+* Fixed a typo when recovering from a failed attempt to open a repository.
+
+  https://github.com/git-cola/git-cola/issues/606
+
+* `git dag` now properly updates itself when launched from the menubar.
+
+  https://github.com/git-cola/git-cola/pull/613
+
+* If git-cola is invoked on Windows using `start pythonw git-cola`,
+  a console window will briefly flash on the screen each time
+  `git cola` invokes `git`.  The console window is now suppressed.
+
+* We now avoid some problematic Popen flags on Windows which were
+  breaking the `git rebase` feature on Windows.
+
+* The `Save` button in `git dag`'s "Grab File..." feature now properly
+  prompts for a filename when saving files.
+
+  https://github.com/git-cola/git-cola/pull/617
+
+Development
+-----------
+* The `qtpy` symlink in the source tree has been removed to allow for easier
+  development on Windows.
+
+  https://github.com/git-cola/git-cola/issues/626
 
 .. _v2.8:
 
@@ -169,7 +290,7 @@ Usability, bells and whistles
 * `git cola`'s Bookmarks widget can now be used to set a "Default Repository".
   Under the hood, we set the `cola.defaultrepo` configuration variable.
   The default repository is used whenever `git cola` is launched outside of
-  a Git repostiory.  When unset, or when set to a bogus value, `git cola`
+  a Git repository.  When unset, or when set to a bogus value, `git cola`
   will prompt for a repository, as it previously did.
 
   https://github.com/git-cola/git-cola/issues/513
@@ -432,7 +553,7 @@ Usability, bells and whistles
 
 * Traditional Chinese (Taiwan) translation updates.
 
-* The system theme's icons are now used whereever possible.
+* The system theme's icons are now used wherever possible.
 
   https://github.com/git-cola/git-cola/pull/458
 
@@ -1188,7 +1309,7 @@ Usability, bells and whistles
 * The "File" menu now provides a "New Repository..." menu action.
 
 * `git dag` now uses a dock-widget interface so that its widgets can
-  be layed-out and arranged.  Customizations are saved and restored
+  be laid-out and arranged.  Customizations are saved and restored
   the next time `git dag` is launched.
 
 * `git dag` now has a "Zoom Best Fit" button next alongside the
