@@ -54,6 +54,7 @@ Thanks
 * Ismael Juma
 * Iulian Udrea
 * Ivar Smolin
+* Jan @hanksoff
 * Jakub Wilk
 * James Geiger
 * Jeff Dagenais
@@ -71,6 +72,7 @@ Thanks
 * Kirit Sælensminde
 * László Böszörményi
 * Leho Kraav
+* Lev Zlotin
 * Libor Jelinek
 * Liviu Cristian Mirea-Ghiban
 * Łukasz Wojniłowicz
@@ -97,6 +99,7 @@ Thanks
 * Owen Healy
 * Pamela Strucker
 * Paolo G. Giarrusso
+* Parashurama Rhagdamaziel
 * Patrick Browne
 * Paul Hildebrandt
 * Paul Weingardt

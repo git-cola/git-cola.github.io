@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v2.9.1 <v2.9.1>` is the latest stable release.
+:ref:`v2.10 <v2.10>` is the latest stable release.
 
 Development version
 ===================
@@ -14,7 +14,61 @@ Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
 
+.. _v2.10:
+
+git-cola v2.10
+==============
+
+Usability, bells and whistles
+-----------------------------
+* `git cola` can now invoke the `.git/hooks/cola-prepare-commit-msg`
+  hook to update the commit message.  This hook takes the same parameters
+  as Git's `prepare-commit-message` hook.  The default path to this hook
+  can be overridden by setting the `cola.prepareCommitMessageHook`
+  configuration variable.
+
+  http://git-cola.readthedocs.io/en/latest/git-cola.html#prepare-commit-message
+
+* `git cola diff` (and the corresponding `Diff` menu actions) can now
+  launch difftool with the standard `Ctrl+D` hotkey.  The `Ctrl+E` hotkey was
+  also added for launching an editor.
+
+* Traditional Chinese (Taiwan) translation updates.
+
+Fixes
+-----
+* `git cola` now works when installed in non-ascii, utf8-encoded paths.
+
+  https://github.com/git-cola/git-cola/issues/629
+
+* Styling issues that caused black backgrounds in various widgets when using
+  PyQ5 on Mac OS X have been fixed.
+
+  https://github.com/git-cola/git-cola/issues/624
+
+* The "Open Recent" menu action was broken and has been fixed.
+
+  https://github.com/git-cola/git-cola/issues/634
+
+* Exiting `git cola` with a maximized main window would hang when reopened
+  on Linux.
+
+  https://github.com/git-cola/git-cola/issues/641
+
+Packaging
+---------
+* `appdata.xml` files are now provided at
+  `share/appdata/git-cola.xml` and `share/appdata/git-dag.xml`
+  for use by the Linux software gallery.
+
+  https://people.freedesktop.org/~hughsient/appdata/
+
+  https://github.com/git-cola/git-cola/pull/627
+
 .. _v2.9.1:
+
+git-cola v2.9.1
+===============
 
 Fixes
 -----
