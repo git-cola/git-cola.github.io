@@ -6,7 +6,7 @@ body {
 	margin-bottom: 0;
 	font-family: "Helvetica", "Ubuntu", "Droid Sans", sans-serif;
 	text-decoration: none;
-	color: #000;
+	color: #333;
 	background-color: #fff;
 }
 
@@ -26,48 +26,33 @@ ul {
 	list-style-type: none;
 }
 
-a:link {
-	color: #666;
+a {
+	font-weight: bold;
 	text-decoration: none;
-}
-
-a:visited {
-	color: #666;
-	text-decoration: none;
+	color: #333;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 a:hover {
 	color: white;
-	text-decoration: none;
-	background-color: #ff6600;
+	background-color: #085f00;
 }
 
 a.button {
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	font-size: 1.5em;
+	color: white;
+	background-color: #085f00;
+	font-size: 2em;
 	font-weight: bold;
-	background-color: #ff6600;
 	color: white;
 	white-space: nowrap;
-	padding: 5px;
+	padding: 0.5ex;
 	padding-left: 1ex;
-	padding-right:1ex;
+	padding-right: 1ex;
 	text-align: left;
 	z-index: 3;
-	border-top: 2px solid #ff8800;
-	border-left: 2px solid #ff8800;
-	border-bottom: 2px solid #885500;
-	border-right: 2px solid #885500;
 }
 
-a.button:visited:hover, a.button:hover {
-	color: #333;
-	background-color: #ffee00;
-	border-top-color: #ddd;
-	border-left-color: #ddd;
-}
-
-a.button:visited {
-	color: white;
+a.button:hover {
+	background-color: #10af00;
 }
