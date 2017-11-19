@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.11 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 3.0 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="git-cola 2.11 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 3.0 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -95,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-options">Log Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#diff-commits">DIFF COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#shortcuts">SHORTCUTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#configuration-variables">CONFIGURATION VARIABLES</a></li>
 </ul>
 </li>
@@ -104,8 +105,9 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-0">git-cola v3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes.html#fixes">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id2">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -204,7 +206,7 @@
     <li>git-cola(1)</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="sources/git-cola.txt" rel="nofollow"> View page source</a>
+          <a href="sources/git-cola.rst.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -225,31 +227,31 @@
 <div class="section" id="options">
 <h2>OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="amend">
-<h3>&#8211;amend<a class="headerlink" href="#amend" title="Permalink to this headline">¶</a></h3>
+<h3>–amend<a class="headerlink" href="#amend" title="Permalink to this headline">¶</a></h3>
 <p>Start <cite>git cola</cite> in amend mode.</p>
 </div>
 <div class="section" id="prompt">
-<h3>&#8211;prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">¶</a></h3>
+<h3>–prompt<a class="headerlink" href="#prompt" title="Permalink to this headline">¶</a></h3>
 <p>Prompt for a Git repository.  Defaults to the current directory.</p>
 </div>
 <div class="section" id="r-repo-path">
-<h3>-r, &#8211;repo &lt;path&gt;<a class="headerlink" href="#r-repo-path" title="Permalink to this headline">¶</a></h3>
+<h3>-r, –repo &lt;path&gt;<a class="headerlink" href="#r-repo-path" title="Permalink to this headline">¶</a></h3>
 <p>Open the Git repository at <cite>&lt;path&gt;</cite>.  Defaults to the current directory.</p>
 </div>
 <div class="section" id="s-status-filter-filter">
-<h3>-s, &#8211;status-filter &lt;filter&gt;<a class="headerlink" href="#s-status-filter-filter" title="Permalink to this headline">¶</a></h3>
+<h3>-s, –status-filter &lt;filter&gt;<a class="headerlink" href="#s-status-filter-filter" title="Permalink to this headline">¶</a></h3>
 <p>Apply the path filter to the status widget.</p>
 </div>
 <div class="section" id="version">
-<h3>&#8211;version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
+<h3>–version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
 <p>Print the <cite>git cola</cite> version and exit.</p>
 </div>
 <div class="section" id="h-help">
-<h3>-h, &#8211;help<a class="headerlink" href="#h-help" title="Permalink to this headline">¶</a></h3>
+<h3>-h, –help<a class="headerlink" href="#h-help" title="Permalink to this headline">¶</a></h3>
 <p>Show usage and optional arguments.</p>
 </div>
 <div class="section" id="help-commands">
-<h3>&#8211;help-commands<a class="headerlink" href="#help-commands" title="Permalink to this headline">¶</a></h3>
+<h3>–help-commands<a class="headerlink" href="#help-commands" title="Permalink to this headline">¶</a></h3>
 <p>Show available sub-commands.</p>
 </div>
 </div>
@@ -356,9 +358,9 @@ Dragging it around moves and places it within the window.</p>
 <p>Tools can be hidden and rearranged however you like.
 <cite>git cola</cite> carefully remembers your window layout and restores
 it the next time it is launched.</p>
-<p>The <cite>Control-{1, 2, 3, ...}</cite> hotkey gives focus to a specific tool.
+<p>The <cite>Control-{1, 2, 3, …}</cite> hotkey gives focus to a specific tool.
 A hidden tool can be re-opened using the <cite>Tools</cite> menu or
-the <cite>Shift+Control-{1, 2, 3, ...}</cite> shortcut keys.</p>
+the <cite>Shift+Control-{1, 2, 3, …}</cite> shortcut keys.</p>
 <p>The Diff editor can be focused with <cite>Ctrl-j</cite>.
 the Status tool can be focused with <cite>Ctrl-k</cite>.
 the Commit tool can be focused with <cite>Ctrl-l</cite>.</p>
@@ -389,7 +391,7 @@ the <cite>Ctrl-s</cite> shortcut key.</p>
 <p>Clicking individual files sends diffs to the <cite>Diff Display</cite>.</p>
 <p>Double-clicking individual files adds and removes their content from the index.</p>
 <p>Various actions are available through the right-click context menu.
-Different actions are available depending a file&#8217;s status.</p>
+Different actions are available depending a file’s status.</p>
 <div class="section" id="stage-selected">
 <h4>Stage Selected<a class="headerlink" href="#stage-selected" title="Permalink to this headline">¶</a></h4>
 <p>Add to the staging area using <a class="reference external" href="http://git-scm.com/docs/git-add">git add</a>
@@ -453,13 +455,13 @@ viewing diffs for staged content.</p>
 <h2>COMMIT MESSAGE EDITOR<a class="headerlink" href="#commit-message-editor" title="Permalink to this headline">¶</a></h2>
 <p>The commit message editor is a simple text widget
 for entering commit messages.</p>
-<p>You can navigate between the <cite>Subject</cite> and <cite>Extended description...</cite>
+<p>You can navigate between the <cite>Subject</cite> and <cite>Extended description…</cite>
 fields using the keyboard arrow keys.</p>
 <p>Pressing enter when inside the <cite>Subject</cite> field jumps down to the
 extended description field.</p>
 <p>The <cite>Options</cite> button menu to the left of the subject field
 provides access to the additional actions.</p>
-<p>The <cite>Ctrl+i</cite> keyboard shortcut adds a standard &#8220;Signed-off-by: &#8221; line,
+<p>The <cite>Ctrl+i</cite> keyboard shortcut adds a standard “Signed-off-by: ” line,
 and <cite>Ctrl+Enter</cite> creates a new commit using the commit message and
 staged content.</p>
 <div class="section" id="sign-off">
@@ -477,7 +479,7 @@ to <a class="reference external" href="http://git-scm.com/docs/git-commit">git c
 <p>The commit button runs
 <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.
 The contents of the commit message editor is provided as the commit message.</p>
-<p>Only staged files are included in the commit &#8211; this is the same behavior
+<p>Only staged files are included in the commit – this is the same behavior
 as running <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> on the command-line.</p>
 </div>
 <div class="section" id="line-and-column-display">
@@ -510,15 +512,15 @@ into the commit message editor when this option is selected.</p>
 <p>Using this option is equivalent to passing the <code class="docutils literal"><span class="pre">--gpg-sign</span></code> option to
 <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a> and
 <a class="reference external" href="http://git-scm.com/docs/git-merge">git merge</a>.</p>
-<p>This option&#8217;s default value can be configured using the <cite>cola.signcommits</cite>
+<p>This option’s default value can be configured using the <cite>cola.signcommits</cite>
 configuration variable.</p>
 </div>
 <div class="section" id="prepare-commit-message">
 <h3>Prepare Commit Message<a class="headerlink" href="#prepare-commit-message" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">Commit</span> <span class="pre">-&gt;</span> <span class="pre">Prepare</span> <span class="pre">Commit</span> <span class="pre">Message</span></code> action runs the
-<cite>cola-prepare-commit-msg</cite> hook if it is available in <cite>.git/hooks/</cite>.
+<p>The <code class="docutils literal"><span class="pre">Commit</span> <span class="pre">-&gt;</span> <span class="pre">Prepare</span> <span class="pre">Commit</span> <span class="pre">Message</span></code> action or <cite>Ctrl-Shift-Return</cite> keyboard shortcut
+runs the <cite>cola-prepare-commit-msg</cite> hook if it is available in <cite>.git/hooks/</cite>.
 This is a <cite>git cola</cite>-specific hook that takes the same parameters
-as Git&#8217;s <a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">prepare-commit-msg hook</a></p>
+as Git’s <a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">prepare-commit-msg hook</a></p>
 <p>The hook is passed the path to <cite>.git/GIT_COLA_MSG</cite> as the first argument and the hook is expected to write
 an updated commit message to specified path.  After running this action, the
 commit message editor is updated with the new commit message.</p>
@@ -532,7 +534,7 @@ across all repositories.</p>
 <h2>BRANCHES<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>Branches</cite> tool provides a visual tree to navigate through the branches.
 The tree has three main nodes <cite>Local Branch</cite>, <cite>Remote Branch</cite> and <cite>Tags</cite>.
-Branches are grouped by their name divided by the character &#8216;/&#8217;.Ex:</p>
+Branches are grouped by their name divided by the character ‘/’.Ex:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">foo</span>
 <span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">bar</span>
 <span class="n">branch</span><span class="o">/</span><span class="n">doe</span>
@@ -547,7 +549,7 @@ Branches are grouped by their name divided by the character &#8216;/&#8217;.Ex:<
 </pre></div>
 </div>
 <p>Current branch will display a star icon. If current branch has commits
-ahead/behind it will display an up/down arrow with it&#8217;s number.</p>
+ahead/behind it will display an up/down arrow with it’s number.</p>
 <div class="section" id="id8">
 <h3>Actions<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>Various actions are available through the right-click context menu.
@@ -560,12 +562,12 @@ Different actions are available depending of selected branch status.</p>
 <div class="section" id="merge-in-current-branch">
 <h4>Merge in current branch<a class="headerlink" href="#merge-in-current-branch" title="Permalink to this headline">¶</a></h4>
 <p>The merge action runs
-<a class="reference external" href="https://git-scm.com/docs/git-merge">git merge &#8211;no-commit [&lt;branchname&gt;]</a>.</p>
+<a class="reference external" href="https://git-scm.com/docs/git-merge">git merge –no-commit [&lt;branchname&gt;]</a>.</p>
 </div>
 <div class="section" id="id9">
 <h4>Pull<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p>The pull action runs
-<a class="reference external" href="https://git-scm.com/docs/git-pull">git pull &#8211;no-ff [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
+<a class="reference external" href="https://git-scm.com/docs/git-pull">git pull –no-ff [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
 </div>
 <div class="section" id="id10">
 <h4>Push<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
@@ -585,7 +587,7 @@ Different actions are available depending of selected branch status.</p>
 <div class="section" id="delete-remote-branch">
 <h4>Delete Remote Branch<a class="headerlink" href="#delete-remote-branch" title="Permalink to this headline">¶</a></h4>
 <p>The remote branch action runs
-<a class="reference external" href="https://git-scm.com/docs/git-push">git push &#8211;delete [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
+<a class="reference external" href="https://git-scm.com/docs/git-push">git push –delete [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
 </div>
 </div>
 </div>
@@ -637,10 +639,17 @@ repository.  Set <cite>cola.defaultrepo</cite> to the path of a Git repository t
 <cite>git cola</cite> attempt to use that repository before falling back to prompting
 the user for a repository.</p>
 </div>
-<div class="section" id="cola-dicitionary">
-<h3>cola.dicitionary<a class="headerlink" href="#cola-dicitionary" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cola-dictionary">
+<h3>cola.dictionary<a class="headerlink" href="#cola-dictionary" title="Permalink to this headline">¶</a></h3>
 <p>Specifies an additional dictionary for <cite>git cola</cite> to use in its spell checker.
 This should be configured to the path of a newline-separated list of words.</p>
+</div>
+<div class="section" id="cola-expandtab">
+<h3>cola.expandtab<a class="headerlink" href="#cola-expandtab" title="Permalink to this headline">¶</a></h3>
+<p>Expand tabs into spaces in the commit message editor.  When set to <cite>true</cite>,
+<cite>git cola</cite> will insert a configurable number of spaces when tab is pressed.
+The number of spaces is determined by <cite>cola.tabwidth</cite>.
+Defaults to <cite>false</cite>.</p>
 </div>
 <div class="section" id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
@@ -650,23 +659,23 @@ and applying diffs.</p>
 </div>
 <div class="section" id="cola-fontdiff">
 <h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
-<p>Specifies the font to use for <cite>git cola</cite>&#8216;s diff display.</p>
+<p>Specifies the font to use for <cite>git cola</cite>’s diff display.</p>
 </div>
 <div class="section" id="cola-icontheme">
 <h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the icon themes to use throughout <cite>git cola</cite>. The theme specified
 must be the name of the subdirectory containing the icons, which in turn must
-be placed in the inside the main &#8220;icons&#8221; directory in <cite>git cola</cite>&#8216;s
+be placed in the inside the main “icons” directory in <cite>git cola</cite>’s
 installation prefix.</p>
-<p>If unset, or set either &#8220;light&#8221; or &#8220;default&#8221;, then the default style will be
-used.  If set to &#8220;dark&#8221; then the built-in &#8220;dark&#8221; icon theme, which is
+<p>If unset, or set either “light” or “default”, then the default style will be
+used.  If set to “dark” then the built-in “dark” icon theme, which is
 suitable for a dark window manager theme, will be used.</p>
 <p>If set to an absolute directory path then icons in that directory will be used.
 This value can be set to multiple values using,
-<cite>git config &#8211;add cola.icontheme $theme</cite>.</p>
+<cite>git config –add cola.icontheme $theme</cite>.</p>
 <p>This setting can be overridden by the <cite>GIT_COLA_ICON_THEME</cite> environment
 variable, which can specify multiple themes using a colon-separated value.</p>
-<p>The icon theme can also be specified by passing <cite>&#8211;icon-theme=&lt;theme&gt;</cite> on the
+<p>The icon theme can also be specified by passing <cite>–icon-theme=&lt;theme&gt;</cite> on the
 command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built-in icons for the remainder.</p>
@@ -688,7 +697,7 @@ another application.</p>
 <p>Whether to automatically break long lines while editing commit messages.
 Defaults to <cite>true</cite>.  This setting is configured using the <cite>Preferences</cite>
 dialog, but it can be toggled for one-off usage using the commit message
-editor&#8217;s options sub-menu.</p>
+editor’s options sub-menu.</p>
 </div>
 <div class="section" id="cola-dragencoding">
 <h3>cola.dragencoding<a class="headerlink" href="#cola-dragencoding" title="Permalink to this headline">¶</a></h3>
@@ -733,31 +742,31 @@ Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
 </div>
 <div class="section" id="cola-turbo">
 <h3>cola.turbo<a class="headerlink" href="#cola-turbo" title="Permalink to this headline">¶</a></h3>
-<p>Set to <cite>true</cite> to enables &#8220;turbo&#8221; mode.  &#8220;Turbo&#8221; mode disables some
+<p>Set to <cite>true</cite> to enables “turbo” mode.  “Turbo” mode disables some
 features that can slow things down when operating on huge repositories.
-&#8220;Turbo&#8221; mode will skip loading Git commit messages, author details, status
+“Turbo” mode will skip loading Git commit messages, author details, status
 information, and commit date details in the <cite>File Browser</cite> tool.
 Defaults to <cite>false</cite>.</p>
 </div>
 <div class="section" id="cola-color-text">
 <h3>cola.color.text<a class="headerlink" href="#cola-color-text" title="Permalink to this headline">¶</a></h3>
 <p>The default diff text color, in hexadecimal RRGGBB notation.
-Defaults to &#8220;030303&#8221;.</p>
+Defaults to “030303”.</p>
 </div>
 <div class="section" id="cola-color-add">
 <h3>cola.color.add<a class="headerlink" href="#cola-color-add" title="Permalink to this headline">¶</a></h3>
-<p>The default diff &#8220;add&#8221; background color, in hexadecimal RRGGBB notation.
-Defaults to &#8220;d2ffe4&#8221;.</p>
+<p>The default diff “add” background color, in hexadecimal RRGGBB notation.
+Defaults to “d2ffe4”.</p>
 </div>
 <div class="section" id="cola-color-remove">
 <h3>cola.color.remove<a class="headerlink" href="#cola-color-remove" title="Permalink to this headline">¶</a></h3>
-<p>The default diff &#8220;remove&#8221; background color, in hexadecimal RRGGBB notation.
-Defaults to &#8220;fee0e4&#8221;.</p>
+<p>The default diff “remove” background color, in hexadecimal RRGGBB notation.
+Defaults to “fee0e4”.</p>
 </div>
 <div class="section" id="cola-color-header">
 <h3>cola.color.header<a class="headerlink" href="#cola-color-header" title="Permalink to this headline">¶</a></h3>
 <p>The default diff header text color, in hexadecimal RRGGBB notation.
-Defaults to &#8220;bbbbbb&#8221;.</p>
+Defaults to “bbbbbb”.</p>
 </div>
 <div class="section" id="gui-diffcontext">
 <h3>gui.diffcontext<a class="headerlink" href="#gui-diffcontext" title="Permalink to this headline">¶</a></h3>
@@ -789,13 +798,13 @@ Defaults to <cite>gitk</cite>.</p>
 <div class="section" id="user-email">
 <h3>user.email<a class="headerlink" href="#user-email" title="Permalink to this headline">¶</a></h3>
 <p>Your email address to be recorded in any newly created commits.
-Can be overridden by the &#8216;GIT_AUTHOR_EMAIL&#8217;, &#8216;GIT_COMMITTER_EMAIL&#8217;, and
-&#8216;EMAIL&#8217; environment variables.</p>
+Can be overridden by the ‘GIT_AUTHOR_EMAIL’, ‘GIT_COMMITTER_EMAIL’, and
+‘EMAIL’ environment variables.</p>
 </div>
 <div class="section" id="user-name">
 <h3>user.name<a class="headerlink" href="#user-name" title="Permalink to this headline">¶</a></h3>
 <p>Your full name to be recorded in any newly created commits.
-Can be overridden by the &#8216;GIT_AUTHOR_NAME&#8217; and &#8216;GIT_COMMITTER_NAME&#8217;
+Can be overridden by the ‘GIT_AUTHOR_NAME’ and ‘GIT_COMMITTER_NAME’
 environment variables.</p>
 </div>
 </div>
@@ -834,14 +843,14 @@ translations when available.  This may not be desired, or you
 may want <cite>git cola</cite> to use a specific language.</p>
 <p>You can make <cite>git cola</cite> use an alternative language by creating a
 <cite>~/.config/git-cola/language</cite> file containing the standard two-letter
-gettext language code, e.g. &#8220;en&#8221;, &#8220;de&#8221;, &#8220;ja&#8221;, &#8220;zh&#8221;, etc.:</p>
+gettext language code, e.g. “en”, “de”, “ja”, “zh”, etc.:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span> <span class="o">&amp;&amp;</span>
 <span class="n">echo</span> <span class="n">en</span> <span class="o">&gt;~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span><span class="o">/</span><span class="n">language</span>
 </pre></div>
 </div>
 <p>Alternatively you may also use LANGUAGE environmental variable to temporarily
-change <cite>git cola</cite>&#8216;s language just like any other gettext-based program.  For
-example to temporarily change <cite>git cola</cite>&#8216;s language to English:</p>
+change <cite>git cola</cite>’s language just like any other gettext-based program.  For
+example to temporarily change <cite>git cola</cite>’s language to English:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
 </pre></div>
 </div>
@@ -854,7 +863,7 @@ fallback.:</p>
 <div class="section" id="custom-gui-actions">
 <h2>CUSTOM GUI ACTIONS<a class="headerlink" href="#custom-gui-actions" title="Permalink to this headline">¶</a></h2>
 <p><cite>git cola</cite> allows you to define custom GUI actions by setting <cite>git config</cite>
-variables.  The &#8220;name&#8221; of the command appears in the &#8220;Actions&#8221; menu.</p>
+variables.  The “name” of the command appears in the “Actions” menu.</p>
 <div class="section" id="guitool-name-cmd">
 <h3>guitool.&lt;name&gt;.cmd<a class="headerlink" href="#guitool-name-cmd" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the shell command line to execute when the corresponding item of the
@@ -947,8 +956,8 @@ gnupg-agent and pinentry-qt, e.g.:</p>
 </pre></div>
 </div>
 <p>On Linux, you should also configure Git so that it uses gpg2 (gnupg2),
-otherwise you will get errors mentioning, &#8220;unable to open /dev/tty&#8221;.
-Set Git&#8217;s <cite>gpg.program</cite> to <cite>gpg2</cite>:</p>
+otherwise you will get errors mentioning, “unable to open /dev/tty”.
+Set Git’s <cite>gpg.program</cite> to <cite>gpg2</cite>:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">gpg</span><span class="o">.</span><span class="n">program</span> <span class="n">gpg2</span>
 </pre></div>
 </div>
@@ -969,7 +978,7 @@ pinentry-gtk-2 on Linux:</p>
 <span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
 </pre></div>
 </div>
-<p>This following example <cite>.gnupg/gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
+<p>This following example <cite>.gnupg/gpg-agent.conf</cite> shows how to use MacGPG2’s
 pinentry app on On Mac OS X:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">MacGPG2</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span>
 <span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
@@ -986,7 +995,7 @@ pinentry app on On Mac OS X:</p>
 </pre></div>
 </div>
 <p>Then the daemon is already running, and you do not need to start it yourself.</p>
-<p>If it is not running, eval the output of <cite>gpg-agent &#8211;daemon</cite> in your shell
+<p>If it is not running, eval the output of <cite>gpg-agent –daemon</cite> in your shell
 prior to launching <cite>git cola</cite>.:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>eval $(gpg-agent --daemon)
 git cola
@@ -1010,7 +1019,7 @@ installation.  e.g.:</p>
 <div class="section" id="links">
 <h2>LINKS<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="git-cola-s-git-repository">
-<h3>Git Cola&#8217;s Git Repository<a class="headerlink" href="#git-cola-s-git-repository" title="Permalink to this headline">¶</a></h3>
+<h3>Git Cola’s Git Repository<a class="headerlink" href="#git-cola-s-git-repository" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/git-cola/git-cola/">https://github.com/git-cola/git-cola/</a></p>
 </div>
 <div class="section" id="git-cola-homepage">
@@ -1042,7 +1051,7 @@ installation.  e.g.:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2007-2016, David Aguilar and contributors.
+        &copy; Copyright 2007-2017, David Aguilar and contributors.
     </p>
   </div>
 
@@ -1063,7 +1072,7 @@ installation.  e.g.:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.11',
+            VERSION:'3.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

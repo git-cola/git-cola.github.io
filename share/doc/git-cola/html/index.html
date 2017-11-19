@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Git Cola Documentation &mdash; git-cola 2.11 documentation</title>
+  <title>Git Cola Documentation &mdash; git-cola 3.0 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="git-cola 2.11 documentation" href="#"/>
+    <link rel="top" title="git-cola 3.0 documentation" href="#"/>
         <link rel="next" title="git-cola(1)" href="git-cola.html"/> 
 
   
@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-options">Log Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#diff-commits">DIFF COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#shortcuts">SHORTCUTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#configuration-variables">CONFIGURATION VARIABLES</a></li>
 </ul>
 </li>
@@ -103,8 +104,9 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-0">git-cola v3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes.html#fixes">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id2">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -203,7 +205,7 @@
     <li>Git Cola Documentation</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="sources/index.txt" rel="nofollow"> View page source</a>
+          <a href="sources/index.rst.txt" rel="nofollow"> View page source</a>
         
       </li>
   </ul>
@@ -219,13 +221,13 @@
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#options">OPTIONS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#amend">&#8211;amend</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#prompt">&#8211;prompt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#r-repo-path">-r, &#8211;repo &lt;path&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#s-status-filter-filter">-s, &#8211;status-filter &lt;filter&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#version">&#8211;version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#h-help">-h, &#8211;help</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#help-commands">&#8211;help-commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#amend">–amend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#prompt">–prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#r-repo-path">-r, –repo &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#s-status-filter-filter">-s, –status-filter &lt;filter&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#version">–version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#h-help">-h, –help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#help-commands">–help-commands</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#sub-commands">SUB-COMMANDS</a><ul>
@@ -280,7 +282,8 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-browserdockable">cola.browserdockable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-checkconflicts">cola.checkconflicts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-defaultrepo">cola.defaultrepo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-dicitionary">cola.dicitionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-dictionary">cola.dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-expandtab">cola.expandtab</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fileattributes">cola.fileattributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fontdiff">cola.fontdiff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-icontheme">cola.icontheme</a></li>
@@ -342,7 +345,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#links">LINKS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-s-git-repository">Git Cola&#8217;s Git Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-s-git-repository">Git Cola’s Git Repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-cola-homepage">Git Cola Homepage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#mailing-list">Mailing List</a></li>
 </ul>
@@ -353,15 +356,16 @@
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#options">OPTIONS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="git-dag.html#prompt">&#8211;prompt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-dag.html#r-repo-path">-r, &#8211;repo &lt;path&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-dag.html#version">&#8211;version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-dag.html#h-help">-h, &#8211;help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#prompt">–prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#r-repo-path">-r, –repo &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#version">–version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#h-help">-h, –help</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-options">Log Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#diff-commits">DIFF COMMITS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#shortcuts">SHORTCUTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#configuration-variables">CONFIGURATION VARIABLES</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="git-dag.html#log-date">log.date</a></li>
 </ul>
@@ -378,8 +382,9 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-0">git-cola v3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes.html#fixes">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id2">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -479,7 +484,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2007-2016, David Aguilar and contributors.
+        &copy; Copyright 2007-2017, David Aguilar and contributors.
     </p>
   </div>
 
@@ -500,7 +505,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.11',
+            VERSION:'3.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

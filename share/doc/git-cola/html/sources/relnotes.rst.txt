@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v2.11 <v2.11>` is the latest stable release.
+:ref:`v3.0 <v3.0>` is the latest stable release.
 
 Development version
 ===================
@@ -13,6 +13,177 @@ Development version
 Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
+
+.. _v3.0:
+
+git-cola v3.0
+=============
+
+Usability, bells and whistles
+-----------------------------
+* Updated Simplified Chinese translation.
+
+  https://github.com/git-cola/git-cola/pull/726
+
+* Updated Ukranian translation.
+
+  https://github.com/git-cola/git-cola/pull/723
+
+* New Czech translation.
+
+  https://github.com/git-cola/git-cola/pull/736
+
+  https://github.com/git-cola/git-cola/pull/737
+
+  https://github.com/git-cola/git-cola/pull/740
+
+  https://github.com/git-cola/git-cola/pull/743
+
+* The "name" field in the "Create Tag" dialog now includes autocompletion,
+  which makes it easy to see which tags currently exist.
+
+* `git cola` now has configurable toolbars.  Use the `View -> Add toolbar`
+  menu item to add a toolbar.
+
+* Setting `cola.expandtab` to `true` will now expand tabs into spaces
+  in the commit message editor.  The number of spaces to insert is determined
+  by consulting `cola.tabwidth`, which defaults to `8`.
+
+* The "Copy SHA-1" hotkey is now `Alt + Ctrl + C`, to avoid clobbering the
+  ability to copy text from the DAG window.
+
+  https://github.com/git-cola/git-cola/pull/705
+
+* The "Prepare Commit Message" action can now be invoked via the
+  `Ctrl+Shift+Return` shortcut.
+
+  https://github.com/git-cola/git-cola/pull/707
+
+* The `Branches` pane now has a filter field that highlights branches whose
+  names match the string entered into its text field.
+
+  https://github.com/git-cola/git-cola/pull/713
+
+* Actions that are triggered in response to button presses were being
+  triggered when the button was pressed, rather than when it was released,
+  which was a usability flaw.  All buttons now respond when clicked
+  rather than when pressed.
+
+  https://github.com/git-cola/git-cola/pull/715
+
+* The DAG window will now only refresh when object IDs change.
+  Previously, the DAG would redraw itself in response to inotify events,
+  such as filesystem operations, which was disruptive when inspecting a large
+  diff in its diff viewer.  The DAG will now only redraw when the object IDs
+  corresponding to its query input changes.  Furthermore, when redrawing, the
+  scrollbar positions are retained to minimize disruption to the viewport
+  contents.
+
+  https://github.com/git-cola/git-cola/issues/620
+
+  https://github.com/git-cola/git-cola/issues/724
+
+* The "About" dialog now includes the SHA-1 where Git Cola was built.
+
+  https://github.com/git-cola/git-cola/issues/530
+
+* The "Status" widget now has "Copy Leading Path to Clipboard" and
+  "Copy Basename to Clipboard" actions.
+
+  https://github.com/git-cola/git-cola/issues/435
+
+  https://github.com/git-cola/git-cola/issues/436
+
+* The "Status" widget now supports custom "Copy ... to Clipboard" actions.
+
+  https://github.com/git-cola/git-cola/issues/437
+
+* The main menu now has an "Edit" menu.
+
+  https://github.com/git-cola/git-cola/issues/725
+
+* `git dag` learned to checkout commits into a detached HEAD state.
+
+  https://github.com/git-cola/git-cola/issues/698
+
+* The `status` widget's context menus now omit actions selection-dependent
+  actions when no file is selected.
+
+  https://github.com/git-cola/git-cola/pull/731
+
+* The startup dialog now focuses the repository list so that repositories
+  can be selected with the keyboard without mouse intervention.
+
+  https://github.com/git-cola/git-cola/issues/741
+
+Fixes
+-----
+* `git dag` now prevents nodes from overlapping in more situations.
+
+  https://github.com/git-cola/git-cola/pull/689
+
+* Adding untracked Git submodule repo directories previously ran
+  `git add submodule/` but we now call `git add submodule` without
+  the trailing slash (`/`) to avoid staging files that belong to the
+  submodule (which is possibly a `git` bug).  By working around the
+  buggy behavior we allow users to recover by issuing the appropriate
+  `git submodule add` command to properly register the submodule.
+
+  https://github.com/git-cola/git-cola/pull/681
+
+* We now avoid `git for-each-ref --sort=version:refname` on versions
+  of `git` older than `v2.7.0`.  Previously we only avoided it for
+  versions older than `v2.0.0`, which was a mistake.
+
+  https://github.com/git-cola/git-cola/pull/686
+
+* The error message displayed when `git` is not installed has been fixed.
+
+  https://github.com/git-cola/git-cola/pull/686
+
+* Adding new remotes was silently broken.
+
+  https://github.com/git-cola/git-cola/issues/684
+
+  https://github.com/git-cola/git-cola/pull/685
+
+* The repo selection dialog had errors during startup when the
+  `cola.refreshonfocus` feature was enabled, as reported on Ubuntu 16.04.
+
+  https://github.com/git-cola/git-cola/issues/690
+
+* Restored support for PyQt 4.6 (Centos 6.8)
+
+  https://github.com/git-cola/git-cola/issues/692
+
+* Switching repositories now resets the "Amend Mode" and other settings
+  when switching.
+
+  https://github.com/git-cola/git-cola/issues/710
+
+* `git rebase` error messages now displayed when rebasing fails or stops
+  via the standalone `git cola rebase` front-end.
+
+  https://github.com/git-cola/git-cola/issues/721
+
+* `git cola` learned to stage broken symlinks.
+
+  https://github.com/git-cola/git-cola/issues/727
+
+* The "View History" feature in the `Browser` tool was fixed, and now
+  disambiguates between refs and paths.
+
+  https://github.com/git-cola/git-cola/issues/732
+
+* The diff editor now has better support for files with CRLF `\r\n`
+  line endings.
+
+  https://github.com/git-cola/git-cola/issues/730
+
+* `cola.inotify` in a repo-local config is now honored
+  when `git cola` is launched from a desktop entry (`git cola --prompt`).
+
+  https://github.com/git-cola/git-cola/issues/695
 
 .. _v2.11:
 

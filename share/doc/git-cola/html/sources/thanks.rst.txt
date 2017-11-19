@@ -13,6 +13,7 @@ Thanks
 * Andreas Sommer
 * Andrew Chen
 * Audrius Karabanovas
+* balping
 * Barış ÇELİK
 * Barry Roberts
 * Boris W
@@ -21,6 +22,7 @@ Thanks
 * Benedict Lee
 * Benoît Nouyrigat
 * Bert Jacobs
+* 林博仁 (Lin-Buo-Ren)
 * Charles 101
 * Christian Jann
 * Christopher Meng
@@ -37,6 +39,7 @@ Thanks
 * Dennis Gilmore
 * deniz1a
 * Dmitry Kann
+* Dmitry Pashkevich
 * Doug Hoskisson
 * Drugoy
 * Efimov Vasily
@@ -47,6 +50,7 @@ Thanks
 * Geoffrey van Wyk
 * geotavros
 * `Git Hackers <http://git-scm.com/about>`_
+* green-eyed-bear
 * Glen Mailer
 * Guillaume de Bure
 * Guo Yunhe
@@ -59,11 +63,14 @@ Thanks
 * Iulian Udrea
 * Ivar Smolin
 * Jan @hanksoff
+* Jan Šilhan
+* Jan Tumanov
 * Jakub Wilk
 * James Geiger
 * Javier Rodriguez Cuevas
 * Jeff Dagenais
 * Jérôme Carretero
+* jfessard
 * JiCiT
 * Johann Schmitz
 * Jordan Bedwell
@@ -81,6 +88,7 @@ Thanks
 * Lev Zlotin
 * Libor Jelinek
 * Liviu Cristian Mirea-Ghiban
+* Luca Ottaviano
 * Łukasz Wojniłowicz
 * Luke Bakken
 * Maarten Nieber
@@ -89,6 +97,7 @@ Thanks
 * Mahmoud Hossam
 * Mateusz Kedzior
 * Maicon D. Filippsen
+* Marcin Mielniczuk
 * Marco Costalba
 * Markus Heidelberg
 * Matěj Šmíd
@@ -98,6 +107,7 @@ Thanks
 * Michael Geddes
 * Michael Homer
 * Mickael Albertus
+* Mike Hanson
 * MikHulk
 * Minarto Margoliono
 * Myz
@@ -113,12 +123,14 @@ Thanks
 * Paul Hildebrandt
 * Paul Weingardt
 * Paulo Fidalgo
+* Pavel Rehak
 * Peter Dave Hello
 * Peter Júnoš
 * Philip Stark
 * Pilar Molina Lopez
 * Raghavendra Karunanidhi
 * Rainer Müller
+* Robbert Korving
 * Rolando Espinoza La fuente
 * Rustam Safin
 * Samsul Ma'arif

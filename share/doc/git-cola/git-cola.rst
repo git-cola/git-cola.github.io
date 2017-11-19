@@ -343,8 +343,8 @@ configuration variable.
 
 Prepare Commit Message
 ----------------------
-The ``Commit -> Prepare Commit Message`` action runs the
-`cola-prepare-commit-msg` hook if it is available in `.git/hooks/`.
+The ``Commit -> Prepare Commit Message`` action or `Ctrl-Shift-Return` keyboard shortcut
+runs the `cola-prepare-commit-msg` hook if it is available in `.git/hooks/`.
 This is a `git cola`-specific hook that takes the same parameters
 as Git's `prepare-commit-msg hook <https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>`_
 
@@ -473,10 +473,17 @@ repository.  Set `cola.defaultrepo` to the path of a Git repository to make
 `git cola` attempt to use that repository before falling back to prompting
 the user for a repository.
 
-cola.dicitionary
-----------------
+cola.dictionary
+---------------
 Specifies an additional dictionary for `git cola` to use in its spell checker.
 This should be configured to the path of a newline-separated list of words.
+
+cola.expandtab
+--------------
+Expand tabs into spaces in the commit message editor.  When set to `true`,
+`git cola` will insert a configurable number of spaces when tab is pressed.
+The number of spaces is determined by `cola.tabwidth`.
+Defaults to `false`.
 
 cola.fileattributes
 -------------------
@@ -518,7 +525,7 @@ but also requires either Linux with inotify support or Windows with `pywin32`
 installed for file system change monitoring to actually function.
 
 cola.refreshonfocus
-----------------------
+-------------------
 Set to `true` to automatically refresh when `git cola` gains focus.  Defaults
 to `false` because this can cause a pause whenever switching to `git cola` from
 another application.
