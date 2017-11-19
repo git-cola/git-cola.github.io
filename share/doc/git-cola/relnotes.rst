@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v2.10 <v2.10>` is the latest stable release.
+:ref:`v2.11 <v2.11>` is the latest stable release.
 
 Development version
 ===================
@@ -13,6 +13,145 @@ Development version
 Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
+
+.. _v2.11:
+
+git-cola v2.11
+==============
+
+Usability, bells and whistles
+-----------------------------
+* New Ukranian translation.
+
+  https://github.com/git-cola/git-cola/pull/670
+
+  https://github.com/git-cola/git-cola/pull/672
+
+* New and improved French translations.
+
+* The new `Branches` widget makes it easier to checkout, merge, push,
+  and pull branches from a single interface.
+
+* `git cola` now includes a dark icon theme.  The dark icon theme can be
+  activated either by setting the `GIT_COLA_ICON_THEME` environment variable
+  to `dark`, by configuring `cola.icontheme` to `dark`, or by specifying
+  `--icon-theme=dark` on the command line.
+
+  https://github.com/git-cola/git-cola/pull/638
+
+* Autocompletion was added to the `Fetch`, `Push`, and `Pull` dialogs.
+
+* The commit message editor now remembers the "Spellcheck" setting
+  after exiting.
+
+  https://github.com/git-cola/git-cola/pull/645
+
+* `git dag` now uses an improved algorithm for laying out the graph,
+  which avoids collisions under certain graph configurations, and
+  avoids overlapping tag with commits.
+
+  https://github.com/git-cola/git-cola/pull/648
+
+  https://github.com/git-cola/git-cola/pull/651
+
+  https://github.com/git-cola/git-cola/pull/654
+
+  https://github.com/git-cola/git-cola/pull/656
+
+  https://github.com/git-cola/git-cola/pull/659
+
+* `git dag` now remembers its column sizes across sessions.
+
+  https://github.com/git-cola/git-cola/issues/674
+
+* `Grep` now shows a preview of the selected file's content in a split window
+  below the grep results.
+
+* `Grep` now includes line numbers in the preview pane's output.
+
+* `Edit Remotes` now remembers its window settings after exiting.
+
+* `Diff` now has an option to display line numbers in the editor.
+
+  https://github.com/git-cola/git-cola/issues/136
+
+* `Amend Last Commit` can now be triggered via the `Commit` menu in addition
+  to the commit message editor's options.
+
+  https://github.com/git-cola/git-cola/issues/640
+
+* The `File Browser` tool was made much faster and can now operate on
+  much larger repositories.
+
+  https://github.com/git-cola/git-cola/issues/499
+
+* A new "turbo" mode was added that allows you to opt-out of operations
+  that can slow `git cola` on large repositories.  The turbo mode is
+  enabled by configuring `git config cola.turbo true`.  Turbo mode
+  disables the background loading of Git commit messages and other
+  details in the `File Browser` widget.
+
+* A new GitIgnore dialog allows adding custom gitignore patterns.
+
+  https://github.com/git-cola/git-cola/pull/653
+
+* The spellchecker in `git cola` can now use an additional dictionary
+  by configuring `cola.dictionary` to the path to a file containing
+  a newline-separated list of words.
+
+  https://github.com/git-cola/git-cola/issues/663
+
+* The stash, export patches, diff, and gitignore dialogs now remember
+  their window sizes.
+
+* A new `git cola recent` sub-command was added for finding recently
+  edited files.
+
+* The `Fetch` dialog now allows pruning remote branches.
+
+  https://github.com/git-cola/git-cola/issues/639
+
+  https://github.com/git-cola/git-cola/pull/680
+
+Fixes
+=====
+* `git cola`'s spellchecker now supports the new `dict-common` filesystem
+  layout, and prefers the `/usr/share/dict/cracklib-small` file over the
+  `/usr/share/dict/words` provided on older distributions.
+  This makes the spellchecker compatible with Arch, which does not provide
+  a `words` symlink like Debian.
+
+  https://github.com/git-cola/git-cola/issues/663
+
+* Properly handle the case where an existing file is untracked using
+  the File Browser.
+
+* Fix a quirk where the "Create Branch" dialog sometimes required clicking
+  twice on the radio buttons.
+
+  https://github.com/git-cola/git-cola/pull/662
+
+* Fixed a focus issue to ensure that "Push", "Fetch", and "Pull" can
+  be executed with the press of a single enter key after being shown.
+
+  https://github.com/git-cola/git-cola/issues/661
+
+* Committing is now allowed in when resolving a merge results in no
+  changes.  This state was previously prevented by the commit message editor,
+  which prevented users from resolving merges that result in no changes.
+
+  https://github.com/git-cola/git-cola/pull/679
+
+* The filesystem monitor would sometimes emit backtraces when directories
+  are modified.  This has been fixed.
+
+  https://bugzilla.redhat.com/show_bug.cgi?id=1438522
+
+* Absolute paths are now returned when querying for `.git`-relative paths
+  from within a submodule, which uses `.git`-files.
+  This fixes launching `git cola` from within a subdirectory of a submodule.
+
+  https://github.com/git-cola/git-cola/pull/675
 
 .. _v2.10:
 

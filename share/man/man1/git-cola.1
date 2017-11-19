@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Jan 14, 2017" "2.10" "git-cola"
+.TH "GIT-COLA" "1" "Apr 09, 2017" "2.11" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -333,6 +333,74 @@ To override the default path to this hook set the
 \fIcola.prepareCommitMessageHook\fP \fIgit config\fP variable to the path to the
 hook script.  This is useful if you would like to use a common hook
 across all repositories.
+.SH BRANCHES
+.sp
+The \fIBranches\fP tool provides a visual tree to navigate through the branches.
+The tree has three main nodes \fILocal Branch\fP, \fIRemote Branch\fP and \fITags\fP\&.
+Branches are grouped by their name divided by the character \(aq/\(aq.Ex:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+branch/feature/foo
+branch/feature/bar
+branch/doe
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Will produce:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+branch
+    \- doe
+    + feature
+        \- bar
+        \- foo
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Current branch will display a star icon. If current branch has commits
+ahead/behind it will display an up/down arrow with it\(aqs number.
+.SS Actions
+.sp
+Various actions are available through the right\-click context menu.
+Different actions are available depending of selected branch status.
+.SS Checkout
+.sp
+The checkout action runs
+\fI\%git checkout [<branchname>]\fP\&.
+.SS Merge in current branch
+.sp
+The merge action runs
+\fI\%git merge \-\-no\-commit [<branchname>]\fP\&.
+.SS Pull
+.sp
+The pull action runs
+\fI\%git pull \-\-no\-ff [<remote>] [<branchname>]\fP\&.
+.SS Push
+.sp
+The push action runs
+\fI\%git push [<remote>] [<branchname>]\fP\&.
+.SS Rename Branch
+.sp
+The rename branch action runs
+\fI\%git branch \-M [<branchname>]\fP\&.
+.SS Delete Branch
+.sp
+The delete branch branch action runs
+\fI\%git branch \-D [<branchname>]\fP\&.
+.SS Delete Remote Branch
+.sp
+The remote branch action runs
+\fI\%git push \-\-delete [<remote>] [<branchname>]\fP\&.
 .SH APPLY PATCHES
 .sp
 Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
@@ -379,6 +447,10 @@ Defaults to \fItrue\fP\&.
 repository.  Set \fIcola.defaultrepo\fP to the path of a Git repository to make
 \fIgit cola\fP attempt to use that repository before falling back to prompting
 the user for a repository.
+.SS cola.dicitionary
+.sp
+Specifies an additional dictionary for \fIgit cola\fP to use in its spell checker.
+This should be configured to the path of a newline\-separated list of words.
 .SS cola.fileattributes
 .sp
 Enables per\-file gitattributes encoding support when set to \fItrue\fP\&.
@@ -387,6 +459,28 @@ and applying diffs.
 .SS cola.fontdiff
 .sp
 Specifies the font to use for \fIgit cola\fP\(aqs diff display.
+.SS cola.icontheme
+.sp
+Specifies the icon themes to use throughout \fIgit cola\fP\&. The theme specified
+must be the name of the subdirectory containing the icons, which in turn must
+be placed in the inside the main "icons" directory in \fIgit cola\fP\(aqs
+installation prefix.
+.sp
+If unset, or set either "light" or "default", then the default style will be
+used.  If set to "dark" then the built\-in "dark" icon theme, which is
+suitable for a dark window manager theme, will be used.
+.sp
+If set to an absolute directory path then icons in that directory will be used.
+This value can be set to multiple values using,
+\fIgit config \-\-add cola.icontheme $theme\fP\&.
+.sp
+This setting can be overridden by the \fIGIT_COLA_ICON_THEME\fP environment
+variable, which can specify multiple themes using a colon\-separated value.
+.sp
+The icon theme can also be specified by passing \fI\-\-icon\-theme=<theme>\fP on the
+command line, once for each icon theme, in the order that they should be
+searched.  This can be used to override a subset of the icons, and fallback
+to the built\-in icons for the remainder.
 .SS cola.inotify
 .sp
 Set to \fIfalse\fP to disable file system change monitoring.  Defaults to \fItrue\fP,
@@ -439,6 +533,13 @@ then they will be preferred over \fIxterm\fP when \fIcola.terminal\fP is unset.
 .sp
 The number of columns used for line wrapping.
 Tabs are counted according to \fIcola.tabwidth\fP\&.
+.SS cola.turbo
+.sp
+Set to \fItrue\fP to enables "turbo" mode.  "Turbo" mode disables some
+features that can slow things down when operating on huge repositories.
+"Turbo" mode will skip loading Git commit messages, author details, status
+information, and commit date details in the \fIFile Browser\fP tool.
+Defaults to \fIfalse\fP\&.
 .SS cola.color.text
 .sp
 The default diff text color, in hexadecimal RRGGBB notation.
@@ -487,6 +588,11 @@ Your full name to be recorded in any newly created commits.
 Can be overridden by the \(aqGIT_AUTHOR_NAME\(aq and \(aqGIT_COMMITTER_NAME\(aq
 environment variables.
 .SH ENVIRONMENT VARIABLES
+.SS GIT_COLA_ICON_THEME
+.sp
+When set in the environment, \fIGIT_COLA_ICON_THEME\fP overrides the
+theme specified in the \fIcola.icontheme\fP configuration.
+Read the section on \fIcola.icontheme\fP above for more details.
 .SS GIT_COLA_SCALE
 .sp
 \fIgit cola\fP can be made to scale its interface for HiDPI displays.
@@ -678,16 +784,15 @@ this is the default value when using \fIgpg2\fP\&.
 Next, edit \fI~/.gnupg/gpg\-agent.conf\fP to contain a pinentry\-program line
 pointing to the pinentry program for your platform.
 .sp
-The following example \fI~/.gnupg/gpg\-agent.conf\fP shows how to use pinentry\-qt on Linux:
+The following example \fI~/.gnupg/gpg\-agent.conf\fP shows how to use
+pinentry\-gtk\-2 on Linux:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
-pinentry\-program /usr/bin/pinentry\-qt
+pinentry\-program /usr/bin/pinentry\-gtk\-2
 default\-cache\-ttl 3600
-enable\-ssh\-support
-use\-standard\-socket
 .ft P
 .fi
 .UNINDENT
@@ -709,15 +814,13 @@ use\-standard\-socket
 .UNINDENT
 .UNINDENT
 .sp
-Once this has been setup then you will need to start the gpg\-agent daemon.
-First, check if it is already running.:
+Once this has been setup then you will need to reload your gpg\-agent config.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
-env | grep GPG_AGENT_INFO
-echo bye | gpg\-connect\-agent
+echo RELOADAGENT | gpg\-connect\-agent
 .ft P
 .fi
 .UNINDENT
@@ -729,8 +832,7 @@ If you see the following output:
 .sp
 .nf
 .ft C
-GPG_AGENT_INFO=...
-OK closing connection
+OK
 .ft P
 .fi
 .UNINDENT

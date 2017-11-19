@@ -357,6 +357,69 @@ To override the default path to this hook set the
 hook script.  This is useful if you would like to use a common hook
 across all repositories.
 
+BRANCHES
+========
+
+The `Branches` tool provides a visual tree to navigate through the branches.
+The tree has three main nodes `Local Branch`, `Remote Branch` and `Tags`.
+Branches are grouped by their name divided by the character '/'.Ex::
+
+    branch/feature/foo
+    branch/feature/bar
+    branch/doe
+
+Will produce::
+
+    branch
+        - doe
+        + feature
+            - bar
+            - foo
+
+Current branch will display a star icon. If current branch has commits
+ahead/behind it will display an up/down arrow with it's number.
+
+Actions
+-------
+Various actions are available through the right-click context menu.
+Different actions are available depending of selected branch status.
+
+Checkout
+~~~~~~~~
+The checkout action runs
+`git checkout [<branchname>] <https://git-scm.com/docs/git-checkout>`_.
+
+Merge in current branch
+~~~~~~~~~~~~~~~~~~~~~~~
+The merge action runs
+`git merge --no-commit [<branchname>] <https://git-scm.com/docs/git-merge>`_.
+
+Pull
+~~~~
+The pull action runs
+`git pull --no-ff [<remote>] [<branchname>] <https://git-scm.com/docs/git-pull>`_.
+
+Push
+~~~~
+The push action runs
+`git push [<remote>] [<branchname>] <https://git-scm.com/docs/git-push>`_.
+
+Rename Branch
+~~~~~~~~~~~~~
+The rename branch action runs
+`git branch -M [<branchname>] <https://git-scm.com/docs/git-push>`_.
+
+Delete Branch
+~~~~~~~~~~~~~
+The delete branch branch action runs
+`git branch -D [<branchname>] <https://git-scm.com/docs/git-branch>`_.
+
+Delete Remote Branch
+~~~~~~~~~~~~~~~~~~~~
+The remote branch action runs
+`git push --delete [<remote>] [<branchname>] <https://git-scm.com/docs/git-push>`_.
+
+
 APPLY PATCHES
 =============
 Use the ``File -> Apply Patches`` menu item to begin applying patches.
@@ -410,6 +473,11 @@ repository.  Set `cola.defaultrepo` to the path of a Git repository to make
 `git cola` attempt to use that repository before falling back to prompting
 the user for a repository.
 
+cola.dicitionary
+----------------
+Specifies an additional dictionary for `git cola` to use in its spell checker.
+This should be configured to the path of a newline-separated list of words.
+
 cola.fileattributes
 -------------------
 Enables per-file gitattributes encoding support when set to `true`.
@@ -419,6 +487,29 @@ and applying diffs.
 cola.fontdiff
 -------------
 Specifies the font to use for `git cola`'s diff display.
+
+cola.icontheme
+--------------
+Specifies the icon themes to use throughout `git cola`. The theme specified
+must be the name of the subdirectory containing the icons, which in turn must
+be placed in the inside the main "icons" directory in `git cola`'s
+installation prefix.
+
+If unset, or set either "light" or "default", then the default style will be
+used.  If set to "dark" then the built-in "dark" icon theme, which is
+suitable for a dark window manager theme, will be used.
+
+If set to an absolute directory path then icons in that directory will be used.
+This value can be set to multiple values using,
+`git config --add cola.icontheme $theme`.
+
+This setting can be overridden by the `GIT_COLA_ICON_THEME` environment
+variable, which can specify multiple themes using a colon-separated value.
+
+The icon theme can also be specified by passing `--icon-theme=<theme>` on the
+command line, once for each icon theme, in the order that they should be
+searched.  This can be used to override a subset of the icons, and fallback
+to the built-in icons for the remainder.
 
 cola.inotify
 ------------
@@ -482,6 +573,14 @@ cola.textwidth
 The number of columns used for line wrapping.
 Tabs are counted according to `cola.tabwidth`.
 
+cola.turbo
+----------
+Set to `true` to enables "turbo" mode.  "Turbo" mode disables some
+features that can slow things down when operating on huge repositories.
+"Turbo" mode will skip loading Git commit messages, author details, status
+information, and commit date details in the `File Browser` tool.
+Defaults to `false`.
+
 cola.color.text
 ---------------
 The default diff text color, in hexadecimal RRGGBB notation.
@@ -544,6 +643,12 @@ environment variables.
 
 ENVIRONMENT VARIABLES
 =====================
+
+GIT_COLA_ICON_THEME
+-------------------
+When set in the environment, `GIT_COLA_ICON_THEME` overrides the
+theme specified in the `cola.icontheme` configuration.
+Read the section on `cola.icontheme` above for more details.
 
 GIT_COLA_SCALE
 --------------
@@ -708,12 +813,11 @@ this is the default value when using `gpg2`.
 Next, edit `~/.gnupg/gpg-agent.conf` to contain a pinentry-program line
 pointing to the pinentry program for your platform.
 
-The following example `~/.gnupg/gpg-agent.conf` shows how to use pinentry-qt on Linux::
+The following example `~/.gnupg/gpg-agent.conf` shows how to use
+pinentry-gtk-2 on Linux::
 
-    pinentry-program /usr/bin/pinentry-qt
+    pinentry-program /usr/bin/pinentry-gtk-2
     default-cache-ttl 3600
-    enable-ssh-support
-    use-standard-socket
 
 This following example `.gnupg/gpg-agent.conf` shows how to use MacGPG2's
 pinentry app on On Mac OS X::
@@ -723,16 +827,13 @@ pinentry app on On Mac OS X::
     enable-ssh-support
     use-standard-socket
 
-Once this has been setup then you will need to start the gpg-agent daemon.
-First, check if it is already running.::
+Once this has been setup then you will need to reload your gpg-agent config.::
 
-    env | grep GPG_AGENT_INFO
-    echo bye | gpg-connect-agent
+    echo RELOADAGENT | gpg-connect-agent
 
 If you see the following output::
 
-    GPG_AGENT_INFO=...
-    OK closing connection
+    OK
 
 Then the daemon is already running, and you do not need to start it yourself.
 

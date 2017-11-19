@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 2.10 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 2.11 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="git-cola 2.10 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 2.11 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -76,6 +76,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#status">STATUS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">DIFF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commit-message-editor">COMMIT MESSAGE EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branches">BRANCHES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#apply-patches">APPLY PATCHES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-variables">CONFIGURATION VARIABLES</a></li>
@@ -103,6 +104,8 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#fixes">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -525,6 +528,67 @@ hook script.  This is useful if you would like to use a common hook
 across all repositories.</p>
 </div>
 </div>
+<div class="section" id="branches">
+<h2>BRANCHES<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>Branches</cite> tool provides a visual tree to navigate through the branches.
+The tree has three main nodes <cite>Local Branch</cite>, <cite>Remote Branch</cite> and <cite>Tags</cite>.
+Branches are grouped by their name divided by the character &#8216;/&#8217;.Ex:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">foo</span>
+<span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">bar</span>
+<span class="n">branch</span><span class="o">/</span><span class="n">doe</span>
+</pre></div>
+</div>
+<p>Will produce:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">branch</span>
+    <span class="o">-</span> <span class="n">doe</span>
+    <span class="o">+</span> <span class="n">feature</span>
+        <span class="o">-</span> <span class="n">bar</span>
+        <span class="o">-</span> <span class="n">foo</span>
+</pre></div>
+</div>
+<p>Current branch will display a star icon. If current branch has commits
+ahead/behind it will display an up/down arrow with it&#8217;s number.</p>
+<div class="section" id="id8">
+<h3>Actions<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Various actions are available through the right-click context menu.
+Different actions are available depending of selected branch status.</p>
+<div class="section" id="checkout">
+<h4>Checkout<a class="headerlink" href="#checkout" title="Permalink to this headline">¶</a></h4>
+<p>The checkout action runs
+<a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout [&lt;branchname&gt;]</a>.</p>
+</div>
+<div class="section" id="merge-in-current-branch">
+<h4>Merge in current branch<a class="headerlink" href="#merge-in-current-branch" title="Permalink to this headline">¶</a></h4>
+<p>The merge action runs
+<a class="reference external" href="https://git-scm.com/docs/git-merge">git merge &#8211;no-commit [&lt;branchname&gt;]</a>.</p>
+</div>
+<div class="section" id="id9">
+<h4>Pull<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>The pull action runs
+<a class="reference external" href="https://git-scm.com/docs/git-pull">git pull &#8211;no-ff [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
+</div>
+<div class="section" id="id10">
+<h4>Push<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>The push action runs
+<a class="reference external" href="https://git-scm.com/docs/git-push">git push [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
+</div>
+<div class="section" id="rename-branch">
+<h4>Rename Branch<a class="headerlink" href="#rename-branch" title="Permalink to this headline">¶</a></h4>
+<p>The rename branch action runs
+<a class="reference external" href="https://git-scm.com/docs/git-push">git branch -M [&lt;branchname&gt;]</a>.</p>
+</div>
+<div class="section" id="delete-branch">
+<h4>Delete Branch<a class="headerlink" href="#delete-branch" title="Permalink to this headline">¶</a></h4>
+<p>The delete branch branch action runs
+<a class="reference external" href="https://git-scm.com/docs/git-branch">git branch -D [&lt;branchname&gt;]</a>.</p>
+</div>
+<div class="section" id="delete-remote-branch">
+<h4>Delete Remote Branch<a class="headerlink" href="#delete-remote-branch" title="Permalink to this headline">¶</a></h4>
+<p>The remote branch action runs
+<a class="reference external" href="https://git-scm.com/docs/git-push">git push &#8211;delete [&lt;remote&gt;] [&lt;branchname&gt;]</a>.</p>
+</div>
+</div>
+</div>
 <div class="section" id="apply-patches">
 <h2>APPLY PATCHES<a class="headerlink" href="#apply-patches" title="Permalink to this headline">¶</a></h2>
 <p>Use the <code class="docutils literal"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></code> menu item to begin applying patches.</p>
@@ -573,6 +637,11 @@ repository.  Set <cite>cola.defaultrepo</cite> to the path of a Git repository t
 <cite>git cola</cite> attempt to use that repository before falling back to prompting
 the user for a repository.</p>
 </div>
+<div class="section" id="cola-dicitionary">
+<h3>cola.dicitionary<a class="headerlink" href="#cola-dicitionary" title="Permalink to this headline">¶</a></h3>
+<p>Specifies an additional dictionary for <cite>git cola</cite> to use in its spell checker.
+This should be configured to the path of a newline-separated list of words.</p>
+</div>
 <div class="section" id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
 <p>Enables per-file gitattributes encoding support when set to <cite>true</cite>.
@@ -582,6 +651,25 @@ and applying diffs.</p>
 <div class="section" id="cola-fontdiff">
 <h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the font to use for <cite>git cola</cite>&#8216;s diff display.</p>
+</div>
+<div class="section" id="cola-icontheme">
+<h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the icon themes to use throughout <cite>git cola</cite>. The theme specified
+must be the name of the subdirectory containing the icons, which in turn must
+be placed in the inside the main &#8220;icons&#8221; directory in <cite>git cola</cite>&#8216;s
+installation prefix.</p>
+<p>If unset, or set either &#8220;light&#8221; or &#8220;default&#8221;, then the default style will be
+used.  If set to &#8220;dark&#8221; then the built-in &#8220;dark&#8221; icon theme, which is
+suitable for a dark window manager theme, will be used.</p>
+<p>If set to an absolute directory path then icons in that directory will be used.
+This value can be set to multiple values using,
+<cite>git config &#8211;add cola.icontheme $theme</cite>.</p>
+<p>This setting can be overridden by the <cite>GIT_COLA_ICON_THEME</cite> environment
+variable, which can specify multiple themes using a colon-separated value.</p>
+<p>The icon theme can also be specified by passing <cite>&#8211;icon-theme=&lt;theme&gt;</cite> on the
+command line, once for each icon theme, in the order that they should be
+searched.  This can be used to override a subset of the icons, and fallback
+to the built-in icons for the remainder.</p>
 </div>
 <div class="section" id="cola-inotify">
 <h3>cola.inotify<a class="headerlink" href="#cola-inotify" title="Permalink to this headline">¶</a></h3>
@@ -642,6 +730,14 @@ then they will be preferred over <cite>xterm</cite> when <cite>cola.terminal</ci
 <h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
 <p>The number of columns used for line wrapping.
 Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
+</div>
+<div class="section" id="cola-turbo">
+<h3>cola.turbo<a class="headerlink" href="#cola-turbo" title="Permalink to this headline">¶</a></h3>
+<p>Set to <cite>true</cite> to enables &#8220;turbo&#8221; mode.  &#8220;Turbo&#8221; mode disables some
+features that can slow things down when operating on huge repositories.
+&#8220;Turbo&#8221; mode will skip loading Git commit messages, author details, status
+information, and commit date details in the <cite>File Browser</cite> tool.
+Defaults to <cite>false</cite>.</p>
 </div>
 <div class="section" id="cola-color-text">
 <h3>cola.color.text<a class="headerlink" href="#cola-color-text" title="Permalink to this headline">¶</a></h3>
@@ -705,6 +801,12 @@ environment variables.</p>
 </div>
 <div class="section" id="environment-variables">
 <h2>ENVIRONMENT VARIABLES<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-cola-icon-theme">
+<h3>GIT_COLA_ICON_THEME<a class="headerlink" href="#git-cola-icon-theme" title="Permalink to this headline">¶</a></h3>
+<p>When set in the environment, <cite>GIT_COLA_ICON_THEME</cite> overrides the
+theme specified in the <cite>cola.icontheme</cite> configuration.
+Read the section on <cite>cola.icontheme</cite> above for more details.</p>
+</div>
 <div class="section" id="git-cola-scale">
 <h3>GIT_COLA_SCALE<a class="headerlink" href="#git-cola-scale" title="Permalink to this headline">¶</a></h3>
 <p><cite>git cola</cite> can be made to scale its interface for HiDPI displays.
@@ -861,11 +963,10 @@ Set Git&#8217;s <cite>gpg.program</cite> to <cite>gpg2</cite>:</p>
 this is the default value when using <cite>gpg2</cite>.</p>
 <p>Next, edit <cite>~/.gnupg/gpg-agent.conf</cite> to contain a pinentry-program line
 pointing to the pinentry program for your platform.</p>
-<p>The following example <cite>~/.gnupg/gpg-agent.conf</cite> shows how to use pinentry-qt on Linux:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">qt</span>
+<p>The following example <cite>~/.gnupg/gpg-agent.conf</cite> shows how to use
+pinentry-gtk-2 on Linux:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="mi">2</span>
 <span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
-<span class="n">enable</span><span class="o">-</span><span class="n">ssh</span><span class="o">-</span><span class="n">support</span>
-<span class="n">use</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">socket</span>
 </pre></div>
 </div>
 <p>This following example <cite>.gnupg/gpg-agent.conf</cite> shows how to use MacGPG2&#8217;s
@@ -876,15 +977,12 @@ pinentry app on On Mac OS X:</p>
 <span class="n">use</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">socket</span>
 </pre></div>
 </div>
-<p>Once this has been setup then you will need to start the gpg-agent daemon.
-First, check if it is already running.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">GPG_AGENT_INFO</span>
-<span class="n">echo</span> <span class="n">bye</span> <span class="o">|</span> <span class="n">gpg</span><span class="o">-</span><span class="n">connect</span><span class="o">-</span><span class="n">agent</span>
+<p>Once this has been setup then you will need to reload your gpg-agent config.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">RELOADAGENT</span> <span class="o">|</span> <span class="n">gpg</span><span class="o">-</span><span class="n">connect</span><span class="o">-</span><span class="n">agent</span>
 </pre></div>
 </div>
 <p>If you see the following output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">GPG_AGENT_INFO</span><span class="o">=...</span>
-<span class="n">OK</span> <span class="n">closing</span> <span class="n">connection</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">OK</span>
 </pre></div>
 </div>
 <p>Then the daemon is already running, and you do not need to start it yourself.</p>
@@ -965,7 +1063,7 @@ installation.  e.g.:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.10',
+            VERSION:'2.11',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
