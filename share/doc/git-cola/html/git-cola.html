@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>git-cola(1) &mdash; git-cola 3.0 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 3.1 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="git-cola 3.0 documentation" href="index.html"/>
+    <link rel="top" title="git-cola 3.1 documentation" href="index.html"/>
         <link rel="next" title="git-dag(1)" href="git-dag.html"/>
         <link rel="prev" title="Git Cola Documentation" href="index.html"/> 
 
@@ -105,9 +105,10 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-1-beta">git-cola v3.1 (beta)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-0">git-cola v3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id2">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id4">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -346,8 +347,8 @@ When you select a line in the <cite>grep</cite> screen and press any of
 <div class="section" id="keyboard-shortcuts">
 <h2>KEYBOARD SHORTCUTS<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
 <p><cite>git cola</cite> has many useful keyboard shortcuts.</p>
-<p>You can see the available shortcuts by pressing the <code class="docutils literal"><span class="pre">?</span></code> key,
-choosing <code class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></code> from the main menu,
+<p>You can see the available shortcuts by pressing the <code class="docutils literal notranslate"><span class="pre">?</span></code> key,
+choosing <code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></code> from the main menu,
 or by consulting the <a class="reference external" href="https://git-cola.github.io/share/doc/git-cola/hotkeys.html">git cola keyboard shortcuts reference</a>.</p>
 </div>
 <div class="section" id="tools">
@@ -442,7 +443,7 @@ Extraneous whitespace is shown with a pure-red background.</p>
 that use either the cursor location or text selection.</p>
 <div class="section" id="staging-content-for-commit">
 <h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">&#64;&#64;</span></code> patterns denote a new diff hunk.  Selecting lines of diff
+<p>The <code class="docutils literal notranslate"><span class="pre">&#64;&#64;</span></code> patterns denote a new diff hunk.  Selecting lines of diff
 and using the <cite>Stage Selected Lines</cite> command will stage just the selected
 lines.  Clicking within a diff hunk and selecting <cite>Stage Diff Hunk</cite> stages the
 entire patch diff hunk.</p>
@@ -467,11 +468,11 @@ staged content.</p>
 <div class="section" id="sign-off">
 <h3>Sign Off<a class="headerlink" href="#sign-off" title="Permalink to this headline">¶</a></h3>
 <p>The <cite>Sign Off</cite> button adds a standard:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">A</span><span class="o">.</span> <span class="n">U</span><span class="o">.</span> <span class="n">Thor</span> <span class="o">&lt;</span><span class="n">a</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">thor</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Signed</span><span class="o">-</span><span class="n">off</span><span class="o">-</span><span class="n">by</span><span class="p">:</span> <span class="n">A</span><span class="o">.</span> <span class="n">U</span><span class="o">.</span> <span class="n">Thor</span> <span class="o">&lt;</span><span class="n">a</span><span class="o">.</span><span class="n">u</span><span class="o">.</span><span class="n">thor</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>line to the bottom of the commit message.</p>
-<p>Invoking this action is equivalent to passing the <code class="docutils literal"><span class="pre">-s</span></code> option
+<p>Invoking this action is equivalent to passing the <code class="docutils literal notranslate"><span class="pre">-s</span></code> option
 to <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.</p>
 </div>
 <div class="section" id="commit">
@@ -480,12 +481,12 @@ to <a class="reference external" href="http://git-scm.com/docs/git-commit">git c
 <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a>.
 The contents of the commit message editor is provided as the commit message.</p>
 <p>Only staged files are included in the commit – this is the same behavior
-as running <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> on the command-line.</p>
+as running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> on the command-line.</p>
 </div>
 <div class="section" id="line-and-column-display">
 <h3>Line and Column Display<a class="headerlink" href="#line-and-column-display" title="Permalink to this headline">¶</a></h3>
 <p>The current line and column number is displayed by the editor.
-E.g. a <code class="docutils literal"><span class="pre">5,0</span></code> display means that the cursor is located at
+E.g. a <code class="docutils literal notranslate"><span class="pre">5,0</span></code> display means that the cursor is located at
 line five, column zero.</p>
 <p>The display changes colors when lines get too long.
 Yellow indicates the safe boundary for sending patches to a mailing list
@@ -509,7 +510,7 @@ into the commit message editor when this option is selected.</p>
 <div class="section" id="create-signed-commit">
 <h3>Create Signed Commit<a class="headerlink" href="#create-signed-commit" title="Permalink to this headline">¶</a></h3>
 <p>Tell <cite>git commit</cite> and <cite>git merge</cite> to sign commits using GPG.</p>
-<p>Using this option is equivalent to passing the <code class="docutils literal"><span class="pre">--gpg-sign</span></code> option to
+<p>Using this option is equivalent to passing the <code class="docutils literal notranslate"><span class="pre">--gpg-sign</span></code> option to
 <a class="reference external" href="http://git-scm.com/docs/git-commit">git commit</a> and
 <a class="reference external" href="http://git-scm.com/docs/git-merge">git merge</a>.</p>
 <p>This option’s default value can be configured using the <cite>cola.signcommits</cite>
@@ -517,7 +518,7 @@ configuration variable.</p>
 </div>
 <div class="section" id="prepare-commit-message">
 <h3>Prepare Commit Message<a class="headerlink" href="#prepare-commit-message" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">Commit</span> <span class="pre">-&gt;</span> <span class="pre">Prepare</span> <span class="pre">Commit</span> <span class="pre">Message</span></code> action or <cite>Ctrl-Shift-Return</cite> keyboard shortcut
+<p>The <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">-&gt;</span> <span class="pre">Prepare</span> <span class="pre">Commit</span> <span class="pre">Message</span></code> action or <cite>Ctrl-Shift-Return</cite> keyboard shortcut
 runs the <cite>cola-prepare-commit-msg</cite> hook if it is available in <cite>.git/hooks/</cite>.
 This is a <cite>git cola</cite>-specific hook that takes the same parameters
 as Git’s <a class="reference external" href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">prepare-commit-msg hook</a></p>
@@ -535,13 +536,13 @@ across all repositories.</p>
 <p>The <cite>Branches</cite> tool provides a visual tree to navigate through the branches.
 The tree has three main nodes <cite>Local Branch</cite>, <cite>Remote Branch</cite> and <cite>Tags</cite>.
 Branches are grouped by their name divided by the character ‘/’.Ex:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">foo</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">foo</span>
 <span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">bar</span>
 <span class="n">branch</span><span class="o">/</span><span class="n">doe</span>
 </pre></div>
 </div>
 <p>Will produce:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">branch</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">branch</span>
     <span class="o">-</span> <span class="n">doe</span>
     <span class="o">+</span> <span class="n">feature</span>
         <span class="o">-</span> <span class="n">bar</span>
@@ -593,7 +594,7 @@ Different actions are available depending of selected branch status.</p>
 </div>
 <div class="section" id="apply-patches">
 <h2>APPLY PATCHES<a class="headerlink" href="#apply-patches" title="Permalink to this headline">¶</a></h2>
-<p>Use the <code class="docutils literal"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></code> menu item to begin applying patches.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Apply</span> <span class="pre">Patches</span></code> menu item to begin applying patches.</p>
 <p>Dragging and dropping patches onto the <cite>git cola</cite> interface
 adds the patches to the list of patches to apply using
 <a class="reference external" href="http://git-scm.com/docs/git-am">git am</a>.</p>
@@ -699,6 +700,12 @@ Defaults to <cite>true</cite>.  This setting is configured using the <cite>Prefe
 dialog, but it can be toggled for one-off usage using the commit message
 editor’s options sub-menu.</p>
 </div>
+<div class="section" id="cola-maxrecent">
+<h3>cola.maxrecent<a class="headerlink" href="#cola-maxrecent" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> caps the number of recent repositories to avoid cluttering
+the start and recent repositories menu.  The maximum number of repositories to
+remember is controlled by <cite>cola.maxrecent</cite> and defaults to <cite>8</cite>.</p>
+</div>
 <div class="section" id="cola-dragencoding">
 <h3>cola.dragencoding<a class="headerlink" href="#cola-dragencoding" title="Permalink to this headline">¶</a></h3>
 <p><cite>git cola</cite> encodes paths dragged from its widgets into <cite>utf-16</cite> when adding
@@ -713,10 +720,25 @@ expects a modern encoding, e.g. <cite>terminator</cite>, then set this value to 
 The maximum size to read is controlled by <cite>cola.readsize</cite>
 and defaults to <cite>2048</cite>.</p>
 </div>
+<div class="section" id="cola-safemode">
+<h3>cola.safemode<a class="headerlink" href="#cola-safemode" title="Permalink to this headline">¶</a></h3>
+<p>The “Stage” button in the <cite>git cola</cite> Actions panel stages all files when it is
+activated and no files are selected.  This can be problematic if it is
+accidentally triggered after carefully preparing the index with staged
+changes.  “Safe Mode” is enabled by setting <cite>cola.safemode</cite> to <cite>true</cite>.
+When enabled, <cite>git cola</cite> will do nothing when “Stage” is activated without a
+selection.  Defaults to <cite>false</cite>.</p>
+</div>
 <div class="section" id="cola-savewindowsettings">
 <h3>cola.savewindowsettings<a class="headerlink" href="#cola-savewindowsettings" title="Permalink to this headline">¶</a></h3>
 <p><cite>git cola</cite> will remember its window settings when set to <cite>true</cite>.
 Window settings and X11 sessions are saved in <cite>$HOME/.config/git-cola</cite>.</p>
+</div>
+<div class="section" id="cola-showpath">
+<h3>cola.showpath<a class="headerlink" href="#cola-showpath" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> displays the absolute path of the repository in the window title.
+This can be disabled by setting <cite>cola.showpath</cite> to <cite>false</cite>.
+Defaults to <cite>true</cite>.</p>
 </div>
 <div class="section" id="cola-signcommits">
 <h3>cola.signcommits<a class="headerlink" href="#cola-signcommits" title="Permalink to this headline">¶</a></h3>
@@ -844,19 +866,19 @@ may want <cite>git cola</cite> to use a specific language.</p>
 <p>You can make <cite>git cola</cite> use an alternative language by creating a
 <cite>~/.config/git-cola/language</cite> file containing the standard two-letter
 gettext language code, e.g. “en”, “de”, “ja”, “zh”, etc.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span> <span class="o">&amp;&amp;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span> <span class="o">&amp;&amp;</span>
 <span class="n">echo</span> <span class="n">en</span> <span class="o">&gt;~/.</span><span class="n">config</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span><span class="o">/</span><span class="n">language</span>
 </pre></div>
 </div>
 <p>Alternatively you may also use LANGUAGE environmental variable to temporarily
 change <cite>git cola</cite>’s language just like any other gettext-based program.  For
 example to temporarily change <cite>git cola</cite>’s language to English:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
 </pre></div>
 </div>
 <p>To make <cite>git cola</cite> use the zh_TW translation with zh_HK, zh, and en as a
 fallback.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">zh_TW</span><span class="p">:</span><span class="n">zh_HK</span><span class="p">:</span><span class="n">zh</span><span class="p">:</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LANGUAGE</span><span class="o">=</span><span class="n">zh_TW</span><span class="p">:</span><span class="n">zh_HK</span><span class="p">:</span><span class="n">zh</span><span class="p">:</span><span class="n">en</span> <span class="n">git</span> <span class="n">cola</span>
 </pre></div>
 </div>
 </div>
@@ -952,20 +974,20 @@ for your password in the terminal.</p>
 <a class="reference external" href="https://gpgtools.org/macgpg2/">Mac GPG Suite</a>.</p>
 <p>On Linux use your package manager to install gnupg2,
 gnupg-agent and pinentry-qt, e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gnupg2</span> <span class="n">gnupg</span><span class="o">-</span><span class="n">agent</span> <span class="n">pinentry</span><span class="o">-</span><span class="n">qt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gnupg2</span> <span class="n">gnupg</span><span class="o">-</span><span class="n">agent</span> <span class="n">pinentry</span><span class="o">-</span><span class="n">qt</span>
 </pre></div>
 </div>
 <p>On Linux, you should also configure Git so that it uses gpg2 (gnupg2),
 otherwise you will get errors mentioning, “unable to open /dev/tty”.
 Set Git’s <cite>gpg.program</cite> to <cite>gpg2</cite>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">gpg</span><span class="o">.</span><span class="n">program</span> <span class="n">gpg2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">gpg</span><span class="o">.</span><span class="n">program</span> <span class="n">gpg2</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="configure-gpg-agent-and-a-pin-entry-program">
 <h3>Configure gpg-agent and a pin-entry program<a class="headerlink" href="#configure-gpg-agent-and-a-pin-entry-program" title="Permalink to this headline">¶</a></h3>
 <p>On Mac OS X, edit <cite>~/.gnupg/gpg.conf</cite> to include the line,:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">use</span><span class="o">-</span><span class="n">agent</span>
 </pre></div>
 </div>
 <p>This is typically not needed on Linux, where <cite>gpg2</cite> is used, as
@@ -974,30 +996,30 @@ this is the default value when using <cite>gpg2</cite>.</p>
 pointing to the pinentry program for your platform.</p>
 <p>The following example <cite>~/.gnupg/gpg-agent.conf</cite> shows how to use
 pinentry-gtk-2 on Linux:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="mi">2</span>
 <span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
 </pre></div>
 </div>
 <p>This following example <cite>.gnupg/gpg-agent.conf</cite> shows how to use MacGPG2’s
 pinentry app on On Mac OS X:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">MacGPG2</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pinentry</span><span class="o">-</span><span class="n">program</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">MacGPG2</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">pinentry</span><span class="o">-</span><span class="n">mac</span>
 <span class="n">default</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">ttl</span> <span class="mi">3600</span>
 <span class="n">enable</span><span class="o">-</span><span class="n">ssh</span><span class="o">-</span><span class="n">support</span>
 <span class="n">use</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">socket</span>
 </pre></div>
 </div>
 <p>Once this has been setup then you will need to reload your gpg-agent config.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">RELOADAGENT</span> <span class="o">|</span> <span class="n">gpg</span><span class="o">-</span><span class="n">connect</span><span class="o">-</span><span class="n">agent</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">RELOADAGENT</span> <span class="o">|</span> <span class="n">gpg</span><span class="o">-</span><span class="n">connect</span><span class="o">-</span><span class="n">agent</span>
 </pre></div>
 </div>
 <p>If you see the following output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">OK</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OK</span>
 </pre></div>
 </div>
 <p>Then the daemon is already running, and you do not need to start it yourself.</p>
 <p>If it is not running, eval the output of <cite>gpg-agent –daemon</cite> in your shell
 prior to launching <cite>git cola</cite>.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>eval $(gpg-agent --daemon)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>eval $(gpg-agent --daemon)
 git cola
 </pre></div>
 </div>
@@ -1011,7 +1033,7 @@ git cola
 Program Files, then the path to Git must be configured by creating a file in
 your home directory <cite>~/.config/git-cola/git-bindir</cite> that points to your git
 installation.  e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Tools</span><span class="o">/</span><span class="n">Git</span><span class="o">/</span><span class="nb">bin</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">Tools</span><span class="o">/</span><span class="n">Git</span><span class="o">/</span><span class="nb">bin</span>
 </pre></div>
 </div>
 </div>
@@ -1072,7 +1094,7 @@ installation.  e.g.:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.0',
+            VERSION:'3.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

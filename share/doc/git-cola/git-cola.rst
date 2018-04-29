@@ -537,6 +537,12 @@ Defaults to `true`.  This setting is configured using the `Preferences`
 dialog, but it can be toggled for one-off usage using the commit message
 editor's options sub-menu.
 
+cola.maxrecent
+--------------
+`git cola` caps the number of recent repositories to avoid cluttering
+the start and recent repositories menu.  The maximum number of repositories to
+remember is controlled by `cola.maxrecent` and defaults to `8`.
+
 cola.dragencoding
 -----------------
 `git cola` encodes paths dragged from its widgets into `utf-16` when adding
@@ -551,10 +557,25 @@ cola.readsize
 The maximum size to read is controlled by `cola.readsize`
 and defaults to `2048`.
 
+cola.safemode
+-------------
+The "Stage" button in the `git cola` Actions panel stages all files when it is
+activated and no files are selected.  This can be problematic if it is
+accidentally triggered after carefully preparing the index with staged
+changes.  "Safe Mode" is enabled by setting `cola.safemode` to `true`.
+When enabled, `git cola` will do nothing when "Stage" is activated without a
+selection.  Defaults to `false`.
+
 cola.savewindowsettings
 -----------------------
 `git cola` will remember its window settings when set to `true`.
 Window settings and X11 sessions are saved in `$HOME/.config/git-cola`.
+
+cola.showpath
+-------------
+`git cola` displays the absolute path of the repository in the window title.
+This can be disabled by setting `cola.showpath` to `false`.
+Defaults to `true`.
 
 cola.signcommits
 ----------------

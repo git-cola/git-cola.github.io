@@ -7,11 +7,14 @@ Thanks
 * Adrien be
 * AJ Bagwell
 * Alex Chernetz
+* Alex Gulyás
 * Alexander Kozienko
 * Alf Eaton
 * anderben
+* Andreas Schnederle-Wagner
 * Andreas Sommer
 * Andrew Chen
+* Andrej Kvasnica
 * Audrius Karabanovas
 * balping
 * Barış ÇELİK
@@ -22,11 +25,13 @@ Thanks
 * Benedict Lee
 * Benoît Nouyrigat
 * Bert Jacobs
+* birgersp
 * 林博仁 (Lin-Buo-Ren)
 * Charles 101
 * Christian Jann
 * Christopher Meng
 * Clément Pit--Claudel
+* Constantine Grantcharov
 * Daniel Fahlke
 * Daniel Jay Haskin
 * Daniel Harding
@@ -44,6 +49,7 @@ Thanks
 * Drugoy
 * Efimov Vasily
 * Eric Drechsel
+* Erwan Bousse
 * Fabio Coatti
 * Filip Danilović
 * Garoe Dorta
@@ -55,6 +61,7 @@ Thanks
 * Guillaume de Bure
 * Guo Yunhe
 * Harro Verton
+* Hannes @kannes
 * Igor Galarraga
 * Igor Kopach
 * Ilya Tumaykin
@@ -72,10 +79,12 @@ Thanks
 * Jérôme Carretero
 * jfessard
 * JiCiT
+* Johannes Löhnert
 * Johann Schmitz
 * Jordan Bedwell
 * Josh Taylor
 * Justin Lecher
+* Kai Krakow
 * Karl Bielefeldt
 * Karthik Manamcheri
 * Kelvie Wong
@@ -86,6 +95,7 @@ Thanks
 * László Böszörményi
 * Leho Kraav
 * Lev Zlotin
+* Louis Rousseau
 * Libor Jelinek
 * Liviu Cristian Mirea-Ghiban
 * Luca Ottaviano
@@ -100,6 +110,7 @@ Thanks
 * Marcin Mielniczuk
 * Marco Costalba
 * Markus Heidelberg
+* Martin Konecny
 * Matěj Šmíd
 * Matthew Levine
 * Matthias Mailänder
@@ -110,10 +121,14 @@ Thanks
 * Mike Hanson
 * MikHulk
 * Minarto Margoliono
+* Mosaab Alzoubi
 * Myz
 * Naraesk
 * Nick Todd
 * Nicolas Dietrich
+* Nikos Roussos
+* ochristi
+* Oliver Haessler
 * OmegaPhil (Omega Weapon)
 * Owen Healy
 * Pamela Strucker
@@ -128,6 +143,8 @@ Thanks
 * Peter Júnoš
 * Philip Stark
 * Pilar Molina Lopez
+* Radek Novacek
+* Radek Postołowicz
 * Raghavendra Karunanidhi
 * Rainer Müller
 * Robbert Korving
@@ -161,7 +178,9 @@ Thanks
 * Vitor Lobo
 * v.paritskiy
 * Wolfgang Ocker
-* Xieofxie
+* wsdfhjxc
+* Xie Hua Liang (xieofxie)
 * Yi EungJun
+* Zauber Paracelsus
 * Zeioth
 * Zhang Han

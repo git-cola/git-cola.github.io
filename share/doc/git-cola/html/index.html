@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Git Cola Documentation &mdash; git-cola 3.0 documentation</title>
+  <title>Git Cola Documentation &mdash; git-cola 3.1 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="git-cola 3.0 documentation" href="#"/>
+    <link rel="top" title="git-cola 3.1 documentation" href="#"/>
         <link rel="next" title="git-cola(1)" href="git-cola.html"/> 
 
   
@@ -104,9 +104,10 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-1-beta">git-cola v3.1 (beta)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-0">git-cola v3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id2">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id4">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -290,9 +291,12 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-inotify">cola.inotify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-refreshonfocus">cola.refreshonfocus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-linebreak">cola.linebreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-maxrecent">cola.maxrecent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-dragencoding">cola.dragencoding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-readsize">cola.readsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-safemode">cola.safemode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-savewindowsettings">cola.savewindowsettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-showpath">cola.showpath</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-signcommits">cola.signcommits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-tabwidth">cola.tabwidth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-terminal">cola.terminal</a></li>
@@ -382,9 +386,10 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-1-beta">git-cola v3.1 (beta)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-0">git-cola v3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-11">git-cola v2.11</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id2">Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#id4">Fixes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-10">git-cola v2.10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9-1">git-cola v2.9.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v2-9">git-cola v2.9</a></li>
@@ -505,7 +510,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.0',
+            VERSION:'3.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

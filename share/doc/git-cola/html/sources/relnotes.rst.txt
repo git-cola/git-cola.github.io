@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v3.0 <v3.0>` is the latest stable release.
+:ref:`v3.1 <v3.1>` is the latest stable release.
 
 Development version
 ===================
@@ -13,6 +13,181 @@ Development version
 Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
+
+.. _v3.1:
+
+git-cola v3.1 (beta)
+====================
+
+Usability, bells and whistles
+-----------------------------
+
+* The "Browser" widget learned to rename files using "git mv".
+
+  https://github.com/git-cola/git-cola/issues/239
+
+* The "Diff" widget learned to diff images.  Side-by-side and pixel diff
+  modes allow you to inspect changes to common images formats.
+
+  https://github.com/git-cola/git-cola/issues/444
+
+  https://github.com/git-cola/git-cola/pull/803
+
+* Git LFS and Git Annex are natively supported by the image diff viewer.
+
+* Git Annex operations are now included. `git annex init` can be performed on
+  repositories, and `git annex add` can be run on untracked files from the
+  status widget.  Install `git-annex` to activate this feature.
+
+* Git LFS operations are now included. `git lfs install` can be performed on
+  repositories, and `git lfs track` can be run on untracked files from the
+  status widget.  Install `git-lfs` to activate this feature.
+
+* The "Stash" tool learned to stash staged changes only.  Select the
+  "Stage Index" option and only staged changes will be stashed away.
+
+  https://github.com/git-cola/git-cola/issues/413
+
+* The "Stash" tool learned to use vim-like navigation keyboard shortcuts,
+  shows error messages when things go wrong, and now saves the "Stash Index"
+  and "Keep Index" options across sessions.
+
+* The Edit menu's "Copy" and "Select All" actions now forward to either the
+  diff, status, recent, or favorites widgets, based on which widget has focus.
+
+* The "File" and "Edit" menu can now be activated using `Alt-{f,e}` hotkeys.
+
+  https://github.com/git-cola/git-cola/issues/759
+
+* It was easy to accidentally trigger the first action in the `Status` tool's
+  context menu when using a quick right-click to bring up the menu.
+  A short sub-second delay was added to ensure that the top-most action is not
+  triggered unless enough time has passed.  This prevents accidental
+  activation of the first item (typically "Stage" or "Unstage") without
+  burdening common use cases.
+
+  https://github.com/git-cola/git-cola/pull/755
+
+  https://github.com/git-cola/git-cola/issues/643
+
+* The "Ctrl+S" hotkey now works for the header items in the Status tool.
+  Selected the "Modified" header item and activating the "Stage" hotkey,
+  for example, will stage all modified files.  This works for the "Staged",
+  "Modified", and "Untracked" headers.  This is not enabled for the
+  "Unmerged" header by design.
+
+  https://github.com/git-cola/git-cola/issues/772
+
+* The list of "Recent" repositories previously capped the number of
+  repositories shown to 8 repositories.  This can be set to a higher
+  value by setting the `cola.maxrecent` configuration variable.
+
+  https://github.com/git-cola/git-cola/issues/752
+
+* The "Create Branch" dialog now prevents invalid branch names.
+
+  https://github.com/git-cola/git-cola/issues/765
+
+* Updated Turkish translation.
+
+  https://github.com/git-cola/git-cola/pull/756
+
+* Updated Ukrainian translation.
+
+  https://github.com/git-cola/git-cola/pull/753
+
+* Updated German translation.
+
+  https://github.com/git-cola/git-cola/pull/802
+
+* Updated Czech translation
+
+  https://github.com/git-cola/git-cola/pull/792
+
+  https://github.com/git-cola/git-cola/pull/806
+
+* The window title can be configured to not display the absolute path of the
+  repository.
+
+  https://github.com/git-cola/git-cola/issues/775
+
+* The "Edit Remotes" editor learned to edit remote URLS.
+
+* Bare repositories can now be created by selecting the
+  "New Bare Repository..." action from the `File` menu.
+
+* The "Branches" widget learned to configure upstream branches.
+
+* A new `git cola clone` sub-command was added for cloning repositories.
+
+Packaging
+---------
+
+* The vendored `qtpy` library was updated to `v1.3.1`.
+
+* The macOS installation was made simpler for better compatibility with
+  Homebrew.
+
+  https://github.com/git-cola/git-cola/issues/636
+
+* The Windows installer is now much simpler.  Git Cola now bundles
+  Python and PyQt5, so users need only install the "Git for Windows"
+  and "Git Cola" installers to get things working.
+
+Fixes
+-----
+
+* Uninitialized difftool errors will now be displayed graphically.
+  They were previously going to the shell.
+
+  https://github.com/git-cola/git-cola/issues/457
+
+* Translations marked "fuzzy" will no longer be used when translating strings.
+
+  https://github.com/git-cola/git-cola/issues/782
+
+* Deleted unmerged files will now correctly use a deleted icon.
+
+  https://github.com/git-cola/git-cola/issues/479
+
+* The `Ctrl+C` "Copy" hotkey on the diff viewer has been fixed.
+
+  https://github.com/git-cola/git-cola/issues/767
+
+* The "Create Tag" dialog did not correctly handle the case when a signed
+  tag is requested, but no message is provided, and the user chooses to
+  create an unannotated tag instead.  This convenience fallback will now
+  properly create an unsigned, unannotated tag.
+
+  https://github.com/git-cola/git-cola/issues/696
+
+* `.gitconfig` and `.git/config` values editable by the Preferences dialog
+  (aka `git cola config`) will now get unset when set to an empty value.
+  For example, setting a different `user.email` in the current repository,
+  followed by a subsequent emptying of that field, would previously result in
+  an empty string getting stored in the config.  This has been fixed so that
+  the value will now get unset in the config instead.
+
+  https://github.com/git-cola/git-cola/issues/406
+
+* Spelling and typofixes.
+
+  https://github.com/git-cola/git-cola/pull/748
+
+* `core.commentChar` is now honored when set in the local repository
+  `.git/config`.
+
+  https://github.com/git-cola/git-cola/issues/766
+
+* The log window was using a format string that did not display
+  correctly in all locales.  A locale-aware format is now used.
+
+  https://github.com/git-cola/git-cola/pull/800
+
+* The dialog displayed when prompting for a reference could sometimes
+  lose focus.
+
+  https://github.com/git-cola/git-cola/pull/804
 
 .. _v3.0:
 
@@ -25,7 +200,7 @@ Usability, bells and whistles
 
   https://github.com/git-cola/git-cola/pull/726
 
-* Updated Ukranian translation.
+* Updated Ukrainian translation.
 
   https://github.com/git-cola/git-cola/pull/723
 
@@ -192,7 +367,7 @@ git-cola v2.11
 
 Usability, bells and whistles
 -----------------------------
-* New Ukranian translation.
+* New Ukrainian translation.
 
   https://github.com/git-cola/git-cola/pull/670
 

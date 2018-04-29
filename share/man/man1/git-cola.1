@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Nov 18, 2017" "3.0" "git-cola"
+.TH "GIT-COLA" "1" "Apr 29, 2018" "3.1" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -503,6 +503,11 @@ Whether to automatically break long lines while editing commit messages.
 Defaults to \fItrue\fP\&.  This setting is configured using the \fIPreferences\fP
 dialog, but it can be toggled for one\-off usage using the commit message
 editor’s options sub\-menu.
+.SS cola.maxrecent
+.sp
+\fIgit cola\fP caps the number of recent repositories to avoid cluttering
+the start and recent repositories menu.  The maximum number of repositories to
+remember is controlled by \fIcola.maxrecent\fP and defaults to \fI8\fP\&.
 .SS cola.dragencoding
 .sp
 \fIgit cola\fP encodes paths dragged from its widgets into \fIutf\-16\fP when adding
@@ -515,10 +520,23 @@ expects a modern encoding, e.g. \fIterminator\fP, then set this value to \fIutf\
 \fIgit cola\fP avoids reading large binary untracked files.
 The maximum size to read is controlled by \fIcola.readsize\fP
 and defaults to \fI2048\fP\&.
+.SS cola.safemode
+.sp
+The “Stage” button in the \fIgit cola\fP Actions panel stages all files when it is
+activated and no files are selected.  This can be problematic if it is
+accidentally triggered after carefully preparing the index with staged
+changes.  “Safe Mode” is enabled by setting \fIcola.safemode\fP to \fItrue\fP\&.
+When enabled, \fIgit cola\fP will do nothing when “Stage” is activated without a
+selection.  Defaults to \fIfalse\fP\&.
 .SS cola.savewindowsettings
 .sp
 \fIgit cola\fP will remember its window settings when set to \fItrue\fP\&.
 Window settings and X11 sessions are saved in \fI$HOME/.config/git\-cola\fP\&.
+.SS cola.showpath
+.sp
+\fIgit cola\fP displays the absolute path of the repository in the window title.
+This can be disabled by setting \fIcola.showpath\fP to \fIfalse\fP\&.
+Defaults to \fItrue\fP\&.
 .SS cola.signcommits
 .sp
 \fIgit cola\fP will sign commits by default when set \fItrue\fP\&. Defaults to \fIfalse\fP\&.
