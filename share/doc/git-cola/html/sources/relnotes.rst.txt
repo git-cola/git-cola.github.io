@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v3.1 <v3.1>` is the latest stable release.
+:ref:`v3.2 <v3.2>` is the latest stable release.
 
 Development version
 ===================
@@ -14,6 +14,172 @@ Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
 
+.. _v3.2:
+
+git-cola v3.2
+=============
+
+Usability, bells and whistles
+-----------------------------
+* The `git cola dag` DAG window now supports `git revert`.
+
+  https://github.com/git-cola/git-cola/issues/843
+
+* `git stash pop` is now supported by the stash dialog.
+
+  https://github.com/git-cola/git-cola/issues/844
+
+* The status widget now ensures that each item is visible when selection
+  changes.  Previously, if you scrolled to the right to see the name of
+  a long filename, and then selected a short filename above it, the widget
+  may not have shown the short filename in the viewport.  We now ensure
+  that the filenames are visible when the selection changes.
+
+  https://github.com/git-cola/git-cola/pull/828
+
+* The `git xbase` rebase editor no longer displays an error when
+  cancelling an interactive rebase.
+
+  https://github.com/git-cola/git-cola/issues/814
+
+* The dialog shown when renaming remotes has been simplified.
+
+  https://github.com/git-cola/git-cola/pull/840
+
+  https://github.com/git-cola/git-cola/issues/838
+
+* The help dialog in the `git-xbase` Rebase editor is now scrollable.
+
+  https://github.com/git-cola/git-cola/issues/855
+
+Translations
+------------
+* Updated Brazilian translation
+
+  https://github.com/git-cola/git-cola/pull/845
+
+* Updated Czech translation
+
+  https://github.com/git-cola/git-cola/pull/854
+
+  https://github.com/git-cola/git-cola/pull/853
+
+  https://github.com/git-cola/git-cola/pull/835
+
+  https://github.com/git-cola/git-cola/pull/813
+
+* Update Spanish translation
+
+  https://github.com/git-cola/git-cola/pull/862
+
+  https://github.com/git-cola/git-cola/pull/867
+
+Packaging
+---------
+* The original `#!/usr/bin/env python` shebang lines can now be
+  retained by passing `USE_ENV_PYTHON=1` to `make` when installing.
+
+  https://github.com/git-cola/git-cola/issues/850
+
+* The Makefile is now resilient to DESTDIR and prefix containing whitespace.
+
+  https://github.com/git-cola/git-cola/pull/858
+
+* The vendored `qtpy` library was updated to `v1.4.2`.
+
+* `python3-distutils` is needed to build cola on Debian.
+
+  https://github.com/git-cola/git-cola/issues/837
+
+Fixes
+-----
+* The "C" key no longer closes the message dialogs, for example the
+  one that is shown when a commit fails its pre-commit hooks.
+  This allows "Ctrl+C" copy to work, rather than closing the dialog.
+
+  https://github.com/git-cola/git-cola/issues/734
+
+* Dock widgets sizes are now properly saved and restored when the main
+  window is maximized.
+
+  https://github.com/git-cola/git-cola/issues/848
+
+* The spellcheck feature was broken under Python3.
+
+  https://github.com/git-cola/git-cola/issues/857
+
+* A regression when saving stashes was fixed.
+
+  https://github.com/git-cola/git-cola/issues/847
+
+* Diffing image files was not updating the available context menus,
+  which prevented the "Stage" action from being present in the menu.
+
+  https://github.com/git-cola/git-cola/issues/841
+
+* `git cola` now detects when `git lfs uninstall` has been run.  This allows
+  you to re-initialize "Git LFS" in an existing repository where it had been
+  previously uninstalled.
+
+  https://github.com/git-cola/git-cola/issues/842
+
+* Custom color values that did not contain any hexadecimal digits in the
+  `a-f` range were being converted into integers by the config reader.  This
+  then caused the configured colors to be ignored.
+
+  These color values are now interpreted correctly.  Additionally, color
+  values can now use an optional HTML-like `#` prefix.
+
+  Example `.gitconfig` snippet::
+
+    [cola "color"]
+        text = "#0a0303"
+
+  https://github.com/git-cola/git-cola/pull/836
+
+  https://github.com/git-cola/git-cola/issues/849
+
+* We now display an error message graphically when `Git` is not installed.
+  Previously, the message went to stderr only.
+
+  https://github.com/git-cola/git-cola/issues/830
+
+* Changing diff options was causing resulting in an exception.
+
+  https://github.com/git-cola/git-cola/issues/833
+
+  https://github.com/git-cola/git-cola/pull/834
+
+* The DAG window now updates itself when branches and tags are created.
+
+  https://github.com/git-cola/git-cola/issues/814
+
+* The user's `$PATH` environment variable can now contain utf-8
+  encoded paths.  Previously, launching external commands could
+  lead to tracebacks.
+
+  https://github.com/git-cola/git-cola/issues/807
+
+* Git Cola development sandboxes can now be stored on utf-8 encoded
+  filesystem paths.  Previously, the interactive rebase feature
+  could be broken when running in that environment.
+
+  https://github.com/git-cola/git-cola/issues/825
+
+* The log window now uses an ISO-8601 timestamp, which
+  avoids localized output in the log window.
+
+  https://github.com/git-cola/git-cola/issues/817
+
+Development
+-----------
+* The code base has been thoroughly sanitized using `pylint`, and
+  travis is now running pylint over the entire project.
+
+* Miscellaneous improvements and code improvements.
+
+  https://github.com/git-cola/git-cola/issues/874
+
 .. _v3.1:
 
 git-cola v3.1
@@ -21,7 +187,6 @@ git-cola v3.1
 
 Usability, bells and whistles
 -----------------------------
-
 * The "Browser" widget learned to rename files using "git mv".
 
   https://github.com/git-cola/git-cola/issues/239
@@ -122,7 +287,6 @@ Usability, bells and whistles
 
 Packaging
 ---------
-
 * The vendored `qtpy` library was updated to `v1.3.1`.
 
 * The macOS installation was made simpler for better compatibility with
@@ -136,7 +300,6 @@ Packaging
 
 Fixes
 -----
-
 * Uninitialized difftool errors will now be displayed graphically.
   They were previously going to the shell.
 
@@ -460,7 +623,7 @@ Usability, bells and whistles
   https://github.com/git-cola/git-cola/pull/680
 
 Fixes
-=====
+-----
 * `git cola`'s spellchecker now supports the new `dict-common` filesystem
   layout, and prefers the `/usr/share/dict/cracklib-small` file over the
   `/usr/share/dict/words` provided on older distributions.

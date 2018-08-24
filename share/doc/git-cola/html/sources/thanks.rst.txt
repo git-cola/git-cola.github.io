@@ -4,6 +4,7 @@ Thanks
 
 * Aaron Cook
 * Aaron Wolf
+* Adam Lesperance
 * Adrien be
 * AJ Bagwell
 * Alex Chernetz
@@ -26,7 +27,7 @@ Thanks
 * Benoît Nouyrigat
 * Bert Jacobs
 * birgersp
-* 林博仁 (Lin-Buo-Ren)
+* 林博仁 (Buo-ren Lin)
 * Charles 101
 * Christian Jann
 * Christopher Meng
@@ -52,6 +53,7 @@ Thanks
 * Erwan Bousse
 * Fabio Coatti
 * Filip Danilović
+* fu7mu4
 * Garoe Dorta
 * Geoffrey van Wyk
 * geotavros
@@ -72,6 +74,8 @@ Thanks
 * Jan @hanksoff
 * Jan Šilhan
 * Jan Tumanov
+* jakubklos77
+* Jakub Szymański
 * Jakub Wilk
 * James Geiger
 * Javier Rodriguez Cuevas
@@ -79,9 +83,11 @@ Thanks
 * Jérôme Carretero
 * jfessard
 * JiCiT
+* Jimmy M. Coleman
 * Johannes Löhnert
 * Johann Schmitz
 * Jordan Bedwell
+* Josh Noe
 * Josh Taylor
 * Justin Lecher
 * Kai Krakow
@@ -127,6 +133,7 @@ Thanks
 * Nick Todd
 * Nicolas Dietrich
 * Nikos Roussos
+* Noel Grandin
 * ochristi
 * Oliver Haessler
 * OmegaPhil (Omega Weapon)
@@ -138,13 +145,16 @@ Thanks
 * Paul Hildebrandt
 * Paul Weingardt
 * Paulo Fidalgo
+* Pavel Borecki
 * Pavel Rehak
 * Peter Dave Hello
 * Peter Júnoš
+* Petr Gladkikh
 * Philip Stark
 * Pilar Molina Lopez
 * Radek Novacek
 * Radek Postołowicz
+* Rafael Nascimento
 * Raghavendra Karunanidhi
 * Rainer Müller
 * Robbert Korving
@@ -173,6 +183,7 @@ Thanks
 * Vaibhav Sagar
 * Vaiz
 * Ved Vyas
+* Victorhck
 * Ville Skyttä
 * Virgil Dupras
 * Vitor Lobo
