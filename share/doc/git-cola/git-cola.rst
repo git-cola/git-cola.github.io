@@ -377,7 +377,7 @@ Will produce::
             - foo
 
 Current branch will display a star icon. If current branch has commits
-ahead/behind it will display an up/down arrow with it's number.
+ahead/behind it will display an up/down arrow with its number.
 
 Actions
 -------
@@ -612,22 +612,30 @@ Defaults to `false`.
 cola.color.text
 ---------------
 The default diff text color, in hexadecimal #RRGGBB notation.
-Defaults to "#030303".
+Defaults to "#030303"::
+
+    git config cola.color.text '#030303'
 
 cola.color.add
 --------------
 The default diff "add" background color, in hexadecimal #RRGGBB notation.
-Defaults to "#d2ffe4".
+Defaults to "#d2ffe4"::
+
+    git config cola.color.add '#d2ffe4'
 
 cola.color.remove
 -----------------
 The default diff "remove" background color, in hexadecimal #RRGGBB notation.
-Defaults to "#fee0e4".
+Defaults to "#fee0e4"::
+
+    git config cola.color.remove '#fee0e4'
 
 cola.color.header
 -----------------
 The default diff header text color, in hexadecimal #RRGGBB notation.
-Defaults to "#bbbbbb".
+Defaults to "#bbbbbb"::
+
+    git config cola.color.header '#bbbbbb'
 
 gui.diffcontext
 ---------------
@@ -680,6 +688,14 @@ Read the section on `cola.icontheme` above for more details.
 
 GIT_COLA_SCALE
 --------------
+.. Important:: `GIT_COLA_SCALE` should not be used with newer versions of Qt.
+
+    Set `QT_AUTO_SCREEN_SCALE_FACTOR` to `1` and Qt will automatically
+    scale the interface to the correct size based on the display DPI.
+
+    See the `Qt High DPI documentation <https://doc.qt.io/qt-5/highdpi.html>`_
+    for more details.
+
 `git cola` can be made to scale its interface for HiDPI displays.
 When defined, `git cola` will scale icons, radioboxes, and checkboxes
 according to the scale factor.  The default value is `1`.

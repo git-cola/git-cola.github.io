@@ -16,6 +16,7 @@ Thanks
 * Andreas Sommer
 * Andrew Chen
 * Andrej Kvasnica
+* Arthur Coelho
 * Audrius Karabanovas
 * balping
 * Barış ÇELİK
@@ -26,8 +27,9 @@ Thanks
 * Benedict Lee
 * Benoît Nouyrigat
 * Bert Jacobs
-* birgersp
+* Birger Skogeng Pedersen
 * 林博仁 (Buo-ren Lin)
+* cclaus
 * Charles 101
 * Christian Jann
 * Christopher Meng
@@ -50,6 +52,7 @@ Thanks
 * Drugoy
 * Efimov Vasily
 * Eric Drechsel
+* Erop @EgZvor
 * Erwan Bousse
 * Fabio Coatti
 * Filip Danilović
@@ -115,6 +118,7 @@ Thanks
 * Maicon D. Filippsen
 * Marcin Mielniczuk
 * Marco Costalba
+* Mariusz Jaskółka
 * Markus Heidelberg
 * Martin Konecny
 * Matěj Šmíd
@@ -134,6 +138,7 @@ Thanks
 * Nicolas Dietrich
 * Nikos Roussos
 * Noel Grandin
+* NotSqrt
 * ochristi
 * Oliver Haessler
 * OmegaPhil (Omega Weapon)
@@ -168,12 +173,14 @@ Thanks
 * Stanisław Halik
 * Stefan Naewe
 * Steffen Prohaska
+* Stephen Groat
 * Sven Claussner
 * Szymon Judasz
 * Taylor Braun-Jones
 * Thiemo van Engelen
 * Thomas Kiley
 * Thomas Kluyver
+* Thomas Thorne
 * Tim Schumacher
 * Trevor Alexander
 * Ugo Riboni
@@ -195,3 +202,4 @@ Thanks
 * Zauber Paracelsus
 * Zeioth
 * Zhang Han
+* 0xflotus

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Aug 24, 2018" "3.2" "git-cola"
+.TH "GIT-COLA" "1" "Feb 02, 2019" "3.3" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -368,7 +368,7 @@ branch
 .UNINDENT
 .sp
 Current branch will display a star icon. If current branch has commits
-ahead/behind it will display an up/down arrow with it’s number.
+ahead/behind it will display an up/down arrow with its number.
 .SS Actions
 .sp
 Various actions are available through the right\-click context menu.
@@ -567,19 +567,59 @@ Defaults to \fIfalse\fP\&.
 .SS cola.color.text
 .sp
 The default diff text color, in hexadecimal #RRGGBB notation.
-Defaults to “#030303”.
+Defaults to “#030303”:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config cola.color.text \(aq#030303\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS cola.color.add
 .sp
 The default diff “add” background color, in hexadecimal #RRGGBB notation.
-Defaults to “#d2ffe4”.
+Defaults to “#d2ffe4”:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config cola.color.add \(aq#d2ffe4\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS cola.color.remove
 .sp
 The default diff “remove” background color, in hexadecimal #RRGGBB notation.
-Defaults to “#fee0e4”.
+Defaults to “#fee0e4”:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config cola.color.remove \(aq#fee0e4\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS cola.color.header
 .sp
 The default diff header text color, in hexadecimal #RRGGBB notation.
-Defaults to “#bbbbbb”.
+Defaults to “#bbbbbb”:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config cola.color.header \(aq#bbbbbb\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS gui.diffcontext
 .sp
 The number of diff context lines to display.
@@ -618,6 +658,19 @@ When set in the environment, \fIGIT_COLA_ICON_THEME\fP overrides the
 theme specified in the \fIcola.icontheme\fP configuration.
 Read the section on \fIcola.icontheme\fP above for more details.
 .SS GIT_COLA_SCALE
+.sp
+\fBIMPORTANT:\fP
+.INDENT 0.0
+.INDENT 3.5
+\fIGIT_COLA_SCALE\fP should not be used with newer versions of Qt.
+.sp
+Set \fIQT_AUTO_SCREEN_SCALE_FACTOR\fP to \fI1\fP and Qt will automatically
+scale the interface to the correct size based on the display DPI.
+.sp
+See the \fI\%Qt High DPI documentation\fP
+for more details.
+.UNINDENT
+.UNINDENT
 .sp
 \fIgit cola\fP can be made to scale its interface for HiDPI displays.
 When defined, \fIgit cola\fP will scale icons, radioboxes, and checkboxes
