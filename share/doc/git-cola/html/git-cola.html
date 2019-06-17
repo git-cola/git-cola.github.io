@@ -1,18 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>git-cola(1) &#8212; git-cola 3.3 documentation</title>
+    <meta charset="utf-8" />
+    <title>git-cola(1) &#8212; git-cola 3.4 documentation</title>
     <link rel="stylesheet" href="static/classic.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/language_data.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="git-dag(1)" href="git-dag.html" />
@@ -30,7 +31,7 @@
         <li class="right" >
           <a href="index.html" title="Git Cola Documentation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">git-cola 3.3 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">git-cola 3.4 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -486,6 +487,14 @@ and applying diffs.</p>
 <h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the font to use for <cite>git cola</cite>’s diff display.</p>
 </div>
+<div class="section" id="cola-hidpi">
+<h3>cola.hidpi<a class="headerlink" href="#cola-hidpi" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the High DPI displays scale factor. Set <cite>0</cite> to automatically scaled.
+Setting value between 0 and 1 is undefined.
+This option requires at least Qt 5.6 to work.
+See <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt QT_SCALE_FACTOR documentation</a>
+for more information.</p>
+</div>
 <div class="section" id="cola-icontheme">
 <h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the icon themes to use throughout <cite>git cola</cite>. The theme specified
@@ -497,10 +506,10 @@ used.  If set to “dark” then the built-in “dark” icon theme, which is
 suitable for a dark window manager theme, will be used.</p>
 <p>If set to an absolute directory path then icons in that directory will be used.
 This value can be set to multiple values using,
-<cite>git config –add cola.icontheme $theme</cite>.</p>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--add</span> <span class="pre">cola.icontheme</span> <span class="pre">$theme</span></code>.</p>
 <p>This setting can be overridden by the <cite>GIT_COLA_ICON_THEME</cite> environment
 variable, which can specify multiple themes using a colon-separated value.</p>
-<p>The icon theme can also be specified by passing <cite>–icon-theme=&lt;theme&gt;</cite> on the
+<p>The icon theme can also be specified by passing <code class="docutils literal notranslate"><span class="pre">--icon-theme=&lt;theme&gt;</span></code> on the
 command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built-in icons for the remainder.</p>
@@ -569,6 +578,17 @@ Defaults to <cite>true</cite>.</p>
 <p><cite>git cola</cite> will sign commits by default when set <cite>true</cite>. Defaults to <cite>false</cite>.
 See the section below on setting up GPG for more details.</p>
 </div>
+<div class="section" id="cola-statusindent">
+<h3>cola.statusindent<a class="headerlink" href="#cola-statusindent" title="Permalink to this headline">¶</a></h3>
+<p>Set to <cite>true</cite> to indent files in the Status widget.  Files in the <cite>Staged</cite>,
+<cite>Modified</cite>, etc. categories will be grouped in a tree-like structure.
+Defaults to <cite>false</cite>.</p>
+</div>
+<div class="section" id="cola-statusshowtotals">
+<h3>cola.statusshowtotals<a class="headerlink" href="#cola-statusshowtotals" title="Permalink to this headline">¶</a></h3>
+<p>Set to <cite>true</cite> to display files counts in the Status widget’s category titles.
+Defaults to <cite>false</cite>.</p>
+</div>
 <div class="section" id="cola-tabwidth">
 <h3>cola.tabwidth<a class="headerlink" href="#cola-tabwidth" title="Permalink to this headline">¶</a></h3>
 <p>The number of columns occupied by a tab character.  Defaults to 8.</p>
@@ -578,13 +598,70 @@ See the section below on setting up GPG for more details.</p>
 <p>The command to use when launching commands within a graphical terminal.</p>
 <p><cite>cola.terminal</cite> defaults to <cite>xterm -e</cite> when unset.
 e.g. when opening a shell, <cite>git cola</cite> will run <cite>xterm -e $SHELL</cite>.</p>
-<p>If either <cite>gnome-terminal</cite>, <cite>xfce4-terminal</cite>, or <cite>konsole</cite> are installed
+<p><cite>git cola</cite> has built-in support for <cite>xterm</cite>, <cite>gnome-terminal</cite>, <cite>konsole</cite>.
+If either <cite>gnome-terminal</cite>, <cite>xfce4-terminal</cite>, or <cite>konsole</cite> are installed
 then they will be preferred over <cite>xterm</cite> when <cite>cola.terminal</cite> is unset.</p>
+<p>The table below shows the built-in values that are used for the respective
+terminal.  You can force the use of a specific terminal by configuring cola
+accordingly.</p>
+</div>
+<div class="section" id="cola-terminalshellquote">
+<h3>cola.terminalshellquote<a class="headerlink" href="#cola-terminalshellquote" title="Permalink to this headline">¶</a></h3>
+<p>Some terminal require that the command string get passed as a string.
+For example, <code class="docutils literal notranslate"><span class="pre">xfce4-terminal</span> <span class="pre">-e</span> <span class="pre">&quot;git</span> <span class="pre">difftool&quot;</span></code> requires shellquoting,
+whereas <code class="docutils literal notranslate"><span class="pre">gnome-terminal</span> <span class="pre">--</span> <span class="pre">git</span> <span class="pre">difftool</span></code> does not.</p>
+<p>You should not need to set this variable for the built-in terminals
+cola knows about – it will behave correctly without configuration.
+For example, when unconfigured, cola already knows that xfce4-terminal
+requires shellquoting.</p>
+<p>This configuration variable is for custom terminals outside of the builtin set.
+The table below shows the builtin configuration.</p>
+<blockquote>
+<div><p>Terminal            cola.terminal           cola.terminalshellquote
+——–            ————-           ———————–
+gnome-terminal      gnome-terminal –       false
+konsole             konsole -e              false
+xfce4-terminal      xfce4-terminal -e       true
+xterm               xterm -e                false</p>
+</div></blockquote>
 </div>
 <div class="section" id="cola-textwidth">
 <h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
 <p>The number of columns used for line wrapping.
 Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
+</div>
+<div class="section" id="cola-theme">
+<h3>cola.theme<a class="headerlink" href="#cola-theme" title="Permalink to this headline">¶</a></h3>
+<p>Specifies the GUI theme to use throughout <cite>git cola</cite>. The theme specified
+must be one of the following values:</p>
+<ul class="simple">
+<li><p><cite>default</cite> – default Qt theme, may appear different on various systems</p></li>
+<li><p><cite>flat-dark-blue</cite></p></li>
+<li><p><cite>flat-dark-green</cite></p></li>
+<li><p><cite>flat-dark-grey</cite></p></li>
+<li><p><cite>flat-dark-red</cite></p></li>
+<li><p><cite>flat-light-blue</cite></p></li>
+<li><p><cite>flat-light-green</cite></p></li>
+<li><p><cite>flat-light-grey</cite></p></li>
+<li><p><cite>flat-light-red</cite></p></li>
+</ul>
+<p>If unset, or set wrong value, then the default style will be
+used. The <cite>default</cite> theme is generated by Qt internal engine and should look
+most native but may look noticeable differently on various systems. The flat
+themes on the other hand should look similar (but not identical) on various
+systems.</p>
+<p>The GUI theme can also be specified by passing <code class="docutils literal notranslate"><span class="pre">--theme=&lt;name&gt;</span></code> on the
+command line.</p>
+<p>On Linux, you may want Qt to use the theme configured using the <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code>
+Qt5 configuration tool.  You can do this by exporting <cite>QT_QPA_PLATFORMTHEME</cite>
+in your <cite>~/.bash_profile</cite> to a value of <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the style configured using the qt5ct tool</span>
+<span class="n">QT_QPA_PLATFORMTHEME</span><span class="o">=</span><span class="n">qt5ct</span>
+<span class="n">export</span> <span class="n">QT_QPA_PLATFORMTHEME</span>
+</pre></div>
+</div>
+<p>This only work with the <cite>default</cite> theme.  The other themes replace the color
+palette with a specific configuration.</p>
 </div>
 <div class="section" id="cola-turbo">
 <h3>cola.turbo<a class="headerlink" href="#cola-turbo" title="Permalink to this headline">¶</a></h3>
@@ -677,11 +754,12 @@ Read the section on <cite>cola.icontheme</cite> above for more details.</p>
 <div class="section" id="git-cola-scale">
 <h3>GIT_COLA_SCALE<a class="headerlink" href="#git-cola-scale" title="Permalink to this headline">¶</a></h3>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
+<p class="admonition-title">Important</p>
 <p><cite>GIT_COLA_SCALE</cite> should not be used with newer versions of Qt.</p>
 <p>Set <cite>QT_AUTO_SCREEN_SCALE_FACTOR</cite> to <cite>1</cite> and Qt will automatically
-scale the interface to the correct size based on the display DPI.</p>
-<p class="last">See the <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt High DPI documentation</a>
+scale the interface to the correct size based on the display DPI.
+This option is also available by setting <cite>cola.hidpi</cite> configuration.</p>
+<p>See the <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt High DPI documentation</a>
 for more details.</p>
 </div>
 <p><cite>git cola</cite> can be made to scale its interface for HiDPI displays.
@@ -861,7 +939,7 @@ pinentry app on On Mac OS X:</p>
 </pre></div>
 </div>
 <p>Then the daemon is already running, and you do not need to start it yourself.</p>
-<p>If it is not running, eval the output of <cite>gpg-agent –daemon</cite> in your shell
+<p>If it is not running, eval the output of <code class="docutils literal notranslate"><span class="pre">gpg-agent</span> <span class="pre">--daemon</span></code> in your shell
 prior to launching <cite>git cola</cite>.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>eval $(gpg-agent --daemon)
 git cola
@@ -905,7 +983,7 @@ installation.  e.g.:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">git-cola(1)</a><ul>
 <li><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
@@ -996,6 +1074,7 @@ installation.  e.g.:</p>
 <li><a class="reference internal" href="#cola-expandtab">cola.expandtab</a></li>
 <li><a class="reference internal" href="#cola-fileattributes">cola.fileattributes</a></li>
 <li><a class="reference internal" href="#cola-fontdiff">cola.fontdiff</a></li>
+<li><a class="reference internal" href="#cola-hidpi">cola.hidpi</a></li>
 <li><a class="reference internal" href="#cola-icontheme">cola.icontheme</a></li>
 <li><a class="reference internal" href="#cola-inotify">cola.inotify</a></li>
 <li><a class="reference internal" href="#cola-refreshonfocus">cola.refreshonfocus</a></li>
@@ -1007,9 +1086,13 @@ installation.  e.g.:</p>
 <li><a class="reference internal" href="#cola-savewindowsettings">cola.savewindowsettings</a></li>
 <li><a class="reference internal" href="#cola-showpath">cola.showpath</a></li>
 <li><a class="reference internal" href="#cola-signcommits">cola.signcommits</a></li>
+<li><a class="reference internal" href="#cola-statusindent">cola.statusindent</a></li>
+<li><a class="reference internal" href="#cola-statusshowtotals">cola.statusshowtotals</a></li>
 <li><a class="reference internal" href="#cola-tabwidth">cola.tabwidth</a></li>
 <li><a class="reference internal" href="#cola-terminal">cola.terminal</a></li>
+<li><a class="reference internal" href="#cola-terminalshellquote">cola.terminalshellquote</a></li>
 <li><a class="reference internal" href="#cola-textwidth">cola.textwidth</a></li>
+<li><a class="reference internal" href="#cola-theme">cola.theme</a></li>
 <li><a class="reference internal" href="#cola-turbo">cola.turbo</a></li>
 <li><a class="reference internal" href="#cola-color-text">cola.color.text</a></li>
 <li><a class="reference internal" href="#cola-color-add">cola.color.add</a></li>
@@ -1086,8 +1169,6 @@ installation.  e.g.:</p>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1108,12 +1189,12 @@ installation.  e.g.:</p>
         <li class="right" >
           <a href="index.html" title="Git Cola Documentation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">git-cola 3.3 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">git-cola 3.4 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2007-2017, David Aguilar and contributors.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
     </div>
   </body>
 </html>

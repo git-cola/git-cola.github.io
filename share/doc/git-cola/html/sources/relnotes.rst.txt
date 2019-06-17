@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v3.3 <v3.3>` is the latest stable release.
+:ref:`v3.4 <v3.4>` is the latest stable release.
 
 Development version
 ===================
@@ -13,6 +13,69 @@ Development version
 Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
+
+.. _v3.4:
+
+git-cola v3.4
+=============
+
+Usability, bells and whistles
+-----------------------------
+* The file browser now includes "Blame" in its context menu.
+  (`#953 <https://github.com/git-cola/git-cola/issues/953>`_)
+
+* The "Push" action now uses "git push --force-with-lease" when using
+  the "Force" option with Git v1.8.5 and newer.
+  (`#946 <https://github.com/git-cola/git-cola/issues/946>`_)
+
+* Updated German translation.
+  (`#936 <https://github.com/git-cola/git-cola/pull/936>`_)
+
+* The `Status` widget learned to optionally display file counts in its
+  category headers, and indent the files displayed in each category.
+  (`#931 <https://github.com/git-cola/git-cola/pull/931>`_)
+
+* The `Branches` widget can now sort branches by their most recent commit.
+  (`#930 <https://github.com/git-cola/git-cola/pull/930>`_)
+
+* `git cola` now includes configurable GUI themes that can be used to style
+  the user interface.  Enable the new themes by configuring `cola.theme`
+  in the preferences window.  See the
+  `cola.theme documentation <https://git-cola.readthedocs.io/en/latest/git-cola.html#cola-theme>`_
+  for more details.  (`#924 <https://github.com/git-cola/git-cola/pull/924>`_)
+
+* `git cola` now has built-in support for HiDPI displays by enabling
+  Qt's 5.6's `QT_AUTO_SCREEN_SCALE_FACTOR` feature.
+  (`#938 <https://github.com/git-cola/git-cola/issues/938>`_)
+
+* `git cola` now uses HiDPI pixmaps when rendering icons, and the builtin
+  icons have been updated to look sharp when displayed in HiDPI.
+  (`#932 <https://github.com/git-cola/git-cola/pull/932>`_)
+
+Fixes
+-----
+* `git cola`'s "Revert Unstaged Edits" previously checked out from "HEAD^",
+  when in "Amend" mode, and removing staged changes.  This behavior has been
+  changed to always checkout from the index, which avoids data loss.
+  (`#947 <https://github.com/git-cola/git-cola/issues/947>`_)
+
+* `git cola` has been updated to work with newer versions of `gnome-terminal`
+  and no longer shell-quotes its arguments when launching `gnome-terminal`.
+  The `cola.terminalshellquote` configuration variable can be set to `true` to
+  get the old behavior, or to handle other terminals that take the command to run
+  as a single string instead of as arguments to `execv()`.
+  (`#935 <https://github.com/git-cola/git-cola/pull/935>`_)
+
+* `git dag` now properly handles arbitrary input on Python3.
+  Previously, an exception would be raised when entering `--grep=xxx` where
+  `xxx` is a quoted string with a missing end-quote.
+  (`#941 <https://github.com/git-cola/git-cola/pull/941>`_)
+
+Development
+-----------
+* The contribution guidelines for contributors has been updated to mention
+  how to regenerate the `*.mo` message files.
+  (`#934 <https://github.com/git-cola/git-cola/pull/934>`_)
 
 .. _v3.3:
 

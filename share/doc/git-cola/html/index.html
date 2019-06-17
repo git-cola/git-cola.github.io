@@ -1,18 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Git Cola Documentation &#8212; git-cola 3.3 documentation</title>
+    <meta charset="utf-8" />
+    <title>Git Cola Documentation &#8212; git-cola 3.4 documentation</title>
     <link rel="stylesheet" href="static/classic.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/language_data.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="git-cola(1)" href="git-cola.html" /> 
@@ -26,7 +27,7 @@
         <li class="right" >
           <a href="git-cola.html" title="git-cola(1)"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">git-cola 3.3 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="#">git-cola 3.4 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -108,6 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-expandtab">cola.expandtab</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fileattributes">cola.fileattributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fontdiff">cola.fontdiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-hidpi">cola.hidpi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-icontheme">cola.icontheme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-inotify">cola.inotify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-refreshonfocus">cola.refreshonfocus</a></li>
@@ -119,9 +121,13 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-savewindowsettings">cola.savewindowsettings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-showpath">cola.showpath</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-signcommits">cola.signcommits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-statusindent">cola.statusindent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-statusshowtotals">cola.statusshowtotals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-tabwidth">cola.tabwidth</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-terminal">cola.terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-terminalshellquote">cola.terminalshellquote</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-textwidth">cola.textwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-theme">cola.theme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-turbo">cola.turbo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-color-text">cola.color.text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-color-add">cola.color.add</a></li>
@@ -207,6 +213,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-4">git-cola v3.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-3">git-cola v3.3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-2">git-cola v3.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#git-cola-v3-1">git-cola v3.1</a></li>
@@ -289,8 +296,8 @@
 <div class="section" id="indices-and-tables">
 <h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -301,7 +308,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
+  <h3><a href="#">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Git Cola Documentation</a><ul>
 <li><a class="reference internal" href="#release-notes">Release Notes</a></li>
@@ -326,8 +333,6 @@
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -345,12 +350,12 @@
         <li class="right" >
           <a href="git-cola.html" title="git-cola(1)"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">git-cola 3.3 documentation</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="#">git-cola 3.4 documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2007-2017, David Aguilar and contributors.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.9.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
     </div>
   </body>
 </html>
