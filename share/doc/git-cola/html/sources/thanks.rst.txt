@@ -17,6 +17,7 @@ Thanks
 * Andrej Kvasnica
 * Andrew Chen
 * Andrew Hemming
+* armandg
 * Arthur Coelho
 * Audrius Karabanovas
 * balping
@@ -89,6 +90,7 @@ Thanks
 * jfessard
 * JiCiT
 * Jimmy M. Coleman
+* Joachim Jablon
 * Joachim Lusiardi
 * Johannes Löhnert
 * Johann Schmitz
@@ -169,18 +171,22 @@ Thanks
 * Rafael Reuber
 * Raghavendra Karunanidhi
 * Rainer Müller
+* Ricardo J. Barberis
 * Robbert Korving
 * Robert Pollak
 * Rolando Espinoza La fuente
 * Rustam Safin
 * Samsul Ma'arif
 * Sebastian Brass
+* Sebastian Oliva
 * Sergey Leschina
+* Shun Sakai
 * Srinivasa Nallapati
 * Stan Angeloff
 * Stanisław Halik
 * Stefan Naewe
 * Steffen Prohaska
+* Stéphane Cerveau
 * Stephen Groat
 * Sven Claussner
 * Szymon Judasz
@@ -203,6 +209,7 @@ Thanks
 * Virgil Dupras
 * Vitor Lobo
 * v.paritskiy
+* waterzch
 * Wolfgang Ocker
 * wsdfhjxc
 * Xie Hua Liang (xieofxie)

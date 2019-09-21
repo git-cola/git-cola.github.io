@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Jun 16, 2019" "3.4" "git-cola"
+.TH "GIT-COLA" "1" "Sep 21, 2019" "3.5" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -429,6 +429,11 @@ the \fISave Window Settings\fP option in the \fIgit cola\fP preferences.
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
+.SS cola.autocompletepaths
+.sp
+Set to \fIfalse\fP to disable auto\-completion of filenames in completion widgets.
+This can speed up operations when working in large repositories.
+Defaults to \fItrue\fP\&.
 .SS cola.blameviewer
 .sp
 The command used to blame files.  Defaults to \fIgit gui blame\fP\&.

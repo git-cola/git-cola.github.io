@@ -5,7 +5,7 @@ Releases
 Latest Release
 ==============
 
-:ref:`v3.4 <v3.4>` is the latest stable release.
+:ref:`v3.5 <v3.5>` is the latest stable release.
 
 Development version
 ===================
@@ -13,6 +13,72 @@ Development version
 Clone the git-cola repo to get the latest development version:
 
 ``git clone git://github.com/git-cola/git-cola.git``
+
+.. _v3.5:
+
+Usability, bells and whistles
+-----------------------------
+* Auto-completion for filenames can now be disabled.  This speeds up
+  revision completion when working in large repositories with many files.
+  (`#981 <https://github.com/git-cola/git-cola/pull/981>`_)
+
+* The Stash dialog now shows the stash date as a tooltip when hovering
+  over a stashed change.
+  (`#982 <https://github.com/git-cola/git-cola/pull/982>`_)
+
+* Qt HiDPI settings are overriden by the `git cola` HiDPI appearance settings.
+  These overrides can now be disabled by selecting the "Disable" mode.
+  This allows users to control Qt's HiDPI settings through environment
+  variables.  Additionally, the "Auto" mode now detects the presence of
+  the Qt HiDPI variables and no longer overrides them when the user has
+  configured their environment explicitly.
+  (`#963 <https://github.com/git-cola/git-cola/issues/963>`_)
+
+* Confirmation dialogs can now focus buttons using the Tab key.
+  Previously, the "Y" and "N" keys could be used to confirm or deny
+  using the keyboard, but "Tab" is more familiar.
+  (`#965 <https://github.com/git-cola/git-cola/issues/965>`_)
+
+* Error dialogs (for example, when a commit hook fails) will now always
+  show the details.  The details were previously hidden behind a toggle.
+  (`#968 <https://github.com/git-cola/git-cola/issues/968>`_)
+
+Translations
+------------
+* Updated Japanese translation.
+  (`#973 <https://github.com/git-cola/git-cola/pull/973>`_)
+  (`#974 <https://github.com/git-cola/git-cola/pull/974>`_)
+
+* Updated Simplified Chinese translation.
+  (`#950 <https://github.com/git-cola/git-cola/pull/950>`_)
+
+Fixes
+-----
+* The filesystem monitor no longer logs that it has been enabled after the
+  inotify watch limit is reached on Linux.
+  (`#984 <https://github.com/git-cola/git-cola/pull/984>`_)
+
+* Better unicode robustness.
+  (`#990 <https://github.com/git-cola/git-cola/issues/990>`_)
+  (`#910 <https://github.com/git-cola/git-cola/issues/991>`_)
+
+* The "Branches" widget did not always update itself when deleting branches
+  (for example, when inotify is disabled or unavailable).
+  (`#978 <https://github.com/git-cola/git-cola/issues/978>`_)
+
+* Non-ascii unicode byte strings are more robustly handled by the log widget.
+  (`#977 <https://github.com/git-cola/git-cola/issues/977>`_)
+
+* Non-unicode results from the `gettext` library are more robustly handled.
+  (`#969 <https://github.com/git-cola/git-cola/issues/969>`_)
+
+* Launching `git cola` from within a directory that has since been deleted
+  would previously result in a traceback, and is now robustly handled.
+  (`#961 <https://github.com/git-cola/git-cola/issues/961>`_)
+
+Packaging
+---------
+* The vendored `qtpy` library was updated to `v1.9`.
 
 .. _v3.4:
 
