@@ -6,7 +6,10 @@ Thanks
 * Aaron Wolf
 * Adam Lesperance
 * Adrien be
+* Adil
 * AJ Bagwell
+* akontsevich
+* Aleksey Kontsevich
 * Alex Chernetz
 * Alex Gulyás
 * Alexander Kozienko
@@ -20,6 +23,7 @@ Thanks
 * armandg
 * Arthur Coelho
 * Audrius Karabanovas
+* Balázs Meskó
 * balping
 * Barış ÇELİK
 * Barry Roberts
@@ -27,9 +31,11 @@ Thanks
 * Ben Boeckel
 * Ben Cole
 * Benedict Lee
+* Benjamin Somers
 * Benoît Nouyrigat
 * Bert Jacobs
 * Birger Skogeng Pedersen
+* Björn Ketelaars
 * 林博仁 (Buo-ren Lin)
 * cclaus
 * Charles 101
@@ -58,6 +64,7 @@ Thanks
 * Erop @EgZvor
 * Erwan Bousse
 * Fabio Coatti
+* Felipe Morales
 * Filip Danilović
 * fu7mu4
 * Garoe Dorta
@@ -68,6 +75,7 @@ Thanks
 * Glen Mailer
 * Guillaume de Bure
 * Guo Yunhe
+* Gyuris Gellért
 * Harro Verton
 * Hannes @kannes
 * Igor Galarraga
@@ -176,11 +184,13 @@ Thanks
 * Robert Pollak
 * Rolando Espinoza La fuente
 * Rustam Safin
+* Sabri Ünal
 * Samsul Ma'arif
 * Sebastian Brass
 * Sebastian Oliva
 * Sergey Leschina
 * Shun Sakai
+* Simon Peeters
 * Srinivasa Nallapati
 * Stan Angeloff
 * Stanisław Halik
@@ -195,6 +205,8 @@ Thanks
 * Thomas Kiley
 * Thomas Kluyver
 * Thomas Thorne
+* Tom Dobbelaere
+* Tim Brown
 * Tim Schumacher
 * Trevor Alexander
 * Ugo Riboni
@@ -204,6 +216,7 @@ Thanks
 * Vaibhav Sagar
 * Vaiz
 * Ved Vyas
+* Victor Nepveu
 * Victorhck
 * Ville Skyttä
 * Virgil Dupras

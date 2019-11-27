@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Sep 21, 2019" "3.5" "git-cola"
+.TH "GIT-COLA" "1" "Nov 27, 2019" "3.6" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -434,6 +434,12 @@ These variables can be set using \fIgit config\fP or from the settings.
 Set to \fIfalse\fP to disable auto\-completion of filenames in completion widgets.
 This can speed up operations when working in large repositories.
 Defaults to \fItrue\fP\&.
+.SS cola.autoloadCommitTemplate
+.sp
+Set to \fItrue\fP to automatically load the commit template in the commit message
+editor If the commit.template variable has not been configured, raise the
+corresponding error.
+Defaults to \fIfalse\fP\&.
 .SS cola.blameviewer
 .sp
 The command used to blame files.  Defaults to \fIgit gui blame\fP\&.
