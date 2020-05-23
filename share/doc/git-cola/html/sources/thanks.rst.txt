@@ -92,6 +92,7 @@ Thanks
 * Jakub Szymański
 * Jakub Wilk
 * James Geiger
+* Jason Newton
 * Javier Rodriguez Cuevas
 * Jeff Dagenais
 * Jérôme Carretero
@@ -141,6 +142,7 @@ Thanks
 * Michael Geddes
 * Michael Homer
 * Mickael Albertus
+* Miguel Boekhold
 * Mike Hanson
 * MikHulk
 * Mikołaj Milej
@@ -179,6 +181,7 @@ Thanks
 * Rafael Reuber
 * Raghavendra Karunanidhi
 * Rainer Müller
+* RealTehreal
 * Ricardo J. Barberis
 * Robbert Korving
 * Robert Pollak
@@ -215,7 +218,9 @@ Thanks
 * Ｖ字龍 (Vdragon)
 * Vaibhav Sagar
 * Vaiz
+* vanderkoort
 * Ved Vyas
+* Victor Gambier
 * Victor Nepveu
 * Victorhck
 * Ville Skyttä
@@ -224,6 +229,7 @@ Thanks
 * v.paritskiy
 * waterzch
 * Wolfgang Ocker
+* wm4
 * wsdfhjxc
 * Xie Hua Liang (xieofxie)
 * Yi EungJun
