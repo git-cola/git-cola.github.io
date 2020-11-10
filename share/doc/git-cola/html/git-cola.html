@@ -1,43 +1,37 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>git-cola(1) &#8212; git-cola 3.7 documentation</title>
-    <link rel="stylesheet" href="static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
-    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <script type="text/javascript" src="static/language_data.js"></script>
-    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="git-dag(1)" href="git-dag.html" />
-    <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
+    <link rel="prev" title="Git Cola Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="git-dag.html" title="git-dag(1)"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="Git Cola Documentation"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">git-cola 3.7 documentation</a> &#187;</li> 
-      </ul>
-    </div>  
+  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="git-cola-1">
@@ -48,7 +42,7 @@
 </div>
 <div class="section" id="description">
 <h2>DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>git cola is a sleek and powerful Git GUI.</p>
+<p>Git Cola is a sleek and powerful Git GUI.</p>
 </div>
 <div class="section" id="options">
 <h2>OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
@@ -172,7 +166,22 @@ When you select a line in the <cite>grep</cite> screen and press any of
 <div class="section" id="keyboard-shortcuts">
 <h2>KEYBOARD SHORTCUTS<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
 <p><cite>git cola</cite> has many useful keyboard shortcuts.</p>
-<p>You can see the available shortcuts by pressing the <code class="docutils literal notranslate"><span class="pre">?</span></code> key,
+<p>Many of <cite>git cola</cite>’s editors understand vim-style hotkeys, eg. <cite>{h,j,k,l}</cite>
+for navigating in the diff, status, grep, and file browser widgets.</p>
+<p><cite>{d,u}</cite> move down/up one half page at a time (similar to vim’s <cite>ctrl-{d,u}</cite>).
+The <cite>space</cite> and <cite>shift-space</cite> hotkeys are mapped to the same operations.</p>
+<p><cite>Shift-{j,k,d,u,f,b,page-up,page-down,left,right,up,down}</cite> can be be used in
+the diff editor to select lines while navigating.</p>
+<p><cite>s</cite> is a useful hotkey in the diff editor.  It stages/unstages the current
+selection when a selection is present.  When nothing is selected, the
+diff hunk at the current text cursor position is staged.  This makes it very
+easy to review changes by selecting good hunks with <cite>s</cite> while navigating down
+and over hunks that are not going to be staged.</p>
+<p><cite>Ctrl-u</cite> in the diff editor reverts unstaged edits, and respects the
+selection.  This is useful for selectively reverted edits from the worktree.
+This same hotkey reverts the entire file when used from the status tool.</p>
+<p><cite>Ctrl-s</cite> in the diff editor and status tools stages/unstages the entire file.</p>
+<p>You can see the available shortcuts by pressing pressing the <code class="docutils literal notranslate"><span class="pre">?</span></code> key,
 choosing <code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Keyboard</span> <span class="pre">shortcuts</span></code> from the main menu,
 or by consulting the <a class="reference external" href="https://git-cola.github.io/share/doc/git-cola/hotkeys.html">git cola keyboard shortcuts reference</a>.</p>
 </div>
@@ -180,7 +189,7 @@ or by consulting the <a class="reference external" href="https://git-cola.github
 <h2>TOOLS<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>git cola</cite> interface is composed of various cooperating tools.
 Double-clicking a tool opens it in its own subwindow.
-Dragging it around moves and places it within the window.</p>
+Dragging it around moves and places it within the main window.</p>
 <p>Tools can be hidden and rearranged however you like.
 <cite>git cola</cite> carefully remembers your window layout and restores
 it the next time it is launched.</p>
@@ -440,6 +449,31 @@ and restored at application shutdown/startup.</p>
 <p><cite>git cola</cite> can be configured to not save custom layouts by unsetting
 the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> preferences.</p>
 </div>
+<div class="section" id="dark-mode-and-window-manager-themes">
+<h2>DARK MODE AND WINDOW MANAGER THEMES<a class="headerlink" href="#dark-mode-and-window-manager-themes" title="Permalink to this headline">¶</a></h2>
+<p>Git Cola contains a <code class="docutils literal notranslate"><span class="pre">default</span></code> theme which follows the current Qt style and a
+handful of built-in color themes.  See <a class="reference internal" href="#cola-theme"><span class="std std-ref">cola.theme</span></a> for more details.</p>
+<p>To use icons appropriate for a dark application theme, configure
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">cola.icontheme</span> <span class="pre">dark</span></code> to use the dark icon theme.
+See <a class="reference internal" href="#cola-icontheme"><span class="std std-ref">cola.icontheme</span></a> for more details.</p>
+<p>On Linux, you may want Qt to follow the Window manager theme by configuring it
+to do so using the <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code> Qt5 configuration tool.  Install <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code> on
+Debian/Ubuntu systems to make this work.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">qt5ct</span>
+</pre></div>
+</div>
+<p>Once installed, update your <cite>~/.bash_profile</cite> to activate <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the style configured using the qt5ct tool</span>
+<span class="n">QT_QPA_PLATFORMTHEME</span><span class="o">=</span><span class="n">qt5ct</span>
+<span class="n">export</span> <span class="n">QT_QPA_PLATFORMTHEME</span>
+</pre></div>
+</div>
+<p>This only work with the <cite>default</cite> theme.  The other themes replace the color
+palette with theme-specific colors.</p>
+<p>On macOS, using the <code class="docutils literal notranslate"><span class="pre">default</span></code> theme will automatically inherit “Dark Mode”
+color themes when configured via System Preferences.  You will need to
+configure the dark icon theme as noted above when dark mode is enabled.</p>
+</div>
 <div class="section" id="configuration-variables">
 <h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this headline">¶</a></h2>
 <p>These variables can be set using <cite>git config</cite> or from the settings.</p>
@@ -509,7 +543,7 @@ See <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt 
 for more information.</p>
 </div>
 <div class="section" id="cola-icontheme">
-<h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline">¶</a></h3>
+<span id="id11"></span><h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the icon themes to use throughout <cite>git cola</cite>. The theme specified
 must be the name of the subdirectory containing the icons, which in turn must
 be placed in the inside the main “icons” directory in <cite>git cola</cite>’s
@@ -526,6 +560,13 @@ variable, which can specify multiple themes using a colon-separated value.</p>
 command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built-in icons for the remainder.</p>
+</div>
+<div class="section" id="cola-imagediff-extension">
+<h3>cola.imagediff.&lt;extension&gt;<a class="headerlink" href="#cola-imagediff-extension" title="Permalink to this headline">¶</a></h3>
+<p>Enable image diffs for the specified file extension.  For example, configuring
+<cite>git config –global cola.imagediff.svg false</cite> will disable use of the visual
+image diff for <cite>.svg</cite> files in all repos until is is explicitly toggled on.
+Defaults to <cite>true</cite>.</p>
 </div>
 <div class="section" id="cola-inotify">
 <h3>cola.inotify<a class="headerlink" href="#cola-inotify" title="Permalink to this headline">¶</a></h3>
@@ -630,13 +671,12 @@ requires shellquoting.</p>
 <p>This configuration variable is for custom terminals outside of the builtin set.
 The table below shows the builtin configuration.</p>
 <blockquote>
-<div><p>Terminal            cola.terminal           cola.terminalshellquote
+<div>Terminal            cola.terminal           cola.terminalshellquote
 ——–            ————-           ———————–
 gnome-terminal      gnome-terminal –       false
 konsole             konsole -e              false
 xfce4-terminal      xfce4-terminal -e       true
-xterm               xterm -e                false</p>
-</div></blockquote>
+xterm               xterm -e                false</div></blockquote>
 </div>
 <div class="section" id="cola-textwidth">
 <h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Permalink to this headline">¶</a></h3>
@@ -644,37 +684,27 @@ xterm               xterm -e                false</p>
 Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
 </div>
 <div class="section" id="cola-theme">
-<h3>cola.theme<a class="headerlink" href="#cola-theme" title="Permalink to this headline">¶</a></h3>
+<span id="id12"></span><h3>cola.theme<a class="headerlink" href="#cola-theme" title="Permalink to this headline">¶</a></h3>
 <p>Specifies the GUI theme to use throughout <cite>git cola</cite>. The theme specified
 must be one of the following values:</p>
 <ul class="simple">
-<li><p><cite>default</cite> – default Qt theme, may appear different on various systems</p></li>
-<li><p><cite>flat-dark-blue</cite></p></li>
-<li><p><cite>flat-dark-green</cite></p></li>
-<li><p><cite>flat-dark-grey</cite></p></li>
-<li><p><cite>flat-dark-red</cite></p></li>
-<li><p><cite>flat-light-blue</cite></p></li>
-<li><p><cite>flat-light-green</cite></p></li>
-<li><p><cite>flat-light-grey</cite></p></li>
-<li><p><cite>flat-light-red</cite></p></li>
+<li><cite>default</cite> – default Qt theme, may appear different on various systems</li>
+<li><cite>flat-dark-blue</cite></li>
+<li><cite>flat-dark-green</cite></li>
+<li><cite>flat-dark-grey</cite></li>
+<li><cite>flat-dark-red</cite></li>
+<li><cite>flat-light-blue</cite></li>
+<li><cite>flat-light-green</cite></li>
+<li><cite>flat-light-grey</cite></li>
+<li><cite>flat-light-red</cite></li>
 </ul>
-<p>If unset, or set wrong value, then the default style will be
+<p>If unset, or set to an invalid value, then the default style will be
 used. The <cite>default</cite> theme is generated by Qt internal engine and should look
-most native but may look noticeably different on various systems. The flat
+native but may look noticeably different on different platforms. The flat
 themes on the other hand should look similar (but not identical) on various
 systems.</p>
 <p>The GUI theme can also be specified by passing <code class="docutils literal notranslate"><span class="pre">--theme=&lt;name&gt;</span></code> on the
 command line.</p>
-<p>On Linux, you may want Qt to use the theme configured using the <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code>
-Qt5 configuration tool.  You can do this by exporting <cite>QT_QPA_PLATFORMTHEME</cite>
-in your <cite>~/.bash_profile</cite> to a value of <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the style configured using the qt5ct tool</span>
-<span class="n">QT_QPA_PLATFORMTHEME</span><span class="o">=</span><span class="n">qt5ct</span>
-<span class="n">export</span> <span class="n">QT_QPA_PLATFORMTHEME</span>
-</pre></div>
-</div>
-<p>This only work with the <cite>default</cite> theme.  The other themes replace the color
-palette with a specific configuration.</p>
 </div>
 <div class="section" id="cola-turbo">
 <h3>cola.turbo<a class="headerlink" href="#cola-turbo" title="Permalink to this headline">¶</a></h3>
@@ -762,17 +792,17 @@ environment variables.</p>
 <h3>GIT_COLA_ICON_THEME<a class="headerlink" href="#git-cola-icon-theme" title="Permalink to this headline">¶</a></h3>
 <p>When set in the environment, <cite>GIT_COLA_ICON_THEME</cite> overrides the
 theme specified in the <cite>cola.icontheme</cite> configuration.
-Read the section on <cite>cola.icontheme</cite> above for more details.</p>
+Read <a class="reference internal" href="#cola-icontheme"><span class="std std-ref">cola.icontheme</span></a> for more details.</p>
 </div>
 <div class="section" id="git-cola-scale">
 <h3>GIT_COLA_SCALE<a class="headerlink" href="#git-cola-scale" title="Permalink to this headline">¶</a></h3>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
+<p class="first admonition-title">Important</p>
 <p><cite>GIT_COLA_SCALE</cite> should not be used with newer versions of Qt.</p>
 <p>Set <cite>QT_AUTO_SCREEN_SCALE_FACTOR</cite> to <cite>1</cite> and Qt will automatically
 scale the interface to the correct size based on the display DPI.
 This option is also available by setting <cite>cola.hidpi</cite> configuration.</p>
-<p>See the <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt High DPI documentation</a>
+<p class="last">See the <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt High DPI documentation</a>
 for more details.</p>
 </div>
 <p><cite>git cola</cite> can be made to scale its interface for HiDPI displays.
@@ -992,224 +1022,223 @@ installation.  e.g.:</p>
 
 
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">git-cola(1)</a><ul>
-<li><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
-<li><a class="reference internal" href="#description">DESCRIPTION</a></li>
-<li><a class="reference internal" href="#options">OPTIONS</a><ul>
-<li><a class="reference internal" href="#amend">–amend</a></li>
-<li><a class="reference internal" href="#prompt">–prompt</a></li>
-<li><a class="reference internal" href="#r-repo-path">-r, –repo &lt;path&gt;</a></li>
-<li><a class="reference internal" href="#s-status-filter-filter">-s, –status-filter &lt;filter&gt;</a></li>
-<li><a class="reference internal" href="#version">–version</a></li>
-<li><a class="reference internal" href="#h-help">-h, –help</a></li>
-<li><a class="reference internal" href="#help-commands">–help-commands</a></li>
+<h1 class="logo"><a href="index.html">git-cola</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">git-cola(1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#amend">–amend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prompt">–prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#r-repo-path">-r, –repo &lt;path&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#s-status-filter-filter">-s, –status-filter &lt;filter&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version">–version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#h-help">-h, –help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#help-commands">–help-commands</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sub-commands">SUB-COMMANDS</a><ul>
-<li><a class="reference internal" href="#am">am</a></li>
-<li><a class="reference internal" href="#archive">archive</a></li>
-<li><a class="reference internal" href="#branch">branch</a></li>
-<li><a class="reference internal" href="#browse">browse</a></li>
-<li><a class="reference internal" href="#config">config</a></li>
-<li><a class="reference internal" href="#dag">dag</a></li>
-<li><a class="reference internal" href="#diff">diff</a></li>
-<li><a class="reference internal" href="#fetch">fetch</a></li>
-<li><a class="reference internal" href="#grep">grep</a></li>
-<li><a class="reference internal" href="#merge">merge</a></li>
-<li><a class="reference internal" href="#pull">pull</a></li>
-<li><a class="reference internal" href="#push">push</a></li>
-<li><a class="reference internal" href="#rebase">rebase</a></li>
-<li><a class="reference internal" href="#remote">remote</a></li>
-<li><a class="reference internal" href="#search">search</a></li>
-<li><a class="reference internal" href="#stash">stash</a></li>
-<li><a class="reference internal" href="#tag">tag</a></li>
-<li><a class="reference internal" href="#id1">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sub-commands">SUB-COMMANDS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#am">am</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#archive">archive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#branch">branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#browse">browse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dag">dag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diff">diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fetch">fetch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grep">grep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge">merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull">pull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#push">push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rebase">rebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote">remote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search">search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stash">stash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tag">tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">version</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configure-your-editor">CONFIGURE YOUR EDITOR</a></li>
-<li><a class="reference internal" href="#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
-<li><a class="reference internal" href="#tools">TOOLS</a></li>
-<li><a class="reference internal" href="#status">STATUS</a><ul>
-<li><a class="reference internal" href="#actions">Actions</a><ul>
-<li><a class="reference internal" href="#stage-selected">Stage Selected</a></li>
-<li><a class="reference internal" href="#launch-editor">Launch Editor</a></li>
-<li><a class="reference internal" href="#launch-difftool">Launch Difftool</a></li>
-<li><a class="reference internal" href="#revert-unstaged-edits">Revert Unstaged Edits</a></li>
-<li><a class="reference internal" href="#revert-uncommitted-edits">Revert Uncommitted Edits</a></li>
-<li><a class="reference internal" href="#unstage-selected">Unstage Selected</a></li>
-<li><a class="reference internal" href="#launch-merge-tool">Launch Merge Tool</a></li>
-<li><a class="reference internal" href="#delete-file-s">Delete File(s)</a></li>
-<li><a class="reference internal" href="#add-to-gitignore">Add to .gitignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-your-editor">CONFIGURE YOUR EDITOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tools">TOOLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status">STATUS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#actions">Actions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">DIFF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#staging-content-for-commit">Staging content for commit</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">DIFF</a><ul>
-<li><a class="reference internal" href="#staging-content-for-commit">Staging content for commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commit-message-editor">COMMIT MESSAGE EDITOR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sign-off">Sign Off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commit">Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-and-column-display">Line and Column Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amend-last-commit">Amend Last Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-signed-commit">Create Signed Commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-commit-message">Prepare Commit Message</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#commit-message-editor">COMMIT MESSAGE EDITOR</a><ul>
-<li><a class="reference internal" href="#sign-off">Sign Off</a></li>
-<li><a class="reference internal" href="#commit">Commit</a></li>
-<li><a class="reference internal" href="#line-and-column-display">Line and Column Display</a></li>
-<li><a class="reference internal" href="#amend-last-commit">Amend Last Commit</a></li>
-<li><a class="reference internal" href="#create-signed-commit">Create Signed Commit</a></li>
-<li><a class="reference internal" href="#prepare-commit-message">Prepare Commit Message</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branches">BRANCHES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Actions</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#branches">BRANCHES</a><ul>
-<li><a class="reference internal" href="#id8">Actions</a><ul>
-<li><a class="reference internal" href="#checkout">Checkout</a></li>
-<li><a class="reference internal" href="#merge-in-current-branch">Merge in current branch</a></li>
-<li><a class="reference internal" href="#id9">Pull</a></li>
-<li><a class="reference internal" href="#id10">Push</a></li>
-<li><a class="reference internal" href="#rename-branch">Rename Branch</a></li>
-<li><a class="reference internal" href="#delete-branch">Delete Branch</a></li>
-<li><a class="reference internal" href="#delete-remote-branch">Delete Remote Branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apply-patches">APPLY PATCHES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dark-mode-and-window-manager-themes">DARK MODE AND WINDOW MANAGER THEMES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-variables">CONFIGURATION VARIABLES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cola-autocompletepaths">cola.autocompletepaths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-blameviewer">cola.blameviewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-browserdockable">cola.browserdockable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-checkconflicts">cola.checkconflicts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-defaultrepo">cola.defaultrepo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-dictionary">cola.dictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-expandtab">cola.expandtab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-fileattributes">cola.fileattributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-fontdiff">cola.fontdiff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-hidpi">cola.hidpi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-icontheme">cola.icontheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-imagediff-extension">cola.imagediff.&lt;extension&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-inotify">cola.inotify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-refreshonfocus">cola.refreshonfocus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-linebreak">cola.linebreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-maxrecent">cola.maxrecent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-dragencoding">cola.dragencoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-readsize">cola.readsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-safemode">cola.safemode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-savewindowsettings">cola.savewindowsettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-showpath">cola.showpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-signcommits">cola.signcommits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-statusindent">cola.statusindent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-statusshowtotals">cola.statusshowtotals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-tabwidth">cola.tabwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-terminal">cola.terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-terminalshellquote">cola.terminalshellquote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-textwidth">cola.textwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-theme">cola.theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-turbo">cola.turbo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-color-text">cola.color.text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-color-add">cola.color.add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-color-remove">cola.color.remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-color-header">cola.color.header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-diffcontext">gui.diffcontext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-displayuntracked">gui.displayuntracked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-editor">gui.editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-historybrowser">gui.historybrowser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diff-tool">diff.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge-tool">merge.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-email">user.email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-name">user.name</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">ENVIRONMENT VARIABLES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git-cola-icon-theme">GIT_COLA_ICON_THEME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-cola-scale">GIT_COLA_SCALE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-cola-trace">GIT_COLA_TRACE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visual">VISUAL</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#apply-patches">APPLY PATCHES</a></li>
-<li><a class="reference internal" href="#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
-<li><a class="reference internal" href="#configuration-variables">CONFIGURATION VARIABLES</a><ul>
-<li><a class="reference internal" href="#cola-autocompletepaths">cola.autocompletepaths</a></li>
-<li><a class="reference internal" href="#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
-<li><a class="reference internal" href="#cola-blameviewer">cola.blameviewer</a></li>
-<li><a class="reference internal" href="#cola-browserdockable">cola.browserdockable</a></li>
-<li><a class="reference internal" href="#cola-checkconflicts">cola.checkconflicts</a></li>
-<li><a class="reference internal" href="#cola-defaultrepo">cola.defaultrepo</a></li>
-<li><a class="reference internal" href="#cola-dictionary">cola.dictionary</a></li>
-<li><a class="reference internal" href="#cola-expandtab">cola.expandtab</a></li>
-<li><a class="reference internal" href="#cola-fileattributes">cola.fileattributes</a></li>
-<li><a class="reference internal" href="#cola-fontdiff">cola.fontdiff</a></li>
-<li><a class="reference internal" href="#cola-hidpi">cola.hidpi</a></li>
-<li><a class="reference internal" href="#cola-icontheme">cola.icontheme</a></li>
-<li><a class="reference internal" href="#cola-inotify">cola.inotify</a></li>
-<li><a class="reference internal" href="#cola-refreshonfocus">cola.refreshonfocus</a></li>
-<li><a class="reference internal" href="#cola-linebreak">cola.linebreak</a></li>
-<li><a class="reference internal" href="#cola-maxrecent">cola.maxrecent</a></li>
-<li><a class="reference internal" href="#cola-dragencoding">cola.dragencoding</a></li>
-<li><a class="reference internal" href="#cola-readsize">cola.readsize</a></li>
-<li><a class="reference internal" href="#cola-safemode">cola.safemode</a></li>
-<li><a class="reference internal" href="#cola-savewindowsettings">cola.savewindowsettings</a></li>
-<li><a class="reference internal" href="#cola-showpath">cola.showpath</a></li>
-<li><a class="reference internal" href="#cola-signcommits">cola.signcommits</a></li>
-<li><a class="reference internal" href="#cola-statusindent">cola.statusindent</a></li>
-<li><a class="reference internal" href="#cola-statusshowtotals">cola.statusshowtotals</a></li>
-<li><a class="reference internal" href="#cola-tabwidth">cola.tabwidth</a></li>
-<li><a class="reference internal" href="#cola-terminal">cola.terminal</a></li>
-<li><a class="reference internal" href="#cola-terminalshellquote">cola.terminalshellquote</a></li>
-<li><a class="reference internal" href="#cola-textwidth">cola.textwidth</a></li>
-<li><a class="reference internal" href="#cola-theme">cola.theme</a></li>
-<li><a class="reference internal" href="#cola-turbo">cola.turbo</a></li>
-<li><a class="reference internal" href="#cola-color-text">cola.color.text</a></li>
-<li><a class="reference internal" href="#cola-color-add">cola.color.add</a></li>
-<li><a class="reference internal" href="#cola-color-remove">cola.color.remove</a></li>
-<li><a class="reference internal" href="#cola-color-header">cola.color.header</a></li>
-<li><a class="reference internal" href="#gui-diffcontext">gui.diffcontext</a></li>
-<li><a class="reference internal" href="#gui-displayuntracked">gui.displayuntracked</a></li>
-<li><a class="reference internal" href="#gui-editor">gui.editor</a></li>
-<li><a class="reference internal" href="#gui-historybrowser">gui.historybrowser</a></li>
-<li><a class="reference internal" href="#diff-tool">diff.tool</a></li>
-<li><a class="reference internal" href="#merge-tool">merge.tool</a></li>
-<li><a class="reference internal" href="#user-email">user.email</a></li>
-<li><a class="reference internal" href="#user-name">user.name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#language-settings">LANGUAGE SETTINGS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-gui-actions">CUSTOM GUI ACTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-cmd">guitool.&lt;name&gt;.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-background">guitool.&lt;name&gt;.background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-needsfile">guitool.&lt;name&gt;.needsfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-noconsole">guitool.&lt;name&gt;.noconsole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-norescan">guitool.&lt;name&gt;.norescan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-confirm">guitool.&lt;name&gt;.confirm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-argprompt">guitool.&lt;name&gt;.argprompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-revprompt">guitool.&lt;name&gt;.revprompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-revunmerged">guitool.&lt;name&gt;.revunmerged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-title">guitool.&lt;name&gt;.title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-prompt">guitool.&lt;name&gt;.prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guitool-name-shortcut">guitool.&lt;name&gt;.shortcut</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#environment-variables">ENVIRONMENT VARIABLES</a><ul>
-<li><a class="reference internal" href="#git-cola-icon-theme">GIT_COLA_ICON_THEME</a></li>
-<li><a class="reference internal" href="#git-cola-scale">GIT_COLA_SCALE</a></li>
-<li><a class="reference internal" href="#git-cola-trace">GIT_COLA_TRACE</a></li>
-<li><a class="reference internal" href="#visual">VISUAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-gpg-agent-and-friends">Install gpg-agent and friends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-gpg-agent-and-a-pin-entry-program">Configure gpg-agent and a pin-entry program</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#language-settings">LANGUAGE SETTINGS</a></li>
-<li><a class="reference internal" href="#custom-gui-actions">CUSTOM GUI ACTIONS</a><ul>
-<li><a class="reference internal" href="#guitool-name-cmd">guitool.&lt;name&gt;.cmd</a></li>
-<li><a class="reference internal" href="#guitool-name-background">guitool.&lt;name&gt;.background</a></li>
-<li><a class="reference internal" href="#guitool-name-needsfile">guitool.&lt;name&gt;.needsfile</a></li>
-<li><a class="reference internal" href="#guitool-name-noconsole">guitool.&lt;name&gt;.noconsole</a></li>
-<li><a class="reference internal" href="#guitool-name-norescan">guitool.&lt;name&gt;.norescan</a></li>
-<li><a class="reference internal" href="#guitool-name-confirm">guitool.&lt;name&gt;.confirm</a></li>
-<li><a class="reference internal" href="#guitool-name-argprompt">guitool.&lt;name&gt;.argprompt</a></li>
-<li><a class="reference internal" href="#guitool-name-revprompt">guitool.&lt;name&gt;.revprompt</a></li>
-<li><a class="reference internal" href="#guitool-name-revunmerged">guitool.&lt;name&gt;.revunmerged</a></li>
-<li><a class="reference internal" href="#guitool-name-title">guitool.&lt;name&gt;.title</a></li>
-<li><a class="reference internal" href="#guitool-name-prompt">guitool.&lt;name&gt;.prompt</a></li>
-<li><a class="reference internal" href="#guitool-name-shortcut">guitool.&lt;name&gt;.shortcut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-notes">WINDOWS NOTES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git-installation">Git Installation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a><ul>
-<li><a class="reference internal" href="#install-gpg-agent-and-friends">Install gpg-agent and friends</a></li>
-<li><a class="reference internal" href="#configure-gpg-agent-and-a-pin-entry-program">Configure gpg-agent and a pin-entry program</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#windows-notes">WINDOWS NOTES</a><ul>
-<li><a class="reference internal" href="#git-installation">Git Installation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#links">LINKS</a><ul>
-<li><a class="reference internal" href="#git-cola-s-git-repository">Git Cola’s Git Repository</a></li>
-<li><a class="reference internal" href="#git-cola-homepage">Git Cola Homepage</a></li>
-<li><a class="reference internal" href="#mailing-list">Mailing List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">LINKS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#git-cola-s-git-repository">Git Cola’s Git Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-cola-homepage">Git Cola Homepage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mailing-list">Mailing List</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag(1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thanks.html">Thanks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a></li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Git Cola Documentation</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="git-dag.html"
-                        title="next chapter">git-dag(1)</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="sources/git-cola.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Git Cola Documentation</a></li>
+      <li>Next: <a href="git-dag.html" title="next chapter">git-dag(1)</a></li>
+  </ul></li>
+</ul>
+</div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="git-dag.html" title="git-dag(1)"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="Git Cola Documentation"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">git-cola 3.7 documentation</a> &#187;</li> 
-      </ul>
+    <div class="footer">
+      &copy;2007-2020, David Aguilar and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="sources/git-cola.rst.txt"
+          rel="nofollow">Page source</a>
     </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2017, David Aguilar and contributors.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.
-    </div>
+
+    
+
+    
   </body>
 </html>

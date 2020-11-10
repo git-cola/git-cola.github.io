@@ -8,7 +8,7 @@ git cola [options] [sub-command]
 
 DESCRIPTION
 ===========
-git cola is a sleek and powerful Git GUI.
+Git Cola is a sleek and powerful Git GUI.
 
 OPTIONS
 =======
@@ -136,7 +136,28 @@ KEYBOARD SHORTCUTS
 ==================
 `git cola` has many useful keyboard shortcuts.
 
-You can see the available shortcuts by pressing the ``?`` key,
+Many of `git cola`'s editors understand vim-style hotkeys, eg. `{h,j,k,l}`
+for navigating in the diff, status, grep, and file browser widgets.
+
+`{d,u}` move down/up one half page at a time (similar to vim's `ctrl-{d,u}`).
+The `space` and `shift-space` hotkeys are mapped to the same operations.
+
+`Shift-{j,k,d,u,f,b,page-up,page-down,left,right,up,down}` can be be used in
+the diff editor to select lines while navigating.
+
+`s` is a useful hotkey in the diff editor.  It stages/unstages the current
+selection when a selection is present.  When nothing is selected, the
+diff hunk at the current text cursor position is staged.  This makes it very
+easy to review changes by selecting good hunks with `s` while navigating down
+and over hunks that are not going to be staged.
+
+`Ctrl-u` in the diff editor reverts unstaged edits, and respects the
+selection.  This is useful for selectively reverted edits from the worktree.
+This same hotkey reverts the entire file when used from the status tool.
+
+`Ctrl-s` in the diff editor and status tools stages/unstages the entire file.
+
+You can see the available shortcuts by pressing pressing the ``?`` key,
 choosing ``Help -> Keyboard shortcuts`` from the main menu,
 or by consulting the `git cola keyboard shortcuts reference <https://git-cola.github.io/share/doc/git-cola/hotkeys.html>`_.
 
@@ -144,7 +165,7 @@ TOOLS
 =====
 The `git cola` interface is composed of various cooperating tools.
 Double-clicking a tool opens it in its own subwindow.
-Dragging it around moves and places it within the window.
+Dragging it around moves and places it within the main window.
 
 Tools can be hidden and rearranged however you like.
 `git cola` carefully remembers your window layout and restores
@@ -447,6 +468,34 @@ and restored at application shutdown/startup.
 `git cola` can be configured to not save custom layouts by unsetting
 the `Save Window Settings` option in the `git cola` preferences.
 
+DARK MODE AND WINDOW MANAGER THEMES
+===================================
+Git Cola contains a ``default`` theme which follows the current Qt style and a
+handful of built-in color themes.  See :ref:`cola_theme` for more details.
+
+To use icons appropriate for a dark application theme, configure
+``git config --global cola.icontheme dark`` to use the dark icon theme.
+See :ref:`cola_icontheme` for more details.
+
+On Linux, you may want Qt to follow the Window manager theme by configuring it
+to do so using the ``qt5ct`` Qt5 configuration tool.  Install ``qt5ct`` on
+Debian/Ubuntu systems to make this work.::
+
+    sudo apt install qt5ct
+
+Once installed, update your `~/.bash_profile` to activate ``qt5ct``::
+
+    # Use the style configured using the qt5ct tool
+    QT_QPA_PLATFORMTHEME=qt5ct
+    export QT_QPA_PLATFORMTHEME
+
+This only work with the `default` theme.  The other themes replace the color
+palette with theme-specific colors.
+
+On macOS, using the ``default`` theme will automatically inherit "Dark Mode"
+color themes when configured via System Preferences.  You will need to
+configure the dark icon theme as noted above when dark mode is enabled.
+
 CONFIGURATION VARIABLES
 =======================
 These variables can be set using `git config` or from the settings.
@@ -516,6 +565,8 @@ This option requires at least Qt 5.6 to work.
 See `Qt QT_SCALE_FACTOR documentation <https://doc.qt.io/qt-5/highdpi.html>`_
 for more information.
 
+.. _cola_icontheme:
+
 cola.icontheme
 --------------
 Specifies the icon themes to use throughout `git cola`. The theme specified
@@ -538,6 +589,13 @@ The icon theme can also be specified by passing ``--icon-theme=<theme>`` on the
 command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built-in icons for the remainder.
+
+cola.imagediff.<extension>
+--------------------------
+Enable image diffs for the specified file extension.  For example, configuring
+`git config --global cola.imagediff.svg false` will disable use of the visual
+image diff for `.svg` files in all repos until is is explicitly toggled on.
+Defaults to `true`.
 
 cola.inotify
 ------------
@@ -659,8 +717,10 @@ cola.textwidth
 The number of columns used for line wrapping.
 Tabs are counted according to `cola.tabwidth`.
 
+.. _cola_theme:
+
 cola.theme
---------------
+----------
 Specifies the GUI theme to use throughout `git cola`. The theme specified
 must be one of the following values:
 
@@ -674,25 +734,14 @@ must be one of the following values:
 * `flat-light-grey`
 * `flat-light-red`
 
-If unset, or set wrong value, then the default style will be
+If unset, or set to an invalid value, then the default style will be
 used. The `default` theme is generated by Qt internal engine and should look
-most native but may look noticeably different on various systems. The flat
+native but may look noticeably different on different platforms. The flat
 themes on the other hand should look similar (but not identical) on various
 systems.
 
 The GUI theme can also be specified by passing ``--theme=<name>`` on the
 command line.
-
-On Linux, you may want Qt to use the theme configured using the ``qt5ct``
-Qt5 configuration tool.  You can do this by exporting `QT_QPA_PLATFORMTHEME`
-in your `~/.bash_profile` to a value of ``qt5ct``::
-
-    # Use the style configured using the qt5ct tool
-    QT_QPA_PLATFORMTHEME=qt5ct
-    export QT_QPA_PLATFORMTHEME
-
-This only work with the `default` theme.  The other themes replace the color
-palette with a specific configuration.
 
 cola.turbo
 ----------
@@ -769,7 +818,6 @@ Your full name to be recorded in any newly created commits.
 Can be overridden by the 'GIT_AUTHOR_NAME' and 'GIT_COMMITTER_NAME'
 environment variables.
 
-
 ENVIRONMENT VARIABLES
 =====================
 
@@ -777,7 +825,7 @@ GIT_COLA_ICON_THEME
 -------------------
 When set in the environment, `GIT_COLA_ICON_THEME` overrides the
 theme specified in the `cola.icontheme` configuration.
-Read the section on `cola.icontheme` above for more details.
+Read :ref:`cola_icontheme` for more details.
 
 GIT_COLA_SCALE
 --------------

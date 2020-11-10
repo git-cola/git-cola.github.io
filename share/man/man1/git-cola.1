@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "May 23, 2020" "3.7" "git-cola"
+.TH "GIT-COLA" "1" "Sep 01, 2020" "3.7" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -35,7 +35,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 git cola [options] [sub\-command]
 .SH DESCRIPTION
 .sp
-git cola is a sleek and powerful Git GUI.
+Git Cola is a sleek and powerful Git GUI.
 .SH OPTIONS
 .SS –amend
 .sp
@@ -132,14 +132,35 @@ The editor preference is saved in the \fIgui.editor\fP variable using
 .sp
 \fIgit cola\fP has many useful keyboard shortcuts.
 .sp
-You can see the available shortcuts by pressing the \fB?\fP key,
+Many of \fIgit cola\fP’s editors understand vim\-style hotkeys, eg. \fI{h,j,k,l}\fP
+for navigating in the diff, status, grep, and file browser widgets.
+.sp
+\fI{d,u}\fP move down/up one half page at a time (similar to vim’s \fIctrl\-{d,u}\fP).
+The \fIspace\fP and \fIshift\-space\fP hotkeys are mapped to the same operations.
+.sp
+\fIShift\-{j,k,d,u,f,b,page\-up,page\-down,left,right,up,down}\fP can be be used in
+the diff editor to select lines while navigating.
+.sp
+\fIs\fP is a useful hotkey in the diff editor.  It stages/unstages the current
+selection when a selection is present.  When nothing is selected, the
+diff hunk at the current text cursor position is staged.  This makes it very
+easy to review changes by selecting good hunks with \fIs\fP while navigating down
+and over hunks that are not going to be staged.
+.sp
+\fICtrl\-u\fP in the diff editor reverts unstaged edits, and respects the
+selection.  This is useful for selectively reverted edits from the worktree.
+This same hotkey reverts the entire file when used from the status tool.
+.sp
+\fICtrl\-s\fP in the diff editor and status tools stages/unstages the entire file.
+.sp
+You can see the available shortcuts by pressing pressing the \fB?\fP key,
 choosing \fBHelp \-> Keyboard shortcuts\fP from the main menu,
 or by consulting the \fI\%git cola keyboard shortcuts reference\fP\&.
 .SH TOOLS
 .sp
 The \fIgit cola\fP interface is composed of various cooperating tools.
 Double\-clicking a tool opens it in its own subwindow.
-Dragging it around moves and places it within the window.
+Dragging it around moves and places it within the main window.
 .sp
 Tools can be hidden and rearranged however you like.
 \fIgit cola\fP carefully remembers your window layout and restores
@@ -426,6 +447,49 @@ and restored at application shutdown/startup.
 .sp
 \fIgit cola\fP can be configured to not save custom layouts by unsetting
 the \fISave Window Settings\fP option in the \fIgit cola\fP preferences.
+.SH DARK MODE AND WINDOW MANAGER THEMES
+.sp
+Git Cola contains a \fBdefault\fP theme which follows the current Qt style and a
+handful of built\-in color themes.  See \fI\%cola.theme\fP for more details.
+.sp
+To use icons appropriate for a dark application theme, configure
+\fBgit config \-\-global cola.icontheme dark\fP to use the dark icon theme.
+See \fI\%cola.icontheme\fP for more details.
+.sp
+On Linux, you may want Qt to follow the Window manager theme by configuring it
+to do so using the \fBqt5ct\fP Qt5 configuration tool.  Install \fBqt5ct\fP on
+Debian/Ubuntu systems to make this work.:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+sudo apt install qt5ct
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Once installed, update your \fI~/.bash_profile\fP to activate \fBqt5ct\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# Use the style configured using the qt5ct tool
+QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This only work with the \fIdefault\fP theme.  The other themes replace the color
+palette with theme\-specific colors.
+.sp
+On macOS, using the \fBdefault\fP theme will automatically inherit “Dark Mode”
+color themes when configured via System Preferences.  You will need to
+configure the dark icon theme as noted above when dark mode is enabled.
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
@@ -505,6 +569,12 @@ The icon theme can also be specified by passing \fB\-\-icon\-theme=<theme>\fP on
 command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built\-in icons for the remainder.
+.SS cola.imagediff.<extension>
+.sp
+Enable image diffs for the specified file extension.  For example, configuring
+\fIgit config –global cola.imagediff.svg false\fP will disable use of the visual
+image diff for \fI\&.svg\fP files in all repos until is is explicitly toggled on.
+Defaults to \fItrue\fP\&.
 .SS cola.inotify
 .sp
 Set to \fIfalse\fP to disable file system change monitoring.  Defaults to \fItrue\fP,
@@ -637,33 +707,14 @@ must be one of the following values:
 \fIflat\-light\-red\fP
 .UNINDENT
 .sp
-If unset, or set wrong value, then the default style will be
+If unset, or set to an invalid value, then the default style will be
 used. The \fIdefault\fP theme is generated by Qt internal engine and should look
-most native but may look noticeably different on various systems. The flat
+native but may look noticeably different on different platforms. The flat
 themes on the other hand should look similar (but not identical) on various
 systems.
 .sp
 The GUI theme can also be specified by passing \fB\-\-theme=<name>\fP on the
 command line.
-.sp
-On Linux, you may want Qt to use the theme configured using the \fBqt5ct\fP
-Qt5 configuration tool.  You can do this by exporting \fIQT_QPA_PLATFORMTHEME\fP
-in your \fI~/.bash_profile\fP to a value of \fBqt5ct\fP:
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-# Use the style configured using the qt5ct tool
-QT_QPA_PLATFORMTHEME=qt5ct
-export QT_QPA_PLATFORMTHEME
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
-.sp
-This only work with the \fIdefault\fP theme.  The other themes replace the color
-palette with a specific configuration.
 .SS cola.turbo
 .sp
 Set to \fItrue\fP to enable “turbo” mode.  “Turbo” mode disables some
@@ -763,7 +814,7 @@ environment variables.
 .sp
 When set in the environment, \fIGIT_COLA_ICON_THEME\fP overrides the
 theme specified in the \fIcola.icontheme\fP configuration.
-Read the section on \fIcola.icontheme\fP above for more details.
+Read \fI\%cola.icontheme\fP for more details.
 .SS GIT_COLA_SCALE
 .sp
 \fBIMPORTANT:\fP
@@ -1068,6 +1119,6 @@ C:/Tools/Git/bin
 .SH AUTHOR
 David Aguilar and contributors
 .SH COPYRIGHT
-2007-2017, David Aguilar and contributors
+2007-2020, David Aguilar and contributors
 .\" Generated by docutils manpage writer.
 .

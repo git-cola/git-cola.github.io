@@ -1,5 +1,6 @@
 .DS_Store
 /build
+/.jekyll-cache
 /Meta
 /share/doc/git-cola/html/.buildinfo
 /_site
