@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Sep 01, 2020" "3.7" "git-cola"
+.TH "GIT-COLA" "1" "Nov 13, 2020" "3.8" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -629,6 +629,12 @@ Defaults to \fItrue\fP\&.
 .sp
 \fIgit cola\fP will sign commits by default when set \fItrue\fP\&. Defaults to \fIfalse\fP\&.
 See the section below on setting up GPG for more details.
+.SS cola.startupmode
+.sp
+Control how the list of repositories is displayed in the startup dialog.
+Set to \fIlist\fP to view the list of repositories as a list, or \fIfolder\fP to view
+the list of repositories as a collection of folder icons.
+Defaults to \fIlist\fP\&.
 .SS cola.statusindent
 .sp
 Set to \fItrue\fP to indent files in the Status widget.  Files in the \fIStaged\fP,
