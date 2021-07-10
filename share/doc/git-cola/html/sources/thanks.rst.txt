@@ -5,6 +5,7 @@ Thanks
 * Aaron Cook
 * Aaron Malpas
 * Aaron Wolf
+* Abid Ahmad
 * Adam Lesperance
 * Adrien be
 * Adil
@@ -24,6 +25,7 @@ Thanks
 * armandg
 * Arthur Coelho
 * Audrius Karabanovas
+* Axel Heider
 * Balázs Meskó
 * balping
 * Barış ÇELİK
@@ -37,6 +39,7 @@ Thanks
 * Bert Jacobs
 * Birger Skogeng Pedersen
 * Björn Ketelaars
+* Bob van der Linden
 * 林博仁 (Buo-ren Lin)
 * cclaus
 * Charles 101
@@ -58,6 +61,7 @@ Thanks
 * Dawid Drozd
 * Dennis Gilmore
 * deniz1a
+* Dmitriy Bogdanov
 * Dmitry Kann
 * Dmitry Pashkevich
 * Doug Hoskisson
@@ -67,8 +71,10 @@ Thanks
 * Erop @EgZvor
 * Erwan Bousse
 * Fabio Coatti
+* Fang Pengfei
 * Felipe Morales
 * Filip Danilović
+* Floris Lambrechts
 * fu7mu4
 * Garoe Dorta
 * Geoffrey van Wyk
@@ -155,12 +161,14 @@ Thanks
 * Muhammad Bashir Al-Noimi
 * Myz
 * Naraesk
+* Nanda Lopes
 * Niel Buys
 * Nick Todd
 * Nicolas Dietrich
 * Nikos Roussos
 * Noel Grandin
 * NotSqrt
+* nyanpasu64
 * ochristi
 * Oliver Haessler
 * OmegaPhil (Omega Weapon)

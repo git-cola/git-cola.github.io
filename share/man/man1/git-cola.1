@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Feb 18, 2021" "3.9" "git-cola"
+.TH "GIT-COLA" "1" "Jul 10, 2021" "3.10" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -784,6 +784,20 @@ git config cola.color.header \(aq#bbbbbb\(aq
 .fi
 .UNINDENT
 .UNINDENT
+.SS core.hooksPath
+.sp
+Hooks are programs you can place in a hooks directory to trigger actions at
+certain points in git’s execution. Hooks that don’t have the executable bit
+set are ignored.
+.sp
+By default the hooks directory is \fB$GIT_DIR/hooks\fP, but that can
+be changed via the \fBcore.hooksPath\fP configuration variable
+.sp
+The \fBcola\-prepare\-commit\-msg\fP hook functionality and Cola’s Git LFS
+detection honors this configuration.
+.sp
+Please see the \fI\%git hooks documentation\fP
+for more details.
 .SS gui.diffcontext
 .sp
 The number of diff context lines to display.
@@ -1112,6 +1126,16 @@ C:/Tools/Git/bin
 .fi
 .UNINDENT
 .UNINDENT
+.SS SSH Agents for Key\-based Authentication
+.sp
+You may need to setup ssh\-agent in order to use SSH key\-based authentication
+on Windows. It has been reported that starting OpenSSH agent in
+Windows Services and adding the key using Powershell are necessary in order
+to get things working.
+.sp
+Please see the following links for more details.
+.sp
+\fI\%https://stackoverflow.com/questions/18683092/how\-to\-run\-ssh\-add\-on\-windows\fP
 .SH LINKS
 .SS Git Cola’s Git Repository
 .sp

@@ -8,8 +8,8 @@ maruku:
   png_dir:    images/latex
   png_url:    /images/latex
 
-cola_version: "3.9"
-cola_release_date: "2021-02-18"
+cola_version: "3.10"
+cola_release_date: "2021-07-10"
 cola_downloads: "https://github.com/git-cola/git-cola/releases/download"
 cola_archive: "https://github.com/git-cola/git-cola/archive"
 cola_github: "https://github.com/git-cola/git-cola"

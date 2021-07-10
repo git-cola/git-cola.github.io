@@ -786,6 +786,21 @@ Defaults to "#bbbbbb"::
 
     git config cola.color.header '#bbbbbb'
 
+core.hooksPath
+--------------
+Hooks are programs you can place in a hooks directory to trigger actions at
+certain points in git’s execution. Hooks that don’t have the executable bit
+set are ignored.
+
+By default the hooks directory is ``$GIT_DIR/hooks``, but that can
+be changed via the ``core.hooksPath`` configuration variable
+
+The ``cola-prepare-commit-msg`` hook functionality and Cola's Git LFS
+detection honors this configuration.
+
+Please see the `git hooks documentation <https://git-scm.com/docs/githooks>`_
+for more details.
+
 gui.diffcontext
 ---------------
 The number of diff context lines to display.
@@ -1047,6 +1062,17 @@ your home directory `~/.config/git-cola/git-bindir` that points to your git
 installation.  e.g.::
 
     C:/Tools/Git/bin
+
+SSH Agents for Key-based Authentication
+---------------------------------------
+You may need to setup ssh-agent in order to use SSH key-based authentication
+on Windows. It has been reported that starting OpenSSH agent in
+Windows Services and adding the key using Powershell are necessary in order
+to get things working.
+
+Please see the following links for more details.
+
+https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows
 
 LINKS
 =====
