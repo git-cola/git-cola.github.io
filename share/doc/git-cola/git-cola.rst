@@ -126,7 +126,7 @@ configured.
 when editing files.  `gvim -f -o` uses splits.
 
 `git cola` is {vim, emacs, textpad, notepad++}-aware.
-When you select a line in the `grep` screen and press any of
+When you select a line in the diff or grep screens and press any of
 `Enter`, `Ctrl-e`, or the `Edit` button, you are taken to that exact line.
 
 The editor preference is saved in the `gui.editor` variable using
@@ -549,9 +549,18 @@ Defaults to `false`.
 
 cola.fileattributes
 -------------------
-Enables per-file gitattributes encoding support when set to `true`.
+Enables per-file gitattributes encoding and binary file support.
 This tells `git cola` to honor the configured encoding when displaying
 and applying diffs.
+
+A `.gitattributes` file can set the ``binary`` attribute in order to force
+specific untracked paths to be treated as binary files when diffing.
+Binary files are displayed using a hexdump display.
+
+.. sourcecode:: sh
+
+   # Treat *.exr files as binary files.
+   *.exr binary
 
 cola.fontdiff
 -------------
@@ -635,6 +644,11 @@ cola.readsize
 `git cola` avoids reading large binary untracked files.
 The maximum size to read is controlled by `cola.readsize`
 and defaults to `2048`.
+
+cola.resizebrowsercolumns
+-------------------------
+`git cola` will automatically resize the file browser columns as folders are
+expanded/collapsed when ``cola.resizebrowsercolumns`` is set to `true`.
 
 cola.safemode
 -------------
@@ -1073,6 +1087,17 @@ to get things working.
 Please see the following links for more details.
 
 https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows
+
+FIPS Security Mode
+==================
+`FIPS Security Mode <https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/FIPS_Mode_-_an_explanation>`_
+is available in newer versions of Python. These include Python 3.9+ and the
+patched Python 3.6 used by CentOS8/RHEL8 (and possibly others).
+
+Git Cola uses the ``hashlib.md5`` function and adheres to the FIPS security
+mode when available. Git Cola does not use the MD5 value for security purposes.
+MD% is used only for the purposes of implementing the ``cola/gravatar.py``
+Gravatar client.
 
 LINKS
 =====

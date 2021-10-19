@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>git-cola(1) &mdash; git-cola 3.10.1 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 3.11.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                3.10.1
+                3.11.0
               </div>
             
           
@@ -193,6 +193,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#cola-maxrecent">cola.maxrecent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-dragencoding">cola.dragencoding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-readsize">cola.readsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-resizebrowsercolumns">cola.resizebrowsercolumns</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-safemode">cola.safemode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-savewindowsettings">cola.savewindowsettings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-showpath">cola.showpath</a></li>
@@ -254,6 +255,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#ssh-agents-for-key-based-authentication">SSH Agents for Key-based Authentication</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#fips-security-mode">FIPS Security Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#links">LINKS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#git-cola-s-git-repository">Git Cola’s Git Repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#git-cola-homepage">Git Cola Homepage</a></li>
@@ -458,7 +460,7 @@ configured.</p>
 <p><em>ProTip</em>: Configuring your editor to <cite>gvim -f -p</cite> will open multiple tabs
 when editing files.  <cite>gvim -f -o</cite> uses splits.</p>
 <p><cite>git cola</cite> is {vim, emacs, textpad, notepad++}-aware.
-When you select a line in the <cite>grep</cite> screen and press any of
+When you select a line in the diff or grep screens and press any of
 <cite>Enter</cite>, <cite>Ctrl-e</cite>, or the <cite>Edit</cite> button, you are taken to that exact line.</p>
 <p>The editor preference is saved in the <cite>gui.editor</cite> variable using
 <a class="reference external" href="http://git-scm.com/docs/git-config">git config</a>.</p>
@@ -826,9 +828,16 @@ Defaults to <cite>false</cite>.</p>
 </div>
 <div class="section" id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this headline">¶</a></h3>
-<p>Enables per-file gitattributes encoding support when set to <cite>true</cite>.
+<p>Enables per-file gitattributes encoding and binary file support.
 This tells <cite>git cola</cite> to honor the configured encoding when displaying
 and applying diffs.</p>
+<p>A <cite>.gitattributes</cite> file can set the <code class="docutils literal notranslate"><span class="pre">binary</span></code> attribute in order to force
+specific untracked paths to be treated as binary files when diffing.
+Binary files are displayed using a hexdump display.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Treat *.exr files as binary files.</span>
+*.exr binary
+</pre></div>
+</div>
 </div>
 <div class="section" id="cola-fontdiff">
 <h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Permalink to this headline">¶</a></h3>
@@ -906,6 +915,11 @@ expects a modern encoding, e.g. <cite>terminator</cite>, then set this value to 
 <p><cite>git cola</cite> avoids reading large binary untracked files.
 The maximum size to read is controlled by <cite>cola.readsize</cite>
 and defaults to <cite>2048</cite>.</p>
+</div>
+<div class="section" id="cola-resizebrowsercolumns">
+<h3>cola.resizebrowsercolumns<a class="headerlink" href="#cola-resizebrowsercolumns" title="Permalink to this headline">¶</a></h3>
+<p><cite>git cola</cite> will automatically resize the file browser columns as folders are
+expanded/collapsed when <code class="docutils literal notranslate"><span class="pre">cola.resizebrowsercolumns</span></code> is set to <cite>true</cite>.</p>
 </div>
 <div class="section" id="cola-safemode">
 <h3>cola.safemode<a class="headerlink" href="#cola-safemode" title="Permalink to this headline">¶</a></h3>
@@ -1331,6 +1345,16 @@ to get things working.</p>
 <p>Please see the following links for more details.</p>
 <p><a class="reference external" href="https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows">https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows</a></p>
 </div>
+</div>
+<div class="section" id="fips-security-mode">
+<h2>FIPS Security Mode<a class="headerlink" href="#fips-security-mode" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/FIPS_Mode_-_an_explanation">FIPS Security Mode</a>
+is available in newer versions of Python. These include Python 3.9+ and the
+patched Python 3.6 used by CentOS8/RHEL8 (and possibly others).</p>
+<p>Git Cola uses the <code class="docutils literal notranslate"><span class="pre">hashlib.md5</span></code> function and adheres to the FIPS security
+mode when available. Git Cola does not use the MD5 value for security purposes.
+MD% is used only for the purposes of implementing the <code class="docutils literal notranslate"><span class="pre">cola/gravatar.py</span></code>
+Gravatar client.</p>
 </div>
 <div class="section" id="links">
 <h2>LINKS<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>

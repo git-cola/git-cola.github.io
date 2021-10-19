@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Jul 11, 2021" "3.10.1" "git-cola"
+.TH "GIT-COLA" "1" "Oct 19, 2021" "3.11.0" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .
@@ -123,7 +123,7 @@ configured.
 when editing files.  \fIgvim \-f \-o\fP uses splits.
 .sp
 \fIgit cola\fP is {vim, emacs, textpad, notepad++}\-aware.
-When you select a line in the \fIgrep\fP screen and press any of
+When you select a line in the diff or grep screens and press any of
 \fIEnter\fP, \fICtrl\-e\fP, or the \fIEdit\fP button, you are taken to that exact line.
 .sp
 The editor preference is saved in the \fIgui.editor\fP variable using
@@ -534,9 +534,24 @@ The number of spaces is determined by \fIcola.tabwidth\fP\&.
 Defaults to \fIfalse\fP\&.
 .SS cola.fileattributes
 .sp
-Enables per\-file gitattributes encoding support when set to \fItrue\fP\&.
+Enables per\-file gitattributes encoding and binary file support.
 This tells \fIgit cola\fP to honor the configured encoding when displaying
 and applying diffs.
+.sp
+A \fI\&.gitattributes\fP file can set the \fBbinary\fP attribute in order to force
+specific untracked paths to be treated as binary files when diffing.
+Binary files are displayed using a hexdump display.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# Treat *.exr files as binary files.
+*.exr binary
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS cola.fontdiff
 .sp
 Specifies the font to use for \fIgit cola\fP’s diff display.
@@ -608,6 +623,10 @@ expects a modern encoding, e.g. \fIterminator\fP, then set this value to \fIutf\
 \fIgit cola\fP avoids reading large binary untracked files.
 The maximum size to read is controlled by \fIcola.readsize\fP
 and defaults to \fI2048\fP\&.
+.SS cola.resizebrowsercolumns
+.sp
+\fIgit cola\fP will automatically resize the file browser columns as folders are
+expanded/collapsed when \fBcola.resizebrowsercolumns\fP is set to \fItrue\fP\&.
 .SS cola.safemode
 .sp
 The “Stage” button in the \fIgit cola\fP Actions panel stages all files when it is
@@ -1136,6 +1155,16 @@ to get things working.
 Please see the following links for more details.
 .sp
 \fI\%https://stackoverflow.com/questions/18683092/how\-to\-run\-ssh\-add\-on\-windows\fP
+.SH FIPS SECURITY MODE
+.sp
+\fI\%FIPS Security Mode\fP
+is available in newer versions of Python. These include Python 3.9+ and the
+patched Python 3.6 used by CentOS8/RHEL8 (and possibly others).
+.sp
+Git Cola uses the \fBhashlib.md5\fP function and adheres to the FIPS security
+mode when available. Git Cola does not use the MD5 value for security purposes.
+MD% is used only for the purposes of implementing the \fBcola/gravatar.py\fP
+Gravatar client.
 .SH LINKS
 .SS Git Cola’s Git Repository
 .sp

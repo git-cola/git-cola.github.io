@@ -24,6 +24,7 @@ Thanks
 * Andrew Hemming
 * armandg
 * Arthur Coelho
+* Audrey Yeena Toskin
 * Audrius Karabanovas
 * Axel Heider
 * Balázs Meskó
@@ -36,6 +37,7 @@ Thanks
 * Benedict Lee
 * Benjamin Somers
 * Benoît Nouyrigat
+* Bernd K
 * Bert Jacobs
 * Birger Skogeng Pedersen
 * Björn Ketelaars
@@ -60,6 +62,7 @@ Thanks
 * David Roman
 * Dawid Drozd
 * Dennis Gilmore
+* Demodian
 * deniz1a
 * Dmitriy Bogdanov
 * Dmitry Kann
@@ -148,6 +151,8 @@ Thanks
 * Matěj Šmíd
 * Matthew Levine
 * Matthias Mailänder
+* Max Harmathy
+* Melike Kecelioglu
 * Micha Rosenbaum
 * Michael Geddes
 * Michael Homer
@@ -157,6 +162,7 @@ Thanks
 * MikHulk
 * Mikołaj Milej
 * Minarto Margoliono
+* Mithil Poojary
 * Mosaab Alzoubi
 * Muhammad Bashir Al-Noimi
 * Myz
@@ -193,6 +199,7 @@ Thanks
 * Rafael Reuber
 * Raghavendra Karunanidhi
 * Rainer Müller
+* Ray Haleblian
 * RealTehreal
 * Ricardo J. Barberis
 * Robbert Korving
