@@ -46,6 +46,7 @@ Thanks
 * cclaus
 * Charles 101
 * Christian Jann
+* Christoph Erhardt
 * Christopher Meng
 * Clément Pit--Claudel
 * Constantine Grantcharov
@@ -128,6 +129,7 @@ Thanks
 * Kirit Sælensminde
 * Kyle Slane
 * László Böszörményi
+* lcjh
 * Leho Kraav
 * Lev Zlotin
 * Louis Rousseau
@@ -208,6 +210,7 @@ Thanks
 * Rustam Safin
 * Sabri Ünal
 * Samsul Ma'arif
+* Sean Allred
 * Sebastian Brass
 * Sebastian Oliva
 * Sergey Leschina

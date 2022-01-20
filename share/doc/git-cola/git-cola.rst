@@ -456,7 +456,7 @@ same order as is listed in the list.
 When a directory is dropped `git cola` walks the directory
 tree in search of patches.  `git cola` sorts the list of
 patches after they have all been found.  This allows you
-to control the order in which patchs are applied by placing
+to control the order in which patches are applied by placing
 patchsets into alphanumerically-sorted directories.
 
 CUSTOM WINDOW SETTINGS
@@ -930,6 +930,15 @@ executed from the root of the working directory, and in the environment it
 receives the name of the tool as GIT_GUITOOL, the name of the currently
 selected file as FILENAME, and the name of the current branch as CUR_BRANCH
 (if the head is detached, CUR_BRANCH is empty).
+
+If ``<name>`` contains slashes (``/``) then the leading part of the name,
+up until the final slash, is treated like a path of submenus under which the
+actions will be created.
+
+For example, configuring ``guitool.Commands/Util/echo.cmd`` creates a
+``Commands`` menu inside the top-level ``Actions`` menu, a ``Util`` menu
+inside the ``Commands`` menu and an ``echo`` action inside the ``Commands``
+submenu.
 
 guitool.<name>.background
 -------------------------

@@ -1,8 +1,5 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "GIT-COLA" "1" "Oct 19, 2021" "3.11.0" "git-cola"
-.SH NAME
-git-cola \- The highly caffeinated Git GUI
 .
 .nr rst2man-indent-level 0
 .
@@ -30,6 +27,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
+.TH "GIT-COLA" "1" "Jan 20, 2022" "3.12.0" "git-cola"
+.SH NAME
+git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
 .sp
 git cola [options] [sub\-command]
@@ -437,7 +437,7 @@ same order as is listed in the list.
 When a directory is dropped \fIgit cola\fP walks the directory
 tree in search of patches.  \fIgit cola\fP sorts the list of
 patches after they have all been found.  This allows you
-to control the order in which patchs are applied by placing
+to control the order in which patches are applied by placing
 patchsets into alphanumerically\-sorted directories.
 .SH CUSTOM WINDOW SETTINGS
 .sp
@@ -944,6 +944,15 @@ executed from the root of the working directory, and in the environment it
 receives the name of the tool as GIT_GUITOOL, the name of the currently
 selected file as FILENAME, and the name of the current branch as CUR_BRANCH
 (if the head is detached, CUR_BRANCH is empty).
+.sp
+If \fB<name>\fP contains slashes (\fB/\fP) then the leading part of the name,
+up until the final slash, is treated like a path of submenus under which the
+actions will be created.
+.sp
+For example, configuring \fBguitool.Commands/Util/echo.cmd\fP creates a
+\fBCommands\fP menu inside the top\-level \fBActions\fP menu, a \fBUtil\fP menu
+inside the \fBCommands\fP menu and an \fBecho\fP action inside the \fBCommands\fP
+submenu.
 .SS guitool.<name>.background
 .sp
 Run the command in the background (similar to editing and difftool actions).
