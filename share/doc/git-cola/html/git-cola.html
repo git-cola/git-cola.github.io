@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git-cola(1) &mdash; git-cola 3.12.0 documentation</title>
+  <title>git-cola(1) &mdash; UNKNOWN 0.0.0 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -27,10 +27,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> git-cola
+            <a href="index.html" class="icon icon-home"> UNKNOWN
           </a>
               <div class="version">
-                3.12.0
+                0.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -121,7 +121,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#apply-patches">APPLY PATCHES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-window-settings">CUSTOM WINDOW SETTINGS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dark-mode-and-window-manager-themes">DARK MODE AND WINDOW MANAGER THEMES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dark-mode-and-window-manager-themes">DARK MODE AND WINDOW MANAGER THEMES</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-themes">Custom Themes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration-variables">CONFIGURATION VARIABLES</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cola-autocompletepaths">cola.autocompletepaths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
@@ -226,7 +229,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">git-cola</a>
+          <a href="index.html">UNKNOWN</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -666,6 +669,9 @@ handful of built-in color themes.  See <a class="reference internal" href="#cola
 <p>To use icons appropriate for a dark application theme, configure
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">cola.icontheme</span> <span class="pre">dark</span></code> to use the dark icon theme.
 See <a class="reference internal" href="#cola-icontheme"><span class="std std-ref">cola.icontheme</span></a> for more details.</p>
+<p>On macOS, using the <code class="docutils literal notranslate"><span class="pre">default</span></code> theme will automatically inherit “Dark Mode”
+color themes when configured via System Preferences.  You will need to
+configure the dark icon theme as noted above when dark mode is enabled.</p>
 <p>On Linux, you may want Qt to follow the Window manager theme by configuring it
 to do so using the <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code> Qt5 configuration tool.  Install <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code> on
 Debian/Ubuntu systems to make this work.:</p>
@@ -674,15 +680,58 @@ Debian/Ubuntu systems to make this work.:</p>
 </div>
 <p>Once installed, update your <cite>~/.bash_profile</cite> to activate <code class="docutils literal notranslate"><span class="pre">qt5ct</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the style configured using the qt5ct tool</span>
-<span class="n">QT_QPA_PLATFORMTHEME</span><span class="o">=</span><span class="n">qt5ct</span>
-<span class="n">export</span> <span class="n">QT_QPA_PLATFORMTHEME</span>
+<span class="n">export</span> <span class="n">QT_QPA_PLATFORMTHEME</span><span class="o">=</span><span class="n">qt5ct</span>
 </pre></div>
 </div>
 <p>This only work with the <cite>default</cite> theme.  The other themes replace the color
 palette with theme-specific colors.</p>
-<p>On macOS, using the <code class="docutils literal notranslate"><span class="pre">default</span></code> theme will automatically inherit “Dark Mode”
-color themes when configured via System Preferences.  You will need to
-configure the dark icon theme as noted above when dark mode is enabled.</p>
+<p>Some systems may require that you override <cite>QT_STYLE_OVERRIDE</cite> in order to
+use a dark theme or to better interact with the Desktop environment.
+Some systems provide a theme that you can install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">adwaita</span><span class="o">-</span><span class="n">qt</span>
+</pre></div>
+</div>
+<p>You can activate the theme using the following enviornment variable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Override the default theme to adwait-dark</span>
+<span class="n">export</span> <span class="n">QT_STYLE_OVERRIDE</span><span class="o">=</span><span class="n">adwaita</span><span class="o">-</span><span class="n">dark</span>
+</pre></div>
+</div>
+<p><cite>QT_STYLE_OVERRIDE</cite> may already be set in your Desktop Environment, so check that
+variable for reference if you get unexpected hangs when launching <cite>git-cola</cite> or
+when the default theme does not follow the desktop’s theme on Linux.</p>
+<p>If you don’t want to set this variable globally then you can set it when launching
+cola from the command-line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QT_STYLE_OVERRIDE</span><span class="o">=</span><span class="n">adwaita</span><span class="o">-</span><span class="n">dark</span> <span class="n">git</span> <span class="n">cola</span>
+</pre></div>
+</div>
+<p>The following is a user-contributed custom <cite>git-cola.desktop</cite> file that can be used to
+launch Git Cola with these settings preset for you:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Git</span> <span class="n">Cola</span> <span class="p">(</span><span class="n">dark</span><span class="p">)</span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">The</span> <span class="n">highly</span> <span class="n">caffeinated</span> <span class="n">Git</span> <span class="n">GUI</span>
+<span class="n">TryExec</span><span class="o">=</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">env</span> <span class="n">QT_STYLE_OVERRIDE</span><span class="o">=</span><span class="n">adwaita</span><span class="o">-</span><span class="n">dark</span> <span class="n">git</span><span class="o">-</span><span class="n">cola</span> <span class="o">--</span><span class="n">prompt</span> <span class="o">--</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span> <span class="n">dark</span>
+<span class="n">Icon</span><span class="o">=</span><span class="n">git</span><span class="o">-</span><span class="n">cola</span>
+<span class="n">StartupNotify</span><span class="o">=</span><span class="n">true</span>
+<span class="n">Terminal</span><span class="o">=</span><span class="n">false</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">Application</span>
+<span class="n">Categories</span><span class="o">=</span><span class="n">Development</span><span class="p">;</span><span class="n">RevisionControl</span><span class="p">;</span>
+<span class="n">X</span><span class="o">-</span><span class="n">KDE</span><span class="o">-</span><span class="n">SubstituteUID</span><span class="o">=</span><span class="n">false</span>
+</pre></div>
+</div>
+<p>You may also want to customize the diff colors when using a dark theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">cola</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">add</span> <span class="mi">86</span><span class="n">c19f</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">cola</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">remove</span> <span class="n">c07067</span>
+</pre></div>
+</div>
+<p>Please see <a class="reference external" href="https://github.com/git-cola/git-cola/issues/760">#760</a> for more details.</p>
+<section id="custom-themes">
+<h3>Custom Themes<a class="headerlink" href="#custom-themes" title="Permalink to this headline"></a></h3>
+<p>To create your own custom theme for Git Cola just create a QSS file and put it in
+<code class="docutils literal notranslate"><span class="pre">~/.config/themes/</span></code>. You can add as many files as you want. Each file will become
+an option in <code class="docutils literal notranslate"><span class="pre">Menu</span> <span class="pre">-&gt;</span> <span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Appearance</span> <span class="pre">-&gt;</span> <span class="pre">GUI</span> <span class="pre">theme</span></code>.</p>
+<p>Some examples can be found here <a class="reference external" href="https://doc.qt.io/qt-5/stylesheet-examples.html">Qt Style Sheets Examples</a>.</p>
+</section>
 </section>
 <section id="configuration-variables">
 <h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this headline"></a></h2>
@@ -760,7 +809,7 @@ See <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">Qt 
 for more information.</p>
 </section>
 <section id="cola-icontheme">
-<span id="id11"></span><h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline"></a></h3>
+<span id="id12"></span><h3>cola.icontheme<a class="headerlink" href="#cola-icontheme" title="Permalink to this headline"></a></h3>
 <p>Specifies the icon themes to use throughout <cite>git cola</cite>. The theme specified
 must be the name of the subdirectory containing the icons, which in turn must
 be placed in the inside the main “icons” directory in <cite>git cola</cite>’s
@@ -914,7 +963,7 @@ xterm               xterm -e                false</p>
 Tabs are counted according to <cite>cola.tabwidth</cite>.</p>
 </section>
 <section id="cola-theme">
-<span id="id12"></span><h3>cola.theme<a class="headerlink" href="#cola-theme" title="Permalink to this headline"></a></h3>
+<span id="id13"></span><h3>cola.theme<a class="headerlink" href="#cola-theme" title="Permalink to this headline"></a></h3>
 <p>Specifies the GUI theme to use throughout <cite>git cola</cite>. The theme specified
 must be one of the following values:</p>
 <ul class="simple">
@@ -1299,7 +1348,7 @@ Gravatar client.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2007-2020, David Aguilar and contributors.</p>
+    <p>&#169; Copyright None.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

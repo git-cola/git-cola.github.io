@@ -42,6 +42,7 @@ Thanks
 * Birger Skogeng Pedersen
 * Björn Ketelaars
 * Bob van der Linden
+* Bruno Cabral
 * 林博仁 (Buo-ren Lin)
 * cclaus
 * Charles 101
@@ -82,6 +83,7 @@ Thanks
 * fu7mu4
 * Garoe Dorta
 * Geoffrey van Wyk
+* Georg Limbach
 * geotavros
 * `Git Hackers <http://git-scm.com/about>`_
 * green-eyed-bear
@@ -98,6 +100,7 @@ Thanks
 * Ismael Juma
 * Iulian Udrea
 * Ivar Smolin
+* Jad El Kik
 * Jan @hanksoff
 * Jan Šilhan
 * Jan Tumanov
@@ -255,6 +258,7 @@ Thanks
 * wm4
 * wsdfhjxc
 * Xie Hua Liang (xieofxie)
+* YAMAMOTO Kenyu
 * Yi EungJun
 * Zauber Paracelsus
 * Zeioth
