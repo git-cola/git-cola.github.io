@@ -93,6 +93,7 @@ Thanks
 * Gyuris Gellért
 * Harro Verton
 * Hannes @kannes
+* hydrargyrum
 * Igor Galarraga
 * Igor Kopach
 * Ilya Tumaykin
@@ -117,6 +118,7 @@ Thanks
 * Jimmy M. Coleman
 * Joachim Jablon
 * Joachim Lusiardi
+* Joel Barrios
 * Johannes Löhnert
 * Johann Schmitz
 * Jordan Bedwell
@@ -137,6 +139,7 @@ Thanks
 * Lev Zlotin
 * Louis Rousseau
 * Libor Jelinek
+* Lim Ngian Xin Terry
 * Liviu Cristian Mirea-Ghiban
 * Luca Ottaviano
 * Łukasz Wojniłowicz
@@ -216,6 +219,7 @@ Thanks
 * Sean Allred
 * Sebastian Brass
 * Sebastian Oliva
+* Sergei Dyshel
 * Sergey Leschina
 * Shun Sakai
 * Simon Peeters
@@ -256,6 +260,7 @@ Thanks
 * waterzch
 * Wolfgang Ocker
 * wm4
+* WNguyen14
 * wsdfhjxc
 * Xie Hua Liang (xieofxie)
 * YAMAMOTO Kenyu
