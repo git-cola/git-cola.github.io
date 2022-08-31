@@ -58,6 +58,7 @@ Thanks
 * Dave Cottlehuber
 * Dave Thomas
 * David Aguilar
+* David Bold
 * David Fernandez
 * David LeGare
 * David Martínez Martí
@@ -132,6 +133,8 @@ Thanks
 * Kerrick Staley
 * Kevin Kofler
 * Kirit Sælensminde
+* Kisaragi Hiu
+* Kurt McKee
 * Kyle Slane
 * László Böszörményi
 * lcjh
@@ -155,6 +158,7 @@ Thanks
 * Marco Costalba
 * Mariusz Jaskółka
 * Markus Heidelberg
+* Martin Gysel
 * Martin Konecny
 * Matěj Šmíd
 * Matthew Levine
@@ -216,6 +220,7 @@ Thanks
 * Rustam Safin
 * Sabri Ünal
 * Samsul Ma'arif
+* Scott Field
 * Sean Allred
 * Sebastian Brass
 * Sebastian Oliva

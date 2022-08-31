@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Jun 10, 2022" "4.0.1" "git-cola"
+.TH "GIT-COLA" "1" "Aug 30, 2022" "4.0.1" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -37,25 +37,25 @@ git cola [options] [sub\-command]
 .sp
 Git Cola is a sleek and powerful Git GUI.
 .SH OPTIONS
-.SS \-\-amend
+.SS \fB\-\-amend\fP
 .sp
 Start \fIgit cola\fP in amend mode.
-.SS \-\-prompt
+.SS \fB\-\-prompt\fP
 .sp
 Prompt for a Git repository.  Defaults to the current directory.
-.SS \-r, \-\-repo <path>
+.SS \fB\-r, \-\-repo <path>\fP
 .sp
 Open the Git repository at \fI<path>\fP\&.  Defaults to the current directory.
-.SS \-s, \-\-status\-filter <filter>
+.SS \fB\-s, \-\-status\-filter <filter>\fP
 .sp
 Apply the path filter to the status widget.
-.SS \-\-version
+.SS \fB\-\-version\fP
 .sp
 Print the \fIgit cola\fP version and exit.
-.SS \-h, \-\-help
+.SS \fB\-h, \-\-help\fP
 .sp
 Show usage and optional arguments.
-.SS \-\-help\-commands
+.SS \fB\-\-help\-commands\fP
 .sp
 Show available sub\-commands.
 .SH SUB-COMMANDS
@@ -116,8 +116,22 @@ Print the \fIgit cola\fP version.
 .SH CONFIGURE YOUR EDITOR
 .sp
 The editor used by \fICtrl\-e\fP is configured from the Preferences screen.
-The environment variable \fI$VISUAL\fP is consulted when no editor has been
-configured.
+.sp
+The following environment variables are consulted when no editor is configured.
+If defined, the first of these variables is used:
+.INDENT 0.0
+.IP \(bu 2
+\fIGIT_VISUAL\fP
+.IP \(bu 2
+\fIVISUAL\fP
+.IP \(bu 2
+\fIGIT_EDITOR\fP
+.IP \(bu 2
+\fIEDITOR\fP
+.UNINDENT
+.sp
+The \fI*VISUAL\fP variables are consulted before the \fI*EDITOR\fP variables so that you can
+configure a graphical editor independently of the editor used by the Git CLI.
 .sp
 \fIProTip\fP: Configuring your editor to \fIgvim \-f \-p\fP will open multiple tabs
 when editing files.  \fIgvim \-f \-o\fP uses splits.
@@ -132,10 +146,10 @@ The editor preference is saved in the \fIgui.editor\fP variable using
 .sp
 \fIgit cola\fP has many useful keyboard shortcuts.
 .sp
-Many of \fIgit cola\fP\(aqs editors understand vim\-style hotkeys, eg. \fI{h,j,k,l}\fP
+Many of \fIgit cola\fP’s editors understand vim\-style hotkeys, eg. \fI{h,j,k,l}\fP
 for navigating in the diff, status, grep, and file browser widgets.
 .sp
-\fI{d,u}\fP move down/up one half page at a time (similar to vim\(aqs \fIctrl\-{d,u}\fP).
+\fI{d,u}\fP move down/up one half page at a time (similar to vim’s \fIctrl\-{d,u}\fP).
 The \fIspace\fP and \fIshift\-space\fP hotkeys are mapped to the same operations.
 .sp
 \fIShift\-{j,k,d,u,f,b,page\-up,page\-down,left,right,up,down}\fP can be be used in
@@ -166,9 +180,9 @@ Tools can be hidden and rearranged however you like.
 \fIgit cola\fP carefully remembers your window layout and restores
 it the next time it is launched.
 .sp
-The \fIControl\-{1, 2, 3, ...}\fP hotkey gives focus to a specific tool.
+The \fIControl\-{1, 2, 3, …}\fP hotkey gives focus to a specific tool.
 A hidden tool can be re\-opened using the \fITools\fP menu or
-the \fIShift+Control\-{1, 2, 3, ...}\fP shortcut keys.
+the \fIShift+Control\-{1, 2, 3, …}\fP shortcut keys.
 .sp
 The Diff editor can be focused with \fICtrl\-j\fP\&.
 the Status tool can be focused with \fICtrl\-k\fP\&.
@@ -195,7 +209,7 @@ Selecting a file displays its diff in the \fI\%DIFF\fP viewer.
 Double\-clicking a file stages its contents, as does the
 the \fICtrl\-s\fP shortcut key.
 .sp
-\fICtrl\-e\fP opens selected files in the conifgured editor, and
+\fICtrl\-e\fP opens selected files in the configured editor, and
 \fICtrl\-d\fP opens selected files using \fI\%git difftool\fP
 .sp
 Additional actions can be performed using the right\-click context menu.
@@ -210,7 +224,7 @@ Clicking individual files sends diffs to the \fIDiff Display\fP\&.
 Double\-clicking individual files adds and removes their content from the index.
 .sp
 Various actions are available through the right\-click context menu.
-Different actions are available depending a file\(aqs status.
+Different actions are available depending a file’s status.
 .SS Stage Selected
 .sp
 Add to the staging area using \fI\%git add\fP
@@ -264,7 +278,7 @@ viewing diffs for staged content.
 The commit message editor is a simple text widget
 for entering commit messages.
 .sp
-You can navigate between the \fISubject\fP and \fIExtended description...\fP
+You can navigate between the \fISubject\fP and \fIExtended description…\fP
 fields using the keyboard arrow keys.
 .sp
 Pressing enter when inside the \fISubject\fP field jumps down to the
@@ -273,7 +287,7 @@ extended description field.
 The \fIOptions\fP button menu to the left of the subject field
 provides access to the additional actions.
 .sp
-The \fICtrl+i\fP keyboard shortcut adds a standard "Signed\-off\-by: " line,
+The \fICtrl+i\fP keyboard shortcut adds a standard “Signed\-off\-by: ” line,
 and \fICtrl+Enter\fP creates a new commit using the commit message and
 staged content.
 .SS Sign Off
@@ -300,7 +314,7 @@ The commit button runs
 \fI\%git commit\fP\&.
 The contents of the commit message editor is provided as the commit message.
 .sp
-Only staged files are included in the commit \-\- this is the same behavior
+Only staged files are included in the commit – this is the same behavior
 as running \fBgit commit\fP on the command\-line.
 .SS Line and Column Display
 .sp
@@ -337,14 +351,14 @@ Using this option is equivalent to passing the \fB\-\-gpg\-sign\fP option to
 \fI\%git commit\fP and
 \fI\%git merge\fP\&.
 .sp
-This option\(aqs default value can be configured using the \fIcola.signcommits\fP
+This option’s default value can be configured using the \fIcola.signcommits\fP
 configuration variable.
 .SS Prepare Commit Message
 .sp
 The \fBCommit \-> Prepare Commit Message\fP action or \fICtrl\-Shift\-Return\fP keyboard shortcut
 runs the \fIcola\-prepare\-commit\-msg\fP hook if it is available in \fI\&.git/hooks/\fP\&.
 This is a \fIgit cola\fP\-specific hook that takes the same parameters
-as Git\(aqs \fI\%prepare\-commit\-msg hook\fP
+as Git’s \fI\%prepare\-commit\-msg hook\fP
 .sp
 The hook is passed the path to \fI\&.git/GIT_COLA_MSG\fP as the first argument and the hook is expected to write
 an updated commit message to specified path.  After running this action, the
@@ -358,7 +372,7 @@ across all repositories.
 .sp
 The \fIBranches\fP tool provides a visual tree to navigate through the branches.
 The tree has three main nodes \fILocal Branch\fP, \fIRemote Branch\fP and \fITags\fP\&.
-Branches are grouped by their name divided by the character \(aq/\(aq.Ex:
+Branches are grouped by their name divided by the character ‘/’.Ex:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -401,11 +415,11 @@ The checkout action runs
 .SS Merge in current branch
 .sp
 The merge action runs
-\fI\%git merge \-\-no\-commit [<branchname>]\fP\&.
+\fI\%git merge –no\-commit [<branchname>]\fP\&.
 .SS Pull
 .sp
 The pull action runs
-\fI\%git pull \-\-no\-ff [<remote>] [<branchname>]\fP\&.
+\fI\%git pull –no\-ff [<remote>] [<branchname>]\fP\&.
 .SS Push
 .sp
 The push action runs
@@ -421,7 +435,7 @@ The delete branch branch action runs
 .SS Delete Remote Branch
 .sp
 The remote branch action runs
-\fI\%git push \-\-delete [<remote>] [<branchname>]\fP\&.
+\fI\%git push –delete [<remote>] [<branchname>]\fP\&.
 .SH APPLY PATCHES
 .sp
 Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
@@ -456,7 +470,7 @@ To use icons appropriate for a dark application theme, configure
 \fBgit config \-\-global cola.icontheme dark\fP to use the dark icon theme.
 See \fI\%cola.icontheme\fP for more details.
 .sp
-On macOS, using the \fBdefault\fP theme will automatically inherit "Dark Mode"
+On macOS, using the \fBdefault\fP theme will automatically inherit “Dark Mode”
 color themes when configured via System Preferences.  You will need to
 configure the dark icon theme as noted above when dark mode is enabled.
 .sp
@@ -504,13 +518,13 @@ sudo apt\-get install adwaita\-qt
 .UNINDENT
 .UNINDENT
 .sp
-You can activate the theme using the following enviornment variable:
+You can activate the theme using the following environment variable:
 .INDENT 0.0
 .INDENT 3.5
 .sp
 .nf
 .ft C
-# Override the default theme to adwait\-dark
+# Override the default theme to adwaita\-dark
 export QT_STYLE_OVERRIDE=adwaita\-dark
 .ft P
 .fi
@@ -519,9 +533,9 @@ export QT_STYLE_OVERRIDE=adwaita\-dark
 .sp
 \fIQT_STYLE_OVERRIDE\fP may already be set in your Desktop Environment, so check that
 variable for reference if you get unexpected hangs when launching \fIgit\-cola\fP or
-when the default theme does not follow the desktop\(aqs theme on Linux.
+when the default theme does not follow the desktop’s theme on Linux.
 .sp
-If you don\(aqt want to set this variable globally then you can set it when launching
+If you don’t want to set this variable globally then you can set it when launching
 cola from the command\-line:
 .INDENT 0.0
 .INDENT 3.5
@@ -642,7 +656,7 @@ Binary files are displayed using a hexdump display.
 .UNINDENT
 .SS cola.fontdiff
 .sp
-Specifies the font to use for \fIgit cola\fP\(aqs diff display.
+Specifies the font to use for \fIgit cola\fP’s diff display.
 .SS cola.hidpi
 .sp
 Specifies the High DPI displays scale factor. Set \fI0\fP to automatically scaled.
@@ -654,11 +668,11 @@ for more information.
 .sp
 Specifies the icon themes to use throughout \fIgit cola\fP\&. The theme specified
 must be the name of the subdirectory containing the icons, which in turn must
-be placed in the inside the main "icons" directory in \fIgit cola\fP\(aqs
+be placed in the inside the main “icons” directory in \fIgit cola\fP’s
 installation prefix.
 .sp
-If unset, or set either "light" or "default", then the default style will be
-used.  If set to "dark" then the built\-in "dark" icon theme, which is
+If unset, or set either “light” or “default”, then the default style will be
+used.  If set to “dark” then the built\-in “dark” icon theme, which is
 suitable for a dark window manager theme, will be used.
 .sp
 If set to an absolute directory path then icons in that directory will be used.
@@ -675,7 +689,7 @@ to the built\-in icons for the remainder.
 .SS cola.imagediff.<extension>
 .sp
 Enable image diffs for the specified file extension.  For example, configuring
-\fIgit config \-\-global cola.imagediff.svg false\fP will disable use of the visual
+\fIgit config –global cola.imagediff.svg false\fP will disable use of the visual
 image diff for \fI\&.svg\fP files in all repos until is is explicitly toggled on.
 Defaults to \fItrue\fP\&.
 .SS cola.inotify
@@ -693,7 +707,7 @@ another application.
 Whether to automatically break long lines while editing commit messages.
 Defaults to \fItrue\fP\&.  This setting is configured using the \fIPreferences\fP
 dialog, but it can be toggled for one\-off usage using the commit message
-editor\(aqs options sub\-menu.
+editor’s options sub\-menu.
 .SS cola.maxrecent
 .sp
 \fIgit cola\fP caps the number of recent repositories to avoid cluttering
@@ -717,11 +731,11 @@ and defaults to \fI2048\fP\&.
 expanded/collapsed when \fBcola.resizebrowsercolumns\fP is set to \fItrue\fP\&.
 .SS cola.safemode
 .sp
-The "Stage" button in the \fIgit cola\fP Actions panel stages all files when it is
+The “Stage” button in the \fIgit cola\fP Actions panel stages all files when it is
 activated and no files are selected.  This can be problematic if it is
 accidentally triggered after carefully preparing the index with staged
-changes.  "Safe Mode" is enabled by setting \fIcola.safemode\fP to \fItrue\fP\&.
-When enabled, \fIgit cola\fP will do nothing when "Stage" is activated without a
+changes.  “Safe Mode” is enabled by setting \fIcola.safemode\fP to \fItrue\fP\&.
+When enabled, \fIgit cola\fP will do nothing when “Stage” is activated without a
 selection.  Defaults to \fIfalse\fP\&.
 .SS cola.savewindowsettings
 .sp
@@ -749,7 +763,7 @@ Set to \fItrue\fP to indent files in the Status widget.  Files in the \fIStaged\
 Defaults to \fIfalse\fP\&.
 .SS cola.statusshowtotals
 .sp
-Set to \fItrue\fP to display files counts in the Status widget\(aqs category titles.
+Set to \fItrue\fP to display files counts in the Status widget’s category titles.
 Defaults to \fIfalse\fP\&.
 .SS cola.tabwidth
 .sp
@@ -771,26 +785,61 @@ accordingly.
 .SS cola.terminalshellquote
 .sp
 Some terminal require that the command string get passed as a string.
-For example, \fBxfce4\-terminal \-e "git difftool"\fP requires shellquoting,
+For example, \fBxfce4\-terminal \-e "git difftool"\fP requires shell quoting,
 whereas \fBgnome\-terminal \-\- git difftool\fP does not.
 .sp
 You should not need to set this variable for the built\-in terminals
-cola knows about \-\- it will behave correctly without configuration.
+cola knows about – it will behave correctly without configuration.
 For example, when unconfigured, cola already knows that xfce4\-terminal
-requires shellquoting.
+requires shell quoting.
 .sp
 This configuration variable is for custom terminals outside of the builtin set.
 The table below shows the builtin configuration.
-.INDENT 0.0
-.INDENT 3.5
-Terminal            cola.terminal           cola.terminalshellquote
-\-\-\-\-\-\-\-\-            \-\-\-\-\-\-\-\-\-\-\-\-\-           \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-gnome\-terminal      gnome\-terminal \-\-       false
-konsole             konsole \-e              false
-xfce4\-terminal      xfce4\-terminal \-e       true
-xterm               xterm \-e                false
-.UNINDENT
-.UNINDENT
+.TS
+center;
+|l|l|l|.
+_
+T{
+Terminal
+T}	T{
+\fBcola.terminal\fP
+T}	T{
+\fBcola.terminalshellquote\fP
+T}
+_
+T{
+gnome\-terminal
+T}	T{
+\fBgnome\-terminal \-\-\fP
+T}	T{
+\fBfalse\fP
+T}
+_
+T{
+konsole
+T}	T{
+\fBkonsole \-e\fP
+T}	T{
+\fBfalse\fP
+T}
+_
+T{
+xfce4\-terminal
+T}	T{
+\fBxfce4\-terminal \-e\fP
+T}	T{
+\fBtrue\fP
+T}
+_
+T{
+xterm
+T}	T{
+\fBxterm \-e\fP
+T}	T{
+\fBfalse\fP
+T}
+_
+.TE
 .SS cola.textwidth
 .sp
 The number of columns used for line wrapping.
@@ -830,15 +879,15 @@ The GUI theme can also be specified by passing \fB\-\-theme=<name>\fP on the
 command line.
 .SS cola.turbo
 .sp
-Set to \fItrue\fP to enable "turbo" mode.  "Turbo" mode disables some
+Set to \fItrue\fP to enable “turbo” mode.  “Turbo” mode disables some
 features that can slow things down when operating on huge repositories.
-"Turbo" mode will skip loading Git commit messages, author details, status
+“Turbo” mode will skip loading Git commit messages, author details, status
 information, and commit date details in the \fIFile Browser\fP tool.
 Defaults to \fIfalse\fP\&.
 .SS cola.color.text
 .sp
 The default diff text color, in hexadecimal #RRGGBB notation.
-Defaults to "#030303":
+Defaults to “#030303”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -851,8 +900,8 @@ git config cola.color.text \(aq#030303\(aq
 .UNINDENT
 .SS cola.color.add
 .sp
-The default diff "add" background color, in hexadecimal #RRGGBB notation.
-Defaults to "#d2ffe4":
+The default diff “add” background color, in hexadecimal #RRGGBB notation.
+Defaults to “#d2ffe4”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -865,8 +914,8 @@ git config cola.color.add \(aq#d2ffe4\(aq
 .UNINDENT
 .SS cola.color.remove
 .sp
-The default diff "remove" background color, in hexadecimal #RRGGBB notation.
-Defaults to "#fee0e4":
+The default diff “remove” background color, in hexadecimal #RRGGBB notation.
+Defaults to “#fee0e4”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -880,7 +929,7 @@ git config cola.color.remove \(aq#fee0e4\(aq
 .SS cola.color.header
 .sp
 The default diff header text color, in hexadecimal #RRGGBB notation.
-Defaults to "#bbbbbb":
+Defaults to “#bbbbbb”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -900,7 +949,7 @@ set are ignored.
 By default the hooks directory is \fB$GIT_DIR/hooks\fP, but that can
 be changed via the \fBcore.hooksPath\fP configuration variable
 .sp
-The \fBcola\-prepare\-commit\-msg\fP hook functionality and Cola\(aqs Git LFS
+The \fBcola\-prepare\-commit\-msg\fP hook functionality and Cola’s Git LFS
 detection honors this configuration.
 .sp
 Please see the \fI\%git hooks documentation\fP
@@ -929,12 +978,12 @@ The default merge tool to use.
 .SS user.email
 .sp
 Your email address to be recorded in any newly created commits.
-Can be overridden by the \(aqGIT_AUTHOR_EMAIL\(aq, \(aqGIT_COMMITTER_EMAIL\(aq, and
-\(aqEMAIL\(aq environment variables.
+Can be overridden by the ‘GIT_AUTHOR_EMAIL’, ‘GIT_COMMITTER_EMAIL’, and
+‘EMAIL’ environment variables.
 .SS user.name
 .sp
 Your full name to be recorded in any newly created commits.
-Can be overridden by the \(aqGIT_AUTHOR_NAME\(aq and \(aqGIT_COMMITTER_NAME\(aq
+Can be overridden by the ‘GIT_AUTHOR_NAME’ and ‘GIT_COMMITTER_NAME’
 environment variables.
 .SH ENVIRONMENT VARIABLES
 .SS GIT_COLA_ICON_THEME
@@ -981,7 +1030,7 @@ may want \fIgit cola\fP to use a specific language.
 .sp
 You can make \fIgit cola\fP use an alternative language by creating a
 \fI~/.config/git\-cola/language\fP file containing the standard two\-letter
-gettext language code, e.g. "en", "de", "ja", "zh", etc.:
+gettext language code, e.g. “en”, “de”, “ja”, “zh”, etc.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -995,8 +1044,8 @@ echo en >~/.config/git\-cola/language
 .UNINDENT
 .sp
 Alternatively you may also use LANGUAGE environmental variable to temporarily
-change \fIgit cola\fP\(aqs language just like any other gettext\-based program.  For
-example to temporarily change \fIgit cola\fP\(aqs language to English:
+change \fIgit cola\fP’s language just like any other gettext\-based program.  For
+example to temporarily change \fIgit cola\fP’s language to English:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -1023,7 +1072,7 @@ LANGUAGE=zh_TW:zh_HK:zh:en git cola
 .SH CUSTOM GUI ACTIONS
 .sp
 \fIgit cola\fP allows you to define custom GUI actions by setting \fIgit config\fP
-variables.  The "name" of the command appears in the "Actions" menu.
+variables.  The “name” of the command appears in the “Actions” menu.
 .SS guitool.<name>.cmd
 .sp
 Specifies the shell command line to execute when the corresponding item of the
@@ -1124,8 +1173,8 @@ sudo apt\-get install gnupg2 gnupg\-agent pinentry\-qt
 .UNINDENT
 .sp
 On Linux, you should also configure Git so that it uses gpg2 (gnupg2),
-otherwise you will get errors mentioning, "unable to open /dev/tty".
-Set Git\(aqs \fIgpg.program\fP to \fIgpg2\fP:
+otherwise you will get errors mentioning, “unable to open /dev/tty”.
+Set Git’s \fIgpg.program\fP to \fIgpg2\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -1170,7 +1219,7 @@ default\-cache\-ttl 3600
 .UNINDENT
 .UNINDENT
 .sp
-This following example \fI\&.gnupg/gpg\-agent.conf\fP shows how to use MacGPG2\(aqs
+This following example \fI\&.gnupg/gpg\-agent.conf\fP shows how to use MacGPG2’s
 pinentry app on On Mac OS X:
 .INDENT 0.0
 .INDENT 3.5
@@ -1263,7 +1312,7 @@ mode when available. Git Cola does not use the MD5 value for security purposes.
 MD% is used only for the purposes of implementing the \fBcola/gravatar.py\fP
 Gravatar client.
 .SH LINKS
-.SS Git Cola\(aqs Git Repository
+.SS Git Cola’s Git Repository
 .sp
 \fI\%https://github.com/git\-cola/git\-cola/\fP
 .SS Git Cola Homepage
@@ -1275,6 +1324,6 @@ Gravatar client.
 .SH AUTHOR
 David Aguilar and contributors
 .SH COPYRIGHT
-David Aguilar
+2007-2022, David Aguilar and contributors
 .\" Generated by docutils manpage writer.
 .
