@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Sep 29, 2022" "4.0.2" "git-cola"
+.TH "GIT-COLA" "1" "Nov 10, 2022" "4.0.3" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -634,6 +634,13 @@ Expand tabs into spaces in the commit message editor.  When set to \fItrue\fP,
 \fIgit cola\fP will insert a configurable number of spaces when tab is pressed.
 The number of spaces is determined by \fIcola.tabwidth\fP\&.
 Defaults to \fIfalse\fP\&.
+.SS cola.gravatar
+.sp
+Use the \fIgravatar.com\fP service to lookup icons for author emails.
+Gravatar icons work by sending an MD5 hash of an author’s email to \fIgravatar.com\fP
+when requesting an icon. Warning: this feature can leak information.
+Network requests to \fIgravatar.com\fP are disabled when set to \fIfalse\fP\&.
+Defaults to \fItrue\fP\&.
 .SS cola.fileattributes
 .sp
 Enables per\-file gitattributes encoding and binary file support.

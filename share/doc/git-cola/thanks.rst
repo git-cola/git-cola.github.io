@@ -75,6 +75,7 @@ Thanks
 * Drugoy
 * Efimov Vasily
 * Eric Drechsel
+* Eric Wild
 * Erop @EgZvor
 * Erwan Bousse
 * Fabio Coatti
@@ -87,6 +88,7 @@ Thanks
 * Geoffrey van Wyk
 * Georg Limbach
 * geotavros
+* Gianni Lerro
 * `Git Hackers <http://git-scm.com/about>`_
 * green-eyed-bear
 * Glen Mailer
@@ -104,6 +106,7 @@ Thanks
 * Iulian Udrea
 * Ivar Smolin
 * Jad El Kik
+* Jakub Klos
 * Jan @hanksoff
 * Jan Šilhan
 * Jan Tumanov
@@ -135,6 +138,7 @@ Thanks
 * Kevin Kofler
 * Kirit Sælensminde
 * Kisaragi Hiu
+* Klaas Neirinck
 * Kurt McKee
 * Kyle Slane
 * László Böszörményi
@@ -154,6 +158,7 @@ Thanks
 * Maciej Filipiak
 * Mahmoud Hossam
 * Mateusz Kedzior
+* Matias N. Goldberg
 * Maicon D. Filippsen
 * Marcin Mielniczuk
 * Marco Costalba

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git-cola(1) &mdash; git-cola 4.0.2 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 4.0.3 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> git-cola
           </a>
               <div class="version">
-                4.0.2
+                4.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -135,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#cola-defaultrepo">cola.defaultrepo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-dictionary">cola.dictionary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-expandtab">cola.expandtab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-gravatar">cola.gravatar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-fileattributes">cola.fileattributes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-fontdiff">cola.fontdiff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-hidpi">cola.hidpi</a></li>
@@ -791,6 +792,14 @@ This should be configured to the path of a newline-separated list of words.</p>
 <cite>git cola</cite> will insert a configurable number of spaces when tab is pressed.
 The number of spaces is determined by <cite>cola.tabwidth</cite>.
 Defaults to <cite>false</cite>.</p>
+</section>
+<section id="cola-gravatar">
+<h3>cola.gravatar<a class="headerlink" href="#cola-gravatar" title="Permalink to this heading"></a></h3>
+<p>Use the <cite>gravatar.com</cite> service to lookup icons for author emails.
+Gravatar icons work by sending an MD5 hash of an author’s email to <cite>gravatar.com</cite>
+when requesting an icon. Warning: this feature can leak information.
+Network requests to <cite>gravatar.com</cite> are disabled when set to <cite>false</cite>.
+Defaults to <cite>true</cite>.</p>
 </section>
 <section id="cola-fileattributes">
 <h3>cola.fileattributes<a class="headerlink" href="#cola-fileattributes" title="Permalink to this heading"></a></h3>
