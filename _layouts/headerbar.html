@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>{{ page.title }}</title>
+<link rel="stylesheet" type="text/css"  href="{{ page.prefix }}cola.css" />
+<link rel="icon" type="image/png" href="{{ page.prefix }}images/favicon.png" />
+<link rel="alternate" type="application/atom+xml" title="git-cola news feed"
+	href="{{ site.cola_github }}/commits/master.atom" />
+
+<style>
+</style>
+
+</head>
+<body>
+    <header class="headerbar">
+        <div class="headerbar-logo-container">
+            <a class="headerbar-logo-link" href="{{ page.prefix }}index.html">
+	            <img class="headerbar-logo" src="{{ page.prefix }}images/git-cola-logo.png" alt="git-cola logo" />
+            </a>
+            <span class="headerbar-text">The highly caffeinated Git GUI</span>
+        </div>
+        <nav class="headerbar-nav">
+            <a href="downloads.html">Download</a></li>
+            <a href="share/doc/git-cola/hotkeys.html">Keyboard Shortcuts</a></li>
+            <a href="https://git-cola.readthedocs.io/en/latest/">Documentation</a></li>
+            <a href="screenshots.html">Screenshots</a></li>
+            <a href="https://github.com/git-cola/git-cola">Source</a></li>
+            <a href="about.html">About</a></li>
+        </nav>
+    </header>
+<!--
+<div class="logo-top">
+</div>
+
+<div class="pagetop">
+    <a href="{{ page.prefix }}index.html">
+	    <img src="{{ page.prefix }}images/logo-top.png" alt="git-cola logo" />
+    </a>
+</div>
+-->
+
+{{ content }}
+
+</body>
+</html>
