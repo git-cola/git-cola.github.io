@@ -2,10 +2,10 @@
 
 body {
     font-size: 1.3em;
-	font-family: "Helvetica", "Ubuntu", "Droid Sans", sans-serif;
-	text-decoration: none;
-	color: #333;
-	background-color: #fff;
+    font-family: "Helvetica", "Ubuntu", "Droid Sans", sans-serif;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
     padding: 0;
     margin: 0;
 }
@@ -63,46 +63,46 @@ body {
 
 .headerbar-nav a {
     padding: 0.5em;
-    color: #E0DFDB;
+    color: #e0dfdb;
 }
 .headerbar-nav a:hover {
-    background-color: #EF5033;
+    background-color: #ef5033;
     color: #fff;
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 a {
-	font-weight: bold;
-	text-decoration: none;
-	color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
     padding: 0.2em;
     padding-bottom: 0.1em;
 }
 
 a:hover {
-	color: white;
-	background-color: #085f00;
+    color: white;
+    background-color: #085f00;
 }
 
 a.button {
-	color: white;
-	background-color: #085f00;
-	font-size: 2em;
-	font-weight: bold;
-	color: white;
-	white-space: nowrap;
-	padding: 0.5ex;
-	padding-left: 1ex;
-	padding-right: 1ex;
-	text-align: left;
-	z-index: 3;
+    color: white;
+    background-color: #085f00;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    padding: 0.5ex;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    text-align: left;
+    z-index: 3;
 }
 
 a.button:hover {
-	background-color: #10af00;
+    background-color: #10af00;
 }
 
 @media screen and (max-width: 1080px) {
