@@ -3,8 +3,8 @@ flags ?=
 
 all:: install
 
-install:
+install::
 	jekyll build --destination "$(prefix)" $(flags)
 
-sanitize:
+sanitize::
 	dos2unix share/doc/git-cola/*.html share/doc/git-cola/html/*.html
