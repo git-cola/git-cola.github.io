@@ -84,12 +84,12 @@ a {
 
 a:hover {
     color: white;
-    background-color: #085f00;
+    background-color: #ef5033;
 }
 
 a.button {
     color: white;
-    background-color: #085f00;
+    background-color: #ef5033;
     font-size: 2em;
     font-weight: bold;
     color: white;
@@ -102,7 +102,8 @@ a.button {
 }
 
 a.button:hover {
-    background-color: #10af00;
+    background-color: #ef5033;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1080px) {
