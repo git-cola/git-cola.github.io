@@ -23,6 +23,7 @@ Thanks
 * Andrej Kvasnica
 * Andrew Chen
 * Andrew Hemming
+* Andy O'Neill
 * armandg
 * Arthur Coelho
 * Audrey Yeena Toskin
@@ -47,6 +48,7 @@ Thanks
 * 林博仁 (Buo-ren Lin)
 * cclaus
 * Charles 101
+* Chris Stefano
 * Christian Jann
 * Christoph Erhardt
 * Christopher Meng
@@ -76,6 +78,7 @@ Thanks
 * Efimov Vasily
 * Eric Drechsel
 * Eric Wild
+* Ernst Widerberg
 * Erop @EgZvor
 * Erwan Bousse
 * Fabio Coatti
