@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Git Cola Documentation &mdash; git-cola 4.1.0 documentation</title>
+  <title>Git Cola Documentation &mdash; git-cola 4.2.0 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,6 +16,7 @@
         <script src="static/underscore.js"></script>
         <script src="static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="static/doctools.js"></script>
+        <script src="static/sphinx_highlight.js"></script>
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -27,14 +28,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> git-cola
+
+          
+          
+          <a href="#" class="icon icon-home">
+            git-cola
           </a>
               <div class="version">
-                4.1.0
+                4.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -62,8 +67,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Git Cola Documentation</li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Git Cola Documentation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -115,11 +120,13 @@
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#tools">TOOLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#status">STATUS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#drag-and-drop">Drag and Drop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#actions">Actions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#id4">DIFF</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#staging-content-for-commit">Staging content for commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#diff-against-commit-diff-mode">Diff Against Commit (Diff Mode)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#commit-message-editor">COMMIT MESSAGE EDITOR</a><ul>
@@ -145,6 +152,7 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-autocompletepaths">cola.autocompletepaths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-blameviewer">cola.blameviewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-blockcursor">cola.blockcursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-browserdockable">cola.browserdockable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-checkconflicts">cola.checkconflicts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-defaultrepo">cola.defaultrepo</a></li>
@@ -155,11 +163,12 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-fontdiff">cola.fontdiff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-hidpi">cola.hidpi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-icontheme">cola.icontheme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-imagediff-extension">cola.imagediff.&lt;extension&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-imagediff-extension">cola.imagediff.[extension]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-inotify">cola.inotify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-refreshonfocus">cola.refreshonfocus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-linebreak">cola.linebreak</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-maxrecent">cola.maxrecent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-mousezoom">cola.mousezoom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-dragencoding">cola.dragencoding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-readsize">cola.readsize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-resizebrowsercolumns">cola.resizebrowsercolumns</a></li>
@@ -263,6 +272,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-2-0">v4.2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-1-0">v4.1.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-0-4">v4.0.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-0-3">v4.0.3</a></li>

@@ -84,7 +84,16 @@ span.title {
     <td class="shortcut">Ctrl + U</td>
     <td>:</td>
     <!-- TODO -->
-    <td>Revert unstaged edits</td>
+    <td>Revert the selected lines, or the diff hunk beneath the text cursor when nothing
+        is selected, from the worktree</td>
+</tr>
+<tr>
+    <td class="shortcut">Ctrl + Shift + U</td>
+    <td>:</td>
+    <!-- TODO -->
+    <td>Launch an external editor to edit the selected lines, or the diff hunk beneath
+        the text cursor when nothing is selected, and then revert unstaged changes
+        using the edited diff</td>
 </tr>
 <tr>
     <td class="shortcut">Ctrl + Z</td>
@@ -132,7 +141,7 @@ span.title {
     <td>Find files</td>
 </tr>
 <tr>
-    <td class="shortcut">Ctrl + G</td>
+    <td class="shortcut">Alt + G</td>
     <td>:</td>
     <td>Suchen</td>
 </tr>
@@ -211,6 +220,11 @@ span.title {
     <td>Übergeordnetes Verzeichnis öffnen</td>
 </tr>
 <tr>
+    <td class="shortcut">Ctrl + Alt + C</td>
+    <td>:</td>
+    <td>Version kopieren</td>
+</tr>
+<tr>
     <td class="shortcut">Ctrl + Shift + E</td>
     <td>:</td>
     <td>Kürzlich geänderte Dateien anzeigen/bearbeiten</td>
@@ -242,14 +256,70 @@ span.title {
     </td>
 </tr>
 <tr>
+    <td class="shortcut">Ctrl + Shift + S</td>
+    <td>:</td>
+    <td>Launch an external editor to edit the selected lines, or the diff hunk beneath the
+        text cursor when nothing is selected, and then stage the edited diff</td>
+</tr>
+<tr>
     <td class="shortcut">Ctrl + D</td>
     <td>:</td>
     <td>Mithilfe von `git difftool` ansehen</td>
 </tr>
 <tr>
+    <td class="shortcut">Ctrl + F</td>
+    <td>:</td>
+    <td>Search diff for matching text</td>
+</tr>
+<tr>
+    <td class="shortcut">Ctrl + G</td>
+    <td>:</td>
+    <td>Search diff for the next text match</td>
+</tr>
+<tr>
+    <td class="shortcut">Ctrl + Shift + G</td>
+    <td>:</td>
+    <td>Search diff for the previous text match</td>
+</tr>
+<tr>
+    <td class="shortcut">Alt + Shift + C</td>
+    <td>:</td>
+    <td>Copy Diff to clipboard (strips diff +/- prefixes)</td>
+</tr>
+<tr>
     <td class="shortcut">Ctrl + Shift + D</td>
     <td>:</td>
     <td>View directory diff using `git difftool --dir-diff`</td>
+</tr>
+<tr>
+    <td class="shortcut">Shift</td>
+    <td>:</td>
+    <td>Hold shift to select text when moving around with H, J, K, L and Arrow keys</td>
+</tr>
+<tr>
+    <td class="shortcut">Space / Shift + Space</td>
+    <td>:</td>
+    <td>Page Down / Page Up</td>
+</tr>
+<tr>
+    <td class="shortcut">0 (Zero)</td>
+    <td>:</td>
+    <td>Move cursor to the start of the line</td>
+</tr>
+<tr>
+    <td class="shortcut">$ (Shift + 4)</td>
+    <td>:</td>
+    <td>Move cursor to the end of the line</td>
+</tr>
+<tr>
+    <td class="shortcut">G G</td>
+    <td>:</td>
+    <td>Move cursor to the start of the diff</td>
+</tr>
+<tr>
+    <td class="shortcut">Shift + G</td>
+    <td>:</td>
+    <td>Move cursor to the end of the diff</td>
 </tr>
 </table>
 
@@ -270,11 +340,6 @@ span.title {
     <td class="shortcut">Ctrl + Shift + D</td>
     <td>:</td>
     <td>Mit Vorgänger vergleichen</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl + Alt + C</td>
-    <td>:</td>
-    <td>SHA-1 kopieren</td>
 </tr>
 </table>
 
@@ -305,7 +370,7 @@ span.title {
     <td>:</td>
     <td>Nach rechts/ausklappen</td>
 </tr>
-<!-- TODO: translate the following -->
+<!-- TODO -->
 <tr>
     <td class="shortcut">Ctrl + J</td>
     <td>:</td>
@@ -316,10 +381,10 @@ span.title {
     <td>:</td>
     <td>Focus the Status tool</td>
 </tr>
-<tr title="Ctrl+L also focuses the DAG revspec, grep query, ...">
+<tr>
     <td class="shortcut">Ctrl + L</td>
     <td>:</td>
-    <td>Focus the Commit tool</td>
+    <td>Focus the Commit summary, Grep query, DAG query, ...</td>
 </tr>
 </table>
 

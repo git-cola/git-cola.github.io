@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git-cola(1) &mdash; git-cola 4.1.0 documentation</title>
+  <title>git-cola(1) &mdash; git-cola 4.2.0 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,6 +16,7 @@
         <script src="static/underscore.js"></script>
         <script src="static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="static/doctools.js"></script>
+        <script src="static/sphinx_highlight.js"></script>
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,14 +29,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> git-cola
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            git-cola
           </a>
               <div class="version">
-                4.1.0
+                4.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,6 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts">KEYBOARD SHORTCUTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tools">TOOLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#status">STATUS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#drag-and-drop">Drag and Drop</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#actions">Actions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#stage-selected">Stage Selected</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#launch-editor">Launch Editor</a></li>
@@ -96,6 +102,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">DIFF</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#staging-content-for-commit">Staging content for commit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diff-against-commit-diff-mode">Diff Against Commit (Diff Mode)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#commit-message-editor">COMMIT MESSAGE EDITOR</a><ul>
@@ -130,6 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#cola-autocompletepaths">cola.autocompletepaths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-blameviewer">cola.blameviewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-blockcursor">cola.blockcursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-browserdockable">cola.browserdockable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-checkconflicts">cola.checkconflicts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-defaultrepo">cola.defaultrepo</a></li>
@@ -140,11 +148,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#cola-fontdiff">cola.fontdiff</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-hidpi">cola.hidpi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-icontheme">cola.icontheme</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cola-imagediff-extension">cola.imagediff.&lt;extension&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-imagediff-extension">cola.imagediff.[extension]</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-inotify">cola.inotify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-refreshonfocus">cola.refreshonfocus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-linebreak">cola.linebreak</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-maxrecent">cola.maxrecent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cola-mousezoom">cola.mousezoom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-dragencoding">cola.dragencoding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-readsize">cola.readsize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-resizebrowsercolumns">cola.resizebrowsercolumns</a></li>
@@ -238,8 +247,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>git-cola(1)</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">git-cola(1)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="sources/git-cola.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -385,6 +394,27 @@ When you select a line in the diff or grep screens and press any of
 <cite>Enter</cite>, <cite>Ctrl-e</cite>, or the <cite>Edit</cite> button, you are taken to that exact line.</p>
 <p>The editor preference is saved in the <cite>gui.editor</cite> variable using
 <a class="reference external" href="http://git-scm.com/docs/git-config">git config</a>.</p>
+<p>The following are some recommend editor configurations.</p>
+<ul class="simple">
+<li><p>Neovim + Neovim-Qt</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span>nvim
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>gui.editor<span class="w"> </span><span class="s1">&#39;nvim-qt --nofork&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Vim + gvim</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span>vim
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>gui.editor<span class="w"> </span><span class="s1">&#39;gvim -f&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Sublime Text</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>gui.editor<span class="w"> </span><span class="s1">&#39;subl --wait&#39;</span>
+</pre></div>
+</div>
 </section>
 <section id="keyboard-shortcuts">
 <h2>KEYBOARD SHORTCUTS<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this heading"></a></h2>
@@ -436,12 +466,23 @@ on the command line.</p>
 <p>You can navigate through the list of files using keyboard arrows as well
 as the ergonomical and vim-like <cite>j</cite> and <cite>k</cite> shortcut keys.</p>
 <p>There are several convenient ways to interact with files in the <cite>Status</cite> tool.</p>
-<p>Selecting a file displays its diff in the <a class="reference internal" href="#id4"><span class="std std-ref">DIFF</span></a> viewer.
+<p>Selecting a file displays its diff in the <cite>Diff</cite> viewer.
 Double-clicking a file stages its contents, as does the
 the <cite>Ctrl-s</cite> shortcut key.</p>
 <p><cite>Ctrl-e</cite> opens selected files in the configured editor, and
 <cite>Ctrl-d</cite> opens selected files using <a class="reference external" href="http://git-scm.com/docs/git-difftool">git difftool</a></p>
 <p>Additional actions can be performed using the right-click context menu.</p>
+<section id="drag-and-drop">
+<h3>Drag and Drop<a class="headerlink" href="#drag-and-drop" title="Permalink to this heading"></a></h3>
+<p>Files can be dragged from the the <cite>Status</cite> tool onto other applications.</p>
+<p>Some terminals will treat a drag with multiple files by separating them with newlines,
+which is less amenable for pasting command-line arguments.</p>
+<p>To avoid this issue, hold down <cite>Alt / Option</cite> when dragging from the <cite>Status</cite> tool.
+The drag and drop payload will no longer contain local file URLs – it will contain
+plain text that is amenable for use on a command-line.</p>
+<p>Note: if drag and drop is not working and you are on Wayland then you may
+need to <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">QT_QPA_PLATFORM=wayland</span></code> in your environment.</p>
+</section>
 <section id="actions">
 <h3>Actions<a class="headerlink" href="#actions" title="Permalink to this heading"></a></h3>
 <p>Clicking the <cite>Staged</cite> folder shows a diffstat for the index.</p>
@@ -498,6 +539,9 @@ Additions are shown in green and removals are displayed in light red.
 Extraneous whitespace is shown with a pure-red background.</p>
 <p>Right-clicking in the diff provides access to additional actions
 that use either the cursor location or text selection.</p>
+<p>The “Copy Diff” action at <code class="docutils literal notranslate"><span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">C</span></code> copies the selected lines to the
+clipboard. The <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code> and `` `` diff line prefixes are stripped from each line
+when copying diffs using the “Copy Diff” action.</p>
 <section id="staging-content-for-commit">
 <h3>Staging content for commit<a class="headerlink" href="#staging-content-for-commit" title="Permalink to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">&#64;&#64;</span></code> patterns denote a new diff hunk.  Selecting lines of diff
@@ -507,6 +551,16 @@ entire patch diff hunk.</p>
 <p>The corresponding opposite commands can be performed on staged files as well,
 e.g. staged content can be selectively removed from the index when we are
 viewing diffs for staged content.</p>
+</section>
+<section id="diff-against-commit-diff-mode">
+<h3>Diff Against Commit (Diff Mode)<a class="headerlink" href="#diff-against-commit-diff-mode" title="Permalink to this heading"></a></h3>
+<p><em>Diff Mode</em> allows you to selectively unstage and revert edits from arbitrary commits
+so that you can bring these edits back into your worktree.</p>
+<p>You can use the diff editor to unstage edits against arbitrary commits by using the
+<code class="docutils literal notranslate"><span class="pre">Diff</span> <span class="pre">&gt;</span> <span class="pre">Against</span> <span class="pre">Commit...</span> <span class="pre">(Diff</span> <span class="pre">Mode)</span></code> menu action.</p>
+<p>You can exit <em>Diff Mode</em> by clicking on the red circle-slash icon on the Status
+widget, by using the <code class="docutils literal notranslate"><span class="pre">Diff</span> <span class="pre">&gt;</span> <span class="pre">Exit</span> <span class="pre">Diff</span> <span class="pre">mode</span></code> menu action, or by clicking in
+an empty area in the <cite>Status</cite> tool.</p>
 </section>
 </section>
 <section id="commit-message-editor">
@@ -763,6 +817,12 @@ Defaults to <cite>false</cite>.</p>
 <h3>cola.blameviewer<a class="headerlink" href="#cola-blameviewer" title="Permalink to this heading"></a></h3>
 <p>The command used to blame files.  Defaults to <cite>git gui blame</cite>.</p>
 </section>
+<section id="cola-blockcursor">
+<h3>cola.blockcursor<a class="headerlink" href="#cola-blockcursor" title="Permalink to this heading"></a></h3>
+<p>Whether to use a “block” cursor in diff editors. The block cursor is easier to
+see compared to a line cursor. Set to <cite>false</cite> to use a thin “line” cursor.
+Defauls to <cite>true</cite>.</p>
+</section>
 <section id="cola-browserdockable">
 <h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Permalink to this heading"></a></h3>
 <p>Whether to create a dock widget with the <cite>Browser</cite> tool.
@@ -785,6 +845,11 @@ the user for a repository.</p>
 <h3>cola.dictionary<a class="headerlink" href="#cola-dictionary" title="Permalink to this heading"></a></h3>
 <p>Specifies an additional dictionary for <cite>git cola</cite> to use in its spell checker.
 This should be configured to the path of a newline-separated list of words.</p>
+<p>By default, <cite>git cola</cite> searches for <cite>dict/words</cite> and <cite>dict/propernames</cite> dictionary
+files in <cite>~/.local/share</cite> and <cite>$XDG_DATA_DIRS</cite>.</p>
+<p>If <cite>$XDG_DATA_DIRS</cite> is undefined or set to an empty value then <cite>/usr/local/share</cite> and
+<cite>/usr/share</cite> are searched for dictionary files.</p>
+<p>Dictionary files are newline-separated and contain one word per line.</p>
 </section>
 <section id="cola-expandtab">
 <h3>cola.expandtab<a class="headerlink" href="#cola-expandtab" title="Permalink to this heading"></a></h3>
@@ -810,7 +875,7 @@ and applying diffs.</p>
 specific untracked paths to be treated as binary files when diffing.
 Binary files are displayed using a hexdump display.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Treat *.exr files as binary files.</span>
-*.exr binary
+*.exr<span class="w"> </span>binary
 </pre></div>
 </div>
 </section>
@@ -846,7 +911,7 @@ searched.  This can be used to override a subset of the icons, and fallback
 to the built-in icons for the remainder.</p>
 </section>
 <section id="cola-imagediff-extension">
-<h3>cola.imagediff.&lt;extension&gt;<a class="headerlink" href="#cola-imagediff-extension" title="Permalink to this heading"></a></h3>
+<h3>cola.imagediff.[extension]<a class="headerlink" href="#cola-imagediff-extension" title="Permalink to this heading"></a></h3>
 <p>Enable image diffs for the specified file extension.  For example, configuring
 <cite>git config –global cola.imagediff.svg false</cite> will disable use of the visual
 image diff for <cite>.svg</cite> files in all repos until is is explicitly toggled on.
@@ -876,6 +941,12 @@ editor’s options sub-menu.</p>
 <p><cite>git cola</cite> caps the number of recent repositories to avoid cluttering
 the start and recent repositories menu.  The maximum number of repositories to
 remember is controlled by <cite>cola.maxrecent</cite> and defaults to <cite>8</cite>.</p>
+</section>
+<section id="cola-mousezoom">
+<h3>cola.mousezoom<a class="headerlink" href="#cola-mousezoom" title="Permalink to this heading"></a></h3>
+<p>Controls whether zooming text using Ctrl + MouseWheel scroll is enabled.
+Set to <cite>false to disable scrolling with the mouse wheel.
+Defauls to `true</cite>.</p>
 </section>
 <section id="cola-dragencoding">
 <h3>cola.dragencoding<a class="headerlink" href="#cola-dragencoding" title="Permalink to this heading"></a></h3>
@@ -967,11 +1038,6 @@ requires shell quoting.</p>
 <p>This configuration variable is for custom terminals outside of the builtin set.
 The table below shows the builtin configuration.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 32%" />
-<col style="width: 41%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Terminal</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">cola.terminal</span></code></p></th>

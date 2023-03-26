@@ -86,6 +86,14 @@ span.title {
     <td>还原缓存改动</td>
 </tr>
 <tr>
+    <td class="shortcut">Ctrl + Shift + U</td>
+    <td>:</td>
+    <!-- TODO -->
+    <td>Launch an external editor to edit the selected lines, or the diff hunk beneath
+        the text cursor when nothing is selected, and then revert unstaged changes
+        using the edited diff</td>
+</tr>
+<tr>
     <td class="shortcut">Ctrl + Z</td>
     <td>:</td>
     <td>撤销未缓存变更</td>
@@ -132,7 +140,7 @@ span.title {
     <td>Find files</td>
 </tr>
 <tr>
-    <td class="shortcut">Ctrl + G</td>
+    <td class="shortcut">Alt + G</td>
     <td>:</td>
     <td>搜索</td>
 </tr>
@@ -211,6 +219,11 @@ span.title {
     <td>打开上级目录</td>
 </tr>
 <tr>
+    <td class="shortcut">Ctrl + Alt + C</td>
+    <td>:</td>
+    <td>Copy Commit ID</td>
+</tr>
+<tr>
     <td class="shortcut">Ctrl + Shift + E</td>
     <td>:</td>
     <td>查看 / 编辑最近修改的文件</td>
@@ -241,17 +254,74 @@ span.title {
     </td>
 </tr>
 <tr>
+    <td class="shortcut">Ctrl + Shift + S</td>
+    <td>:</td>
+    <td>Launch an external editor to edit the selected lines, or the diff hunk benath the
+        text cursor when nothing is selected, and then stage the edited diff</td>
+</tr>
+<tr>
     <td class="shortcut">Ctrl + D</td>
     <td>:</td>
     <td>使用「git difftool」命令查看内容差异</td>
+</tr>
+<tr>
+    <td class="shortcut">Ctrl + F</td>
+    <td>:</td>
+    <td>Search diff for matching text</td>
+</tr>
+<tr>
+    <td class="shortcut">Ctrl + G</td>
+    <td>:</td>
+    <td>Search diff for the next text match</td>
+</tr>
+<tr>
+    <td class="shortcut">Ctrl + Shift + G</td>
+    <td>:</td>
+    <td>Search diff for the previous text match</td>
+</tr>
+<tr>
+    <td class="shortcut">Alt + Shift + C</td>
+    <td>:</td>
+    <td>Copy Diff to clipboard (strips diff +/- prefixes)</td>
 </tr>
 <tr>
     <td class="shortcut">Ctrl + Shift + D</td>
     <td>:</td>
     <td>View directory diff using `git difftool --dir-diff`</td>
 </tr>
+<!-- TODO -->
+<tr>
+    <td class="shortcut">Shift</td>
+    <td>:</td>
+    <td>Hold Shift to select text when moving the cursor with H, J, K, L
+        and Arrow keys</td>
+</tr>
+<tr>
+    <td class="shortcut">Space / Shift + Space</td>
+    <td>:</td>
+    <td>Page Down / Page Up</td>
+</tr>
+<tr>
+    <td class="shortcut">0 (Zero)</td>
+    <td>:</td>
+    <td>Move cursor to the start of the line</td>
+</tr>
+<tr>
+    <td class="shortcut">$ (Shift + 4)</td>
+    <td>:</td>
+    <td>Move cursor to the end of the line</td>
+</tr>
+<tr>
+    <td class="shortcut">G G</td>
+    <td>:</td>
+    <td>Move cursor to the start of the diff</td>
+</tr>
+<tr>
+    <td class="shortcut">Shift + G</td>
+    <td>:</td>
+    <td>Move cursor to the end of the diff</td>
+</tr>
 </table>
-
 
 <!-- Browser actions -->
 <table class="center">
@@ -269,11 +339,6 @@ span.title {
     <td class="shortcut">Ctrl + Shift + D</td>
     <td>:</td>
     <td>与之前版本比较差异</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl + Alt + C</td>
-    <td>:</td>
-    <td>Copy SHA-1</td>
 </tr>
 </table>
 
@@ -304,7 +369,7 @@ span.title {
     <td>:</td>
     <td>右移／展开</td>
 </tr>
-<!-- TODO: translate the following -->
+<!-- TODO -->
 <tr>
     <td class="shortcut">Ctrl + J</td>
     <td>:</td>
@@ -315,10 +380,10 @@ span.title {
     <td>:</td>
     <td>Focus the Status tool</td>
 </tr>
-<tr title="Ctrl+L also focuses the DAG revspec, grep query, ...">
+<tr>
     <td class="shortcut">Ctrl + L</td>
     <td>:</td>
-    <!-- TODO: Focus the Commit tool -->
+    <!-- TODO: Focus the Commit summary, Grep query, DAG query, ...-->
     <td>聚焦在 DAG 输入框</td>
 </tr>
 </table>

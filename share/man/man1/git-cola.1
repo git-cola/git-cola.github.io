@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Dec 23, 2022" "4.1.0" "git-cola"
+.TH "GIT-COLA" "1" "Mar 26, 2023" "4.2.0" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -142,6 +142,52 @@ When you select a line in the diff or grep screens and press any of
 .sp
 The editor preference is saved in the \fIgui.editor\fP variable using
 \fI\%git config\fP\&.
+.sp
+The following are some recommend editor configurations.
+.INDENT 0.0
+.IP \(bu 2
+Neovim + Neovim\-Qt
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config \-\-global core.editor nvim
+git config \-\-global gui.editor \(aqnvim\-qt \-\-nofork\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.IP \(bu 2
+Vim + gvim
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config \-\-global core.editor vim
+git config \-\-global gui.editor \(aqgvim \-f\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.IP \(bu 2
+Sublime Text
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+git config \-\-global gui.editor \(aqsubl \-\-wait\(aq
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH KEYBOARD SHORTCUTS
 .sp
 \fIgit cola\fP has many useful keyboard shortcuts.
@@ -205,7 +251,7 @@ as the ergonomical and vim\-like \fIj\fP and \fIk\fP shortcut keys.
 .sp
 There are several convenient ways to interact with files in the \fIStatus\fP tool.
 .sp
-Selecting a file displays its diff in the \fI\%DIFF\fP viewer.
+Selecting a file displays its diff in the \fIDiff\fP viewer.
 Double\-clicking a file stages its contents, as does the
 the \fICtrl\-s\fP shortcut key.
 .sp
@@ -213,6 +259,19 @@ the \fICtrl\-s\fP shortcut key.
 \fICtrl\-d\fP opens selected files using \fI\%git difftool\fP
 .sp
 Additional actions can be performed using the right\-click context menu.
+.SS Drag and Drop
+.sp
+Files can be dragged from the the \fIStatus\fP tool onto other applications.
+.sp
+Some terminals will treat a drag with multiple files by separating them with newlines,
+which is less amenable for pasting command\-line arguments.
+.sp
+To avoid this issue, hold down \fIAlt / Option\fP when dragging from the \fIStatus\fP tool.
+The drag and drop payload will no longer contain local file URLs – it will contain
+plain text that is amenable for use on a command\-line.
+.sp
+Note: if drag and drop is not working and you are on Wayland then you may
+need to \fBexport QT_QPA_PLATFORM=wayland\fP in your environment.
 .SS Actions
 .sp
 Clicking the \fIStaged\fP folder shows a diffstat for the index.
@@ -263,6 +322,10 @@ Extraneous whitespace is shown with a pure\-red background.
 .sp
 Right\-clicking in the diff provides access to additional actions
 that use either the cursor location or text selection.
+.sp
+The “Copy Diff” action at \fBAlt + Shift + C\fP copies the selected lines to the
+clipboard. The \fB+\fP, \fB\-\fP and \(ga\(ga \(ga\(ga diff line prefixes are stripped from each line
+when copying diffs using the “Copy Diff” action.
 .SS Staging content for commit
 .sp
 The \fB@@\fP patterns denote a new diff hunk.  Selecting lines of diff
@@ -273,6 +336,17 @@ entire patch diff hunk.
 The corresponding opposite commands can be performed on staged files as well,
 e.g. staged content can be selectively removed from the index when we are
 viewing diffs for staged content.
+.SS Diff Against Commit (Diff Mode)
+.sp
+\fIDiff Mode\fP allows you to selectively unstage and revert edits from arbitrary commits
+so that you can bring these edits back into your worktree.
+.sp
+You can use the diff editor to unstage edits against arbitrary commits by using the
+\fBDiff > Against Commit... (Diff Mode)\fP menu action.
+.sp
+You can exit \fIDiff Mode\fP by clicking on the red circle\-slash icon on the Status
+widget, by using the \fBDiff > Exit Diff mode\fP menu action, or by clicking in
+an empty area in the \fIStatus\fP tool.
 .SH COMMIT MESSAGE EDITOR
 .sp
 The commit message editor is a simple text widget
@@ -609,6 +683,11 @@ Defaults to \fIfalse\fP\&.
 .SS cola.blameviewer
 .sp
 The command used to blame files.  Defaults to \fIgit gui blame\fP\&.
+.SS cola.blockcursor
+.sp
+Whether to use a “block” cursor in diff editors. The block cursor is easier to
+see compared to a line cursor. Set to \fIfalse\fP to use a thin “line” cursor.
+Defauls to \fItrue\fP\&.
 .SS cola.browserdockable
 .sp
 Whether to create a dock widget with the \fIBrowser\fP tool.
@@ -628,6 +707,14 @@ the user for a repository.
 .sp
 Specifies an additional dictionary for \fIgit cola\fP to use in its spell checker.
 This should be configured to the path of a newline\-separated list of words.
+.sp
+By default, \fIgit cola\fP searches for \fIdict/words\fP and \fIdict/propernames\fP dictionary
+files in \fI~/.local/share\fP and \fI$XDG_DATA_DIRS\fP\&.
+.sp
+If \fI$XDG_DATA_DIRS\fP is undefined or set to an empty value then \fI/usr/local/share\fP and
+\fI/usr/share\fP are searched for dictionary files.
+.sp
+Dictionary files are newline\-separated and contain one word per line.
 .SS cola.expandtab
 .sp
 Expand tabs into spaces in the commit message editor.  When set to \fItrue\fP,
@@ -693,7 +780,7 @@ The icon theme can also be specified by passing \fB\-\-icon\-theme=<theme>\fP on
 command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built\-in icons for the remainder.
-.SS cola.imagediff.<extension>
+.SS cola.imagediff.[extension]
 .sp
 Enable image diffs for the specified file extension.  For example, configuring
 \fIgit config –global cola.imagediff.svg false\fP will disable use of the visual
@@ -720,6 +807,11 @@ editor’s options sub\-menu.
 \fIgit cola\fP caps the number of recent repositories to avoid cluttering
 the start and recent repositories menu.  The maximum number of repositories to
 remember is controlled by \fIcola.maxrecent\fP and defaults to \fI8\fP\&.
+.SS cola.mousezoom
+.sp
+Controls whether zooming text using Ctrl + MouseWheel scroll is enabled.
+Set to \fIfalse to disable scrolling with the mouse wheel.
+Defauls to \(gatrue\fP\&.
 .SS cola.dragencoding
 .sp
 \fIgit cola\fP encodes paths dragged from its widgets into \fIutf\-16\fP when adding
@@ -792,7 +884,7 @@ accordingly.
 .SS cola.terminalshellquote
 .sp
 Some terminal require that the command string get passed as a string.
-For example, \fBxfce4\-terminal \-e "git difftool"\fP requires shell quoting,
+For example, \fBxfce4\-terminal \-e \(dqgit difftool\(dq\fP requires shell quoting,
 whereas \fBgnome\-terminal \-\- git difftool\fP does not.
 .sp
 You should not need to set this variable for the built\-in terminals

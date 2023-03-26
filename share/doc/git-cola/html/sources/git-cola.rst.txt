@@ -141,6 +141,29 @@ When you select a line in the diff or grep screens and press any of
 The editor preference is saved in the `gui.editor` variable using
 `git config <http://git-scm.com/docs/git-config>`_.
 
+The following are some recommend editor configurations.
+
+* Neovim + Neovim-Qt
+
+.. sourcecode:: sh
+
+   git config --global core.editor nvim
+   git config --global gui.editor 'nvim-qt --nofork'
+
+* Vim + gvim
+
+.. sourcecode:: sh
+
+   git config --global core.editor vim
+   git config --global gui.editor 'gvim -f'
+
+* Sublime Text
+
+.. sourcecode:: sh
+
+   git config --global gui.editor 'subl --wait'
+
+
 KEYBOARD SHORTCUTS
 ==================
 `git cola` has many useful keyboard shortcuts.
@@ -188,6 +211,7 @@ The Diff editor can be focused with `Ctrl-j`.
 the Status tool can be focused with `Ctrl-k`.
 the Commit tool can be focused with `Ctrl-l`.
 
+
 .. _status:
 
 STATUS
@@ -208,7 +232,7 @@ as the ergonomical and vim-like `j` and `k` shortcut keys.
 
 There are several convenient ways to interact with files in the `Status` tool.
 
-Selecting a file displays its diff in the :ref:`Diff` viewer.
+Selecting a file displays its diff in the `Diff` viewer.
 Double-clicking a file stages its contents, as does the
 the `Ctrl-s` shortcut key.
 
@@ -216,6 +240,20 @@ the `Ctrl-s` shortcut key.
 `Ctrl-d` opens selected files using `git difftool <http://git-scm.com/docs/git-difftool>`_
 
 Additional actions can be performed using the right-click context menu.
+
+Drag and Drop
+-------------
+Files can be dragged from the the `Status` tool onto other applications.
+
+Some terminals will treat a drag with multiple files by separating them with newlines,
+which is less amenable for pasting command-line arguments.
+
+To avoid this issue, hold down `Alt / Option` when dragging from the `Status` tool.
+The drag and drop payload will no longer contain local file URLs -- it will contain
+plain text that is amenable for use on a command-line.
+
+Note: if drag and drop is not working and you are on Wayland then you may
+need to ``export QT_QPA_PLATFORM=wayland`` in your environment.
 
 Actions
 -------
@@ -269,6 +307,7 @@ Add to .gitignore
 ~~~~~~~~~~~~~~~~~
 Adds untracked files to to the .gitignore file.
 
+
 .. _diff:
 
 DIFF
@@ -280,6 +319,10 @@ Extraneous whitespace is shown with a pure-red background.
 Right-clicking in the diff provides access to additional actions
 that use either the cursor location or text selection.
 
+The "Copy Diff" action at ``Alt + Shift + C`` copies the selected lines to the
+clipboard. The ``+``, ``-`` and `` `` diff line prefixes are stripped from each line
+when copying diffs using the "Copy Diff" action.
+
 Staging content for commit
 --------------------------
 The ``@@`` patterns denote a new diff hunk.  Selecting lines of diff
@@ -290,6 +333,19 @@ entire patch diff hunk.
 The corresponding opposite commands can be performed on staged files as well,
 e.g. staged content can be selectively removed from the index when we are
 viewing diffs for staged content.
+
+Diff Against Commit (Diff Mode)
+-------------------------------
+*Diff Mode* allows you to selectively unstage and revert edits from arbitrary commits
+so that you can bring these edits back into your worktree.
+
+You can use the diff editor to unstage edits against arbitrary commits by using the
+``Diff > Against Commit... (Diff Mode)`` menu action.
+
+You can exit *Diff Mode* by clicking on the red circle-slash icon on the Status
+widget, by using the ``Diff > Exit Diff mode`` menu action, or by clicking in
+an empty area in the `Status` tool.
+
 
 COMMIT MESSAGE EDITOR
 =====================
@@ -576,6 +632,12 @@ cola.blameviewer
 ----------------
 The command used to blame files.  Defaults to `git gui blame`.
 
+cola.blockcursor
+----------------
+Whether to use a "block" cursor in diff editors. The block cursor is easier to
+see compared to a line cursor. Set to `false` to use a thin "line" cursor.
+Defauls to `true`.
+
 cola.browserdockable
 --------------------
 Whether to create a dock widget with the `Browser` tool.
@@ -598,6 +660,14 @@ cola.dictionary
 ---------------
 Specifies an additional dictionary for `git cola` to use in its spell checker.
 This should be configured to the path of a newline-separated list of words.
+
+By default, `git cola` searches for `dict/words` and `dict/propernames` dictionary
+files in `~/.local/share` and `$XDG_DATA_DIRS`.
+
+If `$XDG_DATA_DIRS` is undefined or set to an empty value then `/usr/local/share` and
+`/usr/share` are searched for dictionary files.
+
+Dictionary files are newline-separated and contain one word per line.
 
 cola.expandtab
 --------------
@@ -634,7 +704,7 @@ cola.fontdiff
 Specifies the font to use for `git cola`'s diff display.
 
 cola.hidpi
--------------
+----------
 Specifies the High DPI displays scale factor. Set `0` to automatically scaled.
 Setting value between 0 and 1 is undefined.
 This option requires at least Qt 5.6 to work.
@@ -666,7 +736,7 @@ command line, once for each icon theme, in the order that they should be
 searched.  This can be used to override a subset of the icons, and fallback
 to the built-in icons for the remainder.
 
-cola.imagediff.<extension>
+cola.imagediff.[extension]
 --------------------------
 Enable image diffs for the specified file extension.  For example, configuring
 `git config --global cola.imagediff.svg false` will disable use of the visual
@@ -697,6 +767,12 @@ cola.maxrecent
 `git cola` caps the number of recent repositories to avoid cluttering
 the start and recent repositories menu.  The maximum number of repositories to
 remember is controlled by `cola.maxrecent` and defaults to `8`.
+
+cola.mousezoom
+--------------
+Controls whether zooming text using Ctrl + MouseWheel scroll is enabled.
+Set to `false to disable scrolling with the mouse wheel.
+Defauls to `true`.
 
 cola.dragencoding
 -----------------
