@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Releases &mdash; git-cola 4.2.0 documentation</title>
+  <title>Releases &mdash; git-cola 4.2.1 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -35,7 +35,7 @@
             git-cola
           </a>
               <div class="version">
-                4.2.0
+                4.2.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -54,508 +54,512 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v4-2-1">v4.2.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-2-0">v4.2.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#usability-bells-and-whistles">Usability, bells and whistles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#development">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-1-0">v4.1.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id30">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">Usability, bells and whistles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#packaging-and-dependencies">Packaging and Dependencies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-0-4">v4.0.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-0-3">v4.0.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id43">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id46">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id51">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#translations">Translations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-0-2">v4.0.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id56">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id63">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id67">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id61">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id68">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id72">Translations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#packaging">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-0-1">v4.0.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id74">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id77">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id79">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id82">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v4-0-0">v4.0.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#breaking-changes">Breaking Changes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id86">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id90">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id99">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id91">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id95">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id104">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-12-0">v3.12.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id102">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id107">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id111">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id113">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id107">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id112">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id116">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id118">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-11-0">v3.11.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id116">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id121">Usability, bells and whistles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#security">Security</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id126">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id131">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id131">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id136">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-10-1">v3.10.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id134">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id139">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-10">v3.10</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id136">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id143">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id145">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id148">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id141">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id148">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id150">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id153">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-9">v3.9</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id151">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id156">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id160">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id156">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id161">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id165">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-8">v3.8</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id163">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id168">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id171">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id175">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id168">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id173">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id176">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id180">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-7">v3.7</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id178">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id183">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id185">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id183">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id188">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id190">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-6">v3.6</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id192">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id204">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id209">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id214">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id216">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id197">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id209">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id214">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id219">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id221">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-5">v3.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id219">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id225">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id229">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id237">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id224">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id230">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id234">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id242">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-4">v3.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id239">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id248">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id252">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id244">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id253">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id257">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-3">v3.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id255">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id267">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id274">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id279">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id260">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id272">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id279">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id284">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-2">v3.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id282">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id290">Translations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id298">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id302">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id318">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id287">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id295">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id303">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id307">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id323">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-1">v3.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id321">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id338">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id340">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id326">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id343">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id345">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v3-0">v3.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id352">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id373">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id357">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id378">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-11">v2.11</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id389">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id407">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id394">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id412">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-10">v2.10</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id414">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id415">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id420">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id419">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id420">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id425">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-9-1">v2.9.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id423">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id428">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-9">v2.9</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id426">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id437">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id447">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id431">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id442">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id452">Development</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-8">v2.8</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id450">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id452">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id455">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id457">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-7">v2.7</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id456">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id459">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id461">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id461">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id464">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id466">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-6">v2.6</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id464">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id467">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id473">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id469">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id472">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id478">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-5">v2.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id476">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id488">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id481">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id493">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-4">v2.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id494">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id500">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id509">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id499">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id505">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id514">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-3">v2.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id511">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id520">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id516">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id525">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-2-1">v2.2.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id526">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id531">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-2">v2.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id528">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id530">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id536">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id533">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id535">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id541">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-1-2">v2.1.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id538">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id541">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id543">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id546">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-1-1">v2.1.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id544">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id545">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id549">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id550">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-1-0">v2.1.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id547">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id552">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id552">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id557">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-8">v2.0.8</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id556">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id561">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id565">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id561">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id566">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id570">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-7">v2.0.7</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id568">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id570">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id572">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id573">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id575">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id577">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-6">v2.0.6</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id574">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id584">Fixes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#v2-0-5">v2.0.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id587">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id579">Usability, bells and whistles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id589">Fixes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#v2-0-5">v2.0.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id592">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id594">Fixes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-4">v2.0.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id595">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id609">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id600">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id614">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-3">v2.0.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id626">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id629">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id631">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id634">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-2">v2.0.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id639">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id643">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id644">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id647">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id644">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id648">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id649">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id652">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-1">v2.0.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id649">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id651">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id654">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id656">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-0">v2.0.0</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#portability">Portability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id657">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id662">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-9-4">v1.9.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id662">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id664">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id667">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id669">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-9-3">v1.9.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id667">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id670">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id672">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id675">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-9-2">v1.9.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id673">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id674">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id678">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id679">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-9-1">v1.9.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id677">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id678">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id682">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id683">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-9-0">v1.9.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id680">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id684">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id685">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id685">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id689">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id690">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-8-5">v1.8.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id687">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id689">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id692">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id694">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-8-4">v1.8.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id692">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id693">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id697">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id698">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-8-3">v1.8.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id696">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id701">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id701">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id706">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-8-2">v1.8.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id707">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id709">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id713">Fixes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#v1-8-1">v1.8.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id716">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id712">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id714">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id718">Fixes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-8-1">v1.8.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id721">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id723">Fixes</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-8-0">v1.8.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id722">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id726">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id727">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id731">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-7">v1.7.7</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id728">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id729">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id733">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id734">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-6">v1.7.6</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id732">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id737">Usability, bells and whistles</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-5">v1.7.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id734">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id739">Usability, bells and whistles</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-4-1">v1.7.4.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id736">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id741">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-4">v1.7.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id738">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id743">Usability, bells and whistles</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-3">v1.7.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id740">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id741">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id742">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id745">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id746">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id747">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-2">v1.7.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id744">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id745">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id747">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id749">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id750">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id752">Packaging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#deprecated-features">Deprecated Features</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-1-1">v1.7.1.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id749">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id751">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id754">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id756">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-1">v1.7.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id753">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id755">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id756">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id758">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id760">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id761">Packaging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cleanup">Cleanup</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-7-0">v1.7.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id758">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id762">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id765">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id763">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id767">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id770">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-3-5">v1.4.3.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id767">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id768">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id772">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id773">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-3-4">v1.4.3.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id773">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id775">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id778">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id780">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-3-3">v1.4.3.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id777">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id778">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id782">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id783">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-3-2">v1.4.3.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id780">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id781">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id785">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id786">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-3-1">v1.4.3.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id784">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id786">Packaging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id787">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id789">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id791">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id792">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-3">v1.4.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id790">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id791">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id793">Packaging</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#v1-4-2-5">v1.4.2.5</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id795">Usability, bells and whistles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id796">Fixes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id798">Packaging</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#v1-4-2-4">v1.4.2.4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v1-4-2-5">v1.4.2.5</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id800">Usability, bells and whistles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id801">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id803">Packaging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-4-2-4">v1.4.2.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id805">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id806">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-2-3">v1.4.2.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id803">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id807">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id808">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id812">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-2-2">v1.4.2.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id810">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id811">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id815">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id816">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-2-1">v1.4.2.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id814">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id816">Portability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id817">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id819">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id821">Portability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id822">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-2">v1.4.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id819">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id824">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id826">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id824">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id829">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id831">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-1-2">v1.4.1.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id830">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id831">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id832">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id835">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id836">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id837">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-1-1">v1.4.1.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id834">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id835">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id836">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id839">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id840">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id841">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-1">v1.4.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id838">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id842">Portability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id843">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id847">Portability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#developer">Developer</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-0-5">v1.4.0.5</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id844">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id849">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-0-4">v1.4.0.4</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id846">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id851">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-0-3">v1.4.0.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id848">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id853">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-0-2">v1.4.0.2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id850">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id855">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-0-1">v1.4.0.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id854">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id859">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-4-0">v1.4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id859">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id860">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id861">Developer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id864">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id865">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id866">Developer</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-3-9">v1.3.9</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id863">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id864">Portability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id865">Documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id866">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id868">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id869">Portability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id870">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id871">Fixes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-3-8">v1.3.8</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id868">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id869">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id873">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id874">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-3-7">v1.3.7</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#subsystems">Subsystems</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id871">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id872">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id873">Developer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id874">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id876">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id877">Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id878">Developer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id879">Packaging</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-3-6">v1.3.6</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id876">Subsystems</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id877">Usability, bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id878">Developer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id879">Packaging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id881">Subsystems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id882">Usability, bells and whistles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id883">Developer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id884">Packaging</a></li>
 </ul>
 </li>
 </ul>
@@ -590,15 +594,29 @@
 <h1>Releases<a class="headerlink" href="#releases" title="Permalink to this heading"></a></h1>
 <section id="latest-release">
 <h2>Latest Release<a class="headerlink" href="#latest-release" title="Permalink to this heading"></a></h2>
-<p><a class="reference internal" href="#v4-2-0"><span class="std std-ref">v4.2.0</span></a> is the latest stable release.</p>
+<p><a class="reference internal" href="#v4-2-1"><span class="std std-ref">v4.2.1</span></a> is the latest stable release.</p>
 </section>
 <section id="development-version">
 <h2>Development version<a class="headerlink" href="#development-version" title="Permalink to this heading"></a></h2>
 <p>Clone the git-cola repo to get the latest development version:</p>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git://github.com/git-cola/git-cola.git</span></code></p>
 </section>
+<section id="v4-2-1">
+<span id="id1"></span><h2>v4.2.1<a class="headerlink" href="#v4-2-1" title="Permalink to this heading"></a></h2>
+<section id="fixes">
+<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Diffs for repositories with a single commit have been fixed.
+(<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1306">#1306</a>)</p></li>
+<li><p>The toolbars follow the Qt toolbar style, as they did prior to <cite>v4.2.0</cite>.
+(<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1307">#1307</a>)</p></li>
+<li><p>The “Checkout Branch” dialog was fixed to display all completions when first shown.
+(<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1308">#1308</a>)</p></li>
+</ul>
+</section>
+</section>
 <section id="v4-2-0">
-<span id="id1"></span><h2>v4.2.0<a class="headerlink" href="#v4-2-0" title="Permalink to this heading"></a></h2>
+<span id="id5"></span><h2>v4.2.0<a class="headerlink" href="#v4-2-0" title="Permalink to this heading"></a></h2>
 <section id="usability-bells-and-whistles">
 <h3>Usability, bells and whistles<a class="headerlink" href="#usability-bells-and-whistles" title="Permalink to this heading"></a></h3>
 <ul class="simple">
@@ -702,9 +720,9 @@ Git Cola directly from the the source tree outside of any virtualenv.
 </section>
 </section>
 <section id="v4-1-0">
-<span id="id29"></span><h2>v4.1.0<a class="headerlink" href="#v4-1-0" title="Permalink to this heading"></a></h2>
-<section id="id30">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id30" title="Permalink to this heading"></a></h3>
+<span id="id33"></span><h2>v4.1.0<a class="headerlink" href="#v4-1-0" title="Permalink to this heading"></a></h2>
+<section id="id34">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id34" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The rebase editor was taught to handle stacked branch workflows enabled by
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">--update-refs</span></code>. The <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cola</span> <span class="pre">rebase</span></code> sub-command now has
@@ -725,8 +743,8 @@ you to enable the updating of stacked branches.
 <li><p>The vendored <cite>qtpy</cite> library was updated to <cite>v2.3.0</cite>.</p></li>
 </ul>
 </section>
-<section id="id36">
-<h3>Development<a class="headerlink" href="#id36" title="Permalink to this heading"></a></h3>
+<section id="id40">
+<h3>Development<a class="headerlink" href="#id40" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixes and updates to Git Cola’s CI actions.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1278">#1278</a>)
@@ -735,9 +753,9 @@ you to enable the updating of stacked branches.
 </section>
 </section>
 <section id="v4-0-4">
-<span id="id39"></span><h2>v4.0.4<a class="headerlink" href="#v4-0-4" title="Permalink to this heading"></a></h2>
-<section id="fixes">
-<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this heading"></a></h3>
+<span id="id43"></span><h2>v4.0.4<a class="headerlink" href="#v4-0-4" title="Permalink to this heading"></a></h2>
+<section id="id44">
+<h3>Fixes<a class="headerlink" href="#id44" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The “T” hotkey for “Find Files” was removed to avoid issues in some configurations.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1270">#1270</a>)</p></li>
@@ -747,9 +765,9 @@ you to enable the updating of stacked branches.
 </section>
 </section>
 <section id="v4-0-3">
-<span id="id42"></span><h2>v4.0.3<a class="headerlink" href="#v4-0-3" title="Permalink to this heading"></a></h2>
-<section id="id43">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id43" title="Permalink to this heading"></a></h3>
+<span id="id47"></span><h2>v4.0.3<a class="headerlink" href="#v4-0-3" title="Permalink to this heading"></a></h2>
+<section id="id48">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id48" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The branches widget no longer loses its selection state in response to
 notifications and UI actions.
@@ -759,8 +777,8 @@ can now be disabled by setting <cite>git config –global cola.gravatar false</c
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/933">#933</a>)</p></li>
 </ul>
 </section>
-<section id="id46">
-<h3>Fixes<a class="headerlink" href="#id46" title="Permalink to this heading"></a></h3>
+<section id="id51">
+<h3>Fixes<a class="headerlink" href="#id51" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The config reader has been revamped to better read settings when git config
 files are located in unexpected locations.
@@ -791,9 +809,9 @@ cannot be accessed due to the new <cite>safe.directory</cite> protections in Git
 </section>
 </section>
 <section id="v4-0-2">
-<span id="id55"></span><h2>v4.0.2<a class="headerlink" href="#v4-0-2" title="Permalink to this heading"></a></h2>
-<section id="id56">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id56" title="Permalink to this heading"></a></h3>
+<span id="id60"></span><h2>v4.0.2<a class="headerlink" href="#v4-0-2" title="Permalink to this heading"></a></h2>
+<section id="id61">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id61" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The Rebase editor (<cite>git-cola-sequence-editor</cite>) now supports multi-select.
 Use <cite>Shift-{Up,Down}</cite> to select multiple lines and the keyboard hotkeys
@@ -816,8 +834,8 @@ This further improved the startup time for Git Cola.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1259">#1259</a>)</p></li>
 </ul>
 </section>
-<section id="id63">
-<h3>Fixes<a class="headerlink" href="#id63" title="Permalink to this heading"></a></h3>
+<section id="id68">
+<h3>Fixes<a class="headerlink" href="#id68" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Documentation rendering errors have been fixed.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1256">#1256</a>)</p></li>
@@ -827,8 +845,8 @@ This further improved the startup time for Git Cola.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1238">#1238</a>)</p></li>
 </ul>
 </section>
-<section id="id67">
-<h3>Translations<a class="headerlink" href="#id67" title="Permalink to this heading"></a></h3>
+<section id="id72">
+<h3>Translations<a class="headerlink" href="#id72" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Spanish translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1244">#1244</a>)</p></li>
@@ -848,17 +866,17 @@ This further improved the startup time for Git Cola.
 </section>
 </section>
 <section id="v4-0-1">
-<span id="id73"></span><h2>v4.0.1<a class="headerlink" href="#v4-0-1" title="Permalink to this heading"></a></h2>
-<section id="id74">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id74" title="Permalink to this heading"></a></h3>
+<span id="id78"></span><h2>v4.0.1<a class="headerlink" href="#v4-0-1" title="Permalink to this heading"></a></h2>
+<section id="id79">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id79" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Double-clicking dock widgets no longer creates sub-windows when the layout is locked.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1176">#1176</a>)
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1198">#1198</a>)</p></li>
 </ul>
 </section>
-<section id="id77">
-<h3>Fixes<a class="headerlink" href="#id77" title="Permalink to this heading"></a></h3>
+<section id="id82">
+<h3>Fixes<a class="headerlink" href="#id82" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now guard against <cite>locale.getdefaultlocale()</cite> returning <cite>None</cite> in some
 configurations, notably on macOS if none of ‘LC_ALL’, ‘LC_CTYPE’, ‘LANG’ or ‘LANGUAGE’
@@ -876,7 +894,7 @@ than the current desktop. Message box sizes are now clamped to the desktop size.
 </section>
 </section>
 <section id="v4-0-0">
-<span id="id82"></span><h2>v4.0.0<a class="headerlink" href="#v4-0-0" title="Permalink to this heading"></a></h2>
+<span id="id87"></span><h2>v4.0.0<a class="headerlink" href="#v4-0-0" title="Permalink to this heading"></a></h2>
 <section id="breaking-changes">
 <h3>Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permalink to this heading"></a></h3>
 <p>These changes are primarily breaking changes for packagers of Git Cola.
@@ -912,8 +930,8 @@ is distributed alongside the <cite>cola</cite> module as package data.</p></li>
 requirement details.</p></li>
 </ul>
 </section>
-<section id="id86">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id86" title="Permalink to this heading"></a></h3>
+<section id="id91">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id91" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://git-cola.readthedocs.io/en/latest/git-cola.html#custom-themes">Custom UI themes</a>
 can be used by adding <cite>*.qss</cite> Qt stylesheet files to <cite>~/.config/git-cola/themes/</cite>.
@@ -924,8 +942,8 @@ the main window is closed.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1200">#1200</a>)</p></li>
 </ul>
 </section>
-<section id="id90">
-<h3>Fixes<a class="headerlink" href="#id90" title="Permalink to this heading"></a></h3>
+<section id="id95">
+<h3>Fixes<a class="headerlink" href="#id95" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Staging conflicted binary files has been fixed to avoid Unicode decoding errors.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1189">#1189</a>)</p></li>
@@ -943,8 +961,8 @@ This made its notification system more robust.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1206">#1206</a>)</p></li>
 </ul>
 </section>
-<section id="id99">
-<h3>Packaging<a class="headerlink" href="#id99" title="Permalink to this heading"></a></h3>
+<section id="id104">
+<h3>Packaging<a class="headerlink" href="#id104" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>vcruntime140.dll</cite> and <cite>msvcp140.dll</cite> are now included in the Windows installation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1207">#1207</a>)</p></li>
@@ -952,9 +970,9 @@ This made its notification system more robust.
 </section>
 </section>
 <section id="v3-12-0">
-<span id="id101"></span><h2>v3.12.0<a class="headerlink" href="#v3-12-0" title="Permalink to this heading"></a></h2>
-<section id="id102">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id102" title="Permalink to this heading"></a></h3>
+<span id="id106"></span><h2>v3.12.0<a class="headerlink" href="#v3-12-0" title="Permalink to this heading"></a></h2>
+<section id="id107">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id107" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The git config guitool action can now be grouped under user-defined menus.
 This is done by using slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>) delimiters in the action name.
@@ -971,8 +989,8 @@ key is pressed.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1187">#1187</a>)</p></li>
 </ul>
 </section>
-<section id="id107">
-<h3>Fixes<a class="headerlink" href="#id107" title="Permalink to this heading"></a></h3>
+<section id="id112">
+<h3>Fixes<a class="headerlink" href="#id112" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The vendored qtpy library was patched to retain Python2 compatibility.</p></li>
 <li><p>The “Unstage” toolbar action was fixed.
@@ -983,15 +1001,15 @@ key is pressed.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1185">#1185</a>)</p></li>
 </ul>
 </section>
-<section id="id111">
-<h3>Translations<a class="headerlink" href="#id111" title="Permalink to this heading"></a></h3>
+<section id="id116">
+<h3>Translations<a class="headerlink" href="#id116" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Polish translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1184">#1184</a>)</p></li>
 </ul>
 </section>
-<section id="id113">
-<h3>Development<a class="headerlink" href="#id113" title="Permalink to this heading"></a></h3>
+<section id="id118">
+<h3>Development<a class="headerlink" href="#id118" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Git Cola now uses Github Actions for running its continuous integration tests.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1179">#1179</a>)</p></li>
@@ -999,9 +1017,9 @@ key is pressed.
 </section>
 </section>
 <section id="v3-11-0">
-<span id="id115"></span><h2>v3.11.0<a class="headerlink" href="#v3-11-0" title="Permalink to this heading"></a></h2>
-<section id="id116">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id116" title="Permalink to this heading"></a></h3>
+<span id="id120"></span><h2>v3.11.0<a class="headerlink" href="#v3-11-0" title="Permalink to this heading"></a></h2>
+<section id="id121">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id121" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The Status tool was improved to better retain selected files when
 the state changes and the display is refreshed.
@@ -1030,8 +1048,8 @@ is now supported by Git Cola when running on FIPS-enabled Python
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1157">#1157</a>)</p></li>
 </ul>
 </section>
-<section id="id126">
-<h3>Fixes<a class="headerlink" href="#id126" title="Permalink to this heading"></a></h3>
+<section id="id131">
+<h3>Fixes<a class="headerlink" href="#id131" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>argparse</cite> usage was adjusted to remain compatible with older Pythons.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1155">#1155</a>)</p></li>
@@ -1044,8 +1062,8 @@ when different languages are used.
 (<a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=2014950">bz #2014950</a>)</p></li>
 </ul>
 </section>
-<section id="id131">
-<h3>Packaging<a class="headerlink" href="#id131" title="Permalink to this heading"></a></h3>
+<section id="id136">
+<h3>Packaging<a class="headerlink" href="#id136" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The Windows installer was slimmed down by removing unused Qt DLLs.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1152">#1152</a>)</p></li>
@@ -1053,18 +1071,18 @@ when different languages are used.
 </section>
 </section>
 <section id="v3-10-1">
-<span id="id133"></span><h2>v3.10.1<a class="headerlink" href="#v3-10-1" title="Permalink to this heading"></a></h2>
-<section id="id134">
-<h3>Fixes<a class="headerlink" href="#id134" title="Permalink to this heading"></a></h3>
+<span id="id138"></span><h2>v3.10.1<a class="headerlink" href="#v3-10-1" title="Permalink to this heading"></a></h2>
+<section id="id139">
+<h3>Fixes<a class="headerlink" href="#id139" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Patch release to fix a typo in the Interactive Rebase feature.</p></li>
 </ul>
 </section>
 </section>
 <section id="v3-10">
-<span id="id135"></span><h2>v3.10<a class="headerlink" href="#v3-10" title="Permalink to this heading"></a></h2>
-<section id="id136">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id136" title="Permalink to this heading"></a></h3>
+<span id="id140"></span><h2>v3.10<a class="headerlink" href="#v3-10" title="Permalink to this heading"></a></h2>
+<section id="id141">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id141" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The git config reader now supports the <cite>include.path</cite> directive
 for including config files.
@@ -1087,15 +1105,15 @@ header items are selected).
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1117">#1117</a>)</p></li>
 </ul>
 </section>
-<section id="id143">
-<h3>Translations<a class="headerlink" href="#id143" title="Permalink to this heading"></a></h3>
+<section id="id148">
+<h3>Translations<a class="headerlink" href="#id148" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Hungarian translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1135">#1135</a>)</p></li>
 </ul>
 </section>
-<section id="id145">
-<h3>Fixes<a class="headerlink" href="#id145" title="Permalink to this heading"></a></h3>
+<section id="id150">
+<h3>Fixes<a class="headerlink" href="#id150" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The “Interactive Rebase” feature was updated to work with Windows.</p></li>
 <li><p><cite>make install-man</cite> was updated to support Sphinx 4.0.
@@ -1104,8 +1122,8 @@ header items are selected).
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1133">#1133</a>)</p></li>
 </ul>
 </section>
-<section id="id148">
-<h3>Development<a class="headerlink" href="#id148" title="Permalink to this heading"></a></h3>
+<section id="id153">
+<h3>Development<a class="headerlink" href="#id153" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Git Cola can now be started as a Python module.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1119">#1119</a>)</p></li>
@@ -1113,9 +1131,9 @@ header items are selected).
 </section>
 </section>
 <section id="v3-9">
-<span id="id150"></span><h2>v3.9<a class="headerlink" href="#v3-9" title="Permalink to this heading"></a></h2>
-<section id="id151">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id151" title="Permalink to this heading"></a></h3>
+<span id="id155"></span><h2>v3.9<a class="headerlink" href="#v3-9" title="Permalink to this heading"></a></h2>
+<section id="id156">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id156" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The startup dialog now detects when Recent and Favorite repositories no
 longer exist on disk, and offers to remove these entries when selected.
@@ -1130,8 +1148,8 @@ new “Restore Worktree” action that updates the worktree using “git read-tr
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/890">#890</a>)</p></li>
 </ul>
 </section>
-<section id="id156">
-<h3>Translations<a class="headerlink" href="#id156" title="Permalink to this heading"></a></h3>
+<section id="id161">
+<h3>Translations<a class="headerlink" href="#id161" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Polish translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1107">#1107</a>)</p></li>
@@ -1141,8 +1159,8 @@ new “Restore Worktree” action that updates the worktree using “git read-tr
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1091">#1091</a>)</p></li>
 </ul>
 </section>
-<section id="id160">
-<h3>Packaging<a class="headerlink" href="#id160" title="Permalink to this heading"></a></h3>
+<section id="id165">
+<h3>Packaging<a class="headerlink" href="#id165" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">--use-env-python</span></code> option for <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> is now Python3 compatible.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/1102">#1102</a>)</p></li>
@@ -1150,9 +1168,9 @@ new “Restore Worktree” action that updates the worktree using “git read-tr
 </section>
 </section>
 <section id="v3-8">
-<span id="id162"></span><h2>v3.8<a class="headerlink" href="#v3-8" title="Permalink to this heading"></a></h2>
-<section id="id163">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id163" title="Permalink to this heading"></a></h3>
+<span id="id167"></span><h2>v3.8<a class="headerlink" href="#v3-8" title="Permalink to this heading"></a></h2>
+<section id="id168">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id168" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The submodules widget can now be used to add submodules.
 Submodules are now updated recursively.
@@ -1167,8 +1185,8 @@ can now toggle between showing and masking the password input field.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1069">#1069</a>)</p></li>
 </ul>
 </section>
-<section id="id168">
-<h3>Translations<a class="headerlink" href="#id168" title="Permalink to this heading"></a></h3>
+<section id="id173">
+<h3>Translations<a class="headerlink" href="#id173" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Polish translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1076">#1076</a>)</p></li>
@@ -1176,8 +1194,8 @@ can now toggle between showing and masking the password input field.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1067">#1067</a>)</p></li>
 </ul>
 </section>
-<section id="id171">
-<h3>Packaging<a class="headerlink" href="#id171" title="Permalink to this heading"></a></h3>
+<section id="id176">
+<h3>Packaging<a class="headerlink" href="#id176" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>share/appdata</cite> AppStream data was renamed to <cite>share/metainfo</cite>
 in accordance with <a class="reference external" href="https://github.com/ximion/appstream/blob/master/NEWS#L1363">AppStream standard changes from 2016</a>.
@@ -1199,8 +1217,8 @@ and has now been removed.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1073">#1073</a>)</p></li>
 </ul>
 </section>
-<section id="id175">
-<h3>Fixes<a class="headerlink" href="#id175" title="Permalink to this heading"></a></h3>
+<section id="id180">
+<h3>Fixes<a class="headerlink" href="#id180" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> now uses integer widths when initializing its brushes.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1080">#1080</a>)</p></li>
@@ -1208,9 +1226,9 @@ and has now been removed.
 </section>
 </section>
 <section id="v3-7">
-<span id="id177"></span><h2>v3.7<a class="headerlink" href="#v3-7" title="Permalink to this heading"></a></h2>
-<section id="id178">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id178" title="Permalink to this heading"></a></h3>
+<span id="id182"></span><h2>v3.7<a class="headerlink" href="#v3-7" title="Permalink to this heading"></a></h2>
+<section id="id183">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id183" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">git-xbase</span></code> rebase editor now includes a file list for filtering
 the changes displayed in the diff view.
@@ -1235,15 +1253,15 @@ when amending a commit.  The settings widget exposes this variable as,
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1027">#1027</a>)</p></li>
 </ul>
 </section>
-<section id="id183">
-<h3>Translations<a class="headerlink" href="#id183" title="Permalink to this heading"></a></h3>
+<section id="id188">
+<h3>Translations<a class="headerlink" href="#id188" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Polish translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1033">#1033</a>)</p></li>
 </ul>
 </section>
-<section id="id185">
-<h3>Fixes<a class="headerlink" href="#id185" title="Permalink to this heading"></a></h3>
+<section id="id190">
+<h3>Fixes<a class="headerlink" href="#id190" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">git-dag.appdata.xml</span></code> was updated to allow network access for author icons.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1050">#1050</a>)</p></li>
@@ -1264,9 +1282,9 @@ editor after reverting a commit to rewrite its commit message.
 </section>
 </section>
 <section id="v3-6">
-<span id="id191"></span><h2>v3.6<a class="headerlink" href="#v3-6" title="Permalink to this heading"></a></h2>
-<section id="id192">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id192" title="Permalink to this heading"></a></h3>
+<span id="id196"></span><h2>v3.6<a class="headerlink" href="#v3-6" title="Permalink to this heading"></a></h2>
+<section id="id197">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id197" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The remote editor is much faster since it no longer queries
 remotes, and uses the cached information instead.
@@ -1295,8 +1313,8 @@ repository.  Previously, this list was only updated when exiting the app.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/998">#998</a>)</p></li>
 </ul>
 </section>
-<section id="id204">
-<h3>Translations<a class="headerlink" href="#id204" title="Permalink to this heading"></a></h3>
+<section id="id209">
+<h3>Translations<a class="headerlink" href="#id209" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Hungarian translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1005">#1005</a>)
@@ -1306,8 +1324,8 @@ repository.  Previously, this list was only updated when exiting the app.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1011">#1011</a>)</p></li>
 </ul>
 </section>
-<section id="id209">
-<h3>Fixes<a class="headerlink" href="#id209" title="Permalink to this heading"></a></h3>
+<section id="id214">
+<h3>Fixes<a class="headerlink" href="#id214" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Better support for Python 3.8’s line buffering modes.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/1014">#1014</a>)</p></li>
@@ -1320,16 +1338,16 @@ operations complete.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/992">#992</a>)</p></li>
 </ul>
 </section>
-<section id="id214">
-<h3>Packaging<a class="headerlink" href="#id214" title="Permalink to this heading"></a></h3>
+<section id="id219">
+<h3>Packaging<a class="headerlink" href="#id219" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>share/git-cola/bin/git-xbase</cite> script will now have its <cite>#!</cite> lines
 updated during installation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/991">#991</a>)</p></li>
 </ul>
 </section>
-<section id="id216">
-<h3>Development<a class="headerlink" href="#id216" title="Permalink to this heading"></a></h3>
+<section id="id221">
+<h3>Development<a class="headerlink" href="#id221" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The unit tests were made more platform-independent.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/993">#993</a>)</p></li>
@@ -1337,9 +1355,9 @@ updated during installation.
 </section>
 </section>
 <section id="v3-5">
-<span id="id218"></span><h2>v3.5<a class="headerlink" href="#v3-5" title="Permalink to this heading"></a></h2>
-<section id="id219">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id219" title="Permalink to this heading"></a></h3>
+<span id="id223"></span><h2>v3.5<a class="headerlink" href="#v3-5" title="Permalink to this heading"></a></h2>
+<section id="id224">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id224" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Auto-completion for filenames can now be disabled.  This speeds up
 revision completion when working in large repositories with many files.
@@ -1363,8 +1381,8 @@ show the details.  The details were previously hidden behind a toggle.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/968">#968</a>)</p></li>
 </ul>
 </section>
-<section id="id225">
-<h3>Translations<a class="headerlink" href="#id225" title="Permalink to this heading"></a></h3>
+<section id="id230">
+<h3>Translations<a class="headerlink" href="#id230" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Japanese translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/973">#973</a>)
@@ -1373,8 +1391,8 @@ show the details.  The details were previously hidden behind a toggle.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/950">#950</a>)</p></li>
 </ul>
 </section>
-<section id="id229">
-<h3>Fixes<a class="headerlink" href="#id229" title="Permalink to this heading"></a></h3>
+<section id="id234">
+<h3>Fixes<a class="headerlink" href="#id234" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The filesystem monitor no longer logs that it has been enabled after the
 inotify watch limit is reached on Linux.
@@ -1394,17 +1412,17 @@ would previously result in a traceback, and is now robustly handled.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/961">#961</a>)</p></li>
 </ul>
 </section>
-<section id="id237">
-<h3>Packaging<a class="headerlink" href="#id237" title="Permalink to this heading"></a></h3>
+<section id="id242">
+<h3>Packaging<a class="headerlink" href="#id242" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The vendored <cite>qtpy</cite> library was updated to <cite>v1.9</cite>.</p></li>
 </ul>
 </section>
 </section>
 <section id="v3-4">
-<span id="id238"></span><h2>v3.4<a class="headerlink" href="#v3-4" title="Permalink to this heading"></a></h2>
-<section id="id239">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id239" title="Permalink to this heading"></a></h3>
+<span id="id243"></span><h2>v3.4<a class="headerlink" href="#v3-4" title="Permalink to this heading"></a></h2>
+<section id="id244">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id244" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The file browser now includes “Blame” in its context menu.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/953">#953</a>)</p></li>
@@ -1431,8 +1449,8 @@ icons have been updated to look sharp when displayed in HiDPI.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/932">#932</a>)</p></li>
 </ul>
 </section>
-<section id="id248">
-<h3>Fixes<a class="headerlink" href="#id248" title="Permalink to this heading"></a></h3>
+<section id="id253">
+<h3>Fixes<a class="headerlink" href="#id253" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite>’s “Revert Unstaged Edits” previously checked out from “HEAD^”,
 when in “Amend” mode, and removing staged changes.  This behavior has been
@@ -1450,8 +1468,8 @@ Previously, an exception would be raised when entering <cite>–grep=xxx</cite> 
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/941">#941</a>)</p></li>
 </ul>
 </section>
-<section id="id252">
-<h3>Development<a class="headerlink" href="#id252" title="Permalink to this heading"></a></h3>
+<section id="id257">
+<h3>Development<a class="headerlink" href="#id257" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The contribution guidelines for contributors has been updated to mention
 how to regenerate the <cite>*.mo</cite> message files.
@@ -1460,9 +1478,9 @@ how to regenerate the <cite>*.mo</cite> message files.
 </section>
 </section>
 <section id="v3-3">
-<span id="id254"></span><h2>v3.3<a class="headerlink" href="#v3-3" title="Permalink to this heading"></a></h2>
-<section id="id255">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id255" title="Permalink to this heading"></a></h3>
+<span id="id259"></span><h2>v3.3<a class="headerlink" href="#v3-3" title="Permalink to this heading"></a></h2>
+<section id="id260">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id260" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> improved how it renders parent commits.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/921">#921</a>)</p></li>
@@ -1499,8 +1517,8 @@ the Sublime text editor.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/894">#894</a>)</p></li>
 </ul>
 </section>
-<section id="id267">
-<h3>Fixes<a class="headerlink" href="#id267" title="Permalink to this heading"></a></h3>
+<section id="id272">
+<h3>Fixes<a class="headerlink" href="#id272" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Launching external programs has been improved on Windows.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/925">#925</a>)</p></li>
@@ -1517,8 +1535,8 @@ display stays within a sensible size.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/891">#891</a>)</p></li>
 </ul>
 </section>
-<section id="id274">
-<h3>Development<a class="headerlink" href="#id274" title="Permalink to this heading"></a></h3>
+<section id="id279">
+<h3>Development<a class="headerlink" href="#id279" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The logo was run through <cite>tidy</cite> to give it a consistent style.
 Some technical issues with the logo were improved.
@@ -1531,8 +1549,8 @@ the pynsist installer scripts.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/879">#879</a>)</p></li>
 </ul>
 </section>
-<section id="id279">
-<h3>Packaging<a class="headerlink" href="#id279" title="Permalink to this heading"></a></h3>
+<section id="id284">
+<h3>Packaging<a class="headerlink" href="#id284" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The vendored <cite>qtpy</cite> library was updated to <cite>v1.6</cite>.</p></li>
 <li><p>The Windows installer’s wrapper scripts were missing an import.
@@ -1541,9 +1559,9 @@ the pynsist installer scripts.
 </section>
 </section>
 <section id="v3-2">
-<span id="id281"></span><h2>v3.2<a class="headerlink" href="#v3-2" title="Permalink to this heading"></a></h2>
-<section id="id282">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id282" title="Permalink to this heading"></a></h3>
+<span id="id286"></span><h2>v3.2<a class="headerlink" href="#v3-2" title="Permalink to this heading"></a></h2>
+<section id="id287">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id287" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>git cola dag</cite> DAG window now supports <cite>git revert</cite>.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/843">#843</a>)</p></li>
@@ -1565,8 +1583,8 @@ cancelling an interactive rebase.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/855">#855</a>)</p></li>
 </ul>
 </section>
-<section id="id290">
-<h3>Translations<a class="headerlink" href="#id290" title="Permalink to this heading"></a></h3>
+<section id="id295">
+<h3>Translations<a class="headerlink" href="#id295" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Brazilian translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/845">#845</a>)</p></li>
@@ -1580,8 +1598,8 @@ cancelling an interactive rebase.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/867">#867</a>)</p></li>
 </ul>
 </section>
-<section id="id298">
-<h3>Packaging<a class="headerlink" href="#id298" title="Permalink to this heading"></a></h3>
+<section id="id303">
+<h3>Packaging<a class="headerlink" href="#id303" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The original <cite>#!/usr/bin/env python</cite> shebang lines can now be
 retained by passing <cite>USE_ENV_PYTHON=1</cite> to <cite>make</cite> when installing.
@@ -1593,8 +1611,8 @@ retained by passing <cite>USE_ENV_PYTHON=1</cite> to <cite>make</cite> when inst
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/837">#837</a>)</p></li>
 </ul>
 </section>
-<section id="id302">
-<h3>Fixes<a class="headerlink" href="#id302" title="Permalink to this heading"></a></h3>
+<section id="id307">
+<h3>Fixes<a class="headerlink" href="#id307" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>The “C” key no longer closes the message dialogs, for example the
 one that is shown when a commit fails its pre-commit hooks.
@@ -1648,8 +1666,8 @@ avoids localized output in the log window.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/817">#817</a>)</p></li>
 </ul>
 </section>
-<section id="id318">
-<h3>Development<a class="headerlink" href="#id318" title="Permalink to this heading"></a></h3>
+<section id="id323">
+<h3>Development<a class="headerlink" href="#id323" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The code base has been thoroughly sanitized using <cite>pylint</cite>, and
 travis is now running pylint over the entire project.</p></li>
@@ -1659,9 +1677,9 @@ travis is now running pylint over the entire project.</p></li>
 </section>
 </section>
 <section id="v3-1">
-<span id="id320"></span><h2>v3.1<a class="headerlink" href="#v3-1" title="Permalink to this heading"></a></h2>
-<section id="id321">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id321" title="Permalink to this heading"></a></h3>
+<span id="id325"></span><h2>v3.1<a class="headerlink" href="#v3-1" title="Permalink to this heading"></a></h2>
+<section id="id326">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id326" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The “Browser” widget learned to rename files using “git mv”.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/239">#239</a>)</p></li>
@@ -1725,8 +1743,8 @@ repository.
 <li><p>A new <cite>git cola clone</cite> sub-command was added for cloning repositories.</p></li>
 </ul>
 </section>
-<section id="id338">
-<h3>Packaging<a class="headerlink" href="#id338" title="Permalink to this heading"></a></h3>
+<section id="id343">
+<h3>Packaging<a class="headerlink" href="#id343" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The vendored <cite>qtpy</cite> library was updated to <cite>v1.3.1</cite>.</p></li>
 <li><p>The macOS installation was made simpler for better compatibility with
@@ -1737,8 +1755,8 @@ Python and PyQt5, so users need only install the “Git for Windows”
 and “Git Cola” installers to get things working.</p></li>
 </ul>
 </section>
-<section id="id340">
-<h3>Fixes<a class="headerlink" href="#id340" title="Permalink to this heading"></a></h3>
+<section id="id345">
+<h3>Fixes<a class="headerlink" href="#id345" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Uninitialized difftool errors will now be displayed graphically.
 They were previously going to the shell.
@@ -1776,9 +1794,9 @@ lose focus.
 </section>
 </section>
 <section id="v3-0">
-<span id="id351"></span><h2>v3.0<a class="headerlink" href="#v3-0" title="Permalink to this heading"></a></h2>
-<section id="id352">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id352" title="Permalink to this heading"></a></h3>
+<span id="id356"></span><h2>v3.0<a class="headerlink" href="#v3-0" title="Permalink to this heading"></a></h2>
+<section id="id357">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id357" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Simplified Chinese translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/726">#726</a>)</p></li>
@@ -1839,8 +1857,8 @@ can be selected with the keyboard without mouse intervention.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/741">#741</a>)</p></li>
 </ul>
 </section>
-<section id="id373">
-<h3>Fixes<a class="headerlink" href="#id373" title="Permalink to this heading"></a></h3>
+<section id="id378">
+<h3>Fixes<a class="headerlink" href="#id378" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> now prevents nodes from overlapping in more situations.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/689">#689</a>)</p></li>
@@ -1886,9 +1904,9 @@ when <cite>git cola</cite> is launched from a desktop entry (<cite>git cola –p
 </section>
 </section>
 <section id="v2-11">
-<span id="id388"></span><h2>v2.11<a class="headerlink" href="#v2-11" title="Permalink to this heading"></a></h2>
-<section id="id389">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id389" title="Permalink to this heading"></a></h3>
+<span id="id393"></span><h2>v2.11<a class="headerlink" href="#v2-11" title="Permalink to this heading"></a></h2>
+<section id="id394">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id394" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>New Ukrainian translation.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/670">#670</a>)
@@ -1947,8 +1965,8 @@ edited files.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/680">#680</a>)</p></li>
 </ul>
 </section>
-<section id="id407">
-<h3>Fixes<a class="headerlink" href="#id407" title="Permalink to this heading"></a></h3>
+<section id="id412">
+<h3>Fixes<a class="headerlink" href="#id412" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite>’s spellchecker now supports the new <cite>dict-common</cite> filesystem
 layout, and prefers the <cite>/usr/share/dict/cracklib-small</cite> file over the
@@ -1979,9 +1997,9 @@ This fixes launching <cite>git cola</cite> from within a subdirectory of a submo
 </section>
 </section>
 <section id="v2-10">
-<span id="id413"></span><h2>v2.10<a class="headerlink" href="#v2-10" title="Permalink to this heading"></a></h2>
-<section id="id414">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id414" title="Permalink to this heading"></a></h3>
+<span id="id418"></span><h2>v2.10<a class="headerlink" href="#v2-10" title="Permalink to this heading"></a></h2>
+<section id="id419">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id419" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> can now invoke the <cite>.git/hooks/cola-prepare-commit-msg</cite>
 hook to update the commit message.  This hook takes the same parameters
@@ -1995,8 +2013,8 @@ also added for launching an editor.</p></li>
 <li><p>Traditional Chinese (Taiwan) translation updates.</p></li>
 </ul>
 </section>
-<section id="id415">
-<h3>Fixes<a class="headerlink" href="#id415" title="Permalink to this heading"></a></h3>
+<section id="id420">
+<h3>Fixes<a class="headerlink" href="#id420" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> now works when installed in non-ascii, utf8-encoded paths.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/629">#629</a>)</p></li>
@@ -2010,8 +2028,8 @@ on Linux.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/641">#641</a>)</p></li>
 </ul>
 </section>
-<section id="id420">
-<h3>Packaging<a class="headerlink" href="#id420" title="Permalink to this heading"></a></h3>
+<section id="id425">
+<h3>Packaging<a class="headerlink" href="#id425" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>appdata.xml</cite> files are now provided at
 <cite>share/appdata/git-cola.xml</cite> and <cite>share/appdata/git-dag.xml</cite>
@@ -2022,9 +2040,9 @@ for use by the Linux software gallery.
 </section>
 </section>
 <section id="v2-9-1">
-<span id="id422"></span><h2>v2.9.1<a class="headerlink" href="#v2-9-1" title="Permalink to this heading"></a></h2>
-<section id="id423">
-<h3>Fixes<a class="headerlink" href="#id423" title="Permalink to this heading"></a></h3>
+<span id="id427"></span><h2>v2.9.1<a class="headerlink" href="#v2-9-1" title="Permalink to this heading"></a></h2>
+<section id="id428">
+<h3>Fixes<a class="headerlink" href="#id428" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The “Open Recent” menu was updated to new bookmarks format.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/628">#628</a>)</p></li>
@@ -2032,9 +2050,9 @@ for use by the Linux software gallery.
 </section>
 </section>
 <section id="v2-9">
-<span id="id425"></span><h2>v2.9<a class="headerlink" href="#v2-9" title="Permalink to this heading"></a></h2>
-<section id="id426">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id426" title="Permalink to this heading"></a></h3>
+<span id="id430"></span><h2>v2.9<a class="headerlink" href="#v2-9" title="Permalink to this heading"></a></h2>
+<section id="id431">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id431" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>New Polish translation thanks to Łukasz Wojniłowicz
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/598">#598</a>)</p></li>
@@ -2075,8 +2093,8 @@ file browser will typically be used.</p></li>
 <li><p><cite>git cola browse</cite> and the <cite>status</cite> widget learned to launch terminals.</p></li>
 </ul>
 </section>
-<section id="id437">
-<h3>Fixes<a class="headerlink" href="#id437" title="Permalink to this heading"></a></h3>
+<section id="id442">
+<h3>Fixes<a class="headerlink" href="#id442" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola browse</cite> was not updating when expanding items.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/588">#588</a>)</p></li>
@@ -2105,8 +2123,8 @@ prompts for a filename when saving files.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/617">#617</a>)</p></li>
 </ul>
 </section>
-<section id="id447">
-<h3>Development<a class="headerlink" href="#id447" title="Permalink to this heading"></a></h3>
+<section id="id452">
+<h3>Development<a class="headerlink" href="#id452" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>qtpy</cite> symlink in the source tree has been removed to allow for easier
 development on Windows.
@@ -2115,16 +2133,16 @@ development on Windows.
 </section>
 </section>
 <section id="v2-8">
-<span id="id449"></span><h2>v2.8<a class="headerlink" href="#v2-8" title="Permalink to this heading"></a></h2>
-<section id="id450">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id450" title="Permalink to this heading"></a></h3>
+<span id="id454"></span><h2>v2.8<a class="headerlink" href="#v2-8" title="Permalink to this heading"></a></h2>
+<section id="id455">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id455" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola push</cite> learned to configure upstream branches.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/563">#563</a>)</p></li>
 </ul>
 </section>
-<section id="id452">
-<h3>Fixes<a class="headerlink" href="#id452" title="Permalink to this heading"></a></h3>
+<section id="id457">
+<h3>Fixes<a class="headerlink" href="#id457" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The diffstat view is now properly updated when notifications are
 received via inotify filesystem monitoring.
@@ -2135,9 +2153,9 @@ received via inotify filesystem monitoring.
 </section>
 </section>
 <section id="v2-7">
-<span id="id455"></span><h2>v2.7<a class="headerlink" href="#v2-7" title="Permalink to this heading"></a></h2>
-<section id="id456">
-<h3>Fixes<a class="headerlink" href="#id456" title="Permalink to this heading"></a></h3>
+<span id="id460"></span><h2>v2.7<a class="headerlink" href="#v2-7" title="Permalink to this heading"></a></h2>
+<section id="id461">
+<h3>Fixes<a class="headerlink" href="#id461" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>When repositories stored in non-ASCII, UTF-8-encoded filesystem paths
 were operated upon with <cite>LC_ALL=C</cite> set in the environment, unicode errors
@@ -2148,16 +2166,16 @@ now operate correctly within this environment.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/582">#582</a>)</p></li>
 </ul>
 </section>
-<section id="id459">
-<h3>Development<a class="headerlink" href="#id459" title="Permalink to this heading"></a></h3>
+<section id="id464">
+<h3>Development<a class="headerlink" href="#id464" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>unittest.mock</cite> module is now used instead of the original <cite>mock</cite> module
 when running the <cite>git cola</cite> test suite using Python3.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/569">#569</a>)</p></li>
 </ul>
 </section>
-<section id="id461">
-<h3>Packaging<a class="headerlink" href="#id461" title="Permalink to this heading"></a></h3>
+<section id="id466">
+<h3>Packaging<a class="headerlink" href="#id466" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p><cite>git cola</cite> is now compatible with <em>PyQt5</em>, <em>PyQt4</em>, and <em>Pyside</em>.
 <cite>git cola</cite> previously supported <em>PyQt4</em> only, but will now use whichever
@@ -2182,9 +2200,9 @@ vendored libraries from being installed.</p></li>
 </section>
 </section>
 <section id="v2-6">
-<span id="id463"></span><h2>v2.6<a class="headerlink" href="#v2-6" title="Permalink to this heading"></a></h2>
-<section id="id464">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id464" title="Permalink to this heading"></a></h3>
+<span id="id468"></span><h2>v2.6<a class="headerlink" href="#v2-6" title="Permalink to this heading"></a></h2>
+<section id="id469">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id469" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>A new “Reset” sub-menu provides access to running “git reset –mixed”
 when resetting branch heads and “git reset  –merge” when resetting
@@ -2195,8 +2213,8 @@ worktrees.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/554">#554</a>)</p></li>
 </ul>
 </section>
-<section id="id467">
-<h3>Fixes<a class="headerlink" href="#id467" title="Permalink to this heading"></a></h3>
+<section id="id472">
+<h3>Fixes<a class="headerlink" href="#id472" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Diff highlighting is now robust to the user having
 diff.supressBlankEmpty=true in their git config.
@@ -2214,8 +2232,8 @@ to quit the app.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/566">#566</a>)</p></li>
 </ul>
 </section>
-<section id="id473">
-<h3>Packaging<a class="headerlink" href="#id473" title="Permalink to this heading"></a></h3>
+<section id="id478">
+<h3>Packaging<a class="headerlink" href="#id478" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>It is now possible to install <cite>git cola</cite> to and from utf8-encoded filesystem
 paths.  Previously, Python’s stdlib would throw an encoding error during
@@ -2226,9 +2244,9 @@ thus fixing assumptions in the stdlib library code.
 </section>
 </section>
 <section id="v2-5">
-<span id="id475"></span><h2>v2.5<a class="headerlink" href="#v2-5" title="Permalink to this heading"></a></h2>
-<section id="id476">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id476" title="Permalink to this heading"></a></h3>
+<span id="id480"></span><h2>v2.5<a class="headerlink" href="#v2-5" title="Permalink to this heading"></a></h2>
+<section id="id481">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id481" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The icon for untracked files was adjusted to better differentiate
 between files and the “Untracked” header.
@@ -2259,8 +2277,8 @@ configured to use a different command by setting <cite>cola.blameviewer</cite>.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/525">#525</a>)</p></li>
 </ul>
 </section>
-<section id="id488">
-<h3>Fixes<a class="headerlink" href="#id488" title="Permalink to this heading"></a></h3>
+<section id="id493">
+<h3>Fixes<a class="headerlink" href="#id493" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>xfce4-terminal</cite> and <cite>gnome-terminal</cite> are now supported when launching
 <cite>git mergetool</cite> to resolve merges.  These terminals require that the command
@@ -2281,9 +2299,9 @@ in the final commit message.
 </section>
 </section>
 <section id="v2-4">
-<span id="id493"></span><h2>v2.4<a class="headerlink" href="#v2-4" title="Permalink to this heading"></a></h2>
-<section id="id494">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id494" title="Permalink to this heading"></a></h3>
+<span id="id498"></span><h2>v2.4<a class="headerlink" href="#v2-4" title="Permalink to this heading"></a></h2>
+<section id="id499">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id499" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The user interface is now HiDPI-capable.  git-cola now uses SVG
 icons, and its interface can be scaled by setting the <cite>GIT_COLA_SCALE</cite>
@@ -2323,8 +2341,8 @@ updates.  This is helpful when working on projects with long paths.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/494">#494</a>)</p></li>
 </ul>
 </section>
-<section id="id500">
-<h3>Fixes<a class="headerlink" href="#id500" title="Permalink to this heading"></a></h3>
+<section id="id505">
+<h3>Fixes<a class="headerlink" href="#id505" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>When using <em>Git for Windows</em>, a <cite>git</cite> window would appear
 when running <em>Windows 8</em>.  We now pass additional flags to
@@ -2346,8 +2364,8 @@ slashes in its name is now properly handled.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/485">#485</a>)</p></li>
 </ul>
 </section>
-<section id="id509">
-<h3>Packaging<a class="headerlink" href="#id509" title="Permalink to this heading"></a></h3>
+<section id="id514">
+<h3>Packaging<a class="headerlink" href="#id514" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>git-cola’s documentation no longer uses an intersphinx link mapping
 to docs.python.org.  This fixes warnings when building rpms using koji,
@@ -2358,9 +2376,9 @@ where network access is prevented.</p>
 </section>
 </section>
 <section id="v2-3">
-<span id="id510"></span><h2>v2.3<a class="headerlink" href="#v2-3" title="Permalink to this heading"></a></h2>
-<section id="id511">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id511" title="Permalink to this heading"></a></h3>
+<span id="id515"></span><h2>v2.3<a class="headerlink" href="#v2-3" title="Permalink to this heading"></a></h2>
+<section id="id516">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id516" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The Interactive Rebase feature now works on Windows!
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/463">#463</a>)</p></li>
@@ -2391,8 +2409,8 @@ is configured to its non-default value.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/446">#446</a>)</p></li>
 </ul>
 </section>
-<section id="id520">
-<h3>Fixes<a class="headerlink" href="#id520" title="Permalink to this heading"></a></h3>
+<section id="id525">
+<h3>Fixes<a class="headerlink" href="#id525" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Diff syntax highlighting was improved to handle more edge cases
 and false positives.
@@ -2408,18 +2426,18 @@ in the commit message editor.
 </section>
 </section>
 <section id="v2-2-1">
-<span id="id525"></span><h2>v2.2.1<a class="headerlink" href="#v2-2-1" title="Permalink to this heading"></a></h2>
-<section id="id526">
-<h3>Fixes<a class="headerlink" href="#id526" title="Permalink to this heading"></a></h3>
+<span id="id530"></span><h2>v2.2.1<a class="headerlink" href="#v2-2-1" title="Permalink to this heading"></a></h2>
+<section id="id531">
+<h3>Fixes<a class="headerlink" href="#id531" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed the “Sign off” feature in the commit message editor.</p></li>
 </ul>
 </section>
 </section>
 <section id="v2-2">
-<span id="id527"></span><h2>v2.2<a class="headerlink" href="#v2-2" title="Permalink to this heading"></a></h2>
-<section id="id528">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id528" title="Permalink to this heading"></a></h3>
+<span id="id532"></span><h2>v2.2<a class="headerlink" href="#v2-2" title="Permalink to this heading"></a></h2>
+<section id="id533">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id533" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Double-click will now choose a commit in the “Select commit” dialog.</p></li>
 <li><p><cite>git cola</cite> has a feature that reads <cite>.git/MERGE_MSG</cite> and friends for the
@@ -2434,8 +2452,8 @@ clearing the message across both the summary and description fields.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/458">#458</a>)</p></li>
 </ul>
 </section>
-<section id="id530">
-<h3>Fixes<a class="headerlink" href="#id530" title="Permalink to this heading"></a></h3>
+<section id="id535">
+<h3>Fixes<a class="headerlink" href="#id535" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>The stash viewer now uses <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">--no-ext-diff</span></code> to avoid running
 user-configured diff tools.</p></li>
@@ -2465,8 +2483,8 @@ editor is used during the rebase.
 </li>
 </ul>
 </section>
-<section id="id536">
-<h3>Packaging<a class="headerlink" href="#id536" title="Permalink to this heading"></a></h3>
+<section id="id541">
+<h3>Packaging<a class="headerlink" href="#id541" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> moved from a 3-part version number to a simpler 2-part “vX.Y”
 version number.  Most of our releases tend to contain new features.</p></li>
@@ -2474,9 +2492,9 @@ version number.  Most of our releases tend to contain new features.</p></li>
 </section>
 </section>
 <section id="v2-1-2">
-<span id="id537"></span><h2>v2.1.2<a class="headerlink" href="#v2-1-2" title="Permalink to this heading"></a></h2>
-<section id="id538">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id538" title="Permalink to this heading"></a></h3>
+<span id="id542"></span><h2>v2.1.2<a class="headerlink" href="#v2-1-2" title="Permalink to this heading"></a></h2>
+<section id="id543">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id543" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated zh_TW translations.</p></li>
 <li><p><cite>git cola rebase</cite> now defaults to <cite>&#64;{upstream}</cite>, and generally uses the same
@@ -2497,8 +2515,8 @@ for more details.</p></li>
 <li><p>Improved hotkey documentation.</p></li>
 </ul>
 </section>
-<section id="id541">
-<h3>Fixes<a class="headerlink" href="#id541" title="Permalink to this heading"></a></h3>
+<section id="id546">
+<h3>Fixes<a class="headerlink" href="#id546" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> will now allow starting an interactive rebase with a dirty
 worktree when <cite>rebase.autostash</cite> is set.
@@ -2507,9 +2525,9 @@ worktree when <cite>rebase.autostash</cite> is set.
 </section>
 </section>
 <section id="v2-1-1">
-<span id="id543"></span><h2>v2.1.1<a class="headerlink" href="#v2-1-1" title="Permalink to this heading"></a></h2>
-<section id="id544">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id544" title="Permalink to this heading"></a></h3>
+<span id="id548"></span><h2>v2.1.1<a class="headerlink" href="#v2-1-1" title="Permalink to this heading"></a></h2>
+<section id="id549">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id549" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>A new “Find files” widget was added, and can be activated by
 using the <cite>Ctrl+t</cite> or <cite>t</cite> hotkeys.</p></li>
@@ -2522,8 +2540,8 @@ when <cite>Enter</cite> or <cite>Return</cite> are pressed.</p></li>
 <li><p>You can now refresh using <cite>F5</cite> in addition to the existing <cite>Ctrl+R</cite> hotkey.</p></li>
 </ul>
 </section>
-<section id="id545">
-<h3>Fixes<a class="headerlink" href="#id545" title="Permalink to this heading"></a></h3>
+<section id="id550">
+<h3>Fixes<a class="headerlink" href="#id550" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> now passes <cite>–no-abbrev-commit</cite> to <cite>git log</cite> to override
 having <cite>log.abbrevCommit = true</cite> set in <cite>.gitconfig</cite>.</p></li>
@@ -2531,9 +2549,9 @@ having <cite>log.abbrevCommit = true</cite> set in <cite>.gitconfig</cite>.</p><
 </section>
 </section>
 <section id="v2-1-0">
-<span id="id546"></span><h2>v2.1.0<a class="headerlink" href="#v2-1-0" title="Permalink to this heading"></a></h2>
-<section id="id547">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id547" title="Permalink to this heading"></a></h3>
+<span id="id551"></span><h2>v2.1.0<a class="headerlink" href="#v2-1-0" title="Permalink to this heading"></a></h2>
+<section id="id552">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id552" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> now forwards all unknown arguments along to <cite>git log</cite>.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/389">#389</a>)</p></li>
@@ -2545,8 +2563,8 @@ having <cite>log.abbrevCommit = true</cite> set in <cite>.gitconfig</cite>.</p><
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/388">#388</a>)</p></li>
 </ul>
 </section>
-<section id="id552">
-<h3>Fixes<a class="headerlink" href="#id552" title="Permalink to this heading"></a></h3>
+<section id="id557">
+<h3>Fixes<a class="headerlink" href="#id557" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> was triggering a traceback on Fedora when parsing Git logs.
 (<a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=1181686">bz #181676</a>)</p></li>
@@ -2558,9 +2576,9 @@ having <cite>log.abbrevCommit = true</cite> set in <cite>.gitconfig</cite>.</p><
 </section>
 </section>
 <section id="v2-0-8">
-<span id="id555"></span><h2>v2.0.8<a class="headerlink" href="#v2-0-8" title="Permalink to this heading"></a></h2>
-<section id="id556">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id556" title="Permalink to this heading"></a></h3>
+<span id="id560"></span><h2>v2.0.8<a class="headerlink" href="#v2-0-8" title="Permalink to this heading"></a></h2>
+<section id="id561">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id561" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> can now create GPG-signed commits and merges.
 See the documentation for details about setting up a GPG agent.
@@ -2580,8 +2598,8 @@ for more details about the supported values.</p></li>
 history using the selected paths.</p></li>
 </ul>
 </section>
-<section id="id561">
-<h3>Fixes<a class="headerlink" href="#id561" title="Permalink to this heading"></a></h3>
+<section id="id566">
+<h3>Fixes<a class="headerlink" href="#id566" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>sphinxtogithub.py</cite> was fixed for Python3.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/353">#353</a>)</p></li>
@@ -2594,8 +2612,8 @@ for some users.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/373">#373</a>)</p></li>
 </ul>
 </section>
-<section id="id565">
-<h3>Packaging<a class="headerlink" href="#id565" title="Permalink to this heading"></a></h3>
+<section id="id570">
+<h3>Packaging<a class="headerlink" href="#id570" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>git-cola-folder-handler.desktop</cite> file handler was fixed
 to pass validation by <cite>desktop-file-validate</cite>.
@@ -2606,17 +2624,17 @@ to prefer icons from the desktop theme when available.</p></li>
 </section>
 </section>
 <section id="v2-0-7">
-<span id="id567"></span><h2>v2.0.7<a class="headerlink" href="#v2-0-7" title="Permalink to this heading"></a></h2>
-<section id="id568">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id568" title="Permalink to this heading"></a></h3>
+<span id="id572"></span><h2>v2.0.7<a class="headerlink" href="#v2-0-7" title="Permalink to this heading"></a></h2>
+<section id="id573">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id573" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>New hotkey: <cite>Ctrl+Shift+M</cite> merges branches.</p></li>
 <li><p>New hotkey: <cite>Ctrl+R</cite> refreshes the DAG viewer.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/347">#347</a>)</p></li>
 </ul>
 </section>
-<section id="id570">
-<h3>Fixes<a class="headerlink" href="#id570" title="Permalink to this heading"></a></h3>
+<section id="id575">
+<h3>Fixes<a class="headerlink" href="#id575" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now use <cite>git config</cite> to parse the list of remotes
 instead of parsing the output of <cite>git remote</cite>, which
@@ -2625,17 +2643,17 @@ is a Git porcelain and should not be used by scripts.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/346">#346</a>)</p></li>
 </ul>
 </section>
-<section id="id572">
-<h3>Packaging<a class="headerlink" href="#id572" title="Permalink to this heading"></a></h3>
+<section id="id577">
+<h3>Packaging<a class="headerlink" href="#id577" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>make install</cite> target now uses <cite>install</cite> instead of <cite>cp</cite>.</p></li>
 </ul>
 </section>
 </section>
 <section id="v2-0-6">
-<span id="id573"></span><h2>v2.0.6<a class="headerlink" href="#v2-0-6" title="Permalink to this heading"></a></h2>
-<section id="id574">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id574" title="Permalink to this heading"></a></h3>
+<span id="id578"></span><h2>v2.0.6<a class="headerlink" href="#v2-0-6" title="Permalink to this heading"></a></h2>
+<section id="id579">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id579" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Brazilian Portuguese translation.</p></li>
 <li><p>The status and browse widgets now allow drag-and-drop into
@@ -2663,8 +2681,8 @@ module is installed.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/344">#344</a>)</p></li>
 </ul>
 </section>
-<section id="id584">
-<h3>Fixes<a class="headerlink" href="#id584" title="Permalink to this heading"></a></h3>
+<section id="id589">
+<h3>Fixes<a class="headerlink" href="#id589" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Newly added remotes are now properly seen by the fetch/push/pull dialogs.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/343">#343</a>)</p></li>
@@ -2672,9 +2690,9 @@ module is installed.
 </section>
 </section>
 <section id="v2-0-5">
-<span id="id586"></span><h2>v2.0.5<a class="headerlink" href="#v2-0-5" title="Permalink to this heading"></a></h2>
-<section id="id587">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id587" title="Permalink to this heading"></a></h3>
+<span id="id591"></span><h2>v2.0.5<a class="headerlink" href="#v2-0-5" title="Permalink to this heading"></a></h2>
+<section id="id592">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id592" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>New Brazilian Portuguese translation thanks to Vitor Lobo.</p></li>
 <li><p>New Indonesian translation thanks to Samsul Ma’arif.</p></li>
@@ -2686,8 +2704,8 @@ branch by default.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/324">#324</a>)</p></li>
 </ul>
 </section>
-<section id="id589">
-<h3>Fixes<a class="headerlink" href="#id589" title="Permalink to this heading"></a></h3>
+<section id="id594">
+<h3>Fixes<a class="headerlink" href="#id594" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now use <cite>os.getcwd()</cite> on Python3.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/316">#316</a>)
@@ -2704,9 +2722,9 @@ with common terminology from diff/patch tools.
 </section>
 </section>
 <section id="v2-0-4">
-<span id="id594"></span><h2>v2.0.4<a class="headerlink" href="#v2-0-4" title="Permalink to this heading"></a></h2>
-<section id="id595">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id595" title="Permalink to this heading"></a></h3>
+<span id="id599"></span><h2>v2.0.4<a class="headerlink" href="#v2-0-4" title="Permalink to this heading"></a></h2>
+<section id="id600">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id600" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now handle the case when inotify <cite>add_watch()</cite> fails
 and display instructions on how to increase the number of watches.
@@ -2739,8 +2757,8 @@ in case the button labels gets truncated by Qt.
 background by setting <cite>guitool.&lt;name&gt;.background</cite> to <cite>true</cite>.</p></li>
 </ul>
 </section>
-<section id="id609">
-<h3>Fixes<a class="headerlink" href="#id609" title="Permalink to this heading"></a></h3>
+<section id="id614">
+<h3>Fixes<a class="headerlink" href="#id614" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now use bold fonts instead of SmallCaps to avoid
 artifacts on several configurations.</p></li>
@@ -2775,9 +2793,9 @@ can be freely resized on Linux.
 </section>
 </section>
 <section id="v2-0-3">
-<span id="id625"></span><h2>v2.0.3<a class="headerlink" href="#v2-0-3" title="Permalink to this heading"></a></h2>
-<section id="id626">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id626" title="Permalink to this heading"></a></h3>
+<span id="id630"></span><h2>v2.0.3<a class="headerlink" href="#v2-0-3" title="Permalink to this heading"></a></h2>
+<section id="id631">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id631" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> no longer prompts after successfully creating a new branch.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/251">#251</a>)</p></li>
@@ -2785,8 +2803,8 @@ can be freely resized on Linux.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/255">#255</a>)</p></li>
 </ul>
 </section>
-<section id="id629">
-<h3>Fixes<a class="headerlink" href="#id629" title="Permalink to this heading"></a></h3>
+<section id="id634">
+<h3>Fixes<a class="headerlink" href="#id634" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> no longer relies on <cite>sys.maxint</cite>, which is
 not available in Python3.
@@ -2810,9 +2828,9 @@ We now refresh the view to avoid them.
 </section>
 </section>
 <section id="v2-0-2">
-<span id="id638"></span><h2>v2.0.2<a class="headerlink" href="#v2-0-2" title="Permalink to this heading"></a></h2>
-<section id="id639">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id639" title="Permalink to this heading"></a></h3>
+<span id="id643"></span><h2>v2.0.2<a class="headerlink" href="#v2-0-2" title="Permalink to this heading"></a></h2>
+<section id="id644">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id644" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Better inotify support for file creation and deletion.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/240">#240</a>)</p></li>
@@ -2823,16 +2841,16 @@ and remembers its state across logout/reboot.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/190">#190</a>)</p></li>
 </ul>
 </section>
-<section id="id643">
-<h3>Packaging<a class="headerlink" href="#id643" title="Permalink to this heading"></a></h3>
+<section id="id648">
+<h3>Packaging<a class="headerlink" href="#id648" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Building the documentation no longer requires <cite>asciidoc</cite>.
 We now use <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> for building
 html documentation and man pages.</p></li>
 </ul>
 </section>
-<section id="id644">
-<h3>Fixes<a class="headerlink" href="#id644" title="Permalink to this heading"></a></h3>
+<section id="id649">
+<h3>Fixes<a class="headerlink" href="#id649" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Reworked the git-dag gravatar icon code to avoid a unicode
 error in Python 2.</p></li>
@@ -2842,8 +2860,8 @@ error in Python 2.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/246">#246</a>)</p></li>
 </ul>
 </section>
-<section id="id647">
-<h3>Packaging<a class="headerlink" href="#id647" title="Permalink to this heading"></a></h3>
+<section id="id652">
+<h3>Packaging<a class="headerlink" href="#id652" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>git-cola no longer depends on Asciidoc for building its documentation
 and man-pages.  We now depend on [Sphinx](<a class="reference external" href="http://sphinx-doc.org/">http://sphinx-doc.org/</a>) only.</p></li>
@@ -2851,17 +2869,17 @@ and man-pages.  We now depend on [Sphinx](<a class="reference external" href="ht
 </section>
 </section>
 <section id="v2-0-1">
-<span id="id648"></span><h2>v2.0.1<a class="headerlink" href="#v2-0-1" title="Permalink to this heading"></a></h2>
-<section id="id649">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id649" title="Permalink to this heading"></a></h3>
+<span id="id653"></span><h2>v2.0.1<a class="headerlink" href="#v2-0-1" title="Permalink to this heading"></a></h2>
+<section id="id654">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id654" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Some context menu actions are now hidden when selected
 files do not exist.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/238">#238</a>)</p></li>
 </ul>
 </section>
-<section id="id651">
-<h3>Fixes<a class="headerlink" href="#id651" title="Permalink to this heading"></a></h3>
+<section id="id656">
+<h3>Fixes<a class="headerlink" href="#id656" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The build-git-cola.sh contrib script was improved.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/235">#235</a>)</p></li>
@@ -2875,7 +2893,7 @@ files do not exist.
 </section>
 </section>
 <section id="v2-0-0">
-<span id="id655"></span><h2>v2.0.0<a class="headerlink" href="#v2-0-0" title="Permalink to this heading"></a></h2>
+<span id="id660"></span><h2>v2.0.0<a class="headerlink" href="#v2-0-0" title="Permalink to this heading"></a></h2>
 <section id="portability">
 <h3>Portability<a class="headerlink" href="#portability" title="Permalink to this heading"></a></h3>
 <ul class="simple">
@@ -2885,8 +2903,8 @@ files do not exist.
 Python 2.5 is no longer supported.</p></li>
 </ul>
 </section>
-<section id="id657">
-<h3>Fixes<a class="headerlink" href="#id657" title="Permalink to this heading"></a></h3>
+<section id="id662">
+<h3>Fixes<a class="headerlink" href="#id662" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>i18n test fixes thanks to Virgil Dupras.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/231">#231</a>)</p></li>
@@ -2898,9 +2916,9 @@ Python 2.5 is no longer supported.</p></li>
 </section>
 </section>
 <section id="v1-9-4">
-<span id="id661"></span><h2>v1.9.4<a class="headerlink" href="#v1-9-4" title="Permalink to this heading"></a></h2>
-<section id="id662">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id662" title="Permalink to this heading"></a></h3>
+<span id="id666"></span><h2>v1.9.4<a class="headerlink" href="#v1-9-4" title="Permalink to this heading"></a></h2>
+<section id="id667">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id667" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The new <cite>Bookmarks</cite> tool makes it really easy to switch between repositories.</p></li>
 <li><p>There is now a dedicated dialog for applying patches.
@@ -2909,8 +2927,8 @@ See the <code class="docutils literal notranslate"><span class="pre">File</span>
 <li><p>A new <cite>git cola am</cite> sub-command was added for applying patches.</p></li>
 </ul>
 </section>
-<section id="id664">
-<h3>Fixes<a class="headerlink" href="#id664" title="Permalink to this heading"></a></h3>
+<section id="id669">
+<h3>Fixes<a class="headerlink" href="#id669" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed a typo that caused inotify events to be silently ignored.</p></li>
 <li><p>Fixed the sys.path setup for Mac OS X (Homebrew).
@@ -2920,9 +2938,9 @@ See the <code class="docutils literal notranslate"><span class="pre">File</span>
 </section>
 </section>
 <section id="v1-9-3">
-<span id="id666"></span><h2>v1.9.3<a class="headerlink" href="#v1-9-3" title="Permalink to this heading"></a></h2>
-<section id="id667">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id667" title="Permalink to this heading"></a></h3>
+<span id="id671"></span><h2>v1.9.3<a class="headerlink" href="#v1-9-3" title="Permalink to this heading"></a></h2>
+<section id="id672">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id672" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola –amend</cite> now starts the editor in <cite>amend</cite> mode.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/187">#187</a>)</p></li>
@@ -2932,8 +2950,8 @@ All text beyond the first newline will be automatically moved to the
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/212">#212</a>)</p></li>
 </ul>
 </section>
-<section id="id670">
-<h3>Fixes<a class="headerlink" href="#id670" title="Permalink to this heading"></a></h3>
+<section id="id675">
+<h3>Fixes<a class="headerlink" href="#id675" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Stray whitespace in <cite>.git</cite> files is now ignored.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/213">#213</a>)</p></li>
@@ -2943,16 +2961,16 @@ All text beyond the first newline will be automatically moved to the
 </section>
 </section>
 <section id="v1-9-2">
-<span id="id672"></span><h2>v1.9.2<a class="headerlink" href="#v1-9-2" title="Permalink to this heading"></a></h2>
-<section id="id673">
-<h3>Fixes<a class="headerlink" href="#id673" title="Permalink to this heading"></a></h3>
+<span id="id677"></span><h2>v1.9.2<a class="headerlink" href="#v1-9-2" title="Permalink to this heading"></a></h2>
+<section id="id678">
+<h3>Fixes<a class="headerlink" href="#id678" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix a traceback when <cite>git push</cite> fails.
 (<a class="reference external" href="https://bugzilla.redhat.com/show_bug.cgi?id=1034778">bz #1034778</a>)</p></li>
 </ul>
 </section>
-<section id="id674">
-<h3>Packaging<a class="headerlink" href="#id674" title="Permalink to this heading"></a></h3>
+<section id="id679">
+<h3>Packaging<a class="headerlink" href="#id679" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Most of the git-cola sub-packages have been removed.
 The only remaining packages are <cite>cola</cite>, <cite>cola.models</cite>,
@@ -2964,15 +2982,15 @@ to <cite>zh_CN.po</cite>.
 </section>
 </section>
 <section id="v1-9-1">
-<span id="id676"></span><h2>v1.9.1<a class="headerlink" href="#v1-9-1" title="Permalink to this heading"></a></h2>
-<section id="id677">
-<h3>Packaging<a class="headerlink" href="#id677" title="Permalink to this heading"></a></h3>
+<span id="id681"></span><h2>v1.9.1<a class="headerlink" href="#v1-9-1" title="Permalink to this heading"></a></h2>
+<section id="id682">
+<h3>Packaging<a class="headerlink" href="#id682" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola version –brief</cite> now prints the brief version number.</p></li>
 </ul>
 </section>
-<section id="id678">
-<h3>Fixes<a class="headerlink" href="#id678" title="Permalink to this heading"></a></h3>
+<section id="id683">
+<h3>Fixes<a class="headerlink" href="#id683" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Resurrected the “make dist” target, for those that prefer to create
 their own tarballs.</p></li>
@@ -2981,9 +2999,9 @@ their own tarballs.</p></li>
 </section>
 </section>
 <section id="v1-9-0">
-<span id="id679"></span><h2>v1.9.0<a class="headerlink" href="#v1-9-0" title="Permalink to this heading"></a></h2>
-<section id="id680">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id680" title="Permalink to this heading"></a></h3>
+<span id="id684"></span><h2>v1.9.0<a class="headerlink" href="#v1-9-0" title="Permalink to this heading"></a></h2>
+<section id="id685">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id685" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now ship a full-featured interactive <cite>git rebase</cite> editor.
 The rebase todo file is edited using the <cite>git xbase</cite> script which
@@ -3003,25 +3021,25 @@ basic regular expressions (default), extended regular expressions,
 and fixed strings.</p></li>
 </ul>
 </section>
-<section id="id684">
-<h3>Packaging<a class="headerlink" href="#id684" title="Permalink to this heading"></a></h3>
+<section id="id689">
+<h3>Packaging<a class="headerlink" href="#id689" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> now depends on the <cite>argparse</cite> Python module.
 This module is part of the stdlib in Python 2.7 and must
 be installed separately when using Python 2.6 and below.</p></li>
 </ul>
 </section>
-<section id="id685">
-<h3>Fixes<a class="headerlink" href="#id685" title="Permalink to this heading"></a></h3>
+<section id="id690">
+<h3>Fixes<a class="headerlink" href="#id690" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Support unicode in the output from <cite>fetch</cite>, <cite>push</cite>, and <cite>pull</cite>.</p></li>
 </ul>
 </section>
 </section>
 <section id="v1-8-5">
-<span id="id686"></span><h2>v1.8.5<a class="headerlink" href="#v1-8-5" title="Permalink to this heading"></a></h2>
-<section id="id687">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id687" title="Permalink to this heading"></a></h3>
+<span id="id691"></span><h2>v1.8.5<a class="headerlink" href="#v1-8-5" title="Permalink to this heading"></a></h2>
+<section id="id692">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id692" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now detect when the editor or history browser are misconfigured.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/197">#197</a>)
@@ -3031,8 +3049,8 @@ or by setting the <cite>gui.displayuntracked</cite> configuration variable to <c
 (<a class="reference external" href="https://public-inbox.org/git/20130821032913.GA6092&#64;wheezy.local/">Git Mailing List on 2013-08-21</a>)</p></li>
 </ul>
 </section>
-<section id="id689">
-<h3>Fixes<a class="headerlink" href="#id689" title="Permalink to this heading"></a></h3>
+<section id="id694">
+<h3>Fixes<a class="headerlink" href="#id694" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Unicode stash names are now supported
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/198">#198</a>)</p></li>
@@ -3041,9 +3059,9 @@ or by setting the <cite>gui.displayuntracked</cite> configuration variable to <c
 </section>
 </section>
 <section id="v1-8-4">
-<span id="id691"></span><h2>v1.8.4<a class="headerlink" href="#v1-8-4" title="Permalink to this heading"></a></h2>
-<section id="id692">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id692" title="Permalink to this heading"></a></h3>
+<span id="id696"></span><h2>v1.8.4<a class="headerlink" href="#v1-8-4" title="Permalink to this heading"></a></h2>
+<section id="id697">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id697" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Brand new German translation thanks to Sven Claussner.</p></li>
 <li><p>The “File” menu now provides a “New Repository…” menu action.</p></li>
@@ -3069,8 +3087,8 @@ appropriate is the most intuitive and muscle-memory-friendly thing to do.</p></l
 and choose “Open With -&gt; Git Cola”  (Linux-only).</p></li>
 </ul>
 </section>
-<section id="id693">
-<h3>Fixes<a class="headerlink" href="#id693" title="Permalink to this heading"></a></h3>
+<section id="id698">
+<h3>Fixes<a class="headerlink" href="#id698" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Python 2.6 on Mac OS X Snow Leopard does not provide a namedtuple
 at <cite>sys.version_info</cite>.  We now avoid using that variable for better
@@ -3085,9 +3103,9 @@ path, just like Git itself.</p></li>
 </section>
 </section>
 <section id="v1-8-3">
-<span id="id695"></span><h2>v1.8.3<a class="headerlink" href="#v1-8-3" title="Permalink to this heading"></a></h2>
-<section id="id696">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id696" title="Permalink to this heading"></a></h3>
+<span id="id700"></span><h2>v1.8.3<a class="headerlink" href="#v1-8-3" title="Permalink to this heading"></a></h2>
+<section id="id701">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id701" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The diff viewer now has an “Options” menu which can be
 used to set “git diff” options.  This can be used to
@@ -3105,8 +3123,8 @@ checkbox in the commit message editor.
 <li><p>The commit message editor now has a built-in spell checker.</p></li>
 </ul>
 </section>
-<section id="id701">
-<h3>Fixes<a class="headerlink" href="#id701" title="Permalink to this heading"></a></h3>
+<section id="id706">
+<h3>Fixes<a class="headerlink" href="#id706" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now avoid invoking external diffs when showing diffstats.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/pull/163">#163</a>)</p></li>
@@ -3124,9 +3142,9 @@ thousands of files.</p></li>
 </section>
 </section>
 <section id="v1-8-2">
-<span id="id706"></span><h2>v1.8.2<a class="headerlink" href="#v1-8-2" title="Permalink to this heading"></a></h2>
-<section id="id707">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id707" title="Permalink to this heading"></a></h3>
+<span id="id711"></span><h2>v1.8.2<a class="headerlink" href="#v1-8-2" title="Permalink to this heading"></a></h2>
+<section id="id712">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id712" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now automatically remove missing repositories from the
 “Select Repository” dialog.
@@ -3134,8 +3152,8 @@ thousands of files.</p></li>
 <li><p>A new <cite>git cola diff</cite> sub-command was added for diffing changed files.</p></li>
 </ul>
 </section>
-<section id="id709">
-<h3>Fixes<a class="headerlink" href="#id709" title="Permalink to this heading"></a></h3>
+<section id="id714">
+<h3>Fixes<a class="headerlink" href="#id714" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The inotify auto-refresh feature makes it difficult to select text in
 the “diff” editor when files are being continually modified by another
@@ -3149,8 +3167,8 @@ the selection when refreshing the editor.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/159">#159</a>)</p></li>
 </ul>
 </section>
-<section id="id713">
-<h3>Fixes<a class="headerlink" href="#id713" title="Permalink to this heading"></a></h3>
+<section id="id718">
+<h3>Fixes<a class="headerlink" href="#id718" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>Better error handling when cloning repositories.</p>
 <p>We were not handling the case where a git URL has
@@ -3166,9 +3184,9 @@ reported by <cite>git clone</cite> when it fails.
 </section>
 </section>
 <section id="v1-8-1">
-<span id="id715"></span><h2>v1.8.1<a class="headerlink" href="#v1-8-1" title="Permalink to this heading"></a></h2>
-<section id="id716">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id716" title="Permalink to this heading"></a></h3>
+<span id="id720"></span><h2>v1.8.1<a class="headerlink" href="#v1-8-1" title="Permalink to this heading"></a></h2>
+<section id="id721">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id721" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> got a big visual upgrade.</p></li>
 <li><p><cite>Ctrl+G</cite> now launches the “Grep” tool.</p></li>
@@ -3183,8 +3201,8 @@ use English then we can create a <cite>~/.config/git-cola/language</cite> file w
 <li><p>Less blocking in the main UI</p></li>
 </ul>
 </section>
-<section id="id718">
-<h3>Fixes<a class="headerlink" href="#id718" title="Permalink to this heading"></a></h3>
+<section id="id723">
+<h3>Fixes<a class="headerlink" href="#id723" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Autocomplete issues on KDE
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/144">#144</a>)</p></li>
@@ -3195,9 +3213,9 @@ display itself in the absence of bookmarks.
 </section>
 </section>
 <section id="v1-8-0">
-<span id="id721"></span><h2>v1.8.0<a class="headerlink" href="#v1-8-0" title="Permalink to this heading"></a></h2>
-<section id="id722">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id722" title="Permalink to this heading"></a></h3>
+<span id="id726"></span><h2>v1.8.0<a class="headerlink" href="#v1-8-0" title="Permalink to this heading"></a></h2>
+<section id="id727">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id727" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> learned to honor <cite>.gitattributes</cite> when showing and
 interactively applying diffs.  This makes it possible to store
@@ -3232,8 +3250,8 @@ were defaulting to “Cancel” when they should have been defaulting
 to the affirmative option instead.</p></li>
 </ul>
 </section>
-<section id="id726">
-<h3>Fixes<a class="headerlink" href="#id726" title="Permalink to this heading"></a></h3>
+<section id="id731">
+<h3>Fixes<a class="headerlink" href="#id731" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Properly handle arbitrarily-named branches.</p></li>
 <li><p>We went back to launching <cite>git mergetool</cite> using an xterm.
@@ -3245,9 +3263,9 @@ the start of a file.</p></li>
 </section>
 </section>
 <section id="v1-7-7">
-<span id="id727"></span><h2>v1.7.7<a class="headerlink" href="#v1-7-7" title="Permalink to this heading"></a></h2>
-<section id="id728">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id728" title="Permalink to this heading"></a></h3>
+<span id="id732"></span><h2>v1.7.7<a class="headerlink" href="#v1-7-7" title="Permalink to this heading"></a></h2>
+<section id="id733">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id733" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>New and improved <cite>grep</cite> mode lets you instantly find and edit files.</p></li>
 <li><p>New <cite>git cola grep</cite> standalone mode.</p></li>
@@ -3259,8 +3277,8 @@ window and use <cite>Ctrl + E</cite> to edit them all at once.</p></li>
 <li><p>More shortcut key labels and misc. UX improvements.</p></li>
 </ul>
 </section>
-<section id="id729">
-<h3>Fixes<a class="headerlink" href="#id729" title="Permalink to this heading"></a></h3>
+<section id="id734">
+<h3>Fixes<a class="headerlink" href="#id734" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Selecting an item no longer copies its filename to the copy/paste buffer.
 <cite>Ctrl + C</cite> or the “Copy” context-menu action can be used instead.</p></li>
@@ -3271,9 +3289,9 @@ changes within the “.git” directory.  Thanks to Andreas Sommer.
 </section>
 </section>
 <section id="v1-7-6">
-<span id="id731"></span><h2>v1.7.6<a class="headerlink" href="#v1-7-6" title="Permalink to this heading"></a></h2>
-<section id="id732">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id732" title="Permalink to this heading"></a></h3>
+<span id="id736"></span><h2>v1.7.6<a class="headerlink" href="#v1-7-6" title="Permalink to this heading"></a></h2>
+<section id="id737">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id737" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> learned to color-code branchy edges.
 The edge colors change when a new branch is detected,
@@ -3290,9 +3308,9 @@ A huge thanks to Uri Okrent for making it happen.</p></li>
 </section>
 </section>
 <section id="v1-7-5">
-<span id="id733"></span><h2>v1.7.5<a class="headerlink" href="#v1-7-5" title="Permalink to this heading"></a></h2>
-<section id="id734">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id734" title="Permalink to this heading"></a></h3>
+<span id="id738"></span><h2>v1.7.5<a class="headerlink" href="#v1-7-5" title="Permalink to this heading"></a></h2>
+<section id="id739">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id739" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Auto-completion was added to more tools.</p></li>
 <li><p><cite>git dag</cite> is easier to use on smaller displays – the author
@@ -3308,9 +3326,9 @@ between invocations.</p></li>
 </section>
 </section>
 <section id="v1-7-4-1">
-<span id="id735"></span><h2>v1.7.4.1<a class="headerlink" href="#v1-7-4-1" title="Permalink to this heading"></a></h2>
-<section id="id736">
-<h3>Fixes<a class="headerlink" href="#id736" title="Permalink to this heading"></a></h3>
+<span id="id740"></span><h2>v1.7.4.1<a class="headerlink" href="#v1-7-4-1" title="Permalink to this heading"></a></h2>
+<section id="id741">
+<h3>Fixes<a class="headerlink" href="#id741" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Detect Homebrew so that OS X users do not need to set PYTHONPATH.</p></li>
 <li><p><cite>git dag</cite> can export patches again.</p></li>
@@ -3318,9 +3336,9 @@ between invocations.</p></li>
 </section>
 </section>
 <section id="v1-7-4">
-<span id="id737"></span><h2>v1.7.4<a class="headerlink" href="#v1-7-4" title="Permalink to this heading"></a></h2>
-<section id="id738">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id738" title="Permalink to this heading"></a></h3>
+<span id="id742"></span><h2>v1.7.4<a class="headerlink" href="#v1-7-4" title="Permalink to this heading"></a></h2>
+<section id="id743">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id743" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The ‘Classic’ tool was renamed to ‘Browser’ and learned to
 limit history to the current branch.</p></li>
@@ -3334,9 +3352,9 @@ much faster rendering.</p></li>
 </section>
 </section>
 <section id="v1-7-3">
-<span id="id739"></span><h2>v1.7.3<a class="headerlink" href="#v1-7-3" title="Permalink to this heading"></a></h2>
-<section id="id740">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id740" title="Permalink to this heading"></a></h3>
+<span id="id744"></span><h2>v1.7.3<a class="headerlink" href="#v1-7-3" title="Permalink to this heading"></a></h2>
+<section id="id745">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id745" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> learned a few new sub commands:</p></li>
 </ul>
@@ -3357,8 +3375,8 @@ text field contains paths.</p></li>
 <li><p>General user interface and performance improvements.</p></li>
 </ul>
 </section>
-<section id="id741">
-<h3>Fixes<a class="headerlink" href="#id741" title="Permalink to this heading"></a></h3>
+<section id="id746">
+<h3>Fixes<a class="headerlink" href="#id746" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The diff viewer no longer changes font size when holding <cite>Control</cite>
 while scrolling with the mouse wheel.</p></li>
@@ -3366,17 +3384,17 @@ while scrolling with the mouse wheel.</p></li>
 are now correctly identified as being modified.</p></li>
 </ul>
 </section>
-<section id="id742">
-<h3>Packaging<a class="headerlink" href="#id742" title="Permalink to this heading"></a></h3>
+<section id="id747">
+<h3>Packaging<a class="headerlink" href="#id747" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>cola.controllers</cite> and <cite>cola.views</cite> packages were removed.</p></li>
 </ul>
 </section>
 </section>
 <section id="v1-7-2">
-<span id="id743"></span><h2>v1.7.2<a class="headerlink" href="#v1-7-2" title="Permalink to this heading"></a></h2>
-<section id="id744">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id744" title="Permalink to this heading"></a></h3>
+<span id="id748"></span><h2>v1.7.2<a class="headerlink" href="#v1-7-2" title="Permalink to this heading"></a></h2>
+<section id="id749">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id749" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> can now launch sub commands, e.g.:</p></li>
 </ul>
@@ -3405,16 +3423,16 @@ and creating a commit (<cite>Ctrl + m</cite>) were added.</p></li>
 <li><p>The status widget was adjusted to use less screen real-estate.</p></li>
 </ul>
 </section>
-<section id="id745">
-<h3>Fixes<a class="headerlink" href="#id745" title="Permalink to this heading"></a></h3>
+<section id="id750">
+<h3>Fixes<a class="headerlink" href="#id750" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Avoid updating the index when responding to inotify events.
 This avoids interfering with operations such as <cite>git rebase –interactive</cite>.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/99">#99</a>)</p></li>
 </ul>
 </section>
-<section id="id747">
-<h3>Packaging<a class="headerlink" href="#id747" title="Permalink to this heading"></a></h3>
+<section id="id752">
+<h3>Packaging<a class="headerlink" href="#id752" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Create <cite>git-dag.pyw</cite> in the win32 installer.</p></li>
 <li><p>win32 shortcuts now contain explicit calls to <cite>pythonw.exe</cite> instead of
@@ -3431,17 +3449,17 @@ is a simpler alternative.</p></li>
 </section>
 </section>
 <section id="v1-7-1-1">
-<span id="id748"></span><h2>v1.7.1.1<a class="headerlink" href="#v1-7-1-1" title="Permalink to this heading"></a></h2>
-<section id="id749">
-<h3>Fixes<a class="headerlink" href="#id749" title="Permalink to this heading"></a></h3>
+<span id="id753"></span><h2>v1.7.1.1<a class="headerlink" href="#v1-7-1-1" title="Permalink to this heading"></a></h2>
+<section id="id754">
+<h3>Fixes<a class="headerlink" href="#id754" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Further enhanced the staging/unstaging behavior in the status widget.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/97">#97</a>)</p></li>
 <li><p>Unmerged files are no longer listed as modified.</p></li>
 </ul>
 </section>
-<section id="id751">
-<h3>Packaging<a class="headerlink" href="#id751" title="Permalink to this heading"></a></h3>
+<section id="id756">
+<h3>Packaging<a class="headerlink" href="#id756" title="Permalink to this heading"></a></h3>
 <p>The <cite>cola-$version</cite> tarballs on github were originally setup to
 have the same contents as the old tarballs hosted on tuxfamily.
 The <cite>make dist</cite> target was changed to write files to a
@@ -3451,9 +3469,9 @@ the darwin .app tarball, and the win32 .exe installer.</p>
 </section>
 </section>
 <section id="v1-7-1">
-<span id="id752"></span><h2>v1.7.1<a class="headerlink" href="#v1-7-1" title="Permalink to this heading"></a></h2>
-<section id="id753">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id753" title="Permalink to this heading"></a></h3>
+<span id="id757"></span><h2>v1.7.1<a class="headerlink" href="#v1-7-1" title="Permalink to this heading"></a></h2>
+<section id="id758">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id758" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Refined the staging/unstaging behavior for code reviews.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/97">#97</a>)</p></li>
@@ -3461,8 +3479,8 @@ the darwin .app tarball, and the win32 .exe installer.</p>
 <li><p>Adjusted some terminology to more closely match the git CLI.</p></li>
 </ul>
 </section>
-<section id="id755">
-<h3>Fixes<a class="headerlink" href="#id755" title="Permalink to this heading"></a></h3>
+<section id="id760">
+<h3>Fixes<a class="headerlink" href="#id760" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Boolean <cite>git config</cite> settings with no value are now supported
 (these are not created by git these days but exist in legacy repositories).</p></li>
@@ -3470,8 +3488,8 @@ the darwin .app tarball, and the win32 .exe installer.</p>
 <li><p>Guard against low-memory conditions and more interrupted system calls.</p></li>
 </ul>
 </section>
-<section id="id756">
-<h3>Packaging<a class="headerlink" href="#id756" title="Permalink to this heading"></a></h3>
+<section id="id761">
+<h3>Packaging<a class="headerlink" href="#id761" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added desktop launchers for git-cola.desktop and git-dag.desktop.
 This replaces the old cola.desktop, so some adjustments to RPM .spec
@@ -3488,9 +3506,9 @@ so there’s no need for this option these days.</p></li>
 </section>
 </section>
 <section id="v1-7-0">
-<span id="id757"></span><h2>v1.7.0<a class="headerlink" href="#v1-7-0" title="Permalink to this heading"></a></h2>
-<section id="id758">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id758" title="Permalink to this heading"></a></h3>
+<span id="id762"></span><h2>v1.7.0<a class="headerlink" href="#v1-7-0" title="Permalink to this heading"></a></h2>
+<section id="id763">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id763" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Export a patch series from <cite>git dag</cite> into a <cite>patches/</cite> directory.</p></li>
 <li><p><cite>git dag</cite> learned to diff commits, slice history along paths, etc.</p></li>
@@ -3502,8 +3520,8 @@ so there’s no need for this option these days.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/33">#33</a>)</p></li>
 </ul>
 </section>
-<section id="id762">
-<h3>Fixes<a class="headerlink" href="#id762" title="Permalink to this heading"></a></h3>
+<section id="id767">
+<h3>Fixes<a class="headerlink" href="#id767" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Display commits with no file changes.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/82">#82</a>)</p></li>
@@ -3511,8 +3529,8 @@ so there’s no need for this option these days.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/90">#90</a>)</p></li>
 </ul>
 </section>
-<section id="id765">
-<h3>Packaging<a class="headerlink" href="#id765" title="Permalink to this heading"></a></h3>
+<section id="id770">
+<h3>Packaging<a class="headerlink" href="#id770" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Bumped version number to ceil(minimum git version).
 <cite>git cola</cite> now requires <cite>git</cite> &gt;= 1.6.3.</p></li>
@@ -3525,9 +3543,9 @@ is not available.</p></li>
 </section>
 </section>
 <section id="v1-4-3-5">
-<span id="id766"></span><h2>v1.4.3.5<a class="headerlink" href="#v1-4-3-5" title="Permalink to this heading"></a></h2>
-<section id="id767">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id767" title="Permalink to this heading"></a></h3>
+<span id="id771"></span><h2>v1.4.3.5<a class="headerlink" href="#v1-4-3-5" title="Permalink to this heading"></a></h2>
+<section id="id772">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id772" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>inotify is much snappier and available on Windows
 thanks to Karl Bielefeldt.</p></li>
@@ -3538,8 +3556,8 @@ thanks to Audrius Karabanovas.</p></li>
 <li><p>stderr is logged when applying partial diffs.</p></li>
 </ul>
 </section>
-<section id="id768">
-<h3>Fixes<a class="headerlink" href="#id768" title="Permalink to this heading"></a></h3>
+<section id="id773">
+<h3>Fixes<a class="headerlink" href="#id773" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Files can be unstaged when amending.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/82">#82</a>)</p></li>
@@ -3552,9 +3570,9 @@ thanks to Audrius Karabanovas.</p></li>
 </section>
 </section>
 <section id="v1-4-3-4">
-<span id="id772"></span><h2>v1.4.3.4<a class="headerlink" href="#v1-4-3-4" title="Permalink to this heading"></a></h2>
-<section id="id773">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id773" title="Permalink to this heading"></a></h3>
+<span id="id777"></span><h2>v1.4.3.4<a class="headerlink" href="#v1-4-3-4" title="Permalink to this heading"></a></h2>
+<section id="id778">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id778" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now provide better feedback when <cite>git push</cite> fails.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/69">#69</a>)</p></li>
@@ -3563,8 +3581,8 @@ when interacting with remotes.  The dialogs are modal and
 a progress dialog is used.</p></li>
 </ul>
 </section>
-<section id="id775">
-<h3>Fixes<a class="headerlink" href="#id775" title="Permalink to this heading"></a></h3>
+<section id="id780">
+<h3>Fixes<a class="headerlink" href="#id780" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>More unicode fixes, again.  It is now possible to have
 unicode branch names, repository paths, home directories, etc.
@@ -3575,9 +3593,9 @@ This continued the work initiated by Redhat’s bugzilla #694806.</p>
 </section>
 </section>
 <section id="v1-4-3-3">
-<span id="id776"></span><h2>v1.4.3.3<a class="headerlink" href="#v1-4-3-3" title="Permalink to this heading"></a></h2>
-<section id="id777">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id777" title="Permalink to this heading"></a></h3>
+<span id="id781"></span><h2>v1.4.3.3<a class="headerlink" href="#v1-4-3-3" title="Permalink to this heading"></a></h2>
+<section id="id782">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id782" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>git cola</cite> desktop launchers now prompt for a repo
 by default.  This is done by using the new <cite>–prompt</cite>
@@ -3585,8 +3603,8 @@ flag which tells <cite>git cola</cite> to ignore any git repositories
 in the current directory and prompt for one instead.</p></li>
 </ul>
 </section>
-<section id="id778">
-<h3>Fixes<a class="headerlink" href="#id778" title="Permalink to this heading"></a></h3>
+<section id="id783">
+<h3>Fixes<a class="headerlink" href="#id783" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>More Unicode fixes for repositories and home directories with
 embedded unicode characters.  Thanks to Christian Jann for
@@ -3596,9 +3614,9 @@ patience and helpful bug reports.</p></li>
 </section>
 </section>
 <section id="v1-4-3-2">
-<span id="id779"></span><h2>v1.4.3.2<a class="headerlink" href="#v1-4-3-2" title="Permalink to this heading"></a></h2>
-<section id="id780">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id780" title="Permalink to this heading"></a></h3>
+<span id="id784"></span><h2>v1.4.3.2<a class="headerlink" href="#v1-4-3-2" title="Permalink to this heading"></a></h2>
+<section id="id785">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id785" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Faster startup time! <cite>git cola</cite> now offloads initialization
 to a background thread so that the GUI appears almost instantly.</p></li>
@@ -3606,8 +3624,8 @@ to a background thread so that the GUI appears almost instantly.</p></li>
 and ecmerge in difftool (backported from git.git).</p></li>
 </ul>
 </section>
-<section id="id781">
-<h3>Fixes<a class="headerlink" href="#id781" title="Permalink to this heading"></a></h3>
+<section id="id786">
+<h3>Fixes<a class="headerlink" href="#id786" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix launching commands in the background on Windows
 (e.g. when launching <cite>git difftool</cite>).</p></li>
@@ -3619,9 +3637,9 @@ unicode characters.
 </section>
 </section>
 <section id="v1-4-3-1">
-<span id="id783"></span><h2>v1.4.3.1<a class="headerlink" href="#v1-4-3-1" title="Permalink to this heading"></a></h2>
-<section id="id784">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id784" title="Permalink to this heading"></a></h3>
+<span id="id788"></span><h2>v1.4.3.1<a class="headerlink" href="#v1-4-3-1" title="Permalink to this heading"></a></h2>
+<section id="id789">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id789" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <cite>cola classic</cite> tool can be now configured to be dockable.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/56">#56</a>)</p></li>
@@ -3631,8 +3649,8 @@ The idea and icons were provided by Uri Okrent.</p></li>
 of whether inotify is installed.</p></li>
 </ul>
 </section>
-<section id="id786">
-<h3>Packaging<a class="headerlink" href="#id786" title="Permalink to this heading"></a></h3>
+<section id="id791">
+<h3>Packaging<a class="headerlink" href="#id791" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix installation of translations per Fedora
 This incorporates Fedora’s fix for the translations path
@@ -3641,8 +3659,8 @@ which originally appeared in cola-1.4.3-translations.patch.</p></li>
 application bundles using ‘make app-bundle’.</p></li>
 </ul>
 </section>
-<section id="id787">
-<h3>Fixes<a class="headerlink" href="#id787" title="Permalink to this heading"></a></h3>
+<section id="id792">
+<h3>Fixes<a class="headerlink" href="#id792" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed a stacktrace when trying to use “Get Commit Message Template”
 with an unconfigured “commit.template” git config variable.
@@ -3656,9 +3674,9 @@ with an unconfigured “commit.template” git config variable.
 </section>
 </section>
 <section id="v1-4-3">
-<span id="id789"></span><h2>v1.4.3<a class="headerlink" href="#v1-4-3" title="Permalink to this heading"></a></h2>
-<section id="id790">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id790" title="Permalink to this heading"></a></h3>
+<span id="id794"></span><h2>v1.4.3<a class="headerlink" href="#v1-4-3" title="Permalink to this heading"></a></h2>
+<section id="id795">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id795" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> now has a separate display area
 for displaying commit metadata.  This area will soon
@@ -3666,8 +3684,8 @@ grow additional functionality such as cherry-picking,
 branching, etc.</p></li>
 </ul>
 </section>
-<section id="id791">
-<h3>Fixes<a class="headerlink" href="#id791" title="Permalink to this heading"></a></h3>
+<section id="id796">
+<h3>Fixes<a class="headerlink" href="#id796" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed tests from a previous refactoring.</p></li>
 <li><p>Guard against ‘diff.external’ configuration by always
@@ -3678,8 +3696,8 @@ shows the correct number of context lines.</p></li>
 <li><p>Raise the GUI so that it is in the foreground on OS X.</p></li>
 </ul>
 </section>
-<section id="id793">
-<h3>Packaging<a class="headerlink" href="#id793" title="Permalink to this heading"></a></h3>
+<section id="id798">
+<h3>Packaging<a class="headerlink" href="#id798" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now allow distutils to rewrite cola’s shebang line.
 This allows us to run on systems where “which python”
@@ -3693,17 +3711,17 @@ separate download.
 </section>
 </section>
 <section id="v1-4-2-5">
-<span id="id794"></span><h2>v1.4.2.5<a class="headerlink" href="#v1-4-2-5" title="Permalink to this heading"></a></h2>
-<section id="id795">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id795" title="Permalink to this heading"></a></h3>
+<span id="id799"></span><h2>v1.4.2.5<a class="headerlink" href="#v1-4-2-5" title="Permalink to this heading"></a></h2>
+<section id="id800">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id800" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Clicking on paths in the status widget copies them into the
 copy/paste buffer for easy middle-clicking into terminals.</p></li>
 <li><p><cite>Ctrl+C</cite> in diff viewer copies the selected diff to the clipboard.</p></li>
 </ul>
 </section>
-<section id="id796">
-<h3>Fixes<a class="headerlink" href="#id796" title="Permalink to this heading"></a></h3>
+<section id="id801">
+<h3>Fixes<a class="headerlink" href="#id801" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed the disappearing actions buttons on PyQt 4.7.4
 as reported by Arch and Ubuntu 10.10.
@@ -3712,8 +3730,8 @@ as reported by Arch and Ubuntu 10.10.
 items could not be de-selected.</p></li>
 </ul>
 </section>
-<section id="id798">
-<h3>Packaging<a class="headerlink" href="#id798" title="Permalink to this heading"></a></h3>
+<section id="id803">
+<h3>Packaging<a class="headerlink" href="#id803" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Removed hard-coded reference to lib/ when calculating Python’s
 site-packages directory.</p></li>
@@ -3721,9 +3739,9 @@ site-packages directory.</p></li>
 </section>
 </section>
 <section id="v1-4-2-4">
-<span id="id799"></span><h2>v1.4.2.4<a class="headerlink" href="#v1-4-2-4" title="Permalink to this heading"></a></h2>
-<section id="id800">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id800" title="Permalink to this heading"></a></h3>
+<span id="id804"></span><h2>v1.4.2.4<a class="headerlink" href="#v1-4-2-4" title="Permalink to this heading"></a></h2>
+<section id="id805">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id805" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Removed “single-click to (un)stage” in the status view.
 This is a usability improvement since we no longer perform
@@ -3731,17 +3749,17 @@ different actions depending on where a row is clicked.</p></li>
 <li><p>Added ability to create unsigned, annotated tags.</p></li>
 </ul>
 </section>
-<section id="id801">
-<h3>Fixes<a class="headerlink" href="#id801" title="Permalink to this heading"></a></h3>
+<section id="id806">
+<h3>Fixes<a class="headerlink" href="#id806" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated documentation to use <cite>cola.git</cite> instead of <cite>cola.gitcmd</cite>.</p></li>
 </ul>
 </section>
 </section>
 <section id="v1-4-2-3">
-<span id="id802"></span><h2>v1.4.2.3<a class="headerlink" href="#v1-4-2-3" title="Permalink to this heading"></a></h2>
-<section id="id803">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id803" title="Permalink to this heading"></a></h3>
+<span id="id807"></span><h2>v1.4.2.3<a class="headerlink" href="#v1-4-2-3" title="Permalink to this heading"></a></h2>
+<section id="id808">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id808" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Allow un/staging by right-clicking top-level items
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/57">#57</a>)</p></li>
@@ -3752,8 +3770,8 @@ staging all files.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/58">#58</a>)</p></li>
 </ul>
 </section>
-<section id="id807">
-<h3>Fixes<a class="headerlink" href="#id807" title="Permalink to this heading"></a></h3>
+<section id="id812">
+<h3>Fixes<a class="headerlink" href="#id812" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Simplified the actions widget to work around a regression
 in PyQt4 4.7.4.
@@ -3762,15 +3780,15 @@ in PyQt4 4.7.4.
 </section>
 </section>
 <section id="v1-4-2-2">
-<span id="id809"></span><h2>v1.4.2.2<a class="headerlink" href="#v1-4-2-2" title="Permalink to this heading"></a></h2>
-<section id="id810">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id810" title="Permalink to this heading"></a></h3>
+<span id="id814"></span><h2>v1.4.2.2<a class="headerlink" href="#v1-4-2-2" title="Permalink to this heading"></a></h2>
+<section id="id815">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id815" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git dag</cite> interaction was made faster.</p></li>
 </ul>
 </section>
-<section id="id811">
-<h3>Fixes<a class="headerlink" href="#id811" title="Permalink to this heading"></a></h3>
+<section id="id816">
+<h3>Fixes<a class="headerlink" href="#id816" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added ‘…’ indicators to the buttons for
 ‘Fetch…’, ‘Push…’, ‘Pull…’, and ‘Stash…’.
@@ -3781,33 +3799,33 @@ in PyQt4 4.7.4.
 </section>
 </section>
 <section id="v1-4-2-1">
-<span id="id813"></span><h2>v1.4.2.1<a class="headerlink" href="#v1-4-2-1" title="Permalink to this heading"></a></h2>
-<section id="id814">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id814" title="Permalink to this heading"></a></h3>
+<span id="id818"></span><h2>v1.4.2.1<a class="headerlink" href="#v1-4-2-1" title="Permalink to this heading"></a></h2>
+<section id="id819">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id819" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Staging and unstaging is faster.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/48">#48</a>)</p></li>
 <li><p><cite>git dag</cite> reads history in a background thread.</p></li>
 </ul>
 </section>
-<section id="id816">
-<h3>Portability<a class="headerlink" href="#id816" title="Permalink to this heading"></a></h3>
+<section id="id821">
+<h3>Portability<a class="headerlink" href="#id821" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added <code class="xref py py-data docutils literal notranslate"><span class="pre">cola.compat.hashlib</span></code> for <cite>Python 2.4</cite> compatibility</p></li>
 <li><p>Improved <cite>PyQt 4.1.x</cite> compatibility.</p></li>
 </ul>
 </section>
-<section id="id817">
-<h3>Fixes<a class="headerlink" href="#id817" title="Permalink to this heading"></a></h3>
+<section id="id822">
+<h3>Fixes<a class="headerlink" href="#id822" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Configured menu actions use <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">-c</span></code> for Windows portability.</p></li>
 </ul>
 </section>
 </section>
 <section id="v1-4-2">
-<span id="id818"></span><h2>v1.4.2<a class="headerlink" href="#v1-4-2" title="Permalink to this heading"></a></h2>
-<section id="id819">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id819" title="Permalink to this heading"></a></h3>
+<span id="id823"></span><h2>v1.4.2<a class="headerlink" href="#v1-4-2" title="Permalink to this heading"></a></h2>
+<section id="id824">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id824" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>Added support for the configurable <code class="docutils literal notranslate"><span class="pre">guitool.&lt;tool&gt;.*</span></code>
 actions as described in the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span></code> documentation.
@@ -3844,8 +3862,8 @@ over the commit message editor.
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/39">#39</a>)</p></li>
 </ul>
 </section>
-<section id="id824">
-<h3>Fixes<a class="headerlink" href="#id824" title="Permalink to this heading"></a></h3>
+<section id="id829">
+<h3>Fixes<a class="headerlink" href="#id829" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Improved backwards compatibility for Python 2.4.</p></li>
 <li><p><cite>Review mode</cite> can now review the current branch; it no longer
@@ -3859,8 +3877,8 @@ by the <cite>git config</cite> parser.</p></li>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/43">#43</a>)</p></li>
 </ul>
 </section>
-<section id="id826">
-<h3>Packaging<a class="headerlink" href="#id826" title="Permalink to this heading"></a></h3>
+<section id="id831">
+<h3>Packaging<a class="headerlink" href="#id831" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Removed colon (<cite>:</cite>) from the applilcation name on Windows
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/41">#41</a>)</p></li>
@@ -3880,9 +3898,9 @@ providing msysgit-friendly patches.</p></li>
 </section>
 </section>
 <section id="v1-4-1-2">
-<span id="id829"></span><h2>v1.4.1.2<a class="headerlink" href="#v1-4-1-2" title="Permalink to this heading"></a></h2>
-<section id="id830">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id830" title="Permalink to this heading"></a></h3>
+<span id="id834"></span><h2>v1.4.1.2<a class="headerlink" href="#v1-4-1-2" title="Permalink to this heading"></a></h2>
+<section id="id835">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id835" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>It is now possible to checkout from the index as well
 as from <cite>HEAD</cite>.  This corresponds to the
@@ -3898,8 +3916,8 @@ It doesn’t do much yet, but it’s been merged so that we can start
 building and improving upon it.</p></li>
 </ul>
 </section>
-<section id="id831">
-<h3>Fixes<a class="headerlink" href="#id831" title="Permalink to this heading"></a></h3>
+<section id="id836">
+<h3>Fixes<a class="headerlink" href="#id836" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed a missing <code class="docutils literal notranslate"><span class="pre">import</span></code> when showing <cite>right-click</cite> actions
 for unmerged files in the <cite>Repository Status</cite> tool.</p></li>
@@ -3910,8 +3928,8 @@ for unmerged files in the <cite>Repository Status</cite> tool.</p></li>
 the name of the current branch.</p></li>
 </ul>
 </section>
-<section id="id832">
-<h3>Packaging<a class="headerlink" href="#id832" title="Permalink to this heading"></a></h3>
+<section id="id837">
+<h3>Packaging<a class="headerlink" href="#id837" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> will now conditionally include a <code class="docutils literal notranslate"><span class="pre">config.mak</span></code>
 file located at the root of the project.  This allows for user
@@ -3933,23 +3951,23 @@ This corresponds to the <code class="docutils literal notranslate"><span class="
 </section>
 </section>
 <section id="v1-4-1-1">
-<span id="id833"></span><h2>v1.4.1.1<a class="headerlink" href="#v1-4-1-1" title="Permalink to this heading"></a></h2>
-<section id="id834">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id834" title="Permalink to this heading"></a></h3>
+<span id="id838"></span><h2>v1.4.1.1<a class="headerlink" href="#v1-4-1-1" title="Permalink to this heading"></a></h2>
+<section id="id839">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id839" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>We now use patience diff by default when it is available via
 <cite>git diff –patience</cite>.</p></li>
 <li><p>Allow closing the <cite>cola classic</cite> tool with <cite>Ctrl+W</cite>.</p></li>
 </ul>
 </section>
-<section id="id835">
-<h3>Fixes<a class="headerlink" href="#id835" title="Permalink to this heading"></a></h3>
+<section id="id840">
+<h3>Fixes<a class="headerlink" href="#id840" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed an unbound variable error in the <cite>push</cite> dialog.</p></li>
 </ul>
 </section>
-<section id="id836">
-<h3>Packaging<a class="headerlink" href="#id836" title="Permalink to this heading"></a></h3>
+<section id="id841">
+<h3>Packaging<a class="headerlink" href="#id841" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Don’t include <cite>simplejson</cite> in MANIFEST.in.</p></li>
 <li><p>Update desktop entry to read <cite>Cola Git GUI</cite>.</p></li>
@@ -3957,12 +3975,12 @@ This corresponds to the <code class="docutils literal notranslate"><span class="
 </section>
 </section>
 <section id="v1-4-1">
-<span id="id837"></span><h2>v1.4.1<a class="headerlink" href="#v1-4-1" title="Permalink to this heading"></a></h2>
+<span id="id842"></span><h2>v1.4.1<a class="headerlink" href="#v1-4-1" title="Permalink to this heading"></a></h2>
 <p>This feature release adds two new features directly from
 <cite>git cola</cite>’s github issues backlog.  On the developer
 front, further work was done towards modularizing the code base.</p>
-<section id="id838">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id838" title="Permalink to this heading"></a></h3>
+<section id="id843">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id843" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Dragging and dropping patches invokes <cite>git am</cite>
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/3">#3</a>)</p></li>
@@ -3974,8 +3992,8 @@ is presented when <cite>git cola</cite> is launched outside of a git repository.
 <li><p>Optimized startup time by removing several calls to <cite>git</cite>.</p></li>
 </ul>
 </section>
-<section id="id842">
-<h3>Portability<a class="headerlink" href="#id842" title="Permalink to this heading"></a></h3>
+<section id="id847">
+<h3>Portability<a class="headerlink" href="#id847" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>git cola</cite> is once again compatible with PyQt 4.3.x.</p></li>
 </ul>
@@ -3991,9 +4009,9 @@ is presented when <cite>git cola</cite> is launched outside of a git repository.
 </section>
 </section>
 <section id="v1-4-0-5">
-<span id="id843"></span><h2>v1.4.0.5<a class="headerlink" href="#v1-4-0-5" title="Permalink to this heading"></a></h2>
-<section id="id844">
-<h3>Fixes<a class="headerlink" href="#id844" title="Permalink to this heading"></a></h3>
+<span id="id848"></span><h2>v1.4.0.5<a class="headerlink" href="#v1-4-0-5" title="Permalink to this heading"></a></h2>
+<section id="id849">
+<h3>Fixes<a class="headerlink" href="#id849" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix launching external applications on Windows</p></li>
 <li><p>Ensure that the <cite>amend</cite> checkbox is unchecked when switching modes</p></li>
@@ -4002,27 +4020,27 @@ is presented when <cite>git cola</cite> is launched outside of a git repository.
 </section>
 </section>
 <section id="v1-4-0-4">
-<span id="id845"></span><h2>v1.4.0.4<a class="headerlink" href="#v1-4-0-4" title="Permalink to this heading"></a></h2>
-<section id="id846">
-<h3>Packaging<a class="headerlink" href="#id846" title="Permalink to this heading"></a></h3>
+<span id="id850"></span><h2>v1.4.0.4<a class="headerlink" href="#v1-4-0-4" title="Permalink to this heading"></a></h2>
+<section id="id851">
+<h3>Packaging<a class="headerlink" href="#id851" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix Lintian warnings</p></li>
 </ul>
 </section>
 </section>
 <section id="v1-4-0-3">
-<span id="id847"></span><h2>v1.4.0.3<a class="headerlink" href="#v1-4-0-3" title="Permalink to this heading"></a></h2>
-<section id="id848">
-<h3>Fixes<a class="headerlink" href="#id848" title="Permalink to this heading"></a></h3>
+<span id="id852"></span><h2>v1.4.0.3<a class="headerlink" href="#v1-4-0-3" title="Permalink to this heading"></a></h2>
+<section id="id853">
+<h3>Fixes<a class="headerlink" href="#id853" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix X11 warnings on application startup</p></li>
 </ul>
 </section>
 </section>
 <section id="v1-4-0-2">
-<span id="id849"></span><h2>v1.4.0.2<a class="headerlink" href="#v1-4-0-2" title="Permalink to this heading"></a></h2>
-<section id="id850">
-<h3>Fixes<a class="headerlink" href="#id850" title="Permalink to this heading"></a></h3>
+<span id="id854"></span><h2>v1.4.0.2<a class="headerlink" href="#v1-4-0-2" title="Permalink to this heading"></a></h2>
+<section id="id855">
+<h3>Fixes<a class="headerlink" href="#id855" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added missing ‘Exit Diff Mode’ button for ‘Diff Expression’ mode
 (<a class="reference external" href="https://github.com/git-cola/git-cola/issues/31">#31</a>)</p></li>
@@ -4032,9 +4050,9 @@ is presented when <cite>git cola</cite> is launched outside of a git repository.
 </section>
 </section>
 <section id="v1-4-0-1">
-<span id="id853"></span><h2>v1.4.0.1<a class="headerlink" href="#v1-4-0-1" title="Permalink to this heading"></a></h2>
-<section id="id854">
-<h3>Fixes<a class="headerlink" href="#id854" title="Permalink to this heading"></a></h3>
+<span id="id858"></span><h2>v1.4.0.1<a class="headerlink" href="#v1-4-0-1" title="Permalink to this heading"></a></h2>
+<section id="id859">
+<h3>Fixes<a class="headerlink" href="#id859" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Keep entries in sorted order in the <cite>cola classic</cite> tool</p></li>
 <li><p>Fix staging untracked files
@@ -4047,13 +4065,13 @@ is presented when <cite>git cola</cite> is launched outside of a git repository.
 </section>
 </section>
 <section id="v1-4-0">
-<span id="id858"></span><h2>v1.4.0<a class="headerlink" href="#v1-4-0" title="Permalink to this heading"></a></h2>
+<span id="id863"></span><h2>v1.4.0<a class="headerlink" href="#v1-4-0" title="Permalink to this heading"></a></h2>
 <p>This release focuses on a redesign of the git-cola user interface,
 a tags interface, and better integration of the <cite>cola classic</cite> tool.
 A flexible interface based on configurable docks is used to manage the
 various cola widgets.</p>
-<section id="id859">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id859" title="Permalink to this heading"></a></h3>
+<section id="id864">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id864" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>New GUI is flexible and user-configurable</p></li>
 <li><p>Individual widgets can be detached and rearranged arbitrarily</p></li>
@@ -4067,15 +4085,15 @@ warns when lines get too long</p></li>
 <li><p>Provide more information in log messages</p></li>
 </ul>
 </section>
-<section id="id860">
-<h3>Fixes<a class="headerlink" href="#id860" title="Permalink to this heading"></a></h3>
+<section id="id865">
+<h3>Fixes<a class="headerlink" href="#id865" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Inherit the window manager’s font settings</p></li>
 <li><p>Miscellaneous PyQt4 bug fixes and workarounds</p></li>
 </ul>
 </section>
-<section id="id861">
-<h3>Developer<a class="headerlink" href="#id861" title="Permalink to this heading"></a></h3>
+<section id="id866">
+<h3>Developer<a class="headerlink" href="#id866" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Removed all usage of Qt Designer <cite>.ui</cite> files</p></li>
 <li><p>Simpler model/view architecture</p></li>
@@ -4089,31 +4107,31 @@ warns when lines get too long</p></li>
 </section>
 </section>
 <section id="v1-3-9">
-<span id="id862"></span><h2>v1.3.9<a class="headerlink" href="#v1-3-9" title="Permalink to this heading"></a></h2>
-<section id="id863">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id863" title="Permalink to this heading"></a></h3>
+<span id="id867"></span><h2>v1.3.9<a class="headerlink" href="#v1-3-9" title="Permalink to this heading"></a></h2>
+<section id="id868">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id868" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added a <cite>cola classic</cite> tool for browsing the entire repository</p></li>
 <li><p>Handle diff expressions with spaces</p></li>
 <li><p>Handle renamed files</p></li>
 </ul>
 </section>
-<section id="id864">
-<h3>Portability<a class="headerlink" href="#id864" title="Permalink to this heading"></a></h3>
+<section id="id869">
+<h3>Portability<a class="headerlink" href="#id869" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Handle carat <cite>^</cite> characters in diff expressions on Windows</p></li>
 <li><p>Worked around a PyQt 4.5/4.6 QThreadPool bug</p></li>
 </ul>
 </section>
-<section id="id865">
-<h3>Documentation<a class="headerlink" href="#id865" title="Permalink to this heading"></a></h3>
+<section id="id870">
+<h3>Documentation<a class="headerlink" href="#id870" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added a keyboard shortcuts reference page</p></li>
 <li><p>Added developer API documentation</p></li>
 </ul>
 </section>
-<section id="id866">
-<h3>Fixes<a class="headerlink" href="#id866" title="Permalink to this heading"></a></h3>
+<section id="id871">
+<h3>Fixes<a class="headerlink" href="#id871" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix the diff expression used when reviewing branches</p></li>
 <li><p>Fix a bug when pushing branches</p></li>
@@ -4123,9 +4141,9 @@ warns when lines get too long</p></li>
 </section>
 </section>
 <section id="v1-3-8">
-<span id="id867"></span><h2>v1.3.8<a class="headerlink" href="#v1-3-8" title="Permalink to this heading"></a></h2>
-<section id="id868">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id868" title="Permalink to this heading"></a></h3>
+<span id="id872"></span><h2>v1.3.8<a class="headerlink" href="#v1-3-8" title="Permalink to this heading"></a></h2>
+<section id="id873">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id873" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fresh and tasty SVG logos</p></li>
 <li><p>Added <cite>Branch Review</cite> mode for reviewing topic branches</p></li>
@@ -4142,8 +4160,8 @@ Disabling it for unmerged items was inconsistent, though safer.</p></li>
 <li><p>Show diffs when navigating the status tree with the keyboard</p></li>
 </ul>
 </section>
-<section id="id869">
-<h3>Packaging<a class="headerlink" href="#id869" title="Permalink to this heading"></a></h3>
+<section id="id874">
+<h3>Packaging<a class="headerlink" href="#id874" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Worked around <cite>pyuic4</cite> bugs in the <cite>setup.py</cite> build script</p></li>
 <li><p>Added Mac OSX application bundles to the download page</p></li>
@@ -4151,7 +4169,7 @@ Disabling it for unmerged items was inconsistent, though safer.</p></li>
 </section>
 </section>
 <section id="v1-3-7">
-<span id="id870"></span><h2>v1.3.7<a class="headerlink" href="#v1-3-7" title="Permalink to this heading"></a></h2>
+<span id="id875"></span><h2>v1.3.7<a class="headerlink" href="#v1-3-7" title="Permalink to this heading"></a></h2>
 <section id="subsystems">
 <h3>Subsystems<a class="headerlink" href="#subsystems" title="Permalink to this heading"></a></h3>
 <ul class="simple">
@@ -4160,29 +4178,29 @@ Disabling it for unmerged items was inconsistent, though safer.</p></li>
 <cite>difftool.prompt</cite> configuration variable</p></li>
 </ul>
 </section>
-<section id="id871">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id871" title="Permalink to this heading"></a></h3>
+<section id="id876">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id876" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Warn when <cite>non-fast-forward</cite> is used with fetch, push or pull</p></li>
 <li><p>Allow <cite>Ctrl+C</cite> to exit cola when run from the command line</p></li>
 </ul>
 </section>
-<section id="id872">
-<h3>Fixes<a class="headerlink" href="#id872" title="Permalink to this heading"></a></h3>
+<section id="id877">
+<h3>Fixes<a class="headerlink" href="#id877" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Support Unicode font names</p></li>
 <li><p>Handle interrupted system calls</p></li>
 </ul>
 </section>
-<section id="id873">
-<h3>Developer<a class="headerlink" href="#id873" title="Permalink to this heading"></a></h3>
+<section id="id878">
+<h3>Developer<a class="headerlink" href="#id878" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><cite>PEP-8</cite>-ified more of the cola code base</p></li>
 <li><p>Added more tests</p></li>
 </ul>
 </section>
-<section id="id874">
-<h3>Packaging<a class="headerlink" href="#id874" title="Permalink to this heading"></a></h3>
+<section id="id879">
+<h3>Packaging<a class="headerlink" href="#id879" title="Permalink to this heading"></a></h3>
 <ul>
 <li><p>All resources are now installed into <cite>$prefix/share/git-cola</cite>.
 Closed Debian bug #519972</p>
@@ -4192,17 +4210,17 @@ Closed Debian bug #519972</p>
 </section>
 </section>
 <section id="v1-3-6">
-<span id="id875"></span><h2>v1.3.6<a class="headerlink" href="#v1-3-6" title="Permalink to this heading"></a></h2>
-<section id="id876">
-<h3>Subsystems<a class="headerlink" href="#id876" title="Permalink to this heading"></a></h3>
+<span id="id880"></span><h2>v1.3.6<a class="headerlink" href="#v1-3-6" title="Permalink to this heading"></a></h2>
+<section id="id881">
+<h3>Subsystems<a class="headerlink" href="#id881" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added support for Kompare in <cite>git difftool</cite></p></li>
 <li><p>Added a separate configuration namespace for <cite>git difftool</cite></p></li>
 <li><p>Added the <cite>diff.tool</cite> configuration variable to define the default diff tool</p></li>
 </ul>
 </section>
-<section id="id877">
-<h3>Usability, bells and whistles<a class="headerlink" href="#id877" title="Permalink to this heading"></a></h3>
+<section id="id882">
+<h3>Usability, bells and whistles<a class="headerlink" href="#id882" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The stash dialog allows passing the <cite>–keep-index</cite> option to <cite>git stash</cite></p></li>
 <li><p>Amending a published commit warns at commit time</p></li>
@@ -4215,14 +4233,14 @@ Closed Debian bug #519972</p>
 <li><p><cite>NOTE</cite> – <cite>cola.showoutput</cite> was removed with the GUI rewrite in 1.4.0.</p></li>
 </ul>
 </section>
-<section id="id878">
-<h3>Developer<a class="headerlink" href="#id878" title="Permalink to this heading"></a></h3>
+<section id="id883">
+<h3>Developer<a class="headerlink" href="#id883" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Improved nose unittest usage</p></li>
 </ul>
 </section>
-<section id="id879">
-<h3>Packaging<a class="headerlink" href="#id879" title="Permalink to this heading"></a></h3>
+<section id="id884">
+<h3>Packaging<a class="headerlink" href="#id884" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added a Windows/msysGit installer</p></li>
 <li><p>Included private versions of <cite>simplejson</cite> and <cite>jsonpickle</cite>
