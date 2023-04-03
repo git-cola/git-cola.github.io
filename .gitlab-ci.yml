@@ -1,0 +1,34 @@
+default:
+  image: ruby:latest
+  cache:
+    paths:
+      - vendor/ruby
+  before_script:
+    - bundle init
+    - bundle config set path vendor/ruby
+    - bundle add jekyll
+    - bundle install
+
+stages:
+  - test
+  - deploy
+
+test-pages:
+  stage: test
+  script:
+    - bundle exec jekyll build -d test
+  artifacts:
+    paths:
+      - test
+  except:
+    - main
+
+pages:
+  stage: deploy
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
