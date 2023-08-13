@@ -762,6 +762,13 @@ Defaults to `true`.  This setting is configured using the `Preferences`
 dialog, but it can be toggled for one-off usage using the commit message
 editor's options sub-menu.
 
+cola.logdate
+------------
+Set the default date-time mode for the DAG display. This value is
+passed to `git log --date=<format>`.
+See `git log(1) <https://git-scm.com/docs/git-log#Documentation/git-log.txt---dateltformatgt>`_
+for more details.
+
 cola.maxrecent
 --------------
 `git cola` caps the number of recent repositories to avoid cluttering
@@ -792,6 +799,12 @@ cola.resizebrowsercolumns
 -------------------------
 `git cola` will automatically resize the file browser columns as folders are
 expanded/collapsed when ``cola.resizebrowsercolumns`` is set to `true`.
+
+cola.patchesdirectory
+---------------------
+The default directory to use when exporting patches. Relative paths are treated
+as being relative to the current repository. Absolute paths are used as-is.
+Defaults to `patches`.
 
 cola.safemode
 -------------
@@ -1218,6 +1231,17 @@ prior to launching `git cola`.::
 
     eval $(gpg-agent --daemon)
     git cola
+
+SHELL COMPLETIONS
+=================
+
+Git Cola provides shell completions for zsh and bash.
+The completion scripts and instructions are included in Git Cola's
+`contrib` directory.
+
+* `Shell completion scripts <https://gitlab.com/git-cola/git-cola/-/tree/main/contrib>`_
+
+* `Setup instructions <https://gitlab.com/git-cola/git-cola/-/blob/main/contrib/README.md>`_
 
 WINDOWS NOTES
 =============

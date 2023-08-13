@@ -45,6 +45,7 @@ Thanks
 * Birger Skogeng Pedersen
 * Björn Ketelaars
 * Bob van der Linden
+* Boerje Sewing
 * Bruno Cabral
 * 林博仁 (Buo-ren Lin)
 * cclaus
@@ -59,6 +60,7 @@ Thanks
 * Daniel Jay Haskin
 * Daniel Harding
 * Daniel King
+* DasaniT
 * Dave Cottlehuber
 * Dave Thomas
 * David Aguilar
@@ -290,6 +292,7 @@ Thanks
 * WNguyen14
 * wsdfhjxc
 * Xie Hua Liang (xieofxie)
+* yael levi
 * YAMAMOTO Kenyu
 * Yi EungJun
 * Zauber Paracelsus

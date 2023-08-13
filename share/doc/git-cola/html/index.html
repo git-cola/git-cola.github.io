@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Git Cola Documentation &mdash; git-cola 4.2.1 documentation</title>
+  <title>Git Cola Documentation &mdash; git-cola 4.3.0 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -14,9 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="static/documentation_options.js"></script>
         <script src="static/jquery.js"></script>
         <script src="static/underscore.js"></script>
-        <script src="static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="static/doctools.js"></script>
-        <script src="static/sphinx_highlight.js"></script>
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -35,7 +33,7 @@
             git-cola
           </a>
               <div class="version">
-                4.2.1
+                4.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -79,7 +77,7 @@
            <div itemprop="articleBody">
              
   <section id="git-cola-documentation">
-<h1>Git Cola Documentation<a class="headerlink" href="#git-cola-documentation" title="Permalink to this heading"></a></h1>
+<h1>Git Cola Documentation<a class="headerlink" href="#git-cola-documentation" title="Permalink to this headline"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola(1)</a><ul>
@@ -167,11 +165,13 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-inotify">cola.inotify</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-refreshonfocus">cola.refreshonfocus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-linebreak">cola.linebreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-logdate">cola.logdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-maxrecent">cola.maxrecent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-mousezoom">cola.mousezoom</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-dragencoding">cola.dragencoding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-readsize">cola.readsize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-resizebrowsercolumns">cola.resizebrowsercolumns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-patchesdirectory">cola.patchesdirectory</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-safemode">cola.safemode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-savewindowsettings">cola.savewindowsettings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#cola-showpath">cola.showpath</a></li>
@@ -228,6 +228,7 @@
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#configure-gpg-agent-and-a-pin-entry-program">Configure gpg-agent and a pin-entry program</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="git-cola.html#shell-completions">SHELL COMPLETIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#windows-notes">WINDOWS NOTES</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#git-installation">Git Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-cola.html#ssh-agents-for-key-based-authentication">SSH Agents for Key-based Authentication</a></li>
@@ -266,12 +267,13 @@
 </ul>
 </div>
 <section id="release-notes">
-<h2>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this heading"></a></h2>
+<h2>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-3-0">v4.3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-2-1">v4.2.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-2-0">v4.2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-1-0">v4.1.0</a></li>
@@ -370,7 +372,7 @@
 </div>
 </section>
 <section id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h2>
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>

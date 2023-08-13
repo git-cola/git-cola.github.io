@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Mar 31, 2023" "4.2.1" "git-cola"
+.TH "GIT-COLA" "1" "Aug 12, 2023" "4.3.0" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -802,6 +802,12 @@ Whether to automatically break long lines while editing commit messages.
 Defaults to \fItrue\fP\&.  This setting is configured using the \fIPreferences\fP
 dialog, but it can be toggled for one\-off usage using the commit message
 editor’s options sub\-menu.
+.SS cola.logdate
+.sp
+Set the default date\-time mode for the DAG display. This value is
+passed to \fIgit log –date=<format>\fP\&.
+See \fI\%git log(1)\fP
+for more details.
 .SS cola.maxrecent
 .sp
 \fIgit cola\fP caps the number of recent repositories to avoid cluttering
@@ -828,6 +834,11 @@ and defaults to \fI2048\fP\&.
 .sp
 \fIgit cola\fP will automatically resize the file browser columns as folders are
 expanded/collapsed when \fBcola.resizebrowsercolumns\fP is set to \fItrue\fP\&.
+.SS cola.patchesdirectory
+.sp
+The default directory to use when exporting patches. Relative paths are treated
+as being relative to the current repository. Absolute paths are used as\-is.
+Defaults to \fIpatches\fP\&.
 .SS cola.safemode
 .sp
 The “Stage” button in the \fIgit cola\fP Actions panel stages all files when it is
@@ -884,7 +895,7 @@ accordingly.
 .SS cola.terminalshellquote
 .sp
 Some terminal require that the command string get passed as a string.
-For example, \fBxfce4\-terminal \-e \(dqgit difftool\(dq\fP requires shell quoting,
+For example, \fBxfce4\-terminal \-e "git difftool"\fP requires shell quoting,
 whereas \fBgnome\-terminal \-\- git difftool\fP does not.
 .sp
 You should not need to set this variable for the built\-in terminals
@@ -1372,6 +1383,17 @@ git cola
 .ft P
 .fi
 .UNINDENT
+.UNINDENT
+.SH SHELL COMPLETIONS
+.sp
+Git Cola provides shell completions for zsh and bash.
+The completion scripts and instructions are included in Git Cola’s
+\fIcontrib\fP directory.
+.INDENT 0.0
+.IP \(bu 2
+\fI\%Shell completion scripts\fP
+.IP \(bu 2
+\fI\%Setup instructions\fP
 .UNINDENT
 .SH WINDOWS NOTES
 .SS Git Installation
