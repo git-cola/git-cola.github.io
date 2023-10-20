@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Aug 30, 2023" "4.3.2" "git-cola"
+.TH "GIT-COLA" "1" "Oct 20, 2023" "4.3.2" "git-cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -1050,6 +1050,56 @@ git config cola.color.header \(aq#bbbbbb\(aq
 .fi
 .UNINDENT
 .UNINDENT
+.SS commit.cleanup
+.sp
+Configure whether commit messages should be stripped of whitespace and comments.
+.sp
+Valid values are \fBstrip\fP, \fBwhitespace\fP, \fBverbatim\fP, \fBscissors\fP or \fBdefault\fP\&.
+.sp
+The \fBdefault\fP mode uses the \fBwhitespace\fP mode when committing through Git Cola
+and the \fBstrip\fP mode when committing using the \fBgit commit\fP command\-line.
+.INDENT 0.0
+.IP \(bu 2
+\fBstrip\fP \- Strip leading and trailing empty lines, trailing whitespace,
+commentary and collapse consecutive empty lines.
+.IP \(bu 2
+\fBwhitespace\fP \- Same as strip except \fB# commentary\fP is not removed.
+This is the \fBdefault\fP behavior when committing through \fIGit Cola\fP\&.
+.IP \(bu 2
+\fBverbatim\fP \- Do not change the message at all.
+.IP \(bu 2
+\fBscissors\fP \- Same as whitespace except that everything from (and including)
+the line found below is truncated, if the message is to be edited.
+“#” can be customized with \fBcore.commentChar\fP:
+.INDENT 2.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- >8 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+Scissor\-lines and all following lines are removed.
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+Changing the mode to \fBwhitespace\fP can be useful when you always want to keep
+lines that begin with comment character \fB#\fP in your log message, even when
+committing using the command\-line \fBgit commit\fP\&.
+.sp
+On the contrary, if you always want to always strip comments, even when
+committing through Git Cola, then configure \fBcommit.cleanup\fP to \fBstrip\fP\&.
+.sp
+Please see the \fI\%git commit cleanup mode documentation\fP
+for more details.
+.SS core.commentChar
+.sp
+Commit messages can contain comments that start with this character.
+Defaults to \fB#\fP\&.
+.sp
+Please see the \fI\%git config documentation\fP
+for more details.
 .SS core.hooksPath
 .sp
 Hooks are programs you can place in a hooks directory to trigger actions at
@@ -1255,6 +1305,14 @@ for more details about the supported values.
 Avoid creating shortcuts that conflict with existing built\-in \fIgit cola\fP
 shortcuts.  Creating a conflict will result in no action when the shortcut
 is used.
+.SH SETTING UP CREDENTIAL HELPERS
+.sp
+Git has robust support for automatically handling credentials.
+.sp
+The recommended approach is to use SSH keys and an SSH agent, but any of the core Git
+Credentials helpers will get used automatically by Git Cola.
+.sp
+See \fI\%https://git\-scm.com/doc/credential\-helpers\fP for more details.
 .SH SETTING UP GPG FOR SIGNED COMMITS
 .sp
 When creating signed commits, \fIgpg\fP will attempt to read your password from the

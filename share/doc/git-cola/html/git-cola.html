@@ -176,6 +176,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#cola-color-add">cola.color.add</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-color-remove">cola.color.remove</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cola-color-header">cola.color.header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commit-cleanup">commit.cleanup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#core-commentchar">core.commentChar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#core-hookspath">core.hooksPath</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gui-diffcontext">gui.diffcontext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gui-displayuntracked">gui.displayuntracked</a></li>
@@ -210,6 +212,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#guitool-name-shortcut">guitool.&lt;name&gt;.shortcut</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-credential-helpers">SETTING UP CREDENTIAL HELPERS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-gpg-for-signed-commits">SETTING UP GPG FOR SIGNED COMMITS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#install-gpg-agent-and-friends">Install gpg-agent and friends</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configure-gpg-agent-and-a-pin-entry-program">Configure gpg-agent and a pin-entry program</a></li>
@@ -1148,6 +1151,42 @@ Defaults to “#bbbbbb”:</p>
 </pre></div>
 </div>
 </section>
+<section id="commit-cleanup">
+<h3>commit.cleanup<a class="headerlink" href="#commit-cleanup" title="Permalink to this heading"></a></h3>
+<p>Configure whether commit messages should be stripped of whitespace and comments.</p>
+<p>Valid values are <code class="docutils literal notranslate"><span class="pre">strip</span></code>, <code class="docutils literal notranslate"><span class="pre">whitespace</span></code>, <code class="docutils literal notranslate"><span class="pre">verbatim</span></code>, <code class="docutils literal notranslate"><span class="pre">scissors</span></code> or <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">default</span></code> mode uses the <code class="docutils literal notranslate"><span class="pre">whitespace</span></code> mode when committing through Git Cola
+and the <code class="docutils literal notranslate"><span class="pre">strip</span></code> mode when committing using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command-line.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">strip</span></code> - Strip leading and trailing empty lines, trailing whitespace,
+commentary and collapse consecutive empty lines.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitespace</span></code> - Same as strip except <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">commentary</span></code> is not removed.
+This is the <code class="docutils literal notranslate"><span class="pre">default</span></code> behavior when committing through <cite>Git Cola</cite>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbatim</span></code> - Do not change the message at all.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scissors</span></code> - Same as whitespace except that everything from (and including)
+the line found below is truncated, if the message is to be edited.
+“#” can be customized with <code class="docutils literal notranslate"><span class="pre">core.commentChar</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ------------------------ &gt;8 ------------------------</span>
+<span class="n">Scissor</span><span class="o">-</span><span class="n">lines</span> <span class="ow">and</span> <span class="nb">all</span> <span class="n">following</span> <span class="n">lines</span> <span class="n">are</span> <span class="n">removed</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Changing the mode to <code class="docutils literal notranslate"><span class="pre">whitespace</span></code> can be useful when you always want to keep
+lines that begin with comment character <code class="docutils literal notranslate"><span class="pre">#</span></code> in your log message, even when
+committing using the command-line <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p>
+<p>On the contrary, if you always want to always strip comments, even when
+committing through Git Cola, then configure <code class="docutils literal notranslate"><span class="pre">commit.cleanup</span></code> to <code class="docutils literal notranslate"><span class="pre">strip</span></code>.</p>
+<p>Please see the <a class="reference external" href="https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---cleanupltmodegt">git commit cleanup mode documentation</a>
+for more details.</p>
+</section>
+<section id="core-commentchar">
+<h3>core.commentChar<a class="headerlink" href="#core-commentchar" title="Permalink to this heading"></a></h3>
+<p>Commit messages can contain comments that start with this character.
+Defaults to <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
+<p>Please see the <a class="reference external" href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-corecommentChar">git config documentation</a>
+for more details.</p>
+</section>
 <section id="core-hookspath">
 <h3>core.hooksPath<a class="headerlink" href="#core-hookspath" title="Permalink to this heading"></a></h3>
 <p>Hooks are programs you can place in a hooks directory to trigger actions at
@@ -1345,6 +1384,13 @@ for more details about the supported values.</p>
 shortcuts.  Creating a conflict will result in no action when the shortcut
 is used.</p>
 </section>
+</section>
+<section id="setting-up-credential-helpers">
+<h2>SETTING UP CREDENTIAL HELPERS<a class="headerlink" href="#setting-up-credential-helpers" title="Permalink to this heading"></a></h2>
+<p>Git has robust support for automatically handling credentials.</p>
+<p>The recommended approach is to use SSH keys and an SSH agent, but any of the core Git
+Credentials helpers will get used automatically by Git Cola.</p>
+<p>See <a class="reference external" href="https://git-scm.com/doc/credential-helpers">https://git-scm.com/doc/credential-helpers</a> for more details.</p>
 </section>
 <section id="setting-up-gpg-for-signed-commits">
 <h2>SETTING UP GPG FOR SIGNED COMMITS<a class="headerlink" href="#setting-up-gpg-for-signed-commits" title="Permalink to this heading"></a></h2>

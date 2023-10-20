@@ -34,6 +34,7 @@ Thanks
 * balping
 * Barış ÇELİK
 * Barry Roberts
+* Bastian Müller
 * Boris W
 * Ben Boeckel
 * Ben Cole
@@ -91,6 +92,7 @@ Thanks
 * Felipe Morales
 * Filip Danilović
 * Floris Lambrechts
+* Frank Weber
 * fu7mu4
 * Garoe Dorta
 * Geoffrey van Wyk
@@ -209,6 +211,7 @@ Thanks
 * ochristi
 * Oliver Haessler
 * OmegaPhil (Omega Weapon)
+* Ori shalhon
 * Owen Healy
 * Pamela Strucker
 * Paolo G. Giarrusso
@@ -222,6 +225,7 @@ Thanks
 * Peer Sommerlund
 * Peter Dave Hello
 * Peter Jensen
+* Peter Justin
 * Peter Júnoš
 * Petr Gladkikh
 * Philip Stark
