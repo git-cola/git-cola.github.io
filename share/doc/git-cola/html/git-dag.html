@@ -4,19 +4,18 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git-dag(1) &mdash; git-cola 4.3.2 documentation</title>
+  <title>git-dag(1) &mdash; git-cola 4.4.0 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="static/documentation_options.js"></script>
-        <script src="static/jquery.js"></script>
-        <script src="static/underscore.js"></script>
-        <script src="static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="static/doctools.js"></script>
-        <script src="static/sphinx_highlight.js"></script>
+        <script src="static/jquery.js?v=5d32c60e"></script>
+        <script src="static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="static/documentation_options.js?v=2f20d6c1"></script>
+        <script src="static/doctools.js?v=888ff710"></script>
+        <script src="static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -36,7 +35,7 @@
             git-cola
           </a>
               <div class="version">
-                4.3.2
+                4.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -99,67 +98,67 @@
            <div itemprop="articleBody">
              
   <section id="git-dag-1">
-<h1>git-dag(1)<a class="headerlink" href="#git-dag-1" title="Permalink to this heading"></a></h1>
+<h1>git-dag(1)<a class="headerlink" href="#git-dag-1" title="Link to this heading"></a></h1>
 <section id="synopsis">
-<h2>SYNOPSIS<a class="headerlink" href="#synopsis" title="Permalink to this heading"></a></h2>
+<h2>SYNOPSIS<a class="headerlink" href="#synopsis" title="Link to this heading"></a></h2>
 <p>git dag [options] [&lt;since&gt;..&lt;until&gt;] [[–] [&lt;path&gt;…]]</p>
 </section>
 <section id="description">
-<h2>DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+<h2>DESCRIPTION<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p><cite>git-dag</cite> is a powerful Git history visualizer.
 <cite>git-dag</cite> presents powerful <cite>git log</cite> features in a simple-to-use
 graphical interface.</p>
 </section>
 <section id="options">
-<h2>OPTIONS<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<h2>OPTIONS<a class="headerlink" href="#options" title="Link to this heading"></a></h2>
 <section id="prompt">
-<h3><code class="docutils literal notranslate"><span class="pre">--prompt</span></code><a class="headerlink" href="#prompt" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">--prompt</span></code><a class="headerlink" href="#prompt" title="Link to this heading"></a></h3>
 <p>Prompt for a Git repository instead of using the current directory.</p>
 </section>
 <section id="r-repo-path">
-<h3><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--repo</span> <span class="pre">&lt;path&gt;</span></code><a class="headerlink" href="#r-repo-path" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--repo</span> <span class="pre">&lt;path&gt;</span></code><a class="headerlink" href="#r-repo-path" title="Link to this heading"></a></h3>
 <p>Run <cite>git dag</cite> on the git repository in <cite>&lt;path&gt;</cite>.
 Defaults to the current directory.</p>
 </section>
 <section id="version">
-<h3><code class="docutils literal notranslate"><span class="pre">--version</span></code><a class="headerlink" href="#version" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">--version</span></code><a class="headerlink" href="#version" title="Link to this heading"></a></h3>
 <p>Print the <cite>git dag</cite> version and exit.</p>
 </section>
 <section id="h-help">
-<h3><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code><a class="headerlink" href="#h-help" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code><a class="headerlink" href="#h-help" title="Link to this heading"></a></h3>
 <p>Show usage and optional arguments.</p>
 </section>
 </section>
 <section id="log-options">
-<h2>Log Options<a class="headerlink" href="#log-options" title="Permalink to this heading"></a></h2>
+<h2>Log Options<a class="headerlink" href="#log-options" title="Link to this heading"></a></h2>
 <p>The <cite>Log</cite> prompt allows you to pass arguments to <cite>git log</cite>.
 This can be used to filter the displayed history, for example
 entering <cite>main – Makefile</cite> will display only commits on the
 <cite>main</cite> branch that touch the <cite>Makefile</cite>.</p>
 </section>
 <section id="context-menu-actions">
-<h2>CONTEXT-MENU ACTIONS<a class="headerlink" href="#context-menu-actions" title="Permalink to this heading"></a></h2>
+<h2>CONTEXT-MENU ACTIONS<a class="headerlink" href="#context-menu-actions" title="Link to this heading"></a></h2>
 <p>The right-click menu can be used to perform various actions.
 All actions operate on the selected commit.</p>
 <p>You can create branches and tags, cherry-pick commits, save patches,
 export tarballs, and grab files from older commits using the context menu.</p>
 </section>
 <section id="diff-commits">
-<h2>DIFF COMMITS<a class="headerlink" href="#diff-commits" title="Permalink to this heading"></a></h2>
+<h2>DIFF COMMITS<a class="headerlink" href="#diff-commits" title="Link to this heading"></a></h2>
 <p>You can diff arbitrary commits.  Select a single commit in either the list
 view or the graph view and then right-click on a second commit.</p>
 <p>A menu will appear allowing you to diff the two commits.</p>
 </section>
 <section id="shortcuts">
-<h2>SHORTCUTS<a class="headerlink" href="#shortcuts" title="Permalink to this heading"></a></h2>
+<h2>SHORTCUTS<a class="headerlink" href="#shortcuts" title="Link to this heading"></a></h2>
 <p>You can run commands using dedicated shortcuts. Select a single commit
 and then press <cite>Ctrl-Alt-c</cite> to copy sha1 or <cite>Ctrl-d</cite> to run diff tool.</p>
 <p>You can read more about hotkeys from ‘keyboard shortcuts’ window or context menu.</p>
 </section>
 <section id="configuration-variables">
-<h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Permalink to this heading"></a></h2>
+<h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Link to this heading"></a></h2>
 <section id="log-date">
-<h3>log.date<a class="headerlink" href="#log-date" title="Permalink to this heading"></a></h3>
+<h3>log.date<a class="headerlink" href="#log-date" title="Link to this heading"></a></h3>
 <p>Set the default date-time format for the ‘Date’ field.
 Setting a value for log.date is similar to using <cite>git log</cite>’s
 <cite>–date</cite> option.  Possible values are <cite>relative</cite>, <cite>local</cite>,
