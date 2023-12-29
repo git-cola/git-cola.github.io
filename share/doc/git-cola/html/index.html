@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Git Cola Documentation &mdash; git-cola 4.4.1 documentation</title>
+  <title>Git Cola Documentation &mdash; Python 4.4.1 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="git-cola(1)" href="git-cola.html" /> 
+    <link rel="next" title="git-cola" href="git-cola.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,7 +31,7 @@
           
           
           <a href="#" class="icon icon-home">
-            git-cola
+            Python
           </a>
               <div class="version">
                 4.4.1
@@ -45,8 +45,8 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola(1)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag(1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thanks.html">Thanks</a></li>
 </ul>
 <ul>
@@ -59,7 +59,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">git-cola</a>
+          <a href="#">Python</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -81,7 +81,7 @@
 <h1>Git Cola Documentation<a class="headerlink" href="#git-cola-documentation" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola(1)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-cola.html#options">OPTIONS</a><ul>
@@ -247,17 +247,18 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag(1)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#options">OPTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-dag.html#revision-range"><code class="docutils literal notranslate"><span class="pre">&lt;revision-range&gt;</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-dag.html#prompt"><code class="docutils literal notranslate"><span class="pre">--prompt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-dag.html#r-repo-path"><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--repo</span> <span class="pre">&lt;path&gt;</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-dag.html#version"><code class="docutils literal notranslate"><span class="pre">--version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="git-dag.html#h-help"><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-options">Log Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-dag.html#log-arguments">Log Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#diff-commits">DIFF COMMITS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-dag.html#shortcuts">SHORTCUTS</a></li>
@@ -277,6 +278,7 @@
 <li class="toctree-l1"><a class="reference internal" href="relnotes.html">Releases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#latest-release">Latest Release</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-4-2">v4.4.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-4-1">v4.4.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-4-0">v4.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="relnotes.html#v4-3-2">v4.3.2</a></li>
@@ -392,13 +394,13 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="git-cola.html" class="btn btn-neutral float-right" title="git-cola(1)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="git-cola.html" class="btn btn-neutral float-right" title="git-cola" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2007-2022, David Aguilar and contributors.</p>
+    <p>&#169; Copyright .</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

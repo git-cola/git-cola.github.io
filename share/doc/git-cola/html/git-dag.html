@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git-dag(1) &mdash; git-cola 4.4.1 documentation</title>
+  <title>git-dag &mdash; Python 4.4.1 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Thanks" href="thanks.html" />
-    <link rel="prev" title="git-cola(1)" href="git-cola.html" /> 
+    <link rel="prev" title="git-cola" href="git-cola.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -32,7 +32,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            git-cola
+            Python
           </a>
               <div class="version">
                 4.4.1
@@ -46,18 +46,19 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola(1)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">git-dag(1)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="git-cola.html">git-cola</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">git-dag</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#revision-range"><code class="docutils literal notranslate"><span class="pre">&lt;revision-range&gt;</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prompt"><code class="docutils literal notranslate"><span class="pre">--prompt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#r-repo-path"><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--repo</span> <span class="pre">&lt;path&gt;</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#version"><code class="docutils literal notranslate"><span class="pre">--version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#h-help"><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#log-options">Log Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-arguments">Log Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#context-menu-actions">CONTEXT-MENU ACTIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#diff-commits">DIFF COMMITS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#shortcuts">SHORTCUTS</a></li>
@@ -79,7 +80,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">git-cola</a>
+          <a href="index.html">Python</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -87,7 +88,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">git-dag(1)</li>
+      <li class="breadcrumb-item active">git-dag</li>
       <li class="wy-breadcrumbs-aside">
             <a href="sources/git-dag.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,44 +98,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="git-dag-1">
-<h1>git-dag(1)<a class="headerlink" href="#git-dag-1" title="Link to this heading"></a></h1>
+  <section id="git-dag">
+<h1>git-dag<a class="headerlink" href="#git-dag" title="Link to this heading"></a></h1>
 <section id="synopsis">
 <h2>SYNOPSIS<a class="headerlink" href="#synopsis" title="Link to this heading"></a></h2>
-<p>git dag [options] [&lt;since&gt;..&lt;until&gt;] [[–] [&lt;path&gt;…]]</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">dag</span> <span class="pre">[options]</span> <span class="pre">[&lt;revision-range&gt;]</span> <span class="pre">[[--]</span> <span class="pre">[&lt;path&gt;...]]</span></code></p>
 </section>
 <section id="description">
 <h2>DESCRIPTION<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
-<p><cite>git-dag</cite> is a powerful Git history visualizer.
-<cite>git-dag</cite> presents powerful <cite>git log</cite> features in a simple-to-use
-graphical interface.</p>
+<p><cite>git-dag</cite> is an advanced Git history visualizer that presents <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>’s
+powerful features in an easy to use graphical interface.</p>
 </section>
 <section id="options">
 <h2>OPTIONS<a class="headerlink" href="#options" title="Link to this heading"></a></h2>
+<section id="revision-range">
+<h3><code class="docutils literal notranslate"><span class="pre">&lt;revision-range&gt;</span></code><a class="headerlink" href="#revision-range" title="Link to this heading"></a></h3>
+<p>Show only commits in the specified revision range.
+When no <code class="docutils literal notranslate"><span class="pre">&lt;revision-range&gt;</span></code> is specified, it defaults to <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>
+(i.e. the whole history leading to the current commit).</p>
+<p><code class="docutils literal notranslate"><span class="pre">origin..HEAD</span></code> specifies all the commits reachable from the current commit
+(i.e.  <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>), but not from <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p>
+<p>For a complete list of ways to spell <code class="docutils literal notranslate"><span class="pre">&lt;revision-range&gt;</span></code>, see the Specifying Ranges
+section of <a class="reference external" href="https://git-scm.com/docs/gitrevisions">gitrevisions(7)</a>
+(<code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">gitrevisions</span></code>).</p>
+</section>
 <section id="prompt">
 <h3><code class="docutils literal notranslate"><span class="pre">--prompt</span></code><a class="headerlink" href="#prompt" title="Link to this heading"></a></h3>
 <p>Prompt for a Git repository instead of using the current directory.</p>
 </section>
 <section id="r-repo-path">
 <h3><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--repo</span> <span class="pre">&lt;path&gt;</span></code><a class="headerlink" href="#r-repo-path" title="Link to this heading"></a></h3>
-<p>Run <cite>git dag</cite> on the git repository in <cite>&lt;path&gt;</cite>.
+<p>Open the git repository located at <code class="docutils literal notranslate"><span class="pre">&lt;path&gt;</span></code>.
 Defaults to the current directory.</p>
 </section>
 <section id="version">
 <h3><code class="docutils literal notranslate"><span class="pre">--version</span></code><a class="headerlink" href="#version" title="Link to this heading"></a></h3>
-<p>Print the <cite>git dag</cite> version and exit.</p>
+<p>Print the version number and exit.</p>
 </section>
 <section id="h-help">
 <h3><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code><a class="headerlink" href="#h-help" title="Link to this heading"></a></h3>
 <p>Show usage and optional arguments.</p>
 </section>
 </section>
-<section id="log-options">
-<h2>Log Options<a class="headerlink" href="#log-options" title="Link to this heading"></a></h2>
-<p>The <cite>Log</cite> prompt allows you to pass arguments to <cite>git log</cite>.
+<section id="log-arguments">
+<h2>Log Arguments<a class="headerlink" href="#log-arguments" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">Log</span></code> text field allows you to pass arguments to <cite>git log</cite>.
 This can be used to filter the displayed history, for example
 entering <cite>main – Makefile</cite> will display only commits on the
 <cite>main</cite> branch that touch the <cite>Makefile</cite>.</p>
+<p>The <cite>Log</cite> text field lets you interactively edit and replace the
+<code class="docutils literal notranslate"><span class="pre">[&lt;revision-range&gt;]</span> <span class="pre">[[--]</span> <span class="pre">[&lt;path&gt;...]]</span></code> arguments that were initially
+specified on the command-line.</p>
 </section>
 <section id="context-menu-actions">
 <h2>CONTEXT-MENU ACTIONS<a class="headerlink" href="#context-menu-actions" title="Link to this heading"></a></h2>
@@ -171,14 +185,14 @@ Setting a value for log.date is similar to using <cite>git log</cite>’s
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="git-cola.html" class="btn btn-neutral float-left" title="git-cola(1)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="git-cola.html" class="btn btn-neutral float-left" title="git-cola" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="thanks.html" class="btn btn-neutral float-right" title="Thanks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2007-2022, David Aguilar and contributors.</p>
+    <p>&#169; Copyright .</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git-cola(1) &mdash; git-cola 4.4.1 documentation</title>
+  <title>git-cola &mdash; Python 4.4.1 documentation</title>
       <link rel="stylesheet" href="static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="git-dag(1)" href="git-dag.html" />
+    <link rel="next" title="git-dag" href="git-dag.html" />
     <link rel="prev" title="Git Cola Documentation" href="index.html" /> 
 </head>
 
@@ -32,7 +32,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            git-cola
+            Python
           </a>
               <div class="version">
                 4.4.1
@@ -46,7 +46,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">git-cola(1)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">git-cola</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#synopsis">SYNOPSIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description">DESCRIPTION</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">OPTIONS</a><ul>
@@ -232,7 +232,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag(1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-dag.html">git-dag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thanks.html">Thanks</a></li>
 </ul>
 <ul>
@@ -245,7 +245,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">git-cola</a>
+          <a href="index.html">Python</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -253,7 +253,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">git-cola(1)</li>
+      <li class="breadcrumb-item active">git-cola</li>
       <li class="wy-breadcrumbs-aside">
             <a href="sources/git-cola.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -263,11 +263,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="git-cola-1">
-<h1>git-cola(1)<a class="headerlink" href="#git-cola-1" title="Link to this heading"></a></h1>
+  <section id="git-cola">
+<h1>git-cola<a class="headerlink" href="#git-cola" title="Link to this heading"></a></h1>
 <section id="synopsis">
 <h2>SYNOPSIS<a class="headerlink" href="#synopsis" title="Link to this heading"></a></h2>
-<p>git cola [options] [sub-command]</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cola</span> <span class="pre">[options]</span> <span class="pre">[sub-command]</span></code></p>
 </section>
 <section id="description">
 <h2>DESCRIPTION<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
@@ -1055,32 +1055,14 @@ For example, when unconfigured, cola already knows that xfce4-terminal
 requires shell quoting.</p>
 <p>This configuration variable is for custom terminals outside of the builtin set.
 The table below shows the builtin configuration.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Terminal</p></th>
-<th class="head"><p><code class="docutils literal notranslate"><span class="pre">cola.terminal</span></code></p></th>
-<th class="head"><p><code class="docutils literal notranslate"><span class="pre">cola.terminalshellquote</span></code></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>gnome-terminal</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">gnome-terminal</span> <span class="pre">--</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>konsole</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">konsole</span> <span class="pre">-e</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p>xfce4-terminal</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">xfce4-terminal</span> <span class="pre">-e</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>xterm</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">xterm</span> <span class="pre">-e</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
-</tr>
-</tbody>
-</table>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Terminal            cola.terminal           cola.terminalshellquote
+--------            -------------           -----------------------
+gnome-terminal      &quot;gnome-terminal --&quot;     false
+konsole             &quot;konsole -e&quot;            false
+xfce4-terminal      &quot;xfce4-terminal -e&quot;     true
+xterm               &quot;xterm -e&quot;              false
+</pre></div>
+</div>
 </section>
 <section id="cola-textwidth">
 <h3>cola.textwidth<a class="headerlink" href="#cola-textwidth" title="Link to this heading"></a></h3>
@@ -1520,13 +1502,13 @@ Gravatar client.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Git Cola Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="git-dag.html" class="btn btn-neutral float-right" title="git-dag(1)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="git-dag.html" class="btn btn-neutral float-right" title="git-dag" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2007-2022, David Aguilar and contributors.</p>
+    <p>&#169; Copyright .</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
