@@ -6,7 +6,7 @@ default:
   before_script:
     - bundle init
     - bundle config set path vendor/ruby
-    - bundle add jekyll
+    - bundle add jekyll --version 4.3.2
     - bundle install
 
 stages:
