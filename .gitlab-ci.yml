@@ -1,5 +1,5 @@
 default:
-  image: ruby:latest
+  image: ruby@sha256:39d33ab3b46dbfd84609871cf56364d36ba2d9b12731f6bc2fc04afd5274b9d8
   cache:
     paths:
       - vendor/ruby
