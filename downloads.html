@@ -3,42 +3,39 @@ title: "Download git-cola"
 layout: headerbar
 ---
 <style>
-img.title { border: 0; }
 h1.title { margin-bottom: 0.5em; }
 h2.title { margin-bottom: 0.5em; }
 
 .cmd {
-	font-family: monospace;
-	font-size: 20pt;
-	display: inline-block;
-	padding: 3px;
+    font-family: monospace;
+    display: inline-block;
+    font-size: 20pt;
+    padding: 3px;
 }
 
 .page {
-    margin: 1em;
-    float: left;
-    padding-right: 300px;
+    padding-right: 310px;
 }
-
 </style>
 
 <div style="
     margin-right: 1em;
     margin-top: 1em;
-    margin-left: -330px;
-    position: relative;
+    position: absolute;
+    right: 0;
     float: right;
     clear: right;">
 {% include download-box.html %}
 </div>
 
-<div class="page">
+<div class="page" style="margin-left: 2em">
 
 <h2 class="title">
     <img class="title" src="images/logo-tar.png"/>
     Source Releases
-</h2><ul>
+</h2>
 
+<ul>
 <li>
 <a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz">
     Git Cola v{{ site.cola_version }}</a> (latest stable release)

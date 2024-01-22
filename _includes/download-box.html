@@ -1,50 +1,5 @@
-<style>
-.downloads-box {
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    color: #fff;
-    background-color: #111;
-    text-align: center;
-    max-width: 310px;
-}
-
-.downloads {
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    padding: 6px;
-    font-size: 0.8em;
-    margin: 6px;
-    color: #000;
-    background-color: #ffe9b7;
-    position: relative;
-    z-index: 3;
-}
-
-.downloads img {
-    border: none;
-}
-
-.downloads a:link {
-    text-decoration: underline;
-    background-color: transparent;
-}
-
-.downloads a:visited {
-    text-decoration: underline;
-    background-color: transparent;
-}
-
-.downloads a:hover {
-    text-decoration: underline;
-    background-color: transparent;
-    color: black;
-}
-</style>
-
 <div class="downloads-box">
-Download git-cola
+Download Git Cola
 
 <div class="downloads">
     The latest stable git-cola release is<br />
@@ -52,7 +7,9 @@ Download git-cola
         <strong>v{{ site.cola_version }}</strong>
     </span>
     <br />
-    <a href="{{ page.prefix }}share/doc/git-cola/html/relnotes.html">release notes</a>
+    <a href="{{ page.prefix }}share/doc/git-cola/html/relnotes.html">
+        Release Notes
+    </a>
     ({{ site.cola_release_date }})
     <br />
     <br />
@@ -60,17 +17,17 @@ Download git-cola
     <table width="100%">
     <tbody>
     <tr>
-    <td width="33%">
+    <td width="33%" class="imglink">
         <a href="{{ site.cola_downloads }}/v{{ site.cola_version }}/git-cola-{{ site.cola_version }}.windows.zip"
-        ><img src="images/windows_big.png" alt="windows logo"/></a>
+        ><img src="images/windows_big.png" alt="windows logo"></a>
     </td>
-    <td width="33%">
+    <td width="33%" class="imglink">
         <a href="https://github.com/git-cola/git-cola#macos"
-        ><img src="images/osx_big.png" alt="mac logo"/></a>
+        ><img src="images/osx_big.png" alt="mac logo"></a>
     </td>
-    <td width="33%">
+    <td width="33%" class="imglink">
         <a href="{{ site.cola_archive }}/v{{ site.cola_version }}.tar.gz"
-        ><img src="images/tux_big.png" alt="tarball logo"/></a>
+        ><img src="images/tux_big.png" alt="tarball logo"></a>
     </td>
 
     </tr>
