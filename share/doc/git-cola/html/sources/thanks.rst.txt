@@ -12,6 +12,7 @@ Thanks
 * Adil
 * AJ Bagwell
 * akontsevich
+* Albert Vaca Cintora
 * Aleksey Kontsevich
 * Alexander Preißner
 * Alex Chernetz
@@ -100,7 +101,7 @@ Thanks
 * geotavros
 * Gianni Lerro
 * Giovanni Martins
-* `Git Hackers <http://git-scm.com/about>`_
+* `Git Hackers <https://git-scm.com/about>`_
 * Graham Bartlett
 * green-eyed-bear
 * Glen Mailer
