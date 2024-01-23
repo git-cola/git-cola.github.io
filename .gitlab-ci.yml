@@ -1,12 +1,12 @@
 default:
-  image: ruby@sha256:39d33ab3b46dbfd84609871cf56364d36ba2d9b12731f6bc2fc04afd5274b9d8
+  image: ruby:3.2
   cache:
     paths:
       - vendor/ruby
   before_script:
     - bundle init
     - bundle config set path vendor/ruby
-    - bundle add jekyll --version 4.3.2
+    - bundle add jekyll
     - bundle install
 
 stages:
