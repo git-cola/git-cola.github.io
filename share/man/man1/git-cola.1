@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Mar 03, 2024" "4.6.1" "Git Cola"
+.TH "GIT-COLA" "1" "May 02, 2024" "4.7.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -850,6 +850,11 @@ Defaults to \fIfalse\fP\&.
 .sp
 Set to \fItrue\fP to display files counts in the Status widget’s category titles.
 Defaults to \fIfalse\fP\&.
+.SS cola.sync
+.sp
+Set to \fIfalse\fP to disable calling \fIos.fdatasync()\fP  / \fIos.fdata()\fP when saving
+settings. Defaults to \fItrue\fP, which means that these functions are called when windows
+are closed and their settings are saved.
 .SS cola.tabwidth
 .sp
 The number of columns occupied by a tab character.  Defaults to 8.

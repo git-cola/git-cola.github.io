@@ -6,8 +6,8 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>git-cola - Git Cola 4.6.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=362ab14a" />
+        <title>git-cola - Git Cola 4.7.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=36a5483c" />
     
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Git Cola 4.6.1 documentation</div></a>
+      <a href="index.html"><div class="brand">Git Cola 4.7.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">Git Cola 4.6.1 documentation</span>
+  <span class="sidebar-brand-text">Git Cola 4.7.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -963,6 +963,12 @@ Defaults to <cite>false</cite>.</p>
 <p>Set to <cite>true</cite> to display files counts in the Status widget’s category titles.
 Defaults to <cite>false</cite>.</p>
 </section>
+<section id="cola-sync">
+<h3>cola.sync<a class="headerlink" href="#cola-sync" title="Link to this heading">#</a></h3>
+<p>Set to <cite>false</cite> to disable calling <cite>os.fdatasync()</cite>  / <cite>os.fdata()</cite> when saving
+settings. Defaults to <cite>true</cite>, which means that these functions are called when windows
+are closed and their settings are saved.</p>
+</section>
 <section id="cola-tabwidth">
 <h3>cola.tabwidth<a class="headerlink" href="#cola-tabwidth" title="Link to this heading">#</a></h3>
 <p>The number of columns occupied by a tab character.  Defaults to 8.</p>
@@ -1605,6 +1611,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-startupmode">cola.startupmode</a></li>
 <li><a class="reference internal" href="#cola-statusindent">cola.statusindent</a></li>
 <li><a class="reference internal" href="#cola-statusshowtotals">cola.statusshowtotals</a></li>
+<li><a class="reference internal" href="#cola-sync">cola.sync</a></li>
 <li><a class="reference internal" href="#cola-tabwidth">cola.tabwidth</a></li>
 <li><a class="reference internal" href="#cola-terminal">cola.terminal</a></li>
 <li><a class="reference internal" href="#cola-terminalshellquote">cola.terminalshellquote</a></li>
@@ -1680,7 +1687,7 @@ Gravatar client.</p>
       
     </aside>
   </div>
-</div><script src="static/documentation_options.js?v=68f2c66a"></script>
+</div><script src="static/documentation_options.js?v=bd5f082a"></script>
     <script src="static/doctools.js?v=888ff710"></script>
     <script src="static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="static/scripts/furo.js?v=32e29ea5"></script>
