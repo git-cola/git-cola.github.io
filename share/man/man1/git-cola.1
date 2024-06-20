@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "May 04, 2024" "4.7.1" "Git Cola"
+.TH "GIT-COLA" "1" "Jun 20, 2024" "4.7.1" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -793,6 +793,11 @@ remember is controlled by \fIcola.maxrecent\fP and defaults to \fI8\fP\&.
 Controls whether zooming text using Ctrl + MouseWheel scroll is enabled.
 Set to \fBfalse\fP to disable scrolling with the mouse wheel.
 Defaults to \fBtrue\fP\&.
+.SS cola.notifyonpush
+.sp
+Enable desktop notifications when commits are pushed using the “Push” dialog.
+Set to \fBtrue\fP to enable desktop notifications.
+Defaults to \fBfalse\fP\&.
 .SS cola.dragencoding
 .sp
 \fIgit cola\fP encodes paths dragged from its widgets into \fIutf\-16\fP when adding
