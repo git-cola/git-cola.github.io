@@ -267,6 +267,7 @@ Thanks
 * Szymon Judasz
 * Taylor Braun-Jones
 * Thiemo van Engelen
+* Thomas McKay
 * Thomas Kiley
 * Thomas Kluyver
 * Thomas Thorne
@@ -289,6 +290,7 @@ Thanks
 * Victorhck
 * Ville Skyttä
 * Virgil Dupras
+* Vishnu Sanal
 * Vitor Lobo
 * v.paritskiy
 * waterzch
