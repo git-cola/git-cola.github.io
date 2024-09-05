@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Jul 26, 2024" "4.8.1" "Git Cola"
+.TH "GIT-COLA" "1" "Sep 04, 2024" "4.8.2" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -141,7 +141,7 @@ When you select a line in the diff or grep screens and press any of
 \fIEnter\fP, \fICtrl\-e\fP, or the \fIEdit\fP button, you are taken to that exact line.
 .sp
 The editor preference is saved in the \fIgui.editor\fP variable using
-\fI\%git config\fP\&.
+\X'tty: link https://git-scm.com/docs/git-config'\fI\%git config\fP\X'tty: link'\&.
 .sp
 The following are some recommend editor configurations.
 .INDENT 0.0
@@ -151,10 +151,12 @@ Neovim + Neovim\-Qt
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config \-\-global core.editor nvim
 git config \-\-global gui.editor \(aqnvim\-qt \-\-nofork\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
@@ -164,10 +166,12 @@ Vim + gvim
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config \-\-global core.editor vim
 git config \-\-global gui.editor \(aqgvim \-f\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
@@ -177,9 +181,11 @@ Sublime Text
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config \-\-global gui.editor \(aqsubl \-\-wait\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SH KEYBOARD SHORTCUTS
@@ -209,7 +215,7 @@ This same hotkey reverts the entire file when used from the status tool.
 .sp
 You can see the available shortcuts by pressing pressing the \fB?\fP key,
 choosing \fBHelp \-> Keyboard shortcuts\fP from the main menu,
-or by consulting the \fI\%git cola keyboard shortcuts reference\fP\&.
+or by consulting the \X'tty: link https://git-cola.github.io/share/doc/git-cola/hotkeys.html'\fI\%git cola keyboard shortcuts reference\fP\X'tty: link'\&.
 .SH TOOLS
 .sp
 The \fIgit cola\fP interface is composed of various cooperating tools.
@@ -230,14 +236,14 @@ The Commit tool can be focused with \fICtrl\-l\fP\&.
 .SH STATUS
 .sp
 The \fIStatus\fP tool provides a visual analog to the
-\fI\%git status\fP command.
+\X'tty: link https://git-scm.com/docs/git-status'\fI\%git status\fP\X'tty: link' command.
 .sp
 \fIStatus\fP displays files that are \fImodified\fP relative to the staging area,
 \fIstaged\fP for the next commit, \fIunmerged\fP files from an in\-progress merge,
 and files that are \fIuntracked\fP to git.
 .sp
 These are the same categories one sees when running
-\fI\%git status\fP
+\X'tty: link https://git-scm.com/docs/git-status'\fI\%git status\fP\X'tty: link'
 on the command line.
 .sp
 You can navigate through the list of files using keyboard arrows as well
@@ -249,7 +255,7 @@ Selecting a file displays its diff in the \fIDiff\fP viewer.
 Double\-clicking a file stages its contents, as does the \fICtrl\-s\fP shortcut key.
 .sp
 \fICtrl\-e\fP opens selected files in the configured editor, and
-\fICtrl\-d\fP opens selected files using \fI\%git difftool\fP
+\fICtrl\-d\fP opens selected files using \X'tty: link https://git-scm.com/docs/git-difftool'\fI\%git difftool\fP\X'tty: link'
 .sp
 Additional actions can be performed using the right\-click context menu.
 .SS Drag and Drop
@@ -279,7 +285,7 @@ Various actions are available through the right\-click context menu.
 Different actions are available depending a file’s status.
 .SS Stage Selected
 .sp
-Add to the staging area using \fI\%git add\fP
+Add to the staging area using \X'tty: link https://git-scm.com/docs/git-add'\fI\%git add\fP\X'tty: link'
 Marks unmerged files as resolved.
 .SS Launch Editor
 .sp
@@ -297,10 +303,10 @@ Throws away uncommitted edits
 .SS Unstage Selected
 .sp
 Remove from the index/staging area with
-\fI\%git reset\fP
+\X'tty: link https://git-scm.com/docs/git-reset'\fI\%git reset\fP\X'tty: link'
 .SS Launch Merge Tool
 .sp
-Resolve conflicts using \fI\%git mergetool\fP\&.
+Resolve conflicts using \X'tty: link https://git-scm.com/docs/git-mergetool'\fI\%git mergetool\fP\X'tty: link'\&.
 .SS Delete File(s)
 .sp
 Delete untracked files from the filesystem.
@@ -363,22 +369,24 @@ The \fISign Off\fP button adds a sign\-off to the bottom of the commit message:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 Signed\-off\-by: A. U. Thor <a.u.thor@example.com>
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
 Invoking this action is equivalent to passing the \fB\-s\fP option
-to \fI\%git commit\fP\&.
+to \X'tty: link https://git-scm.com/docs/git-commit'\fI\%git commit\fP\X'tty: link'\&.
 .sp
 Signing\-off on commits is a common practice in projects that use
-\fI\%Developer Certificate of Origin\fP
+\X'tty: link https://developercertificate.org/'\fI\%Developer Certificate of Origin\fP\X'tty: link'
 attestations in their contribution process.
 .SS Commit
 .sp
 The commit button runs
-\fI\%git commit\fP\&.
+\X'tty: link https://git-scm.com/docs/git-commit'\fI\%git commit\fP\X'tty: link'\&.
 The contents of the commit message editor is provided as the commit message.
 .sp
 Only staged files are included in the commit – this is the same behavior
@@ -400,7 +408,7 @@ Red indicates that the line is running up against the standard
 80\-column limit for commit messages.
 .sp
 Keeping commit messages less than 76\-characters wide is encouraged.
-\fI\%git log\fP
+\X'tty: link https://git-scm.com/docs/git-log'\fI\%git log\fP\X'tty: link'
 is a great tool but long lines mess up its formatting for everyone else,
 so please be mindful when writing commit messages.
 .SS Amend Last Commit
@@ -415,8 +423,8 @@ The \fIStatus\fP tool will display all of the changes for the amended commit.
 Tell \fIgit commit\fP and \fIgit merge\fP to sign commits using GPG.
 .sp
 Using this option is equivalent to passing the \fB\-\-gpg\-sign\fP option to
-\fI\%git commit\fP and
-\fI\%git merge\fP\&.
+\X'tty: link https://git-scm.com/docs/git-commit'\fI\%git commit\fP\X'tty: link' and
+\X'tty: link https://git-scm.com/docs/git-merge'\fI\%git merge\fP\X'tty: link'\&.
 .sp
 This option’s default value can be configured using the \fIcola.signcommits\fP
 configuration variable.
@@ -425,7 +433,7 @@ configuration variable.
 The \fBCommit \-> Prepare Commit Message\fP action or \fICtrl\-Shift\-Return\fP keyboard shortcut
 runs the \fIcola\-prepare\-commit\-msg\fP hook if it is available in \fI\&.git/hooks/\fP\&.
 This is a \fIgit cola\fP\-specific hook that takes the same parameters
-as Git’s \fI\%prepare\-commit\-msg hook\fP
+as Git’s \X'tty: link https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks'\fI\%prepare\-commit\-msg hook\fP\X'tty: link'
 .sp
 The hook is passed the path to \fI\&.git/GIT_COLA_MSG\fP as the first argument and the hook is expected to write
 an updated commit message to specified path.  After running this action, the
@@ -444,11 +452,13 @@ For example, in a repo with the following list of branches:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 branch/feature/foo
 branch/feature/bar
 branch/doe
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -456,13 +466,15 @@ The branches widget will display the following hierarchy:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 branch
     \- doe
     + feature
         \- bar
         \- foo
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -476,38 +488,38 @@ Different actions are available depending on the selected branch’s status.
 .SS Checkout
 .sp
 The checkout action runs
-\fI\%git checkout [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-checkout'\fI\%git checkout [<branchname>]\fP\X'tty: link'\&.
 .SS Merge into current branch
 .sp
 The merge action runs
-\fI\%git merge –no\-commit [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-merge'\fI\%git merge –no\-commit [<branchname>]\fP\X'tty: link'\&.
 .SS Pull
 .sp
 The pull action runs
-\fI\%git pull –no\-ff [<remote>] [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-pull'\fI\%git pull –no\-ff [<remote>] [<branchname>]\fP\X'tty: link'\&.
 .SS Push
 .sp
 The push action runs
-\fI\%git push [<remote>] [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-push'\fI\%git push [<remote>] [<branchname>]\fP\X'tty: link'\&.
 .SS Rename Branch
 .sp
 The rename branch action runs
-\fI\%git branch \-M [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-push'\fI\%git branch \-M [<branchname>]\fP\X'tty: link'\&.
 .SS Delete Branch
 .sp
 The delete branch branch action runs
-\fI\%git branch \-D [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-branch'\fI\%git branch \-D [<branchname>]\fP\X'tty: link'\&.
 .SS Delete Remote Branch
 .sp
 The remote branch action runs
-\fI\%git push –delete [<remote>] [<branchname>]\fP\&.
+\X'tty: link https://git-scm.com/docs/git-push'\fI\%git push –delete [<remote>] [<branchname>]\fP\X'tty: link'\&.
 .SH APPLY PATCHES
 .sp
 Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
 .sp
 Dragging and dropping patches onto the \fIgit cola\fP interface
 adds the patches to the list of patches to apply using
-\fI\%git am\fP\&.
+\X'tty: link https://git-scm.com/docs/git-am'\fI\%git am\fP\X'tty: link'\&.
 .sp
 You can drag either a set of patches or a directory containing patches.
 Patches can be sorted using in the interface and are applied in the
@@ -545,9 +557,11 @@ Debian/Ubuntu systems to make this work.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 sudo apt install qt5ct
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -555,10 +569,12 @@ Once installed, update your \fI~/.bash_profile\fP to activate \fBqt5ct\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 # Use the style configured using the qt5ct tool
 export QT_QPA_PLATFORMTHEME=qt5ct
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -571,9 +587,11 @@ Some systems provide a theme that you can install:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 sudo apt\-get install adwaita\-qt
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -581,10 +599,12 @@ You can activate the theme using the following environment variable:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 # Override the default theme to adwaita\-dark
 export QT_STYLE_OVERRIDE=adwaita\-dark
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -597,9 +617,11 @@ cola from the command\-line:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 QT_STYLE_OVERRIDE=adwaita\-dark git cola
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -608,7 +630,8 @@ launch Git Cola with these settings preset for you:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 [Desktop Entry]
 Name=Git Cola (dark)
 Comment=The highly caffeinated Git GUI
@@ -620,7 +643,8 @@ Terminal=false
 Type=Application
 Categories=Development;RevisionControl;
 X\-KDE\-SubstituteUID=false
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -628,21 +652,23 @@ You may also want to customize the diff colors when using a dark theme:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config \-\-global cola.color.add 86c19f
 git config \-\-global cola.color.remove c07067
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
-Please see \fI\%#760\fP for more details.
+Please see \X'tty: link https://github.com/git-cola/git-cola/issues/760'\fI\%#760\fP\X'tty: link' for more details.
 .SS Custom Themes
 .sp
 To create your own custom theme for Git Cola just create a QSS file and put it in
 \fB~/.config/themes/\fP\&. You can add as many files as you want. Each file will become
 an option in \fBMenu \-> File \-> Preferences \-> Appearance \-> GUI theme\fP\&.
 .sp
-Some examples can be found here \fI\%Qt Style Sheets Examples\fP\&.
+Some examples can be found here \X'tty: link https://doc.qt.io/qt-5/stylesheet-examples.html'\fI\%Qt Style Sheets Examples\fP\X'tty: link'\&.
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
@@ -717,10 +743,12 @@ Binary files are displayed using a hex\-dump display.
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 # Treat *.exr files as binary files.
 *.exr binary
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS cola.fontdiff
@@ -731,7 +759,7 @@ Specifies the font to use for \fIgit cola\fP’s diff display.
 Specifies the High DPI displays scale factor. Set \fI0\fP to automatically scaled.
 Setting value between 0 and 1 is undefined.
 This option requires at least Qt 5.6 to work.
-See \fI\%Qt QT_SCALE_FACTOR documentation\fP
+See \X'tty: link https://doc.qt.io/qt-5/highdpi.html'\fI\%Qt QT_SCALE_FACTOR documentation\fP\X'tty: link'
 for more information.
 .SS cola.icontheme
 .sp
@@ -781,7 +809,7 @@ editor’s options sub\-menu.
 .sp
 Set the default date\-time mode for the DAG display. This value is
 passed to \fIgit log –date=<format>\fP\&.
-See \fI\%git log(1)\fP
+See \X'tty: link https://git-scm.com/docs/git-log#Documentation/git-log.txt---dateltformatgt'\fI\%git log(1)\fP\X'tty: link'
 for more details.
 .SS cola.maxrecent
 .sp
@@ -893,14 +921,16 @@ The table below shows the builtin configuration.
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 Terminal            cola.terminal           cola.terminalshellquote
 \-\-\-\-\-\-\-\-            \-\-\-\-\-\-\-\-\-\-\-\-\-           \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 gnome\-terminal      \(dqgnome\-terminal \-\-\(dq     false
 konsole             \(dqkonsole \-e\(dq            false
 xfce4\-terminal      \(dqxfce4\-terminal \-e\(dq     true
 xterm               \(dqxterm \-e\(dq              false
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS cola.textwidth
@@ -954,9 +984,11 @@ Defaults to “#030303”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config cola.color.text \(aq#030303\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS cola.color.add
@@ -966,9 +998,11 @@ Defaults to “#d2ffe4”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config cola.color.add \(aq#d2ffe4\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS cola.color.remove
@@ -978,9 +1012,11 @@ Defaults to “#fee0e4”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config cola.color.remove \(aq#fee0e4\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS cola.color.header
@@ -990,9 +1026,11 @@ Defaults to “#bbbbbb”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config cola.color.header \(aq#bbbbbb\(aq
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS commit.cleanup
@@ -1019,10 +1057,12 @@ the line found below is truncated, if the message is to be edited.
 .INDENT 2.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 # \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- >8 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 Scissor\-lines and all following lines are removed.
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -1034,14 +1074,14 @@ committing using the command\-line \fBgit commit\fP\&.
 On the contrary, if you always want to always strip comments, even when
 committing through Git Cola, then configure \fBcommit.cleanup\fP to \fBstrip\fP\&.
 .sp
-Please see the \fI\%git commit cleanup mode documentation\fP
+Please see the \X'tty: link https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---cleanupltmodegt'\fI\%git commit cleanup mode documentation\fP\X'tty: link'
 for more details.
 .SS core.commentChar
 .sp
 Commit messages can contain comments that start with this character.
 Defaults to \fB#\fP\&.
 .sp
-Please see the \fI\%git config documentation\fP
+Please see the \X'tty: link https://git-scm.com/docs/git-config#Documentation/git-config.txt-corecommentChar'\fI\%git config documentation\fP\X'tty: link'
 for more details.
 .SS core.hooksPath
 .sp
@@ -1055,7 +1095,7 @@ be changed via the \fBcore.hooksPath\fP configuration variable
 The \fBcola\-prepare\-commit\-msg\fP hook functionality and Cola’s Git LFS
 detection honors this configuration.
 .sp
-Please see the \fI\%git hooks documentation\fP
+Please see the \X'tty: link https://git-scm.com/docs/githooks'\fI\%git hooks documentation\fP\X'tty: link'
 for more details.
 .SS gui.diffcontext
 .sp
@@ -1105,7 +1145,7 @@ Set \fIQT_AUTO_SCREEN_SCALE_FACTOR\fP to \fI1\fP and Qt will automatically
 scale the interface to the correct size based on the display DPI.
 This option is also available by setting \fIcola.hidpi\fP configuration.
 .sp
-See the \fI\%Qt High DPI documentation\fP
+See the \X'tty: link https://doc.qt.io/qt-5/highdpi.html'\fI\%Qt High DPI documentation\fP\X'tty: link'
 for more details.
 .UNINDENT
 .UNINDENT
@@ -1137,10 +1177,12 @@ gettext language code, e.g. “en”, “de”, “ja”, “zh”, etc.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 mkdir \-p ~/.config/git\-cola &&
 echo en >~/.config/git\-cola/language
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1150,9 +1192,11 @@ example to temporarily change \fIgit cola\fP’s language to English:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 LANGUAGE=en git cola
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1161,9 +1205,11 @@ fallback.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 LANGUAGE=zh_TW:zh_HK:zh:en git cola
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SH CUSTOM GUI ACTIONS
@@ -1236,7 +1282,7 @@ The default value includes the actual command.
 Specifies a keyboard shortcut for the custom tool.
 .sp
 The value must be a valid string understood by the \fIQAction::setShortcut()\fP API.
-See \fI\%https://doc.qt.io/qt\-6/qkeysequence.html#toString\fP
+See \X'tty: link https://doc.qt.io/qt-6/qkeysequence.html#toString'\fI\%https://doc.qt.io/qt\-6/qkeysequence.html#toString\fP\X'tty: link'
 for more details about the supported values.
 .sp
 Avoid creating shortcuts that conflict with existing built\-in \fIgit cola\fP
@@ -1249,7 +1295,7 @@ Git has robust support for automatically handling credentials.
 The recommended approach is to use SSH keys and an SSH agent, but any of the core Git
 Credentials helpers will get used automatically by Git Cola.
 .sp
-See \fI\%https://git\-scm.com/doc/credential\-helpers\fP for more details.
+See \X'tty: link https://git-scm.com/doc/credential-helpers'\fI\%https://git\-scm.com/doc/credential\-helpers\fP\X'tty: link' for more details.
 .SH SETTING UP GPG FOR SIGNED COMMITS
 .sp
 When creating signed commits, \fIgpg\fP will attempt to read your password from the
@@ -1262,16 +1308,18 @@ for your password in the terminal.
 .SS Install gpg\-agent and friends
 .sp
 On Mac OS X, you may need to \fIbrew install gpg\-agent\fP and install the
-\fI\%Mac GPG Suite\fP\&.
+\X'tty: link https://gpgtools.org/macgpg2/'\fI\%Mac GPG Suite\fP\X'tty: link'\&.
 .sp
 On Linux use your package manager to install gnupg2,
 gnupg\-agent and pinentry\-qt, e.g.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 sudo apt\-get install gnupg2 gnupg\-agent pinentry\-qt
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1281,9 +1329,11 @@ Set Git’s \fIgpg.program\fP to \fIgpg2\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 git config \-\-global gpg.program gpg2
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS Configure gpg\-agent and a pin\-entry program
@@ -1292,9 +1342,11 @@ On Mac OS X, edit \fI~/.gnupg/gpg.conf\fP to include the line,:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 use\-agent
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1309,10 +1361,12 @@ pinentry\-gtk\-2 on Linux:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 pinentry\-program /usr/bin/pinentry\-gtk\-2
 default\-cache\-ttl 3600
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1321,12 +1375,14 @@ pinentry app on On Mac OS X:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 pinentry\-program /usr/local/MacGPG2/libexec/pinentry\-mac.app/Contents/MacOS/pinentry\-mac
 default\-cache\-ttl 3600
 enable\-ssh\-support
 use\-standard\-socket
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1334,9 +1390,11 @@ Once this has been set up then you will need to reload your gpg\-agent config:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 echo RELOADAGENT | gpg\-connect\-agent
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1344,9 +1402,11 @@ If you see the following output:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 OK
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .sp
@@ -1357,10 +1417,12 @@ prior to launching \fIgit cola\fP\&.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 eval $(gpg\-agent \-\-daemon)
 git cola
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SH SHELL COMPLETIONS
@@ -1370,9 +1432,9 @@ The completion scripts and instructions are included in Git Cola’s
 \fIcontrib\fP directory.
 .INDENT 0.0
 .IP \(bu 2
-\fI\%Shell completion scripts\fP
+\X'tty: link https://gitlab.com/git-cola/git-cola/-/tree/main/contrib'\fI\%Shell completion scripts\fP\X'tty: link'
 .IP \(bu 2
-\fI\%Setup instructions\fP
+\X'tty: link https://gitlab.com/git-cola/git-cola/-/blob/main/contrib/README.md'\fI\%Setup instructions\fP\X'tty: link'
 .UNINDENT
 .SH WINDOWS NOTES
 .SS Git Installation
@@ -1384,9 +1446,11 @@ installation, e.g.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.EX
+.nf
+.ft C
 C:/Tools/Git/bin
-.EE
+.ft P
+.fi
 .UNINDENT
 .UNINDENT
 .SS SSH Agents for Key\-based Authentication
@@ -1398,10 +1462,10 @@ to get things working.
 .sp
 Please see the following links for more details.
 .sp
-\fI\%https://stackoverflow.com/questions/18683092/how\-to\-run\-ssh\-add\-on\-windows\fP
+\X'tty: link https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows'\fI\%https://stackoverflow.com/questions/18683092/how\-to\-run\-ssh\-add\-on\-windows\fP\X'tty: link'
 .SH FIPS SECURITY MODE
 .sp
-\fI\%FIPS Security Mode\fP
+\X'tty: link https://github.com/python/cpython/issues/53462'\fI\%FIPS Security Mode\fP\X'tty: link'
 is available in newer versions of Python. These include Python 3.9+ and the
 patched Python 3.6 used by CentOS8/RHEL8 (and possibly others).
 .sp
@@ -1419,7 +1483,7 @@ Gravatar client.
 .UNINDENT
 .SS Git Cola Homepage
 .sp
-\fI\%https://git\-cola.gitlab.io/\fP
+\X'tty: link https://git-cola.gitlab.io/'\fI\%https://git\-cola.gitlab.io/\fP\X'tty: link'
 .SH AUTHOR
 David Aguilar and contributors
 .\" Generated by docutils manpage writer.
