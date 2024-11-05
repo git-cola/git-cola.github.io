@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Sep 04, 2024" "4.8.2" "Git Cola"
+.TH "GIT-COLA" "1" "Nov 05, 2024" "4.9.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -151,12 +151,10 @@ Neovim + Neovim\-Qt
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config \-\-global core.editor nvim
 git config \-\-global gui.editor \(aqnvim\-qt \-\-nofork\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
@@ -166,12 +164,10 @@ Vim + gvim
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config \-\-global core.editor vim
 git config \-\-global gui.editor \(aqgvim \-f\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .INDENT 0.0
@@ -181,11 +177,9 @@ Sublime Text
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config \-\-global gui.editor \(aqsubl \-\-wait\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SH KEYBOARD SHORTCUTS
@@ -369,11 +363,9 @@ The \fISign Off\fP button adds a sign\-off to the bottom of the commit message:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 Signed\-off\-by: A. U. Thor <a.u.thor@example.com>
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -452,13 +444,11 @@ For example, in a repo with the following list of branches:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 branch/feature/foo
 branch/feature/bar
 branch/doe
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -466,15 +456,13 @@ The branches widget will display the following hierarchy:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 branch
     \- doe
     + feature
         \- bar
         \- foo
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -557,11 +545,9 @@ Debian/Ubuntu systems to make this work.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 sudo apt install qt5ct
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -569,12 +555,10 @@ Once installed, update your \fI~/.bash_profile\fP to activate \fBqt5ct\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 # Use the style configured using the qt5ct tool
 export QT_QPA_PLATFORMTHEME=qt5ct
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -587,11 +571,9 @@ Some systems provide a theme that you can install:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 sudo apt\-get install adwaita\-qt
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -599,12 +581,10 @@ You can activate the theme using the following environment variable:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 # Override the default theme to adwaita\-dark
 export QT_STYLE_OVERRIDE=adwaita\-dark
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -617,11 +597,9 @@ cola from the command\-line:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 QT_STYLE_OVERRIDE=adwaita\-dark git cola
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -630,8 +608,7 @@ launch Git Cola with these settings preset for you:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 [Desktop Entry]
 Name=Git Cola (dark)
 Comment=The highly caffeinated Git GUI
@@ -643,8 +620,7 @@ Terminal=false
 Type=Application
 Categories=Development;RevisionControl;
 X\-KDE\-SubstituteUID=false
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -652,12 +628,10 @@ You may also want to customize the diff colors when using a dark theme:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config \-\-global cola.color.add 86c19f
 git config \-\-global cola.color.remove c07067
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -672,6 +646,12 @@ Some examples can be found here \X'tty: link https://doc.qt.io/qt-5/stylesheet-e
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
+.SS cola.autodetectproxy
+.sp
+Set to \fIfalse\fP to disable auto\-configuration of HTTP proxy settings based on
+the configured Gnome and KDE Desktop Environment proxy settings.
+The core Git \fIhttp.proxy\fP configuration overrides this value.
+Defaults to \fItrue\fP\&.
 .SS cola.autocompletepaths
 .sp
 Set to \fIfalse\fP to disable auto\-completion of filenames in completion widgets.
@@ -743,12 +723,10 @@ Binary files are displayed using a hex\-dump display.
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 # Treat *.exr files as binary files.
 *.exr binary
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS cola.fontdiff
@@ -921,16 +899,14 @@ The table below shows the builtin configuration.
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 Terminal            cola.terminal           cola.terminalshellquote
 \-\-\-\-\-\-\-\-            \-\-\-\-\-\-\-\-\-\-\-\-\-           \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 gnome\-terminal      \(dqgnome\-terminal \-\-\(dq     false
 konsole             \(dqkonsole \-e\(dq            false
 xfce4\-terminal      \(dqxfce4\-terminal \-e\(dq     true
 xterm               \(dqxterm \-e\(dq              false
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS cola.textwidth
@@ -984,11 +960,9 @@ Defaults to “#030303”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config cola.color.text \(aq#030303\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS cola.color.add
@@ -998,11 +972,9 @@ Defaults to “#d2ffe4”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config cola.color.add \(aq#d2ffe4\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS cola.color.remove
@@ -1012,11 +984,9 @@ Defaults to “#fee0e4”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config cola.color.remove \(aq#fee0e4\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS cola.color.header
@@ -1026,11 +996,9 @@ Defaults to “#bbbbbb”:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config cola.color.header \(aq#bbbbbb\(aq
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS commit.cleanup
@@ -1057,12 +1025,10 @@ the line found below is truncated, if the message is to be edited.
 .INDENT 2.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 # \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- >8 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 Scissor\-lines and all following lines are removed.
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -1177,12 +1143,10 @@ gettext language code, e.g. “en”, “de”, “ja”, “zh”, etc.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 mkdir \-p ~/.config/git\-cola &&
 echo en >~/.config/git\-cola/language
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1192,11 +1156,9 @@ example to temporarily change \fIgit cola\fP’s language to English:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 LANGUAGE=en git cola
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1205,11 +1167,9 @@ fallback.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 LANGUAGE=zh_TW:zh_HK:zh:en git cola
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SH CUSTOM GUI ACTIONS
@@ -1315,11 +1275,9 @@ gnupg\-agent and pinentry\-qt, e.g.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 sudo apt\-get install gnupg2 gnupg\-agent pinentry\-qt
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1329,11 +1287,9 @@ Set Git’s \fIgpg.program\fP to \fIgpg2\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 git config \-\-global gpg.program gpg2
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS Configure gpg\-agent and a pin\-entry program
@@ -1342,11 +1298,9 @@ On Mac OS X, edit \fI~/.gnupg/gpg.conf\fP to include the line,:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 use\-agent
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1361,12 +1315,10 @@ pinentry\-gtk\-2 on Linux:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 pinentry\-program /usr/bin/pinentry\-gtk\-2
 default\-cache\-ttl 3600
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1375,14 +1327,12 @@ pinentry app on On Mac OS X:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 pinentry\-program /usr/local/MacGPG2/libexec/pinentry\-mac.app/Contents/MacOS/pinentry\-mac
 default\-cache\-ttl 3600
 enable\-ssh\-support
 use\-standard\-socket
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1390,11 +1340,9 @@ Once this has been set up then you will need to reload your gpg\-agent config:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 echo RELOADAGENT | gpg\-connect\-agent
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1402,11 +1350,9 @@ If you see the following output:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 OK
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .sp
@@ -1417,12 +1363,10 @@ prior to launching \fIgit cola\fP\&.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 eval $(gpg\-agent \-\-daemon)
 git cola
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SH SHELL COMPLETIONS
@@ -1446,11 +1390,9 @@ installation, e.g.:
 .INDENT 0.0
 .INDENT 3.5
 .sp
-.nf
-.ft C
+.EX
 C:/Tools/Git/bin
-.ft P
-.fi
+.EE
 .UNINDENT
 .UNINDENT
 .SS SSH Agents for Key\-based Authentication
