@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
-        <title>git-cola - Git Cola 4.9.0 documentation</title>
+        <title>git-cola - Git Cola 4.10.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Git Cola 4.9.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Git Cola 4.10.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">Git Cola 4.9.0 documentation</span>
+  <span class="sidebar-brand-text">Git Cola 4.10.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -1136,6 +1136,14 @@ Defaults to “#bbbbbb”:</p>
 </pre></div>
 </div>
 </section>
+<section id="cola-updateindex">
+<h3>cola.updateindex<a class="headerlink" href="#cola-updateindex" title="Link to this heading">¶</a></h3>
+<p>Git’s index is refreshed during application startup. You can disable this behavior by
+configuring <code class="docutils literal notranslate"><span class="pre">cola.updateindex</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>. This is useful in some scenarios such as
+when accessing Git repositories over a Samba share. If you have this enabled then you
+can use the <code class="docutils literal notranslate"><span class="pre">ctrl-r</span></code> “Refresh” action to force the index to be refreshed instead.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</section>
 <section id="commit-cleanup">
 <h3>commit.cleanup<a class="headerlink" href="#commit-cleanup" title="Link to this heading">¶</a></h3>
 <p>Configure whether commit messages should be stripped of whitespace and comments.</p>
@@ -1687,6 +1695,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-color-add">cola.color.add</a></li>
 <li><a class="reference internal" href="#cola-color-remove">cola.color.remove</a></li>
 <li><a class="reference internal" href="#cola-color-header">cola.color.header</a></li>
+<li><a class="reference internal" href="#cola-updateindex">cola.updateindex</a></li>
 <li><a class="reference internal" href="#commit-cleanup">commit.cleanup</a></li>
 <li><a class="reference internal" href="#core-commentchar">core.commentChar</a></li>
 <li><a class="reference internal" href="#core-hookspath">core.hooksPath</a></li>
@@ -1752,7 +1761,7 @@ Gravatar client.</p>
       
     </aside>
   </div>
-</div><script src="static/documentation_options.js?v=7a99edf7"></script>
+</div><script src="static/documentation_options.js?v=92ff7de8"></script>
     <script src="static/doctools.js?v=9a2dae69"></script>
     <script src="static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="static/scripts/furo.js?v=5fa4622c"></script>

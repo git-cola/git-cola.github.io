@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Nov 14, 2024" "4.9.0" "Git Cola"
+.TH "GIT-COLA" "1" "Dec 10, 2024" "4.10.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -1001,6 +1001,13 @@ git config cola.color.header \(aq#bbbbbb\(aq
 .EE
 .UNINDENT
 .UNINDENT
+.SS cola.updateindex
+.sp
+Git’s index is refreshed during application startup. You can disable this behavior by
+configuring \fBcola.updateindex\fP to \fBfalse\fP\&. This is useful in some scenarios such as
+when accessing Git repositories over a Samba share. If you have this enabled then you
+can use the \fBctrl\-r\fP “Refresh” action to force the index to be refreshed instead.
+Defaults to \fBtrue\fP\&.
 .SS commit.cleanup
 .sp
 Configure whether commit messages should be stripped of whitespace and comments.
