@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Dec 14, 2024" "4.10.1" "Git Cola"
+.TH "GIT-COLA" "1" "Jan 24, 2025" "4.10.1" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -1412,6 +1412,13 @@ to get things working.
 Please see the following links for more details.
 .sp
 \X'tty: link https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows'\fI\%https://stackoverflow.com/questions/18683092/how\-to\-run\-ssh\-add\-on\-windows\fP\X'tty: link'
+.SS Samba
+.sp
+Core Git has issues when operating over a Samba file share. This can lead
+to \fB\&.git/index.lock\fP lingering around and preventing \fBgit\fP commands from
+working correctly.
+.sp
+To avoid these issues, operate on repositories from a local filesystem.
 .SH FIPS SECURITY MODE
 .sp
 \X'tty: link https://github.com/python/cpython/issues/53462'\fI\%FIPS Security Mode\fP\X'tty: link'
