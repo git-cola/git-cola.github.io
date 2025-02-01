@@ -109,7 +109,8 @@ Thanks
 * Gyuris Gellért
 * Harro Verton
 * Hannes @kannes
-* @Hendrix4858
+* Hendrix4858
+* Hoernchen
 * hydrargyrum
 * Igor Galarraga
 * Igor Kopach
@@ -208,6 +209,7 @@ Thanks
 * Nikos Roussos
 * Noel Grandin
 * NotSqrt
+* novebeta
 * nyanpasu64
 * ochristi
 * Oliver Haessler
