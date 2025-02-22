@@ -58,6 +58,7 @@ Thanks
 * Christopher Meng
 * Clément Pit--Claudel
 * Constantine Grantcharov
+* Daniel Dunn
 * Daniel Fahlke
 * Daniel Jay Haskin
 * Daniel Harding
@@ -123,6 +124,7 @@ Thanks
 * Jad El Kik
 * Jacob Gustafson
 * Jakub Klos
+* João Matos
 * Jan @hanksoff
 * Jan Šilhan
 * Jan Tumanov
