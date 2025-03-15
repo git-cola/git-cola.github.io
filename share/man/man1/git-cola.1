@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Feb 22, 2025" "4.12.0" "Git Cola"
+.TH "GIT-COLA" "1" "Mar 15, 2025" "4.12.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -59,60 +59,85 @@ Show usage and optional arguments.
 .sp
 Show available sub\-commands.
 .SH SUB-COMMANDS
+.sp
+Run \fBgit cola \-\-help\-commands\fP to list all sub\-commands.
+.sp
+The following sub\-commands can be launched directly from the command\-line.
+For example, \fBgit cola diff\fP will launch the \fBdiff\fP sub\-command.
 .SS am
 .sp
-Apply patches.
+Apply patches. This sub\-command is named after the \fBgit am\fP command.
+\fBgit cola am\fP is an entry point for the \fBFile > Patches > Apply Patches...\fP
+main menu action.
 .SS archive
 .sp
-Export tarballs from Git.
+Export tarballs from Git. \fBgit cola archive\fP is an entry point for the
+\fBFile > Save As Tarball/Zip...\fP main menu action.
 .SS branch
 .sp
-Create branches.
+Create branches. \fBgit cola branch\fP is an entry point for the \fBBranch > Create...\fP
+main menu action.
 .SS browse
 .sp
-Browse tracked files.
+Browse tracked files. \fBgit cola browse\fP is an entry point for the
+\fBView > File Browser...\fP main menu action.
 .SS config
 .sp
-Configure settings.
+Configure settings. \fBgit cola config\fP is an entry point for the
+\fBFile > Preferences\fP main menu action.
 .SS dag
 .sp
-Start the \fIgit dag\fP Git history browser.
+Start the \fBgit dag\fP Git history browser. \fBgit cola dag\fP is an entry point for the
+\fBView > DAG...\fP main menu action and can also be launched as \fBgit dag\fP command.
 .SS diff
 .sp
-Diff changed files.
+Diff changed files. \fBgit cola diff\fP is an entry point for the \fBDiff > Expression...\fP
+main menu action.
 .SS fetch
 .sp
-Fetch history from remote repositories.
+Fetch history from remote repositories. \fBgit cola fetch\fP is an entry point for the
+\fBActions > Fetch...\fP main menu action.
 .SS grep
 .sp
-Use \fIgit grep\fP to search for content.
+Use \fIgit grep\fP to search for content. \fBgit cola grep\fP is an entry point for the
+\fBActions > Grep\fP main menu action.
 .SS merge
 .sp
-Merge branches.
+Merge branches. \fBgit cola merge\fP is an entry point for the \fBActions > Merge...\fP
+main menu action.
 .SS pull
 .sp
-Fetch and merge remote branches.
+Fetch and merge remote branches. \fBgit cola pull\fP is an entry point for the
+\fBActions > Pull...\fP main menu action.
 .SS push
 .sp
-Push branches to remotes.
+Push branches to remotes. \fBgit cola push\fP is an entry point for the
+\fBActions > Push...\fP main menu action.
 .SS rebase
 .sp
-Start an interactive rebase.
+Start an interactive rebase. \fBgit cola rebase\fP is an entry point for the
+\fBRebase > Start Interactive Rebase...\fP main menu action.
 .SS remote
 .sp
-Create and edit remotes.
+Create and edit remotes. \fBgit cola remote\fP is an entry point for the
+\fBFile > Edit Remotes...\fP main menu action.
 .SS search
 .sp
-Search for commits.
+Search for commits. \fBgit cola search\fP is an entry point for the
+\fBActions > Search...\fP main menu action.
 .SS stash
 .sp
-Stash uncommitted modifications.
+Stash uncommitted modifications. \fBgit cola stash\fP is an entry point for the
+\fBActions > Stash...\fP main menu action.
 .SS tag
 .sp
-Create tags.
+Create tags. \fBgit cola tag\fP is an entry point for the \fBActions > Create Tag...\fP
+main menu action.
 .SS version
 .sp
-Print the \fIgit cola\fP version.
+Print the Git Cola version. \fBgit cola version\fP displays has options for printing
+the current version in different formats. Version details about Git Cola and its
+dependencies can also be found in the \fBHelp > About\fP dialog’s \fBVersion\fP tab.
 .SH CONFIGURE YOUR EDITOR
 .sp
 The editor used by \fICtrl\-e\fP is configured from the Preferences screen.
@@ -208,7 +233,7 @@ This same hotkey reverts the entire file when used from the status tool.
 \fICtrl\-s\fP in the diff editor and status tools stages/unstages the entire file.
 .sp
 You can see the available shortcuts by pressing pressing the \fB?\fP key,
-choosing \fBHelp \-> Keyboard shortcuts\fP from the main menu,
+choosing \fBHelp > Keyboard shortcuts\fP from the main menu,
 or by consulting the \X'tty: link https://git-cola.github.io/share/doc/git-cola/hotkeys.html'\fI\%git cola keyboard shortcuts reference\fP\X'tty: link'\&.
 .SH TOOLS
 .sp
@@ -422,7 +447,7 @@ This option’s default value can be configured using the \fIcola.signcommits\fP
 configuration variable.
 .SS Prepare Commit Message
 .sp
-The \fBCommit \-> Prepare Commit Message\fP action or \fICtrl\-Shift\-Return\fP keyboard shortcut
+The \fBCommit > Prepare Commit Message\fP action or \fICtrl\-Shift\-Return\fP keyboard shortcut
 runs the \fIcola\-prepare\-commit\-msg\fP hook if it is available in \fI\&.git/hooks/\fP\&.
 This is a \fIgit cola\fP\-specific hook that takes the same parameters
 as Git’s \X'tty: link https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks'\fI\%prepare\-commit\-msg hook\fP\X'tty: link'
@@ -503,7 +528,7 @@ The remote branch action runs
 \X'tty: link https://git-scm.com/docs/git-push'\fI\%git push –delete [<remote>] [<branchname>]\fP\X'tty: link'\&.
 .SH APPLY PATCHES
 .sp
-Use the \fBFile \-> Apply Patches\fP menu item to begin applying patches.
+Use the \fBFile > Apply Patches\fP menu item to begin applying patches.
 .sp
 Dragging and dropping patches onto the \fIgit cola\fP interface
 adds the patches to the list of patches to apply using
@@ -518,6 +543,79 @@ tree in search of patches.  \fIgit cola\fP sorts the list of
 patches after they have all been found.  This allows you
 to control the order in which patches are applied by placing
 patch sets into alphanumerically\-sorted directories.
+.SH STASH
+.sp
+Use the \fBgit cola stash\fP sub\-command or the \fBActions > Stash...\fP menu action
+to open the \fIStash\fP tool.
+.sp
+Stashing is a quick way of removing changes from your worktree so that you
+can restore the changes later. You can learn about the use cases for stashes in the
+\X'tty: link https://git-scm.com/docs/git-stash#_description'\fI\%git stash documentation\fP\X'tty: link'\&.
+.sp
+The list on the left displays all of your saved stashes.
+.sp
+Selecting a stash from the list allows you to \fIRename\fP, \fIApply\fP, \fIPop\fP, or
+\fIDrop\fP the content from the selected stash.
+.sp
+The \fISave\fP button saves uncommitted content from your worktree to a new stash.
+.sp
+The content to stash is controlled by the \fIKeep Index\fP and \fISave Index\fP options.
+By default, all uncommitted changes, including staged content, will be saved to
+the stash and removed from your working copy.
+.SS Options
+.INDENT 0.0
+.IP \(bu 2
+\fIKeep Index\fP: Stash everything that has not been staged.
+Only content in the \fIModified\fP state will be saved to the stash.
+Staged content will not be stashed.
+.IP \(bu 2
+\fISave Index\fP: Only stash the content that has been staged.
+Only content in the \fIStaged\fP state will be saved to the stash.
+Modified content will not be stashed.
+.UNINDENT
+.SH WORKFLOW FAQ
+.INDENT 0.0
+.IP \(bu 2
+How do I stash some but not all modified files / lines?
+.sp
+There are two ways of stashing a subset of changes.
+.sp
+You can either \fIStage\fP the content you want to keep un\-stashed,
+or you can \fIStage\fP the content that you want to stash away.
+.INDENT 2.0
+.IP \(bu 2
+\fBMethod 1: Stage the content that you want to keep.\fP
+.sp
+This method is analogous to the \fBgit stash \-\-keep\-index\fP option.
+.INDENT 2.0
+.IP 1. 3
+Stage the content that you want to keep using the \fIDiff\fP and \fIStatus\fP tools.
+.IP 2. 3
+Launch the \fIStash\fP tool.
+.IP 3. 3
+Enable the \fIKeep Index\fP option and \fISave\fP the stash.
+.UNINDENT
+.sp
+Modified changes will be stashed away.
+Staged changes will remain in your worktree.
+.IP \(bu 2
+\fBMethod 2: Stage the content that you want to stash.\fP
+.sp
+This workflow is unique to Git Cola. There is currently no equivalent
+Git builtin command for stashing the staging area.
+.INDENT 2.0
+.IP 1. 3
+Stage the content that you want to stash using the \fIDiff\fP and \fIStatus\fP tools.
+.IP 2. 3
+Launch the \fIStash\fP tool.
+.IP 3. 3
+Enable the \fIStash Index\(ga\fP option and \fISave\fP the stash.
+.UNINDENT
+.sp
+Staged changes will be stashed away.
+Modified changes will remain in your worktree.
+.UNINDENT
+.UNINDENT
 .SH CUSTOM WINDOW SETTINGS
 .sp
 \fIgit cola\fP remembers modifications to the layout and arrangement
@@ -640,7 +738,7 @@ Please see \X'tty: link https://github.com/git-cola/git-cola/issues/760'\fI\%#76
 .sp
 To create your own custom theme for Git Cola just create a QSS file and put it in
 \fB~/.config/themes/\fP\&. You can add as many files as you want. Each file will become
-an option in \fBMenu \-> File \-> Preferences \-> Appearance \-> GUI theme\fP\&.
+an option in \fBMenu > File > Preferences > Appearance > GUI theme\fP\&.
 .sp
 Some examples can be found here \X'tty: link https://doc.qt.io/qt-5/stylesheet-examples.html'\fI\%Qt Style Sheets Examples\fP\X'tty: link'\&.
 .SH CONFIGURATION VARIABLES
