@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>git-cola - Git Cola 4.12.0 documentation</title>
+        <title>git-cola - Git Cola 4.13.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Git Cola 4.12.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Git Cola 4.13.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">Git Cola 4.12.0 documentation</span>
+  <span class="sidebar-brand-text">Git Cola 4.13.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -511,7 +511,7 @@ Marks unmerged files as resolved.</p>
 </section>
 <section id="launch-difftool">
 <h4>Launch Difftool<a class="headerlink" href="#launch-difftool" title="Link to this heading">¶</a></h4>
-<p>Visualize changes using <cite>git difftool</cite>.</p>
+<p>Visualize changes using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">difftool</span></code>.</p>
 </section>
 <section id="revert-unstaged-edits">
 <h4>Revert Unstaged Edits<a class="headerlink" href="#revert-unstaged-edits" title="Link to this heading">¶</a></h4>
@@ -537,7 +537,7 @@ from the index/staging area</p>
 </section>
 <section id="add-to-gitignore">
 <h4>Add to .gitignore<a class="headerlink" href="#add-to-gitignore" title="Link to this heading">¶</a></h4>
-<p>Adds untracked files to to the .gitignore file.</p>
+<p>Adds untracked files to to the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p>
 </section>
 </section>
 </section>
@@ -652,6 +652,20 @@ commit message editor is updated with the new commit message.</p>
 hook script.  This is useful if you would like to use a common hook
 across all repositories.</p>
 </section>
+<section id="set-commit-date">
+<h3>Set Commit Date<a class="headerlink" href="#set-commit-date" title="Link to this heading">¶</a></h3>
+<p>The tool menu’s “Set Commit Date” action displays a dialog that lets you set the
+commit time for the next commit. Once enabled, the checkbox next to the menu action will
+be checked.</p>
+<p>The commit date option is disabled once a commit is performed.</p>
+</section>
+<section id="set-commit-author">
+<h3>Set Commit Author<a class="headerlink" href="#set-commit-author" title="Link to this heading">¶</a></h3>
+<p>The tool menu’s “Set Commit Author” action displays a dialog that lets you set the
+commit author for the next commit. Once enabled, the checkbox next to the menu action
+will be checked.</p>
+<p>This setting persists across commits. Clear the tool menu’s checkbox to disable the action.</p>
+</section>
 </section>
 <section id="branches">
 <h2>BRANCHES<a class="headerlink" href="#branches" title="Link to this heading">¶</a></h2>
@@ -659,9 +673,9 @@ across all repositories.</p>
 The tree has three main sections: <cite>Local Branches</cite>, <cite>Remote Branches</cite> and <cite>Tags</cite>.
 Branches are grouped by their name divided by the character <code class="docutils literal notranslate"><span class="pre">/</span></code>.
 For example, in a repo with the following list of branches:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">foo</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">branch</span><span class="o">/</span><span class="n">doe</span>
+<span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">foo</span>
 <span class="n">branch</span><span class="o">/</span><span class="n">feature</span><span class="o">/</span><span class="n">bar</span>
-<span class="n">branch</span><span class="o">/</span><span class="n">doe</span>
 </pre></div>
 </div>
 <p>The branches widget will display the following hierarchy:</p>
@@ -797,6 +811,13 @@ of tools within the <cite>git cola</cite> interface.  Changes are saved
 and restored at application shutdown/startup.</p>
 <p><cite>git cola</cite> can be configured to not save custom layouts by disabling
 the <cite>Save Window Settings</cite> option in the <cite>git cola</cite> preferences.</p>
+<p>You can save your current layout configuration to <code class="docutils literal notranslate"><span class="pre">*.layout</span></code> files
+using the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Layouts</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">Layout</span></code> menu action.</p>
+<p>You can load arbitrary layout files using the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Layouts</span> <span class="pre">&gt;</span> <span class="pre">Load</span> <span class="pre">Layout</span></code>
+menu action.</p>
+<p>By default, layouts are saved to the <code class="docutils literal notranslate"><span class="pre">~/.config/git-cola/layouts</span></code> directory.
+Layouts saved to this directory will appear in the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Layouts</span></code> menu
+for quick loading and switching of layouts.</p>
 </section>
 <section id="dark-mode-and-window-manager-themes">
 <h2>DARK MODE AND WINDOW MANAGER THEMES<a class="headerlink" href="#dark-mode-and-window-manager-themes" title="Link to this heading">¶</a></h2>
@@ -1717,6 +1738,8 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#amend-last-commit">Amend Last Commit</a></li>
 <li><a class="reference internal" href="#create-signed-commit">Create Signed Commit</a></li>
 <li><a class="reference internal" href="#prepare-commit-message">Prepare Commit Message</a></li>
+<li><a class="reference internal" href="#set-commit-date">Set Commit Date</a></li>
+<li><a class="reference internal" href="#set-commit-author">Set Commit Author</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#branches">BRANCHES</a><ul>
@@ -1856,7 +1879,7 @@ Gravatar client.</p>
       
     </aside>
   </div>
-</div><script src="static/documentation_options.js?v=7155e95a"></script>
+</div><script src="static/documentation_options.js?v=0080a303"></script>
     <script src="static/doctools.js?v=9bcbadda"></script>
     <script src="static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="static/scripts/furo.js?v=5fa4622c"></script>

@@ -344,7 +344,7 @@ Launches the configured visual text editor
 Launch Difftool
 ~~~~~~~~~~~~~~~
 
-Visualize changes using `git difftool`.
+Visualize changes using ``git difftool``.
 
 Revert Unstaged Edits
 ~~~~~~~~~~~~~~~~~~~~~
@@ -376,7 +376,7 @@ Delete untracked files from the filesystem.
 Add to .gitignore
 ~~~~~~~~~~~~~~~~~
 
-Adds untracked files to to the .gitignore file.
+Adds untracked files to to the ``.gitignore`` file.
 
 
 .. _diff:
@@ -524,6 +524,24 @@ To override the default path to this hook set the
 hook script.  This is useful if you would like to use a common hook
 across all repositories.
 
+Set Commit Date
+---------------
+
+The tool menu's "Set Commit Date" action displays a dialog that lets you set the
+commit time for the next commit. Once enabled, the checkbox next to the menu action will
+be checked.
+
+The commit date option is disabled once a commit is performed.
+
+Set Commit Author
+-----------------
+
+The tool menu's "Set Commit Author" action displays a dialog that lets you set the
+commit author for the next commit. Once enabled, the checkbox next to the menu action
+will be checked.
+
+This setting persists across commits. Clear the tool menu's checkbox to disable the action.
+
 
 BRANCHES
 ========
@@ -533,9 +551,9 @@ The tree has three main sections: `Local Branches`, `Remote Branches` and `Tags`
 Branches are grouped by their name divided by the character ``/``.
 For example, in a repo with the following list of branches::
 
+    branch/doe
     branch/feature/foo
     branch/feature/bar
-    branch/doe
 
 The branches widget will display the following hierarchy::
 
@@ -698,6 +716,16 @@ and restored at application shutdown/startup.
 
 `git cola` can be configured to not save custom layouts by disabling
 the `Save Window Settings` option in the `git cola` preferences.
+
+You can save your current layout configuration to ``*.layout`` files
+using the ``View > Layouts > Save Layout`` menu action.
+
+You can load arbitrary layout files using the ``View > Layouts > Load Layout``
+menu action.
+
+By default, layouts are saved to the ``~/.config/git-cola/layouts`` directory.
+Layouts saved to this directory will appear in the ``View > Layouts`` menu
+for quick loading and switching of layouts.
 
 
 DARK MODE AND WINDOW MANAGER THEMES

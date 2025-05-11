@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Mar 15, 2025" "4.12.0" "Git Cola"
+.TH "GIT-COLA" "1" "May 11, 2025" "4.13.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -311,7 +311,7 @@ Marks unmerged files as resolved.
 Launches the configured visual text editor
 .SS Launch Difftool
 .sp
-Visualize changes using \fIgit difftool\fP\&.
+Visualize changes using \fBgit difftool\fP\&.
 .SS Revert Unstaged Edits
 .sp
 Reverts unstaged content by checking out selected paths
@@ -331,7 +331,7 @@ Resolve conflicts using \X'tty: link https://git-scm.com/docs/git-mergetool'\fI\
 Delete untracked files from the filesystem.
 .SS Add to .gitignore
 .sp
-Adds untracked files to to the .gitignore file.
+Adds untracked files to to the \fB\&.gitignore\fP file.
 .SH DIFF
 .sp
 The diff viewer/editor displays diffs for selected files.
@@ -460,6 +460,20 @@ To override the default path to this hook set the
 \fIcola.prepareCommitMessageHook\fP \fIgit config\fP variable to the path to the
 hook script.  This is useful if you would like to use a common hook
 across all repositories.
+.SS Set Commit Date
+.sp
+The tool menu’s “Set Commit Date” action displays a dialog that lets you set the
+commit time for the next commit. Once enabled, the checkbox next to the menu action will
+be checked.
+.sp
+The commit date option is disabled once a commit is performed.
+.SS Set Commit Author
+.sp
+The tool menu’s “Set Commit Author” action displays a dialog that lets you set the
+commit author for the next commit. Once enabled, the checkbox next to the menu action
+will be checked.
+.sp
+This setting persists across commits. Clear the tool menu’s checkbox to disable the action.
 .SH BRANCHES
 .sp
 The \fIBranches\fP tool provides a visual tree to navigate branches.
@@ -470,9 +484,9 @@ For example, in a repo with the following list of branches:
 .INDENT 3.5
 .sp
 .EX
+branch/doe
 branch/feature/foo
 branch/feature/bar
-branch/doe
 .EE
 .UNINDENT
 .UNINDENT
@@ -624,6 +638,16 @@ and restored at application shutdown/startup.
 .sp
 \fIgit cola\fP can be configured to not save custom layouts by disabling
 the \fISave Window Settings\fP option in the \fIgit cola\fP preferences.
+.sp
+You can save your current layout configuration to \fB*.layout\fP files
+using the \fBView > Layouts > Save Layout\fP menu action.
+.sp
+You can load arbitrary layout files using the \fBView > Layouts > Load Layout\fP
+menu action.
+.sp
+By default, layouts are saved to the \fB~/.config/git\-cola/layouts\fP directory.
+Layouts saved to this directory will appear in the \fBView > Layouts\fP menu
+for quick loading and switching of layouts.
 .SH DARK MODE AND WINDOW MANAGER THEMES
 .sp
 Git Cola contains a \fBdefault\fP theme which follows the current Qt style and a
