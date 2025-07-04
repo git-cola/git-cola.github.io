@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "May 11, 2025" "4.13.0" "Git Cola"
+.TH "GIT-COLA" "1" "Jul 04, 2025" "4.13.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -105,6 +105,9 @@ Use \fIgit grep\fP to search for content. \fBgit cola grep\fP is an entry point 
 .sp
 Merge branches. \fBgit cola merge\fP is an entry point for the \fBActions > Merge...\fP
 main menu action.
+.SS open
+.sp
+Launch the “Quick Open” dialog to open bookmarked and recently\-opened repositories.
 .SS pull
 .sp
 Fetch and merge remote branches. \fBgit cola pull\fP is an entry point for the
@@ -854,6 +857,10 @@ Binary files are displayed using a hex\-dump display.
 .SS cola.fontdiff
 .sp
 Specifies the font to use for \fIgit cola\fP’s diff display.
+.SS cola.fontsize
+.sp
+Specifies the font size that is used for the Status, Submodules, Branches, Recent, and
+Favorites widgets.
 .SS cola.hidpi
 .sp
 Specifies the High DPI displays scale factor. Set \fI0\fP to automatically scaled.
@@ -1509,6 +1516,34 @@ The completion scripts and instructions are included in Git Cola’s
 .IP \(bu 2
 \X'tty: link https://gitlab.com/git-cola/git-cola/-/blob/main/contrib/README.md'\fI\%Setup instructions\fP\X'tty: link'
 .UNINDENT
+.SH MACOS NOTES
+.sp
+A \fBgit\-cola.app\fP bundle can be built using \fBgarden macos/app\fP\&.
+See the \fBgarden.yaml\fP file for more details.
+.sp
+Older versions of the \fBgit\-cola.app\fP may have caused macOS to launch Git Cola using
+Rosetta even though Python is arm64 native. This is a macOS / Apple bug.
+.sp
+A stub \fBgit\-cola\-macos\fP binary is now provided in \fBgit\-cola.app/Contents/MacOS\fP
+as a workaround to prevent this behavior.
+.sp
+If you launched an older version of the \fBgit\-cola.app\fP bundle you may have encountered
+this macOS bug:
+.sp
+\X'tty: link https://apple.stackexchange.com/questions/457171/shell-script-application-bundle-prompts-for-rosetta-installation'\fI\%https://apple.stackexchange.com/questions/457171/shell\-script\-application\-bundle\-prompts\-for\-rosetta\-installation\fP\X'tty: link'
+.sp
+Per the discussion above, you can clear the buggy cache using this command:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+/usr/libexec/PlistBuddy \-c \(aqDelete :\(dqArchitectures for arm64\(dq:com.justroots.git\-cola\(aq \e
+~/Library/Preferences/com.apple.LaunchServices/com.apple.LaunchServices.plist
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Reboot after running this command and Git Cola should launch natively without Rosetta.
 .SH WINDOWS NOTES
 .SS Git Installation
 .sp

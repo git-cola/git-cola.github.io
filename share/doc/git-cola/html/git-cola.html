@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 8.2.1 and Furo 2024.08.06 -->
         <title>git-cola - Git Cola 4.13.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=354aac6f" />
@@ -341,6 +341,10 @@ main menu action.</p>
 <h3>merge<a class="headerlink" href="#merge" title="Link to this heading">¶</a></h3>
 <p>Merge branches. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cola</span> <span class="pre">merge</span></code> is an entry point for the <code class="docutils literal notranslate"><span class="pre">Actions</span> <span class="pre">&gt;</span> <span class="pre">Merge...</span></code>
 main menu action.</p>
+</section>
+<section id="open">
+<h3>open<a class="headerlink" href="#open" title="Link to this heading">¶</a></h3>
+<p>Launch the “Quick Open” dialog to open bookmarked and recently-opened repositories.</p>
 </section>
 <section id="pull">
 <h3>pull<a class="headerlink" href="#pull" title="Link to this heading">¶</a></h3>
@@ -983,6 +987,11 @@ Binary files are displayed using a hex-dump display.</p>
 <h3>cola.fontdiff<a class="headerlink" href="#cola-fontdiff" title="Link to this heading">¶</a></h3>
 <p>Specifies the font to use for <cite>git cola</cite>’s diff display.</p>
 </section>
+<section id="cola-fontsize">
+<h3>cola.fontsize<a class="headerlink" href="#cola-fontsize" title="Link to this heading">¶</a></h3>
+<p>Specifies the font size that is used for the Status, Submodules, Branches, Recent, and
+Favorites widgets.</p>
+</section>
 <section id="cola-hidpi">
 <h3>cola.hidpi<a class="headerlink" href="#cola-hidpi" title="Link to this heading">¶</a></h3>
 <p>Specifies the High DPI displays scale factor. Set <cite>0</cite> to automatically scaled.
@@ -1563,6 +1572,24 @@ The completion scripts and instructions are included in Git Cola’s
 <li><p><a class="reference external" href="https://gitlab.com/git-cola/git-cola/-/blob/main/contrib/README.md">Setup instructions</a></p></li>
 </ul>
 </section>
+<section id="macos-notes">
+<h2>MACOS NOTES<a class="headerlink" href="#macos-notes" title="Link to this heading">¶</a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">git-cola.app</span></code> bundle can be built using <code class="docutils literal notranslate"><span class="pre">garden</span> <span class="pre">macos/app</span></code>.
+See the <code class="docutils literal notranslate"><span class="pre">garden.yaml</span></code> file for more details.</p>
+<p>Older versions of the <code class="docutils literal notranslate"><span class="pre">git-cola.app</span></code> may have caused macOS to launch Git Cola using
+Rosetta even though Python is arm64 native. This is a macOS / Apple bug.</p>
+<p>A stub <code class="docutils literal notranslate"><span class="pre">git-cola-macos</span></code> binary is now provided in <code class="docutils literal notranslate"><span class="pre">git-cola.app/Contents/MacOS</span></code>
+as a workaround to prevent this behavior.</p>
+<p>If you launched an older version of the <code class="docutils literal notranslate"><span class="pre">git-cola.app</span></code> bundle you may have encountered
+this macOS bug:</p>
+<p><a class="reference external" href="https://apple.stackexchange.com/questions/457171/shell-script-application-bundle-prompts-for-rosetta-installation">https://apple.stackexchange.com/questions/457171/shell-script-application-bundle-prompts-for-rosetta-installation</a></p>
+<p>Per the discussion above, you can clear the buggy cache using this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">PlistBuddy</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;Delete :&quot;Architectures for arm64&quot;:com.justroots.git-cola&#39;</span> \
+<span class="o">~/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">LaunchServices</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">LaunchServices</span><span class="o">.</span><span class="n">plist</span>
+</pre></div>
+</div>
+<p>Reboot after running this command and Git Cola should launch natively without Rosetta.</p>
+</section>
 <section id="windows-notes">
 <h2>WINDOWS NOTES<a class="headerlink" href="#windows-notes" title="Link to this heading">¶</a></h2>
 <section id="git-installation">
@@ -1697,6 +1724,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#fetch">fetch</a></li>
 <li><a class="reference internal" href="#grep">grep</a></li>
 <li><a class="reference internal" href="#merge">merge</a></li>
+<li><a class="reference internal" href="#open">open</a></li>
 <li><a class="reference internal" href="#pull">pull</a></li>
 <li><a class="reference internal" href="#push">push</a></li>
 <li><a class="reference internal" href="#rebase">rebase</a></li>
@@ -1780,6 +1808,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-gravatar">cola.gravatar</a></li>
 <li><a class="reference internal" href="#cola-fileattributes">cola.fileattributes</a></li>
 <li><a class="reference internal" href="#cola-fontdiff">cola.fontdiff</a></li>
+<li><a class="reference internal" href="#cola-fontsize">cola.fontsize</a></li>
 <li><a class="reference internal" href="#cola-hidpi">cola.hidpi</a></li>
 <li><a class="reference internal" href="#cola-icontheme">cola.icontheme</a></li>
 <li><a class="reference internal" href="#cola-imagediff-extension">cola.imagediff.[extension]</a></li>
@@ -1856,6 +1885,7 @@ Gravatar client.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#shell-completions">SHELL COMPLETIONS</a></li>
+<li><a class="reference internal" href="#macos-notes">MACOS NOTES</a></li>
 <li><a class="reference internal" href="#windows-notes">WINDOWS NOTES</a><ul>
 <li><a class="reference internal" href="#git-installation">Git Installation</a></li>
 <li><a class="reference internal" href="#ssh-agents-for-key-based-authentication">SSH Agents for Key-based Authentication</a></li>

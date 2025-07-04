@@ -28,6 +28,7 @@ Thanks
 * Andy O'Neill
 * armandg
 * Arthur Coelho
+* Arnaud Henry
 * Audrey Yeena Toskin
 * Audrius Karabanovas
 * Axel Heider
@@ -48,6 +49,7 @@ Thanks
 * Björn Ketelaars
 * Bob van der Linden
 * Boerje Sewing
+* Brad Bell
 * Bruno Cabral
 * 林博仁 (Buo-ren Lin)
 * cclaus
@@ -194,6 +196,7 @@ Thanks
 * Michael Geddes
 * Michael Homer
 * Michael Schwarz
+* Michele Nalli
 * Mickael Albertus
 * Miguel Boekhold
 * Mike Hanson
@@ -270,6 +273,7 @@ Thanks
 * Suyandi
 * Sven Claussner
 * Szymon Judasz
+* Tamil Neram தமிழ் நேரம்
 * Taylor Braun-Jones
 * Thiemo van Engelen
 * Thomas McKay
