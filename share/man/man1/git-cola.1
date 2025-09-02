@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Aug 08, 2025" "4.14.0" "Git Cola"
+.TH "GIT-COLA" "1" "Sep 02, 2025" "4.14.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -771,6 +771,25 @@ Some examples can be found here \X'tty: link https://doc.qt.io/qt-5/stylesheet-e
 .SH CONFIGURATION VARIABLES
 .sp
 These variables can be set using \fIgit config\fP or from the settings.
+.SS cola.aspell.enabled
+.sp
+Set to \fItrue\fP to enable support for \fBaspell\fP spellcheck dictionaries.
+When \fIfalse\fP, spellcheck dictionaries are read from \fB/usr/share/dict/words\fP
+by default. When \fItrue\fP Git Cola will run \fBaspell dump master \-\-lang=$lang\fP
+for each of the installed languages to gather words.
+Defaults to \fIfalse\fP\&.
+.SS cola.aspell.lang
+.sp
+Configure the language names that are queried using \fBaspell\fP\&. For example,
+\fBgit config \-\-global \-\-add cola.aspell.lang en_US\fP will make it so that
+only the \fBen_US\fP language is used.
+.sp
+This is a multi\-valued configuration value.
+\fBgit config \-\-global \-\-add cola.aspell.lang $lang\fP can be run once for each language
+to specify multiple languages to use.
+.sp
+When unset, all of the two\-letter language names from the output of
+\fBaspell dicts\fP will be used.
 .SS cola.autodetectproxy
 .sp
 Set to \fIfalse\fP to disable auto\-configuration of HTTP proxy settings based on
@@ -823,6 +842,20 @@ If \fI$XDG_DATA_DIRS\fP is undefined or set to an empty value then \fI/usr/local
 \fI/usr/share\fP are searched for dictionary files.
 .sp
 Dictionary files are newline\-separated and contain one word per line.
+Dictionary files must be UTF\-8 encoded.
+.sp
+If you have multiple dictionaries that you would like \fIgit cola\fP to use then
+you can specify multiple dictionaries using \fBgit config \-\-global \-\-add\fP\&.
+\fBcola.dictionary\fP is a configuration value that can contain multiple values.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+git config \-\-global \-\-add cola.dictionary /path/to/dictionary1
+git config \-\-global \-\-add cola.dictionary /path/to/dictionary2
+.EE
+.UNINDENT
+.UNINDENT
 .SS cola.expandtab
 .sp
 Expand tabs into spaces in the commit message editor.  When set to \fItrue\fP,

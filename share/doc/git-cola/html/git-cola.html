@@ -5,31 +5,31 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
         <title>git-cola - Git Cola 4.14.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=302659d7" />
+      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=acfd86a5" />
+    <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=8dab3a3b" />
     
     
 
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -188,7 +188,6 @@
     <div class="sidebar-container">
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
-  
   
   <span class="sidebar-brand-text">Git Cola 4.14.0 documentation</span>
   
@@ -897,6 +896,25 @@ an option in <code class="docutils literal notranslate"><span class="pre">Menu</
 <section id="configuration-variables">
 <h2>CONFIGURATION VARIABLES<a class="headerlink" href="#configuration-variables" title="Link to this heading">¶</a></h2>
 <p>These variables can be set using <cite>git config</cite> or from the settings.</p>
+<section id="cola-aspell-enabled">
+<h3>cola.aspell.enabled<a class="headerlink" href="#cola-aspell-enabled" title="Link to this heading">¶</a></h3>
+<p>Set to <cite>true</cite> to enable support for <code class="docutils literal notranslate"><span class="pre">aspell</span></code> spellcheck dictionaries.
+When <cite>false</cite>, spellcheck dictionaries are read from <code class="docutils literal notranslate"><span class="pre">/usr/share/dict/words</span></code>
+by default. When <cite>true</cite> Git Cola will run <code class="docutils literal notranslate"><span class="pre">aspell</span> <span class="pre">dump</span> <span class="pre">master</span> <span class="pre">--lang=$lang</span></code>
+for each of the installed languages to gather words.
+Defaults to <cite>false</cite>.</p>
+</section>
+<section id="cola-aspell-lang">
+<h3>cola.aspell.lang<a class="headerlink" href="#cola-aspell-lang" title="Link to this heading">¶</a></h3>
+<p>Configure the language names that are queried using <code class="docutils literal notranslate"><span class="pre">aspell</span></code>. For example,
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">--add</span> <span class="pre">cola.aspell.lang</span> <span class="pre">en_US</span></code> will make it so that
+only the <code class="docutils literal notranslate"><span class="pre">en_US</span></code> language is used.</p>
+<p>This is a multi-valued configuration value.
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">--add</span> <span class="pre">cola.aspell.lang</span> <span class="pre">$lang</span></code> can be run once for each language
+to specify multiple languages to use.</p>
+<p>When unset, all of the two-letter language names from the output of
+<code class="docutils literal notranslate"><span class="pre">aspell</span> <span class="pre">dicts</span></code> will be used.</p>
+</section>
 <section id="cola-autodetectproxy">
 <h3>cola.autodetectproxy<a class="headerlink" href="#cola-autodetectproxy" title="Link to this heading">¶</a></h3>
 <p>Set to <cite>false</cite> to disable auto-configuration of HTTP proxy settings based on
@@ -953,7 +971,15 @@ This should be configured to the path of a newline-separated list of words.</p>
 files in <cite>~/.local/share</cite> and <cite>$XDG_DATA_DIRS</cite>.</p>
 <p>If <cite>$XDG_DATA_DIRS</cite> is undefined or set to an empty value then <cite>/usr/local/share</cite> and
 <cite>/usr/share</cite> are searched for dictionary files.</p>
-<p>Dictionary files are newline-separated and contain one word per line.</p>
+<p>Dictionary files are newline-separated and contain one word per line.
+Dictionary files must be UTF-8 encoded.</p>
+<p>If you have multiple dictionaries that you would like <cite>git cola</cite> to use then
+you can specify multiple dictionaries using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">--add</span></code>.
+<code class="docutils literal notranslate"><span class="pre">cola.dictionary</span></code> is a configuration value that can contain multiple values.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>cola.dictionary<span class="w"> </span>/path/to/dictionary1
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>cola.dictionary<span class="w"> </span>/path/to/dictionary2
+</pre></div>
+</div>
 </section>
 <section id="cola-expandtab">
 <h3>cola.expandtab<a class="headerlink" href="#cola-expandtab" title="Link to this heading">¶</a></h3>
@@ -1795,6 +1821,8 @@ Gravatar client.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#configuration-variables">CONFIGURATION VARIABLES</a><ul>
+<li><a class="reference internal" href="#cola-aspell-enabled">cola.aspell.enabled</a></li>
+<li><a class="reference internal" href="#cola-aspell-lang">cola.aspell.lang</a></li>
 <li><a class="reference internal" href="#cola-autodetectproxy">cola.autodetectproxy</a></li>
 <li><a class="reference internal" href="#cola-autocompletepaths">cola.autocompletepaths</a></li>
 <li><a class="reference internal" href="#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
@@ -1912,6 +1940,6 @@ Gravatar client.</p>
 </div><script src="static/documentation_options.js?v=8edb52cd"></script>
     <script src="static/doctools.js?v=9bcbadda"></script>
     <script src="static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="static/scripts/furo.js?v=46bd48cc"></script>
     </body>
 </html>

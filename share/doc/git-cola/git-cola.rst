@@ -818,6 +818,29 @@ CONFIGURATION VARIABLES
 
 These variables can be set using `git config` or from the settings.
 
+cola.aspell.enabled
+-------------------
+
+Set to `true` to enable support for ``aspell`` spellcheck dictionaries.
+When `false`, spellcheck dictionaries are read from ``/usr/share/dict/words``
+by default. When `true` Git Cola will run ``aspell dump master --lang=$lang``
+for each of the installed languages to gather words.
+Defaults to `false`.
+
+cola.aspell.lang
+----------------
+
+Configure the language names that are queried using ``aspell``. For example,
+``git config --global --add cola.aspell.lang en_US`` will make it so that
+only the ``en_US`` language is used.
+
+This is a multi-valued configuration value.
+``git config --global --add cola.aspell.lang $lang`` can be run once for each language
+to specify multiple languages to use.
+
+When unset, all of the two-letter language names from the output of
+``aspell dicts`` will be used.
+
 cola.autodetectproxy
 --------------------
 
@@ -887,6 +910,16 @@ If `$XDG_DATA_DIRS` is undefined or set to an empty value then `/usr/local/share
 `/usr/share` are searched for dictionary files.
 
 Dictionary files are newline-separated and contain one word per line.
+Dictionary files must be UTF-8 encoded.
+
+If you have multiple dictionaries that you would like `git cola` to use then
+you can specify multiple dictionaries using ``git config --global --add``.
+``cola.dictionary`` is a configuration value that can contain multiple values.
+
+.. sourcecode:: sh
+
+   git config --global --add cola.dictionary /path/to/dictionary1
+   git config --global --add cola.dictionary /path/to/dictionary2
 
 cola.expandtab
 --------------
