@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
     <!-- Generated with Sphinx 8.2.1 and Furo 2024.08.06 -->
-        <title>git-cola - Git Cola 4.15.0 documentation</title>
+        <title>git-cola - Git Cola 4.16.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=302659d7" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Git Cola 4.15.0 documentation</div></a>
+      <a href="index.html"><div class="brand">Git Cola 4.16.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -190,7 +190,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">Git Cola 4.15.0 documentation</span>
+  <span class="sidebar-brand-text">Git Cola 4.16.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -981,6 +981,14 @@ you can specify multiple dictionaries using <code class="docutils literal notran
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>cola.dictionary<span class="w"> </span>/path/to/dictionary2
 </pre></div>
 </div>
+</section>
+<section id="cola-enablepopups">
+<h3>cola.enablepopups<a class="headerlink" href="#cola-enablepopups" title="Link to this heading">¶</a></h3>
+<p>Actions such as “Fetch”, “Push”, “Pull”, “Sync” and “Sync Out” display desktop
+notifications on Linux when either the <cite>notify2</cite> or <cite>notifypy</cite> modules are installed.
+The message are logged to the Console otherwise.</p>
+<p>Messages are displayed using popup dialogs when <code class="docutils literal notranslate"><span class="pre">cola.enablepopups</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+Defaults to <cite>false</cite>.</p>
 </section>
 <section id="cola-expandtab">
 <h3>cola.expandtab<a class="headerlink" href="#cola-expandtab" title="Link to this heading">¶</a></h3>
@@ -1833,6 +1841,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-checkconflicts">cola.checkconflicts</a></li>
 <li><a class="reference internal" href="#cola-defaultrepo">cola.defaultrepo</a></li>
 <li><a class="reference internal" href="#cola-dictionary">cola.dictionary</a></li>
+<li><a class="reference internal" href="#cola-enablepopups">cola.enablepopups</a></li>
 <li><a class="reference internal" href="#cola-expandtab">cola.expandtab</a></li>
 <li><a class="reference internal" href="#cola-gravatar">cola.gravatar</a></li>
 <li><a class="reference internal" href="#cola-fileattributes">cola.fileattributes</a></li>
@@ -1938,7 +1947,7 @@ Gravatar client.</p>
       
     </aside>
   </div>
-</div><script src="static/documentation_options.js?v=ff0e1894"></script>
+</div><script src="static/documentation_options.js?v=6d71c67f"></script>
     <script src="static/doctools.js?v=9bcbadda"></script>
     <script src="static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="static/scripts/furo.js?v=5fa4622c"></script>

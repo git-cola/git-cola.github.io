@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Sep 07, 2025" "4.15.0" "Git Cola"
+.TH "GIT-COLA" "1" "Oct 25, 2025" "4.16.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -856,6 +856,14 @@ git config \-\-global \-\-add cola.dictionary /path/to/dictionary2
 .EE
 .UNINDENT
 .UNINDENT
+.SS cola.enablepopups
+.sp
+Actions such as “Fetch”, “Push”, “Pull”, “Sync” and “Sync Out” display desktop
+notifications on Linux when either the \fInotify2\fP or \fInotifypy\fP modules are installed.
+The message are logged to the Console otherwise.
+.sp
+Messages are displayed using popup dialogs when \fBcola.enablepopups\fP is set to \fBtrue\fP\&.
+Defaults to \fIfalse\fP\&.
 .SS cola.expandtab
 .sp
 Expand tabs into spaces in the commit message editor.  When set to \fItrue\fP,
