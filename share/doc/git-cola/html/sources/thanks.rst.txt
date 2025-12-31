@@ -29,6 +29,7 @@ Thanks
 * armandg
 * Arthur Coelho
 * Arnaud Henry
+* Attila Houtkooper
 * Audrey Yeena Toskin
 * Audrius Karabanovas
 * Axel Heider
@@ -102,6 +103,7 @@ Thanks
 * Geoffrey van Wyk
 * Georg Limbach
 * geotavros
+* ghmon
 * Gianni Lerro
 * Giovanni Martins
 * `Git Hackers <https://git-scm.com/about>`_
@@ -138,6 +140,7 @@ Thanks
 * Jason Newton
 * Javier Rodriguez Cuevas
 * Jeff Dagenais
+* jdalbey
 * Jérôme Carretero
 * jfessard
 * JiCiT
@@ -154,12 +157,14 @@ Thanks
 * Kai Krakow
 * Karl Bielefeldt
 * Karthik Manamcheri
+* Katsuhiko Takahashi
 * Kelvie Wong
 * Kerrick Staley
 * Kevin Kofler
 * Kirit Sælensminde
 * Kisaragi Hiu
 * Klaas Neirinck
+* krisuf
 * K.T.dev
 * Kurt McKee
 * Kyle Slane
@@ -179,6 +184,7 @@ Thanks
 * Maaaks
 * Maciej Filipiak
 * Mahmoud Hossam
+* Manuel Alejandro García Pineño
 * Mateusz Kedzior
 * Matias N. Goldberg
 * Maicon D. Filippsen

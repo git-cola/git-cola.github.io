@@ -876,6 +876,18 @@ Whether to use a "block" cursor in diff editors. The block cursor is easier to
 see compared to a line cursor. Set to `false` to use a thin "line" cursor.
 Defaults to `true`.
 
+cola.boldfonts
+--------------
+
+Use bold fonts throughout the entire interface to increase usability on small screens.
+Defaults to `false`.
+
+cola.boldheaders
+----------------
+
+Whether to use bold headers on a dark background instead of italics in the Status tool.
+Defaults to `false`.
+
 cola.browserdockable
 --------------------
 
@@ -900,8 +912,9 @@ the user for a repository.
 cola.dictionary
 ---------------
 
-Specifies an additional dictionary for `git cola` to use in its spell checker.
+Specifies additional dictionaries for `git cola` to use in its spell checker.
 This should be configured to the path of a newline-separated list of words.
+``*.dic`` dictionary files used by ``hunspell`` are also supported.
 
 By default, `git cola` searches for `dict/words` and `dict/propernames` dictionary
 files in `~/.local/share` and `$XDG_DATA_DIRS`.
@@ -920,6 +933,14 @@ you can specify multiple dictionaries using ``git config --global --add``.
 
    git config --global --add cola.dictionary /path/to/dictionary1
    git config --global --add cola.dictionary /path/to/dictionary2
+
+Users on Debian-based systems can install additional ``hunspell`` dictionary
+files to make them available in ``/usr/share/hunspell/*.dic``. For example,
+to install the Spanish dictionary, run:
+
+.. sourcecode:: sh
+
+   sudo apt install hunspell-es
 
 cola.enablepopups
 -----------------
@@ -1024,6 +1045,12 @@ cola.inotify
 Set to `false` to disable file system change monitoring.  Defaults to `true`,
 but also requires either Linux with inotify support or Windows with `pywin32`
 installed for file system change monitoring to actually function.
+
+cola.inotifydelay
+-----------------
+
+How long to wait, in milliseconds, between file system change notifications.
+Defaults to `888`.
 
 cola.refreshonfocus
 -------------------
@@ -1284,6 +1311,14 @@ when accessing Git repositories over a Samba share. If you have this enabled the
 can use the ``ctrl-r`` "Refresh" action to force the index to be refreshed instead.
 Defaults to ``true``.
 
+cola.verbosity
+--------------
+
+Increase the verbosity of the Console tool by logging ``git`` commands with a ``[git]``
+prefix when set to a value of ``1`` or higher. This setting allows users to more easily
+discover which ``git`` commands are being run under the hood.
+Defaults to ``0``.
+
 commit.cleanup
 --------------
 
@@ -1396,6 +1431,26 @@ environment variables.
 
 ENVIRONMENT VARIABLES
 =====================
+
+GIT_ASKPASS
+-----------
+
+Specify the OpenSSH `askpass` program to use when prompting for credentials.
+This environment variable has the highest priority when specifying an `askpass` program.
+
+The ``SSH_ASKPASS`` environment variable is considered alongside ``GIT_ASKPASS``
+nd  has the 2nd-highest priority.
+
+See `Git's askpass documentation <https://git-scm.com/docs/gitcredentials.html#_requesting_credentials>`_
+for more details.
+
+Debian users can either ``sudo apt install ssh-askpass-gnome`` or
+``sudo apt install ksshaskpass`` to install a suitable askpass credential helper.
+When installed, these programs will be used by default when the environment variables
+have not been set.
+
+If no `askpass` program can be found then cola's builtin `ssh-askpass`
+program will by used, but using an external program is highly encouraged.
 
 GIT_COLA_ICON_THEME
 -------------------

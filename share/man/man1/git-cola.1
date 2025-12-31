@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "GIT-COLA" "1" "Nov 12, 2025" "4.16.1" "Git Cola"
+.TH "GIT-COLA" "1" "Dec 31, 2025" "4.17.0" "Git Cola"
 .SH NAME
 git-cola \- The highly caffeinated Git GUI
 .SH SYNOPSIS
@@ -815,6 +815,14 @@ The command used to blame files.  Defaults to \fIgit gui blame\fP\&.
 Whether to use a “block” cursor in diff editors. The block cursor is easier to
 see compared to a line cursor. Set to \fIfalse\fP to use a thin “line” cursor.
 Defaults to \fItrue\fP\&.
+.SS cola.boldfonts
+.sp
+Use bold fonts throughout the entire interface to increase usability on small screens.
+Defaults to \fIfalse\fP\&.
+.SS cola.boldheaders
+.sp
+Whether to use bold headers on a dark background instead of italics in the Status tool.
+Defaults to \fIfalse\fP\&.
 .SS cola.browserdockable
 .sp
 Whether to create a dock widget with the \fIBrowser\fP tool.
@@ -832,8 +840,9 @@ repository.  Set \fIcola.defaultrepo\fP to the path of a Git repository to make
 the user for a repository.
 .SS cola.dictionary
 .sp
-Specifies an additional dictionary for \fIgit cola\fP to use in its spell checker.
+Specifies additional dictionaries for \fIgit cola\fP to use in its spell checker.
 This should be configured to the path of a newline\-separated list of words.
+\fB*.dic\fP dictionary files used by \fBhunspell\fP are also supported.
 .sp
 By default, \fIgit cola\fP searches for \fIdict/words\fP and \fIdict/propernames\fP dictionary
 files in \fI~/.local/share\fP and \fI$XDG_DATA_DIRS\fP\&.
@@ -853,6 +862,18 @@ you can specify multiple dictionaries using \fBgit config \-\-global \-\-add\fP\
 .EX
 git config \-\-global \-\-add cola.dictionary /path/to/dictionary1
 git config \-\-global \-\-add cola.dictionary /path/to/dictionary2
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Users on Debian\-based systems can install additional \fBhunspell\fP dictionary
+files to make them available in \fB/usr/share/hunspell/*.dic\fP\&. For example,
+to install the Spanish dictionary, run:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+sudo apt install hunspell\-es
 .EE
 .UNINDENT
 .UNINDENT
@@ -942,6 +963,10 @@ Defaults to \fItrue\fP\&.
 Set to \fIfalse\fP to disable file system change monitoring.  Defaults to \fItrue\fP,
 but also requires either Linux with inotify support or Windows with \fIpywin32\fP
 installed for file system change monitoring to actually function.
+.SS cola.inotifydelay
+.sp
+How long to wait, in milliseconds, between file system change notifications.
+Defaults to \fI888\fP\&.
 .SS cola.refreshonfocus
 .sp
 Set to \fItrue\fP to automatically refresh when \fIgit cola\fP gains focus.  Defaults
@@ -1178,6 +1203,12 @@ configuring \fBcola.updateindex\fP to \fBfalse\fP\&. This is useful in some scen
 when accessing Git repositories over a Samba share. If you have this enabled then you
 can use the \fBctrl\-r\fP “Refresh” action to force the index to be refreshed instead.
 Defaults to \fBtrue\fP\&.
+.SS cola.verbosity
+.sp
+Increase the verbosity of the Console tool by logging \fBgit\fP commands with a \fB[git]\fP
+prefix when set to a value of \fB1\fP or higher. This setting allows users to more easily
+discover which \fBgit\fP commands are being run under the hood.
+Defaults to \fB0\fP\&.
 .SS commit.cleanup
 .sp
 Configure whether commit messages should be stripped of whitespace and comments.
@@ -1272,6 +1303,24 @@ Your full name to be recorded in any newly created commits.
 Can be overridden by the ‘GIT_AUTHOR_NAME’ and ‘GIT_COMMITTER_NAME’
 environment variables.
 .SH ENVIRONMENT VARIABLES
+.SS GIT_ASKPASS
+.sp
+Specify the OpenSSH \fIaskpass\fP program to use when prompting for credentials.
+This environment variable has the highest priority when specifying an \fIaskpass\fP program.
+.sp
+The \fBSSH_ASKPASS\fP environment variable is considered alongside \fBGIT_ASKPASS\fP
+nd  has the 2nd\-highest priority.
+.sp
+See \X'tty: link https://git-scm.com/docs/gitcredentials.html#_requesting_credentials'\fI\%Git’s askpass documentation\fP\X'tty: link'
+for more details.
+.sp
+Debian users can either \fBsudo apt install ssh\-askpass\-gnome\fP or
+\fBsudo apt install ksshaskpass\fP to install a suitable askpass credential helper.
+When installed, these programs will be used by default when the environment variables
+have not been set.
+.sp
+If no \fIaskpass\fP program can be found then cola’s builtin \fIssh\-askpass\fP
+program will by used, but using an external program is highly encouraged.
 .SS GIT_COLA_ICON_THEME
 .sp
 When set in the environment, \fIGIT_COLA_ICON_THEME\fP overrides the

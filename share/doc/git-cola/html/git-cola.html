@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="git-dag" href="git-dag.html" /><link rel="prev" title="Git Cola Documentation" href="index.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>git-cola - Git Cola 4.16.1 documentation</title>
+        <title>git-cola - Git Cola 4.17.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=acfd86a5" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -166,7 +166,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">Git Cola 4.16.1 documentation</div></a>
+      <a href="index.html"><div class="brand">Git Cola 4.17.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -189,7 +189,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
-  <span class="sidebar-brand-text">Git Cola 4.16.1 documentation</span>
+  <span class="sidebar-brand-text">Git Cola 4.17.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -945,6 +945,16 @@ Defaults to <cite>false</cite>.</p>
 see compared to a line cursor. Set to <cite>false</cite> to use a thin “line” cursor.
 Defaults to <cite>true</cite>.</p>
 </section>
+<section id="cola-boldfonts">
+<h3>cola.boldfonts<a class="headerlink" href="#cola-boldfonts" title="Link to this heading">¶</a></h3>
+<p>Use bold fonts throughout the entire interface to increase usability on small screens.
+Defaults to <cite>false</cite>.</p>
+</section>
+<section id="cola-boldheaders">
+<h3>cola.boldheaders<a class="headerlink" href="#cola-boldheaders" title="Link to this heading">¶</a></h3>
+<p>Whether to use bold headers on a dark background instead of italics in the Status tool.
+Defaults to <cite>false</cite>.</p>
+</section>
 <section id="cola-browserdockable">
 <h3>cola.browserdockable<a class="headerlink" href="#cola-browserdockable" title="Link to this heading">¶</a></h3>
 <p>Whether to create a dock widget with the <cite>Browser</cite> tool.
@@ -965,8 +975,9 @@ the user for a repository.</p>
 </section>
 <section id="cola-dictionary">
 <h3>cola.dictionary<a class="headerlink" href="#cola-dictionary" title="Link to this heading">¶</a></h3>
-<p>Specifies an additional dictionary for <cite>git cola</cite> to use in its spell checker.
-This should be configured to the path of a newline-separated list of words.</p>
+<p>Specifies additional dictionaries for <cite>git cola</cite> to use in its spell checker.
+This should be configured to the path of a newline-separated list of words.
+<code class="docutils literal notranslate"><span class="pre">*.dic</span></code> dictionary files used by <code class="docutils literal notranslate"><span class="pre">hunspell</span></code> are also supported.</p>
 <p>By default, <cite>git cola</cite> searches for <cite>dict/words</cite> and <cite>dict/propernames</cite> dictionary
 files in <cite>~/.local/share</cite> and <cite>$XDG_DATA_DIRS</cite>.</p>
 <p>If <cite>$XDG_DATA_DIRS</cite> is undefined or set to an empty value then <cite>/usr/local/share</cite> and
@@ -978,6 +989,12 @@ you can specify multiple dictionaries using <code class="docutils literal notran
 <code class="docutils literal notranslate"><span class="pre">cola.dictionary</span></code> is a configuration value that can contain multiple values.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>cola.dictionary<span class="w"> </span>/path/to/dictionary1
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--add<span class="w"> </span>cola.dictionary<span class="w"> </span>/path/to/dictionary2
+</pre></div>
+</div>
+<p>Users on Debian-based systems can install additional <code class="docutils literal notranslate"><span class="pre">hunspell</span></code> dictionary
+files to make them available in <code class="docutils literal notranslate"><span class="pre">/usr/share/hunspell/*.dic</span></code>. For example,
+to install the Spanish dictionary, run:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>hunspell-es
 </pre></div>
 </div>
 </section>
@@ -1065,6 +1082,11 @@ Defaults to <cite>true</cite>.</p>
 <p>Set to <cite>false</cite> to disable file system change monitoring.  Defaults to <cite>true</cite>,
 but also requires either Linux with inotify support or Windows with <cite>pywin32</cite>
 installed for file system change monitoring to actually function.</p>
+</section>
+<section id="cola-inotifydelay">
+<h3>cola.inotifydelay<a class="headerlink" href="#cola-inotifydelay" title="Link to this heading">¶</a></h3>
+<p>How long to wait, in milliseconds, between file system change notifications.
+Defaults to <cite>888</cite>.</p>
 </section>
 <section id="cola-refreshonfocus">
 <h3>cola.refreshonfocus<a class="headerlink" href="#cola-refreshonfocus" title="Link to this heading">¶</a></h3>
@@ -1290,6 +1312,13 @@ when accessing Git repositories over a Samba share. If you have this enabled the
 can use the <code class="docutils literal notranslate"><span class="pre">ctrl-r</span></code> “Refresh” action to force the index to be refreshed instead.
 Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </section>
+<section id="cola-verbosity">
+<h3>cola.verbosity<a class="headerlink" href="#cola-verbosity" title="Link to this heading">¶</a></h3>
+<p>Increase the verbosity of the Console tool by logging <code class="docutils literal notranslate"><span class="pre">git</span></code> commands with a <code class="docutils literal notranslate"><span class="pre">[git]</span></code>
+prefix when set to a value of <code class="docutils literal notranslate"><span class="pre">1</span></code> or higher. This setting allows users to more easily
+discover which <code class="docutils literal notranslate"><span class="pre">git</span></code> commands are being run under the hood.
+Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</section>
 <section id="commit-cleanup">
 <h3>commit.cleanup<a class="headerlink" href="#commit-cleanup" title="Link to this heading">¶</a></h3>
 <p>Configure whether commit messages should be stripped of whitespace and comments.</p>
@@ -1380,6 +1409,21 @@ environment variables.</p>
 </section>
 <section id="environment-variables">
 <h2>ENVIRONMENT VARIABLES<a class="headerlink" href="#environment-variables" title="Link to this heading">¶</a></h2>
+<section id="git-askpass">
+<h3>GIT_ASKPASS<a class="headerlink" href="#git-askpass" title="Link to this heading">¶</a></h3>
+<p>Specify the OpenSSH <cite>askpass</cite> program to use when prompting for credentials.
+This environment variable has the highest priority when specifying an <cite>askpass</cite> program.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SSH_ASKPASS</span></code> environment variable is considered alongside <code class="docutils literal notranslate"><span class="pre">GIT_ASKPASS</span></code>
+nd  has the 2nd-highest priority.</p>
+<p>See <a class="reference external" href="https://git-scm.com/docs/gitcredentials.html#_requesting_credentials">Git’s askpass documentation</a>
+for more details.</p>
+<p>Debian users can either <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ssh-askpass-gnome</span></code> or
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ksshaskpass</span></code> to install a suitable askpass credential helper.
+When installed, these programs will be used by default when the environment variables
+have not been set.</p>
+<p>If no <cite>askpass</cite> program can be found then cola’s builtin <cite>ssh-askpass</cite>
+program will by used, but using an external program is highly encouraged.</p>
+</section>
 <section id="git-cola-icon-theme">
 <h3>GIT_COLA_ICON_THEME<a class="headerlink" href="#git-cola-icon-theme" title="Link to this heading">¶</a></h3>
 <p>When set in the environment, <cite>GIT_COLA_ICON_THEME</cite> overrides the
@@ -1836,6 +1880,8 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-autoloadcommittemplate">cola.autoloadCommitTemplate</a></li>
 <li><a class="reference internal" href="#cola-blameviewer">cola.blameviewer</a></li>
 <li><a class="reference internal" href="#cola-blockcursor">cola.blockcursor</a></li>
+<li><a class="reference internal" href="#cola-boldfonts">cola.boldfonts</a></li>
+<li><a class="reference internal" href="#cola-boldheaders">cola.boldheaders</a></li>
 <li><a class="reference internal" href="#cola-browserdockable">cola.browserdockable</a></li>
 <li><a class="reference internal" href="#cola-checkconflicts">cola.checkconflicts</a></li>
 <li><a class="reference internal" href="#cola-defaultrepo">cola.defaultrepo</a></li>
@@ -1850,6 +1896,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-icontheme">cola.icontheme</a></li>
 <li><a class="reference internal" href="#cola-imagediff-extension">cola.imagediff.[extension]</a></li>
 <li><a class="reference internal" href="#cola-inotify">cola.inotify</a></li>
+<li><a class="reference internal" href="#cola-inotifydelay">cola.inotifydelay</a></li>
 <li><a class="reference internal" href="#cola-refreshonfocus">cola.refreshonfocus</a></li>
 <li><a class="reference internal" href="#cola-linebreak">cola.linebreak</a></li>
 <li><a class="reference internal" href="#cola-logdate">cola.logdate</a></li>
@@ -1879,6 +1926,7 @@ Gravatar client.</p>
 <li><a class="reference internal" href="#cola-color-remove">cola.color.remove</a></li>
 <li><a class="reference internal" href="#cola-color-header">cola.color.header</a></li>
 <li><a class="reference internal" href="#cola-updateindex">cola.updateindex</a></li>
+<li><a class="reference internal" href="#cola-verbosity">cola.verbosity</a></li>
 <li><a class="reference internal" href="#commit-cleanup">commit.cleanup</a></li>
 <li><a class="reference internal" href="#core-commentchar">core.commentChar</a></li>
 <li><a class="reference internal" href="#core-hookspath">core.hooksPath</a></li>
@@ -1893,6 +1941,7 @@ Gravatar client.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#environment-variables">ENVIRONMENT VARIABLES</a><ul>
+<li><a class="reference internal" href="#git-askpass">GIT_ASKPASS</a></li>
 <li><a class="reference internal" href="#git-cola-icon-theme">GIT_COLA_ICON_THEME</a></li>
 <li><a class="reference internal" href="#git-cola-scale">GIT_COLA_SCALE</a></li>
 <li><a class="reference internal" href="#git-cola-trace">GIT_COLA_TRACE</a></li>
@@ -1946,7 +1995,7 @@ Gravatar client.</p>
       
     </aside>
   </div>
-</div><script src="static/documentation_options.js?v=c9094266"></script>
+</div><script src="static/documentation_options.js?v=1ca48c26"></script>
     <script src="static/doctools.js?v=9bcbadda"></script>
     <script src="static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="static/scripts/furo.js?v=46bd48cc"></script>
