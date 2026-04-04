@@ -11,6 +11,7 @@ Thanks
 * Adrien be
 * Adil
 * AJ Bagwell
+* Akhil Presingu
 * akontsevich
 * Albert Vaca Cintora
 * Aleksey Kontsevich
@@ -131,6 +132,7 @@ Thanks
 * Jakub Klos
 * João Matos
 * Jan @hanksoff
+* Jan Kurella
 * Jan Šilhan
 * Jan Tumanov
 * jakubklos77
@@ -249,6 +251,7 @@ Thanks
 * Philip Stark
 * Pilar Molina Lopez
 * Pius Raeder
+* pkzc
 * Povilas Kanapickas
 * Radek Novacek
 * Radek Postołowicz
@@ -265,6 +268,7 @@ Thanks
 * Rustam Safin
 * Sabri Ünal
 * Samsul Ma'arif
+* Sasha @legasik21
 * Scott Field
 * Sean Allred
 * Sebastian Brass
