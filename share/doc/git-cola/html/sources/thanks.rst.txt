@@ -219,6 +219,7 @@ Thanks
 * Nanda Lopes
 * Naraesk
 * Nathan du Buy
+* Nav @nav9
 * Niel Buys
 * Nick Todd
 * Nicolas Dietrich
@@ -267,12 +268,14 @@ Thanks
 * Rolando Espinoza La fuente
 * Rustam Safin
 * Sabri Ünal
+* Samuel Amen Ague
 * Samsul Ma'arif
 * Sasha @legasik21
 * Scott Field
 * Sean Allred
 * Sebastian Brass
 * Sebastian Oliva
+* senique @senique
 * Sergei Dyshel
 * Sergey Leschina
 * Shun Sakai
@@ -284,6 +287,7 @@ Thanks
 * Steffen Prohaska
 * Stéphane Cerveau
 * Stephen Groat
+* Suchismita Biswal
 * Suyandi
 * Sven Claussner
 * Szymon Judasz
